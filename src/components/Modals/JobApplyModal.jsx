@@ -1,9 +1,23 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material'
-import React from 'react'
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Grid,
+  // useMediaQuery,
+} from "@mui/material";
+import { Form, Formik } from "formik";
+import React from "react";
+import TextFieldWrapper from "../FormComponents/TextFieldWrapper";
+// import { useTheme } from "styled-components";
 
 const JobApplyModal = () => {
-
   const [open, setOpen] = React.useState(false);
+
+  // const theme = useTheme();
+  // const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -14,34 +28,66 @@ const JobApplyModal = () => {
   };
 
   return (
-    <div>
+    <Box>
       <Button variant="contained" onClick={handleClickOpen}>
         Apply Now
       </Button>
       <Dialog
         open={open}
         onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
+        // fullScreen={fullScreen}
+        fullWidth
+        sx={{ width: "100%" }}
       >
-        <DialogTitle id="alert-dialog-title">
-          Apply Job Title
-        </DialogTitle>
+        <DialogTitle>Apply Job Title</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
+          <Formik
+            initialValues={{
+              firstname: "",
+            }}
+          >
+            {(values) => {
+              return (
+                <Form>
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} md={12} mt={2}>
+                      <TextFieldWrapper name="firstname" label="FirstName" />
+                    </Grid>
+                    <Grid item xs={12} md={12}>
+                      <TextFieldWrapper name="firstname" label="FirstName" />
+                    </Grid>
+                    <Grid item xs={12} md={12}>
+                      <TextFieldWrapper name="firstname" label="FirstName" />
+                    </Grid>
+                    <Grid item xs={12} md={12}>
+                      <TextFieldWrapper name="firstname" label="FirstName" />
+                    </Grid>
+                    <Grid item xs={12} md={12}>
+                      <TextFieldWrapper name="firstname" label="FirstName" />
+                    </Grid>
+                    <Grid item xs={12} md={12}>
+                      <TextFieldWrapper name="firstname" label="FirstName" />
+                    </Grid>
+                    <Grid item xs={12} md={12}>
+                      <TextFieldWrapper name="firstname" label="FirstName" />
+                    </Grid>
+                  </Grid>
+                </Form>
+              );
+            }}
+          </Formik>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
+        <DialogActions sx={{ px: 3 }}>
+          <Button onClick={handleClose} color="error" variant="contained">
+            Cancel
+          </Button>
+          <Button onClick={handleClose} autoFocus variant="contained">
+            Submit
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
-  )
-}
+    </Box>
+  );
+};
 
-export default JobApplyModal
+export default JobApplyModal;

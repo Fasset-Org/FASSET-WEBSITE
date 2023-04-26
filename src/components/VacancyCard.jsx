@@ -1,4 +1,11 @@
-import { Button, Card, CardContent, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Grid,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +18,7 @@ const VacancyCard = ({ vacancy }) => {
       sm={12}
       md={12}
       lg={4}
-      xl={4}
+      xl={3}
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -29,17 +36,19 @@ const VacancyCard = ({ vacancy }) => {
           <Typography textAlign="center" mt={2}>
             {vacancy.jobDescription}
           </Typography>
-          <Button
-            // variant="outlined"
-            sx={{ mt: 2, fontWeight: "bolder" }}
-            color="secondary"
-            fullWidth
-            onClick={() => {
-              navigate(`/vacancies/${vacancy.id}`);
-            }}
-          >
-            Read More
-          </Button>
+          <Box textAlign="center">
+            <Button
+              variant="contained"
+              sx={{ mt: 2 }}
+              color="primary"
+              // fullWidth
+              onClick={() => {
+                navigate(`/vacancies/${vacancy.id}`);
+              }}
+            >
+              Read More
+            </Button>
+          </Box>
         </CardContent>
       </Card>
     </Grid>

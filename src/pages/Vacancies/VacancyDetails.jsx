@@ -6,9 +6,8 @@ import {
   Divider,
   List,
   ListItem,
-  ListItemText,
   Stack,
-  Typography
+  Typography,
 } from "@mui/material";
 import React from "react";
 import VacancyCard from "../../components/VacancyCard";
@@ -23,17 +22,17 @@ const VacancyDetails = () => {
     "Prepare correspondence in relation to grant payments",
     "Function as a team member for all employer grants processing",
     "Match employer profiles with categories of grants",
-    "Verify employer and grant details against qualifying criteria and compliance"
+    "Verify employer and grant details against qualifying criteria and compliance",
   ];
 
   return (
     <Stack direction="row">
       <Stack
-        width="70%"
+        width={{ md: "70%", xs: "100%" }}
         // justifyContent="center"
         alignItems="center"
         border={1}
-        padding={2}
+        sx={{ px: { xs: 2, sm: 2, md: 10, lg: 2, xl: 10 }, py: 2 }}
         spacing={2}
       >
         <Stack
@@ -65,14 +64,18 @@ const VacancyDetails = () => {
           // border={1}
           alignItems="center"
         >
-          <Typography width="38%" fontSize={15} fontWeight="bolder">
-            Purpose Of The Job
-          </Typography>
-          <Typography>
-            The primary purpose of this position is to provide administrations
-            on the approval of sector grants and stakeholder needs according to
-            FASSET regulations, processes, and procedures.
-          </Typography>
+          <Stack width="30%">
+            <Typography fontSize={15} fontWeight="bolder">
+              Purpose Of The Job
+            </Typography>
+          </Stack>
+          <Stack width="70%">
+            <Typography>
+              The primary purpose of this position is to provide administrations
+              on the approval of sector grants and stakeholder needs according
+              to FASSET regulations, processes, and procedures.
+            </Typography>
+          </Stack>
         </Stack>
 
         <Stack
@@ -81,10 +84,10 @@ const VacancyDetails = () => {
           // border={1}
           // alignItems="center"
         >
-          <Typography width='30%' fontSize={15} fontWeight="bolder">
+          <Typography width="30%" fontSize={15} fontWeight="bolder">
             Department
           </Typography>
-          <Typography >ICT</Typography>
+          <Typography>ICT</Typography>
         </Stack>
 
         <Stack
@@ -93,7 +96,7 @@ const VacancyDetails = () => {
           // border={1}
           // alignItems="center"
         >
-          <Typography width='30%' fontSize={15} fontWeight="bolder" >
+          <Typography width="30%" fontSize={15} fontWeight="bolder">
             Reporting Line
           </Typography>
           <Typography>Grants Specialist</Typography>
@@ -102,19 +105,17 @@ const VacancyDetails = () => {
         <Stack width="100%">
           <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff200" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{ backgroundColor: "primary.main" }}
             >
-              <Typography fontSize={15} fontWeight="bolder" color="#FFFFFF">
-                Main Resposibilities
-              </Typography>
+              <Typography fontSize={15}>Main Resposibilities</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <List
                 sx={{
-                  width: "100%"
+                  width: "100%",
                   // bgcolor: "background.paper"
                 }}
               >
@@ -134,14 +135,12 @@ const VacancyDetails = () => {
         <Stack width="100%">
           <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff200" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{ backgroundColor: "primary.main" }}
             >
-              <Typography fontSize={15} fontWeight="bolder" color="#FFFFFF">
-                Required Qualification
-              </Typography>
+              <Typography fontSize={15}>Required Qualification</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -155,19 +154,17 @@ const VacancyDetails = () => {
         <Stack width="100%">
           <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff200" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{ backgroundColor: "primary.main" }}
             >
-              <Typography fontSize={15} fontWeight="bolder" color="#FFFFFF">
-                Competencies Required
-              </Typography>
+              <Typography fontSize={15}>Competencies Required</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <List
                 sx={{
-                  width: "100%"
+                  width: "100%",
                   // bgcolor: "background.paper"
                 }}
               >
@@ -180,7 +177,7 @@ const VacancyDetails = () => {
                   "Detail and process orientated.",
                   "Strong analytical, interpersonal, communication.",
                   "Report writing and presentation skills",
-                  "Ability to work independently and as part of a team"
+                  "Ability to work independently and as part of a team",
                 ].map((responsibility, i) => (
                   <ListItem key={i} disableGutters>
                     <Typography fontWeight="bolder" sx={{ mr: 2 }}>
@@ -197,19 +194,17 @@ const VacancyDetails = () => {
         <Stack width="100%">
           <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff200" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{ backgroundColor: "primary.main" }}
             >
-              <Typography fontSize={15} fontWeight="bolder" color="#FFFFFF">
-                Knowledge & Skills Required
-              </Typography>
+              <Typography fontSize={15}>Knowledge & Skills Required</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <List
                 sx={{
-                  width: "100%"
+                  width: "100%",
                   // bgcolor: "background.paper"
                 }}
               >
@@ -222,7 +217,7 @@ const VacancyDetails = () => {
                   "Detail and process orientated.",
                   "Strong analytical, interpersonal, communication.",
                   "Report writing and presentation skills",
-                  "Ability to work independently and as part of a team"
+                  "Ability to work independently and as part of a team",
                 ].map((responsibility, i) => (
                   <ListItem key={i} disableGutters>
                     <Typography fontWeight="bolder" sx={{ mr: 2 }}>
@@ -239,12 +234,12 @@ const VacancyDetails = () => {
         <Stack width="100%">
           <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff200" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{ backgroundColor: "primary.main" }}
             >
-              <Typography fontSize={15} fontWeight="bolder" color="#FFFFFF">
+              <Typography fontSize={15}>
                 Date Of Commencement Of Position
               </Typography>
             </AccordionSummary>
@@ -260,14 +255,12 @@ const VacancyDetails = () => {
         <Stack width="100%">
           <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff200" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{ backgroundColor: "primary.main" }}
             >
-              <Typography fontSize={15} fontWeight="bolder" color="#FFFFFF">
-                Remuneration Package
-              </Typography>
+              <Typography fontSize={15}>Remuneration Package</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -281,14 +274,12 @@ const VacancyDetails = () => {
         <Stack width="100%">
           <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff200" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{ backgroundColor: "primary.main" }}
             >
-              <Typography fontSize={15} fontWeight="bolder" color="#FFFFFF">
-                Assessment
-              </Typography>
+              <Typography fontSize={15}>Assessment</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -301,14 +292,12 @@ const VacancyDetails = () => {
         <Stack width="100%">
           <Accordion>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#fff200" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               sx={{ backgroundColor: "primary.main" }}
             >
-              <Typography fontSize={15} fontWeight="bolder" color="#FFFFFF">
-                Enquiry Information
-              </Typography>
+              <Typography fontSize={15}>Enquiry Information</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -322,13 +311,19 @@ const VacancyDetails = () => {
             </AccordionDetails>
           </Accordion>
         </Stack>
+        <Stack direction="row" justifyContent="end" spacing={2} width="100%">
+          <Button variant="outlined">Download Job Description</Button>
+          <Button variant="contained">Apply Now</Button>
+        </Stack>
       </Stack>
+
       <Stack
         width="30%"
-        padding={2}
         // justifyContent="center"
         alignItems="center"
         spacing={2}
+        display={{md: 'flex', xs: 'none'}}
+        sx={{ px: { xs: 2, sm: 2, md: 2, lg: 2, xl: 10 } }}
       >
         <Divider>
           <Typography
@@ -345,7 +340,7 @@ const VacancyDetails = () => {
             jobTitle: "Frontend Developer C1",
             jobDescription:
               "An opportunity to work abroad has been made available with one of the leading Travel Business that provide strategic solutions to clients with high quality",
-            jobRem: "650K"
+            jobRem: "650K",
           }}
         />
         <VacancyCard
@@ -354,7 +349,7 @@ const VacancyDetails = () => {
             jobTitle: "Frontend Developer C1",
             jobDescription:
               "An opportunity to work abroad has been made available with one of the leading Travel Business that provide strategic solutions to clients with high quality",
-            jobRem: "650K"
+            jobRem: "650K",
           }}
         />
         <VacancyCard
@@ -363,7 +358,7 @@ const VacancyDetails = () => {
             jobTitle: "Frontend Developer C1",
             jobDescription:
               "An opportunity to work abroad has been made available with one of the leading Travel Business that provide strategic solutions to clients with high quality",
-            jobRem: "650K"
+            jobRem: "650K",
           }}
         />
       </Stack>

@@ -8,9 +8,9 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Vacancies from "./pages/Vacancies/Vacancies";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import FassetProgrammes from "./pages/FassetProgrammes/FassetProgrammes";
-import ContactUs from "./pages/ContactUs/ContactUs";
 import VacancyDetails from "./pages/Vacancies/VacancyDetails";
 import Learnerships from "./pages/Learnerships/Learnerships";
+import "./App.css";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -26,14 +26,14 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<TopNavigation />}>
-          <Route path="/" element={<Home />} index />
+            <Route path="/" element={<Home />} index />
             <Route path="/home" element={<Home />} index />
             <Route path="/vacancies" element={<Vacancies />} />
             <Route path="/vacancies/:id" element={<VacancyDetails />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/fassetprogrammes" element={<FassetProgrammes />} />
             <Route path="/leanerships" element={<Learnerships />} />
-            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/contactus" element={<Home id="contact-us" />} />
           </Route>
         </Routes>
       </Router>

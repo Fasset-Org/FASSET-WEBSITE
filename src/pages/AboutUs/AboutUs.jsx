@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import WhoWeAre from "../../components/WhoWeAre";
 
 const AboutUs = () => {
-  return (
-    <div>AboutUs</div>
-  )
-}
+  return <WhoWeAre />;
+};
 
-export default AboutUs
+export default AboutUs;

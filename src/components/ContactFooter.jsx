@@ -3,10 +3,17 @@ import { Form, Formik } from "formik";
 import React from "react";
 import TextFieldWrapper from "./FormComponents/TextFieldWrapper";
 import * as Yup from "yup";
+import { useRef } from "react";
+import { useEffect } from "react";
 
-const ContactFooter = () => {
+const ContactFooter = ({ setContactRef }) => {
+  const ref = useRef();
+
+  useEffect(() => {
+    setContactRef(ref);
+  }, [setContactRef]);
   return (
-    <Stack>
+    <div ref={ref}>
       <Stack direction="row" paddingX={2}>
         <Stack
           width="50%"
@@ -87,7 +94,7 @@ const ContactFooter = () => {
           </Typography>
         </Stack>
       </Stack>
-    </Stack>
+    </div>
   );
 };
 

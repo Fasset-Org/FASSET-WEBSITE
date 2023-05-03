@@ -9,7 +9,10 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const LinksFooter = () => {
   return (
-    <Stack paddingTop={2} sx={{ backgroundColor: "#b9c1cc" }}>
+    <Stack
+      paddingTop={2}
+      // sx={{ backgroundColor: "#b9c1cc" }}
+    >
       <Stack
         direction={{
           md: "row",

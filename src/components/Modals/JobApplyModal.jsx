@@ -6,11 +6,14 @@ import {
   DialogContent,
   DialogTitle,
   Grid,
+  InputLabel,
+  TextField
   // useMediaQuery,
 } from "@mui/material";
 import { Form, Formik } from "formik";
 import React from "react";
 import TextFieldWrapper from "../FormComponents/TextFieldWrapper";
+import SelectFieldWrapper from "../FormComponents/SelectFieldWrapper";
 // import { useTheme } from "styled-components";
 
 const JobApplyModal = () => {
@@ -26,6 +29,17 @@ const JobApplyModal = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const genderOptions = [
+    {
+      value: "Male",
+      label: "Male"
+    },
+    {
+      value: "Female",
+      label: "Female"
+    }
+  ];
 
   return (
     <Box>
@@ -44,6 +58,11 @@ const JobApplyModal = () => {
           <Formik
             initialValues={{
               firstname: "",
+              fullname: "",
+              nationality: "",
+              idNumber: "",
+              gender: "",
+              cellphone: ""
             }}
           >
             {(values) => {
@@ -51,25 +70,34 @@ const JobApplyModal = () => {
                 <Form>
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={12} mt={2}>
-                      <TextFieldWrapper name="firstname" label="FirstName" />
+                      <TextFieldWrapper name="fullname" label="Fullname" />
                     </Grid>
                     <Grid item xs={12} md={12}>
-                      <TextFieldWrapper name="firstname" label="FirstName" />
+                      <TextFieldWrapper
+                        name="nationality"
+                        label="Nationality"
+                      />
                     </Grid>
                     <Grid item xs={12} md={12}>
-                      <TextFieldWrapper name="firstname" label="FirstName" />
+                      <TextFieldWrapper name="idNumber" label="Id Number" />
                     </Grid>
                     <Grid item xs={12} md={12}>
-                      <TextFieldWrapper name="firstname" label="FirstName" />
+                      <SelectFieldWrapper
+                        name="gender"
+                        label="Gender"
+                        options={genderOptions}
+                      />
                     </Grid>
                     <Grid item xs={12} md={12}>
-                      <TextFieldWrapper name="firstname" label="FirstName" />
+                      <TextFieldWrapper name="cellphone" label="Cellphone" />
                     </Grid>
                     <Grid item xs={12} md={12}>
-                      <TextFieldWrapper name="firstname" label="FirstName" />
+                      <InputLabel>Id copy</InputLabel>
+                      <TextField name="idCopy" type="file" fullWidth />
                     </Grid>
                     <Grid item xs={12} md={12}>
-                      <TextFieldWrapper name="firstname" label="FirstName" />
+                      <InputLabel>Resume</InputLabel>
+                      <TextField name="resume" type="file" fullWidth />
                     </Grid>
                   </Grid>
                 </Form>

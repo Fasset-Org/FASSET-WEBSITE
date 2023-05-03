@@ -84,11 +84,11 @@ const TopNavigation = () => {
             About Us
           </Link>
           <ul className="dropdown_menu dropdown_menu--animated dropdown_menu-6">
-            <li>Who we are</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
+            <li>Our Mandate</li>
+            <li>Board & Committes</li>
+            <li>Our Teams</li>
+            <li>Fasset Constitution</li>
+            <li>Policies</li>
           </ul>
         </li>
         <li>

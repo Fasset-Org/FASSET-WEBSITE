@@ -1,30 +1,29 @@
-import { Button, Stack } from "@mui/material";
 import React from "react";
-import WelcomeComponent from "../components/WelcomeComponent";
-import Testimony from "../components/Testimony";
-import ContactFooter from "../components/ContactFooter";
-import { useState } from "react";
-import { useEffect } from "react";
+// import WelcomeComponent from "../components/WelcomeComponent";
+
+// import ContactFooter from "../components/ContactFooter";
+// import { useState } from "react";
+// import { useEffect } from "react";
+import { Stack } from "@mui/material";
+import DesktopBanner from "../components/Desktop/DesktopBanner";
+import LinksFooter from "../components/LinksFooter";
 
 const Home = ({ id }) => {
-  const [contactRef, setContactRef] = useState();
-  useEffect(() => {
-    if (id && contactRef) {
-      window.scrollTo({
-        top: contactRef.current.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  }, [contactRef, id]);
+  // const [contactRef, setContactRef] = useState();
+  // useEffect(() => {
+  //   if (id && contactRef) {
+  //     window.scrollTo({
+  //       top: contactRef.current.offsetTop,
+  //       behavior: "smooth"
+  //     });
+  //   }
+  // }, [contactRef, id]);
 
   return (
     <Stack spacing={2}>
-      <WelcomeComponent />
-      <Stack paddingX={10} spacing={2}>
-        <Testimony />
+      <DesktopBanner />
 
-        <ContactFooter setContactRef={setContactRef} />
-      </Stack>
+      <LinksFooter />
     </Stack>
   );
 };

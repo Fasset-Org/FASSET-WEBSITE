@@ -42,7 +42,7 @@ const WhoWeAre = () => {
         alignItems="center"
       >
         <MotionStack
-          jsutifyContent="center"
+          justifyContent="end"
           alignItems="center"
           direction="row"
           sx={{
@@ -138,7 +138,7 @@ const WhoWeAre = () => {
             <Grid lg={6} padding={2}>
               <Card
                 sx={{
-                  backgroundColor: "#006197",
+                  backgroundColor: "primary.main",
                   color: "#FFFFFF",
                   borderRadius: 7,
                   height: 150
@@ -169,8 +169,8 @@ const WhoWeAre = () => {
             <Grid lg={6} padding={2}>
               <Card
                 sx={{
-                  backgroundColor: "#00b5ea",
-                  color: "#FFFFFF",
+                  backgroundColor: "secondary.main",
+                  color: "#000000",
                   borderRadius: 7,
                   height: 150
                 }}
@@ -236,7 +236,7 @@ const WhoWeAre = () => {
       </Stack>
       <Grid container>
         <Grid lg={4} xl={4} padding={2}>
-          <Card sx={{ height: 335 }}>
+          <Card>
             <Box
               sx={{
                 width: "100%",
@@ -275,46 +275,54 @@ const WhoWeAre = () => {
           </Card>
         </Grid>
         <Grid lg={4} xl={4} padding={2}>
-          <Card>
-            <Box
-              sx={{
-                width: "100%",
-                height: 30,
-                backgroundColor: "primary.main",
-                textAlign: "center",
-                color: "#FFFFFF",
-                fontWeight: "bolder"
-              }}
-            >
-              Relevant Legislation
-            </Box>
-            <CardContent sx={{ padding: 0 }}>
-              <List sx={{ padding: 0, pt: 2 }}>
-                {legislations.map((vision, idx) => {
-                  return (
-                    <ListItem
-                      sx={{
-                        padding: 0,
-                        display: "list-item"
-                        // border: 1
-                      }}
-                    >
-                      <Typography
+          <Stack
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            height="100%"
+            width="100%"
+          >
+            <Card sx={{width: '100%'}}>
+              <Box
+                sx={{
+                  width: "100%",
+                  height: 30,
+                  backgroundColor: "primary.main",
+                  textAlign: "center",
+                  color: "#FFFFFF",
+                  fontWeight: "bolder"
+                }}
+              >
+                Relevant Legislation
+              </Box>
+              <CardContent sx={{ padding: 0 }}>
+                <List sx={{ padding: 0, pt: 2 }}>
+                  {legislations.map((vision, idx) => {
+                    return (
+                      <ListItem
                         sx={{
-                          fontSize: 14,
-                          textAlign: "center",
-                          backgroundColor: idx % 2 === 1 ? "#E5E7E9" : ""
+                          padding: 0,
+                          display: "list-item"
+                          // border: 1
                         }}
-                      >{`• ${vision}`}</Typography>
-                    </ListItem>
-                  );
-                })}
-              </List>
-            </CardContent>
-          </Card>
+                      >
+                        <Typography
+                          sx={{
+                            fontSize: 14,
+                            textAlign: "center",
+                            backgroundColor: idx % 2 === 1 ? "#E5E7E9" : ""
+                          }}
+                        >{`• ${vision}`}</Typography>
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </CardContent>
+            </Card>
+          </Stack>
         </Grid>
         <Grid lg={4} xl={4} padding={2}>
-          <Card sx={{ height: 335 }}>
+          <Card>
             <Box
               sx={{
                 width: "100%",

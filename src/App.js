@@ -11,6 +11,7 @@ import FassetProgrammes from "./pages/FassetProgrammes/FassetProgrammes";
 import VacancyDetails from "./pages/Vacancies/VacancyDetails";
 import Learnerships from "./pages/Learnerships/Learnerships";
 import "./App.css";
+import DesktopNavigation from "./components/Navigation/DesktopNavigation";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -25,7 +26,7 @@ function App() {
       <CssBaseline />
       <Router>
         <Routes>
-          <Route path="/" element={<TopNavigation />}>
+          <Route path="/" element={<DesktopNavigation />}>
             <Route path="/" element={<Home />} index />
             <Route path="/home" element={<Home />} index />
             <Route path="/vacancies" element={<Vacancies />} />

@@ -11,7 +11,11 @@ const LinksFooter = () => {
   return (
     <Stack
       paddingTop={2}
-      // sx={{ backgroundColor: "#b9c1cc" }}
+      sx={{ 
+        backgroundColor: "#FFFFFF", 
+        border: 1,
+        borderColor: 'lightgray'
+      }}
     >
       <Stack
         direction={{

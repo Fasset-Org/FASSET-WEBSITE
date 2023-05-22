@@ -42,7 +42,7 @@ const lightTheme = createTheme({
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          color: "#fff200",
+          color: "#FFFFFF",
         },
       },
     },

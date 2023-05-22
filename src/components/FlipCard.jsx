@@ -21,9 +21,8 @@ const FlipCard = ({ value, definition }) => {
       // transition: { duration: 0.5 }
     },
     back: {
-      rotateY: 180,
       opacity: 1,
-      transition: { duration: 0.5 }
+      transition: { duration: 2 }
     }
   };
 
@@ -42,15 +41,20 @@ const FlipCard = ({ value, definition }) => {
 
   return (
     <MotionStack
-      onMouseOver={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      // onMouseOver={() => setIsFlipped(true)}
+      // onMouseLeave={() => setIsFlipped(false)}
       variants={flipVariants}
       animate={isFlipped ? "back" : "front"}
-      sx={{ perspective: 1000, height: 210, }}
+      initial={"front"}
+      // whileInView={() => {
+      //   setIsFlipped(true);
+      //   return "back";
+      // }}
+      sx={{ perspective: 1000, height: 210 }}
     >
       <Card
         className="flip-card"
-        sx={{ width: "100%", height: "100%", }}
+        sx={{ width: "100%", height: "100%" }}
         component={Stack}
         direction="row"
         justifyContent="center"

@@ -3,7 +3,7 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import "./Navigation/tab.css";
 
-const Slideshow = ({ images }) => {
+const Slideshow = ({ images, height }) => {
   return (
     <Slide
       autoplay={true}
@@ -15,7 +15,7 @@ const Slideshow = ({ images }) => {
         <div key={index}>
           <div
             style={{
-              height: "500px"
+              height: height
               // backgroundImage: `url(${slideImage.url})`,
               // backgroundRepeat: "cover",
               // backgroundSize: "100% 100%",

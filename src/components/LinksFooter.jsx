@@ -1,4 +1,4 @@
-import { IconButton, Link, Stack, Typography } from "@mui/material";
+import { Divider, IconButton, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import logo from "../images/fasset_master_logo.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -11,10 +11,10 @@ const LinksFooter = () => {
   return (
     <Stack
       paddingTop={2}
-      sx={{ 
-        backgroundColor: "#FFFFFF", 
+      sx={{
+        backgroundColor: "#f2f3f3",
         border: 1,
-        borderColor: 'lightgray'
+        borderColor: "lightgray"
       }}
     >
       <Stack
@@ -68,23 +68,27 @@ const LinksFooter = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Typography sx={{ color: "black", fontWeight: "bolder" }}>
+          <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             About Us
           </Typography>
-          <Link sx={{ color: "#000000", fontWeight: "lighter" }}>
+          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
             Who we are
           </Link>
-          <Link sx={{ color: "#000000", fontWeight: "lighter" }}>
+          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
             Our Mandate
           </Link>
-          <Link sx={{ color: "#000000", fontWeight: "lighter" }}>
+          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
             Board & Commitees
           </Link>
-          <Link sx={{ color: "#000000", fontWeight: "lighter" }}>Our Team</Link>
-          <Link sx={{ color: "#000000", fontWeight: "lighter" }}>
+          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+            Our Team
+          </Link>
+          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
             Fasset Constitution
           </Link>
-          <Link sx={{ color: "#000000", fontWeight: "lighter" }}>Policies</Link>
+          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+            Policies
+          </Link>
         </Stack>
         <Stack
           width="22.2233%"
@@ -94,15 +98,15 @@ const LinksFooter = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Typography sx={{ color: "black", fontWeight: "bolder" }}>
+          <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             Stakeholder
           </Typography>
-          <Link sx={{ color: "#000000" }}>Stakeholder Login</Link>
-          <Link sx={{ color: "#000000" }}>Latest News</Link>
-          <Link sx={{ color: "#000000" }}>Annual Report</Link>
-          <Link sx={{ color: "#000000" }}>eFacts Newsletter</Link>
-          <Link sx={{ color: "#000000" }}>Facts Newsletter</Link>
-          <Link sx={{ color: "#000000" }}>Press Articles</Link>
+          <Link sx={{ color: "primary.main" }}>Stakeholder Login</Link>
+          <Link sx={{ color: "primary.main" }}>Latest News</Link>
+          <Link sx={{ color: "primary.main" }}>Annual Report</Link>
+          <Link sx={{ color: "primary.main" }}>eFacts Newsletter</Link>
+          <Link sx={{ color: "primary.main" }}>Facts Newsletter</Link>
+          <Link sx={{ color: "primary.main" }}>Press Articles</Link>
         </Stack>
         <Stack
           width="22.2233%"
@@ -112,29 +116,72 @@ const LinksFooter = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Typography sx={{ color: "#000000", fontWeight: "bolder" }}>
+          <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             Other
           </Typography>
-          <Link sx={{ color: "#000000" }}>Mandatory Grants</Link>
-          <Link sx={{ color: "#000000" }}>Discretionary Grants</Link>
-          <Link sx={{ color: "#000000" }}>Downloads</Link>
-          <Link sx={{ color: "#000000" }}>Events</Link>
-          <Link sx={{ color: "#000000" }}>Vacancies</Link>
+          <Link sx={{ color: "primary.main" }}>Mandatory Grants</Link>
+          <Link sx={{ color: "primary.main" }}>Discretionary Grants</Link>
+          <Link sx={{ color: "primary.main" }}>Downloads</Link>
+          <Link sx={{ color: "primary.main" }}>Events</Link>
+          <Link sx={{ color: "primary.main" }}>Vacancies</Link>
         </Stack>
       </Stack>
-      <Stack direction="row" justifyContent="center">
-        <LocationOnIcon sx={{ color: "primary.main" }} />
+
+      <Stack
+        width="100%"
+        height={60}
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        sx={{ backgroundColor: "primary.main" }}
+        padding={2}
+        spacing={2}
+      >
         <Typography
           textAlign="center"
           fontWeight="bolder"
-          sx={{ color: "primary.main" }}
+          sx={{ color: "#FFFFFF" }}
         >
-          296 Kent Avenue Randburg 2194
+          {`Copyright © ${new Date().getFullYear()} - Fasset Rights Reserved`}
         </Typography>
+        <Divider
+          orientation="vertical"
+          sx={{
+            backgroundColor: "#FFFFFF"
+          }}
+        />
+        <Typography
+          textAlign="center"
+          fontWeight="bolder"
+          sx={{ color: "#FFFFFF" }}
+        >
+          Fasset Policy
+        </Typography>
+        <Divider
+          orientation="vertical"
+          sx={{
+            backgroundColor: "#FFFFFF"
+          }}
+        />
+
+        <Link
+          href="https://www.google.com/maps/place/296+Kent+Ave,+Ferndale,+Randburg,+2194,+South+Africa/@-26.094773,27.999893,14z/data=!4m6!3m5!1s0x1e95749412095119:0xa215fac024675b4!8m2!3d-26.0947729!4d27.9998927!16s%2Fg%2F11mtfgpqkh?hl=en"
+          component={Stack}
+          direction="row"
+          justifyContent="center"
+          sx={{ cursor: "pointer" }}
+          target="_blank"
+        >
+          <LocationOnIcon sx={{ color: "#FFFFFF" }} />
+          <Typography
+            textAlign="center"
+            fontWeight="bolder"
+            sx={{ color: "#FFFFFF" }}
+          >
+            296 Kent Avenue Randburg 2194
+          </Typography>
+        </Link>
       </Stack>
-      <Typography textAlign="center" fontWeight="bolder">
-        {`Fasset © ${new Date().getFullYear()} - All rights Reserved`}
-      </Typography>
     </Stack>
   );
 };

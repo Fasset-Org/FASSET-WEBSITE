@@ -15,6 +15,9 @@ const lightTheme = createTheme({
     error: {
       main: "#E74C3C",
     },
+    gray: {
+      main: '#f2f3f3'
+    }
   },
   components: {
     MuiButton: {

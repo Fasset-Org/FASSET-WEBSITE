@@ -11,6 +11,9 @@ import VacancyDetails from "./pages/Vacancies/VacancyDetails";
 import "./App.css";
 import DesktopNavigation from "./components/Navigation/DesktopNavigation";
 import Learners from "./pages/Learners/Learners";
+import LoginUser from "./pages/FMS/Auth/LoginUser";
+import Navigation from "./components/FMS/Navigation/Navigation";
+import Dashboard from "./pages/FMS/Auth/Dashboard";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -25,6 +28,7 @@ function App() {
       <CssBaseline />
       <Router>
         <Routes>
+          {/* Website Routes */}
           <Route path="/" element={<DesktopNavigation />}>
             <Route path="/" element={<Home />} index />
             <Route path="/home" element={<Home />} index />
@@ -34,6 +38,14 @@ function App() {
             <Route path="/fassetprogrammes" element={<FassetProgrammes />} />
             <Route path="/learners" element={<Learners />} />
             <Route path="/contactus" element={<Home id="contact-us" />} />
+          </Route>
+          {/* Auth Routes */}
+          <Route path="/login" element={<LoginUser />} />
+
+          {/* Content Management Routes */}
+
+          <Route path="/fms" element={<Navigation />}>
+            <Route path="dashboard" element={<Dashboard />} />
           </Route>
         </Routes>
       </Router>

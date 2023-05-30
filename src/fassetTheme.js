@@ -15,8 +15,8 @@ const lightTheme = createTheme({
     error: {
       main: "#E74C3C",
     },
-    gray: {
-      main: '#f2f3f3'
+    warning: {
+      main: '#ffffcc'
     }
   },
   components: {
@@ -89,8 +89,9 @@ const lightTheme = createTheme({
     MuiTextField: {
       styleOverrides: {
         root: {
-          // height: '40px',
-          borderRadius: 0,
+          [`& fieldset`]: {
+            borderRadius: 0
+          }
         },
       },
     },

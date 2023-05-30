@@ -17,7 +17,7 @@ const TextFieldWrapper = ({ name, label, ...otherProps }) => {
     configTextField.helperText = meta.error;
   }
 
-  return <TextField {...configTextField} label={label} sx={{borderRadius: 0}} />;
+  return <TextField {...configTextField} label={label} size="small"  />;
 };
 
 export default TextFieldWrapper;

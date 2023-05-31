@@ -14,6 +14,8 @@ import Learners from "./pages/Learners/Learners";
 import LoginUser from "./pages/FMS/Auth/LoginUser";
 import Navigation from "./components/FMS/Navigation/Navigation";
 import Dashboard from "./pages/FMS/Auth/Dashboard";
+import UsersList from "./pages/FMS/Auth/User/UsersList";
+import AssetsAllocated from "./pages/FMS/Assets/AssetsAllocated";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -46,6 +48,8 @@ function App() {
 
           <Route path="/fms" element={<Navigation />}>
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="users" element={<UsersList />} />
+            <Route path="assets" element={<AssetsAllocated />} />
           </Route>
         </Routes>
       </Router>

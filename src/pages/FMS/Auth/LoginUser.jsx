@@ -25,12 +25,13 @@ const LoginUser = () => {
         alignItems="center"
         padding={2}
       >
-        <img src={whiteLogo} alt="" height="50%" width="14%" />
+        <img src={whiteLogo} alt="" height="50%" width="12%" />
       </Stack>
       <Stack justifyContent="center" alignItems="center">
         <Card
           component={Stack}
           padding={2}
+          py={4}
           width="35%"
           justifyContent="center"
           alignItems="center"
@@ -93,7 +94,7 @@ const LoginUser = () => {
                         variant="contained"
                         fullWidth
                         type="submit"
-                        onClick={(e) => navigate("/fms/dashboard")}
+                        // onClick={(e) => navigate("/fms/dashboard")}
                       >
                         Login
                       </Button>

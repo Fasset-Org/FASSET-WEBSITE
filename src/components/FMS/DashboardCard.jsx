@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const DashboardCard = ({ title, Icon }) => {
+const DashboardCard = ({ title, Icon, ...otherProps }) => {
   return (
     <Card
       component={Stack}
@@ -15,11 +15,13 @@ const DashboardCard = ({ title, Icon }) => {
       alignItems="center"
       height={200}
       sx={{
+        cursor: "pointer",
         border: 2,
         borderColor: "primary.main",
         // backgroundColor: "#374370",
         borderRadius: 4
       }}
+      {...otherProps}
     >
       <CardContent component={Stack}>
         <IconButton>

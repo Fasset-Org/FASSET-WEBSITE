@@ -20,7 +20,7 @@ import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
 import WorkIcon from "@mui/icons-material/Work";
 import { Stack } from "@mui/material";
 import logo from "../../../images/square-logo.jpeg";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -92,6 +92,7 @@ const Drawer = styled(MuiDrawer, {
 export default function Navigation() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -188,7 +189,12 @@ export default function Navigation() {
         <Divider />
 
         <List>
-          <ListItem key={"Dashboard"} disablePadding sx={{ display: "block" }}>
+          <ListItem
+            key={"Dashboard"}
+            disablePadding
+            sx={{ display: "block" }}
+            onClick={() => navigate("/fms/dashboard")}
+          >
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -216,6 +222,7 @@ export default function Navigation() {
             key={"User Management"}
             disablePadding
             sx={{ display: "block" }}
+            onClick={() => navigate("/fms/users")}
           >
             <ListItemButton
               sx={{
@@ -247,6 +254,7 @@ export default function Navigation() {
             key={"Asset Management"}
             disablePadding
             sx={{ display: "block" }}
+            onClick={() => navigate("/fms/assets")}
           >
             <ListItemButton
               sx={{
@@ -275,6 +283,7 @@ export default function Navigation() {
             key={"Human Resource"}
             disablePadding
             sx={{ display: "block" }}
+            onClick={() => navigate("/fms/hr")}
           >
             <ListItemButton
               sx={{

@@ -13,10 +13,8 @@ import whiteLogo from "../../../images/white_logo.png";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import TextFieldWrapper from "../../../components/FormComponents/TextFieldWrapper";
-import { useNavigate } from "react-router-dom";
 
 const LoginUser = () => {
-  const navigate = useNavigate();
   return (
     <Stack>
       <Stack

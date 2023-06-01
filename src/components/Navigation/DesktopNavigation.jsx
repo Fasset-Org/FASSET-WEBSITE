@@ -1,11 +1,11 @@
-import { AppBar, Box, Button, Stack, Typography } from "@mui/material";
+import { AppBar, Box, Button, Stack } from "@mui/material";
 import React from "react";
-import logo from "../../images/square-logo.jpeg";
+// import logo from "../../images/square-logo.jpeg";
 import { Link, Outlet } from "react-router-dom";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import TwitterIcon from "@mui/icons-material/Twitter";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LinksFooter from "../LinksFooter";
 import "./Navigation.scss";
 import TopContactNavigation from "./TopContactNavigation";

@@ -18,9 +18,11 @@ import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
 import WorkIcon from "@mui/icons-material/Work";
-import { Stack } from "@mui/material";
+import { Avatar, Badge, Stack } from "@mui/material";
 import logo from "../../../images/square-logo.jpeg";
 import { Outlet, useNavigate } from "react-router-dom";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 
 const drawerWidth = 240;
 
@@ -163,7 +165,26 @@ export default function Navigation() {
               </Typography>
             </Stack>
 
-            <Stack flexGrow={15} height="100%"></Stack>
+            <Stack
+              flexGrow={15}
+              height="100%"
+              direction="row"
+              justifyContent="end"
+              alignItems="center"
+              spacing={3}
+              pr={2}
+            >
+              <LightModeIcon fontSize="medium" sx={{ color: "#FFFFFF" }} />
+
+              <Badge badgeContent={4} color="secondary">
+                <NotificationsIcon
+                  fontSize="medium"
+                  sx={{ color: "#FFFFFF" }}
+                />
+              </Badge>
+
+              <Avatar>T</Avatar>
+            </Stack>
           </Stack>
         </Stack>
       </AppBar>

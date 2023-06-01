@@ -1,11 +1,4 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  IconButton,
-  Stack,
-  Typography
-} from "@mui/material";
+import { AppBar, Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import logo from "../../images/square-logo.jpeg";
 import { Link, Outlet } from "react-router-dom";
@@ -15,6 +8,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LinksFooter from "../LinksFooter";
 import "./Navigation.scss";
+import TopContactNavigation from "./TopContactNavigation";
+import TopLinksNavigation from "./TopLinksNavigation";
 
 const DesktopNavigation = () => {
   return (
@@ -61,7 +56,7 @@ const DesktopNavigation = () => {
           <CloseIcon />
         </IconButton>
       </Stack> */}
-      <Stack
+      {/* <Stack
         height={60}
         width="100%"
         direction="row"
@@ -128,10 +123,12 @@ const DesktopNavigation = () => {
             <LinkedInIcon sx={{ color: "#0178b5" }} fontSize="medium" />
           </IconButton>
         </Stack>
-      </Stack>
+      </Stack> */}
+      <TopContactNavigation />
+      <TopLinksNavigation />
       <AppBar
         position="sticky"
-        sx={{ height: 60, backgroundColor: "primary.main" }}
+        sx={{ height: 64, backgroundColor: "primary.main" }}
       >
         <Stack
           width="100%"
@@ -139,7 +136,7 @@ const DesktopNavigation = () => {
           direction="row"
           justifyContent="space-between"
         >
-          <Stack
+          {/* <Stack
             height="100%"
             justifyContent="center"
             alignItems="center"
@@ -157,7 +154,7 @@ const DesktopNavigation = () => {
             >
               Fasset
             </Typography>
-          </Stack>
+          </Stack> */}
           <Stack
             height="100%"
             justifyContent="center"
@@ -166,7 +163,7 @@ const DesktopNavigation = () => {
             direction="row"
             width="100%"
             flex={9}
-            border={1}
+            // border={1}
           >
             <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Home
@@ -186,19 +183,19 @@ const DesktopNavigation = () => {
               Learners
             </Link>
             <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
-              Stakeholders
+              Employers
             </Link>
-            <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
+            {/* <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Research
-            </Link>
-            <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
-              Career Awareness
-            </Link>
+            </Link> */}
             <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Institutions
             </Link>
             <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
-              Events
+              Supply Chain
+            </Link>
+            <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
+              Resources
             </Link>
             <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Downloads
@@ -219,11 +216,11 @@ const DesktopNavigation = () => {
                 fontSize: 13,
                 fontWeight: "bolder",
                 color: "#FFFFFF",
-                backgroundColor: "primary.dark",
+                backgroundColor: "primary.dark"
                 // borderRadius: 1
               }}
             >
-              Contact US
+              Fasset Assistant
             </Button>
           </Stack>
           {/* <Stack

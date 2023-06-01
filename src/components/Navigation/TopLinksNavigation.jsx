@@ -13,7 +13,7 @@ const TopLinksNavigation = () => {
     >
       <Link sx={{ color: "black" }}>INVOICE MANAGEMENT</Link>
       <Link sx={{ color: "black" }}>ODOO LMIS</Link>
-      <img src={logo} alt="" height={30} width={180} />
+      <img src={logo} alt="" height={30} width={150} />
       <Link sx={{ color: "black" }}>BURSARY MANGEMENT SYSTEM</Link>
       <Link sx={{ color: "black" }}>CAREER PORTAL</Link>
     </Stack>

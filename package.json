@@ -10,6 +10,7 @@
     "@mui/lab": "^5.0.0-alpha.127",
     "@mui/material": "^5.12.1",
     "@mui/styled-engine-sc": "^5.11.11",
+    "@tanstack/react-query": "^4.29.12",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -57,5 +58,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^4.29.9"
   }
 }

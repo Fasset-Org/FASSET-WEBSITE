@@ -16,9 +16,11 @@ import Navigation from "./components/FMS/Navigation/Navigation";
 import Dashboard from "./pages/FMS/Auth/Dashboard";
 import UsersList from "./pages/FMS/Auth/User/UsersList";
 import AssetsAllocated from "./pages/FMS/Assets/AssetsAllocated";
+// import { QueryClient } from "@tanstack/react-query";
 
 function App() {
   const [theme, setTheme] = useState("light");
+  // const queryClient = new QueryClient()
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";

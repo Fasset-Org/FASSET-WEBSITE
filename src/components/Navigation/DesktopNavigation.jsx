@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Stack } from "@mui/material";
+import { AppBar, Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 // import logo from "../../images/square-logo.jpeg";
 import { Link, Outlet } from "react-router-dom";
@@ -14,6 +14,9 @@ import TopLinksNavigation from "./TopLinksNavigation";
 const DesktopNavigation = () => {
   return (
     <Stack>
+      <Typography textAlign="center" color='red' fontSize={30}>
+        Not working on this, this weekend, preparing fot learners lol
+      </Typography>
       {/* <Stack
         height={40}
         direction="row"

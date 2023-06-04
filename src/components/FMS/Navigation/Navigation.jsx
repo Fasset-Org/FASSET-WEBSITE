@@ -19,7 +19,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
 import WorkIcon from "@mui/icons-material/Work";
 import { Avatar, Badge, Stack } from "@mui/material";
-import logo from "../../../images/square-logo.jpeg";
+import logo from "../../../images/white_logo.png";
 import { Outlet, useNavigate } from "react-router-dom";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -133,7 +133,7 @@ export default function Navigation() {
                   ...(open && { display: "none" })
                 }}
               >
-                <MenuIcon fontSize="medium" />
+                <MenuIcon fontSize="medium" sx={{ color: "#FFFFFF" }} />
               </IconButton>
             </Stack>
           )}
@@ -155,7 +155,7 @@ export default function Navigation() {
               flexGrow={1}
               spacing={1}
             >
-              <img src={logo} alt="" height="50%" />
+              <img src={logo} alt="" height="80%" />
               <Typography
                 textTransform="uppercase"
                 fontSize={20}
@@ -176,7 +176,7 @@ export default function Navigation() {
             >
               <LightModeIcon fontSize="medium" sx={{ color: "#FFFFFF" }} />
 
-              <Badge badgeContent={4} color="secondary">
+              <Badge badgeContent={4} color="error">
                 <NotificationsIcon
                   fontSize="medium"
                   sx={{ color: "#FFFFFF" }}
@@ -201,9 +201,12 @@ export default function Navigation() {
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
+              <ChevronRightIcon sx={{ color: "#FFFFFF" }} />
             ) : (
-              <ChevronLeftIcon sx={{ color: "#FFFFFF" }} fontSize="medium" />
+              <ChevronLeftIcon
+                sx={{ color: "#FFFFFF" }}
+                fontSize="medium"
+              />
             )}
           </IconButton>
         </DrawerHeader>

@@ -16,11 +16,13 @@ import Navigation from "./components/FMS/Navigation/Navigation";
 import Dashboard from "./pages/FMS/Auth/Dashboard";
 import UsersList from "./pages/FMS/Auth/User/UsersList";
 import AssetsAllocated from "./pages/FMS/Assets/AssetsAllocated";
-// import { QueryClient } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
 
 function App() {
   const [theme, setTheme] = useState("light");
-  // const queryClient = new QueryClient()
+  const queryClient = new QueryClient();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
@@ -30,31 +32,34 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <CssBaseline />
-      <Router>
-        <Routes>
-          {/* Website Routes */}
-          <Route path="/" element={<DesktopNavigation />}>
-            <Route path="/" element={<Home />} index />
-            <Route path="/home" element={<Home />} index />
-            <Route path="/vacancies" element={<Vacancies />} />
-            <Route path="/vacancies/:id" element={<VacancyDetails />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/fassetprogrammes" element={<FassetProgrammes />} />
-            <Route path="/learners" element={<Learners />} />
-            <Route path="/contactus" element={<Home id="contact-us" />} />
-          </Route>
-          {/* Auth Routes */}
-          <Route path="/login" element={<LoginUser />} />
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Routes>
+            {/* Website Routes */}
+            <Route path="/" element={<DesktopNavigation />}>
+              <Route path="/" element={<Home />} index />
+              <Route path="/home" element={<Home />} index />
+              <Route path="/vacancies" element={<Vacancies />} />
+              <Route path="/vacancies/:id" element={<VacancyDetails />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/fassetprogrammes" element={<FassetProgrammes />} />
+              <Route path="/learners" element={<Learners />} />
+              <Route path="/contactus" element={<Home id="contact-us" />} />
+            </Route>
+            {/* Auth Routes */}
+            <Route path="/login" element={<LoginUser />} />
 
-          {/* Content Management Routes */}
+            {/* Content Management Routes */}
 
-          <Route path="/fms" element={<Navigation />}>
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="users" element={<UsersList />} />
-            <Route path="assets" element={<AssetsAllocated />} />
-          </Route>
-        </Routes>
-      </Router>
+            <Route path="/fms" element={<Navigation />}>
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="users" element={<UsersList />} />
+              <Route path="assets" element={<AssetsAllocated />} />
+            </Route>
+          </Routes>
+        </Router>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }

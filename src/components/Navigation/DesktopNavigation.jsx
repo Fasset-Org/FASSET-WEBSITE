@@ -14,9 +14,6 @@ import TopLinksNavigation from "./TopLinksNavigation";
 const DesktopNavigation = () => {
   return (
     <Stack>
-      <Typography textAlign="center" color='red' fontSize={30}>
-        Not working on this, this weekend, preparing fot learners lol
-      </Typography>
       {/* <Stack
         height={40}
         direction="row"

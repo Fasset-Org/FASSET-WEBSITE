@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Stack, Typography } from "@mui/material";
+import { AppBar, Box, Button, Stack } from "@mui/material";
 import React from "react";
 // import logo from "../../images/square-logo.jpeg";
 import { Link, Outlet } from "react-router-dom";

@@ -18,6 +18,7 @@ import UsersList from "./pages/FMS/Auth/User/UsersList";
 import AssetsAllocated from "./pages/FMS/Assets/AssetsAllocated";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Downloads from "./pages/Downloads/Downloads";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
               <Route path="/fassetprogrammes" element={<FassetProgrammes />} />
               <Route path="/learners" element={<Learners />} />
               <Route path="/contactus" element={<Home id="contact-us" />} />
+              <Route path="/downloads" element={<Downloads />} />
             </Route>
             {/* Auth Routes */}
             <Route path="/login" element={<LoginUser />} />

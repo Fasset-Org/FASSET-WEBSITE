@@ -9,7 +9,7 @@ const TopLinksNavigation = () => {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      spacing={4}
+      spacing={2}
     >
       <Link>INVOICE MANAGEMENT</Link>
       <Link>ODOO LMIS</Link>

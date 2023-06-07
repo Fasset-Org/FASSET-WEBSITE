@@ -6,12 +6,10 @@ import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
 import WorkIcon from "@mui/icons-material/Work";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useNavigate } from "react-router-dom";
-import { QueryClient } from "@tanstack/react-query";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const queryClient = new QueryClient();
-  console.log(queryClient);
+
   return (
     <Stack>
       <Grid container spacing={6}>

@@ -23,6 +23,8 @@ import logo from "../../../images/white_logo.png";
 import { Outlet, useNavigate } from "react-router-dom";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect } from "react";
 
 const drawerWidth = 240;
 
@@ -96,6 +98,10 @@ export default function Navigation() {
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
 
+  const queryClient = useQueryClient();
+  const { data } = useQuery(["userInfo"]);
+  console.log(data)
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -103,6 +109,11 @@ export default function Navigation() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    const userInfo = JSON.parse(localStorage.getItem("user"));
+    userInfo && queryClient.setQueryData("userInfo", userInfo);
+  }, [queryClient]);
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -203,10 +214,7 @@ export default function Navigation() {
             {theme.direction === "rtl" ? (
               <ChevronRightIcon sx={{ color: "#FFFFFF" }} />
             ) : (
-              <ChevronLeftIcon
-                sx={{ color: "#FFFFFF" }}
-                fontSize="medium"
-              />
+              <ChevronLeftIcon sx={{ color: "#FFFFFF" }} fontSize="medium" />
             )}
           </IconButton>
         </DrawerHeader>

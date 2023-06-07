@@ -23,7 +23,7 @@ const WelcomeComponent = () => {
       >
         <Divider>
           <Typography
-            fontSize={40}
+            fontSize={30}
             fontWeight="bolder"
             textTransform="uppercase"
             fontFamily="Helvetica Neue"
@@ -46,7 +46,7 @@ const WelcomeComponent = () => {
             textAlign="center"
             fontFamily="Helvetica Neue"
             fontWeight="bolder"
-            fontSize={30}
+            fontSize={20}
             textTransform="uppercase"
             sx={{ color: "primary.main" }}
           >

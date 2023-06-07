@@ -4,19 +4,22 @@ const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#163683",
+      main: "#163683"
     },
     secondary: {
-      main: "#fff200",
+      main: "#fff200"
     },
     success: {
-      main: "#2ECC71",
+      main: "#2ECC71"
     },
     error: {
-      main: "#E74C3C",
+      main: "#a10e25"
     },
     warning: {
-      main: '#ffffcc'
+      main: "#ffffcc"
+    },
+    danger: {
+      main: "#a10e25"
     }
   },
   components: {
@@ -38,24 +41,24 @@ const lightTheme = createTheme({
 
         root: {
           borderRadius: 0,
-          zIndex: 0,
-        },
-      },
+          zIndex: 0
+        }
+      }
     },
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          color: "#FFFFFF",
-        },
-      },
+          color: "#FFFFFF"
+        }
+      }
     },
     MuiAppBar: {
       styleOverrides: {
         root: {
           backgroundColor: "transparent",
-          zIndex: 110,
-        },
-      },
+          zIndex: 110
+        }
+      }
     },
     MuiLink: {
       styleOverrides: {
@@ -64,27 +67,27 @@ const lightTheme = createTheme({
           "&:hover": {
             fontWeight: "bold",
             fontSize: "16px",
-            color: "#163683",
-          },
-        },
-      },
+            color: "#163683"
+          }
+        }
+      }
     },
     MuiTab: {
       styleOverrides: {
         root: {
-          textTransform: "none",
-        },
-      },
+          textTransform: "none"
+        }
+      }
     },
 
     MuiTabs: {
       styleOverrides: {
         root: {
           "& .MuiTabs-indicator": {
-            display: "none",
-          },
-        },
-      },
+            display: "none"
+          }
+        }
+      }
     },
     MuiTextField: {
       styleOverrides: {
@@ -92,57 +95,57 @@ const lightTheme = createTheme({
           [`& fieldset`]: {
             borderRadius: 0
           }
-        },
-      },
+        }
+      }
     },
     MuiDivider: {
       styleOverrides: {
         root: {
-          color: "rgba(22,54,131, 1)",
-        },
-      },
-    },
+          color: "rgba(22,54,131, 1)"
+        }
+      }
+    }
   },
   typography: {
-    fontFamily: "Helvetica Neue",
-  },
+    fontFamily: "Helvetica Neue"
+  }
 });
 
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#FFFFFF",
+      main: "#FFFFFF"
     },
     secondary: {
-      main: "#a6aa15",
+      main: "#a6aa15"
     },
     success: {
-      main: "#2ECC71",
+      main: "#2ECC71"
     },
     error: {
-      main: "#E74C3C",
+      main: "#E74C3C"
     },
     warning: {
-      main: "#F4D03F",
-    },
+      main: "#F4D03F"
+    }
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
           borderRadius: 0,
-          zIndex: 0,
-        },
-      },
+          zIndex: 0
+        }
+      }
     },
     MuiAppBar: {
       styleOverrides: {
         root: {
           backgroundColor: "transparent",
-          zIndex: 110,
-        },
-      },
+          zIndex: 110
+        }
+      }
     },
     MuiLink: {
       styleOverrides: {
@@ -151,33 +154,33 @@ const darkTheme = createTheme({
           fontWeight: "bold",
           "&:hover": {
             fontWeight: "bolder",
-            fontSize: "18px",
-          },
-        },
-      },
+            fontSize: "18px"
+          }
+        }
+      }
     },
     MuiTab: {
       styleOverrides: {
         root: {
           "&:hover": {
             color: "#a6aa15",
-            fontWeight: "bolder",
+            fontWeight: "bolder"
           },
-          textTransform: "none",
-        },
-      },
+          textTransform: "none"
+        }
+      }
     },
 
     MuiTabs: {
       styleOverrides: {
         root: {
           "& .MuiTabs-indicator": {
-            display: "none",
-          },
-        },
-      },
-    },
-  },
+            display: "none"
+          }
+        }
+      }
+    }
+  }
 });
 
 export { lightTheme, darkTheme };

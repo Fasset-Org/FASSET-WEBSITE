@@ -29,7 +29,7 @@ const TopContactNavigation = () => {
         >
           <ContactPhoneIcon sx={{ fontWeight: "bolder" }} />
 
-          <Typography fontWeight="bolder">Call Centre :</Typography>
+          <Typography>Call Centre :</Typography>
           <Typography>&nbsp;087 821 2680</Typography>
         </Typography>
         <Divider
@@ -48,7 +48,7 @@ const TopContactNavigation = () => {
         >
           <PhoneIcon sx={{ fontWeight: "bolder" }} />
 
-          <Typography fontWeight="bolder">Switchboard :</Typography>
+          <Typography>Switchboard :</Typography>
           <Typography>&nbsp;087 821 2680</Typography>
         </Typography>
         <Divider
@@ -64,9 +64,9 @@ const TopContactNavigation = () => {
           alignItems="center"
           spacing={1}
         >
-          <MailIcon sx={{ fontWeight: "bolder" }} />
+          <MailIcon />
 
-          <Typography fontWeight="bolder">Email :</Typography>
+          <Typography>Email :</Typography>
           <Typography>
             &nbsp;fassetcallcentre@fasset.org.za
           </Typography>

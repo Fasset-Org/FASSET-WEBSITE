@@ -85,7 +85,6 @@ const DesktopNavigation = () => {
               variant="contained"
               sx={{
                 fontSize: 13,
-                fontWeight: "bolder",
                 color: "#FFFFFF",
                 backgroundColor: "primary.dark"
                 // borderRadius: 1
@@ -94,36 +93,6 @@ const DesktopNavigation = () => {
               Fasset Assistant
             </Button>
           </Stack>
-          {/* <Stack
-            flex={1}
-            height="100%"
-            justifyContent="center"
-            alignItems="center"
-            padding={1}
-            direction="row"
-            spacing={2}
-            sx={{ "&:hover": { transform: "scale(1.1)" } }}
-          >
-            <img src={logo} alt="" height="90%" />
-            <Typography
-              fontSize={20}
-              textTransform="uppercase"
-              sx={{ textShadow: "2px 2px 2px #F5DF43" }}
-            >
-              Fasset
-            </Typography>
-          </Stack> */}
-          {/* <Stack
-            flex={2}
-            height="100%"
-            justifyContent="center"
-            alignItems="center"
-            spacing={1}
-            direction="row"
-          >
-            
-            
-          </Stack> */}
         </Stack>
       </AppBar>
       <Box flex={1}>

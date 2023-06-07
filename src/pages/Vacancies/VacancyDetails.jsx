@@ -26,7 +26,7 @@ const VacancyDetails = () => {
   ];
 
   return (
-    <Stack direction="row">
+    <Stack direction="row" px={4} py={2}>
       <Stack
         width={{ md: "70%", xs: "100%" }}
         // justifyContent="center"

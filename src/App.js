@@ -19,7 +19,7 @@ import AssetsAllocated from "./pages/FMS/Assets/AssetsAllocated";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Downloads from "./pages/Downloads/Downloads";
-
+import "./global.scss";
 
 function App() {
   const [theme, setTheme] = useState("light");

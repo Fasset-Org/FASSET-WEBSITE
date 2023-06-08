@@ -10,6 +10,7 @@ import LinksFooter from "../LinksFooter";
 import "./Navigation.scss";
 import TopContactNavigation from "./TopContactNavigation";
 import TopLinksNavigation from "./TopLinksNavigation";
+import logo from "../../images/white_logo.png";
 
 const DesktopNavigation = () => {
   return (
@@ -36,6 +37,13 @@ const DesktopNavigation = () => {
             flex={9}
             // border={1}
           >
+            <img
+              src={logo}
+              alt=""
+              height='100%'
+              width={70}
+              style={{ border: "1px solid #163683", padding: "10px" }}
+            />
             <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Home
             </Link>
@@ -68,7 +76,11 @@ const DesktopNavigation = () => {
             <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Resources
             </Link>
-            <Link to="/downloads" className="nav-link" style={{ cursor: "pointer" }}>
+            <Link
+              to="/downloads"
+              className="nav-link"
+              style={{ cursor: "pointer" }}
+            >
               Downloads
             </Link>
             <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>

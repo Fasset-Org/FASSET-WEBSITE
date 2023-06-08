@@ -31,7 +31,7 @@ const Home = ({ id }) => {
         Values
       </Typography>
 
-      <Stack direction="row" spacing={2} padding={2} border={1}>
+      <Stack direction="row" spacing={2} padding={2}>
         <ValueCard
           title="Professionalism And Accountability"
           definition={

@@ -4,7 +4,12 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-
+import WorkIcon from "@mui/icons-material/Work";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
+import EditRoadIcon from "@mui/icons-material/EditRoad";
+import CastForEducationIcon from "@mui/icons-material/CastForEducation";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+// import ChooseACareer from "../../components/Learners/ChooseACareer";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -17,7 +22,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 3 }} {...other}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -51,7 +56,7 @@ const Learners = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        height: 400
+        flexDirection: 'row'
       }}
     >
       <Tabs
@@ -60,22 +65,43 @@ const Learners = () => {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: "divider", width: 200 }}
+        sx={{ borderRight: 1, borderColor: "divider",}}
       >
-        <Tab label="Item One" {...a11yProps(0)} />
-        <Tab label="Item Two" {...a11yProps(1)} />
-        <Tab label="Item Three" {...a11yProps(2)} />
-        <Tab label="Item Four" {...a11yProps(3)} />
-        <Tab label="Item Five" {...a11yProps(4)} />
-        <Tab label="Item Six" {...a11yProps(5)} />
-        <Tab label="Item Seven" {...a11yProps(6)} />
-        <Tab label="Item Eight" {...a11yProps(7)} />
-        <Tab label="Item Nine" {...a11yProps(8)} />
-        <Tab label="Item Ten" {...a11yProps(9)} />
-        <Tab label="Item Eleven" {...a11yProps(10)} />
-        <Tab label="Item Twelve" {...a11yProps(11)} />
-        <Tab label="Item Thirteen" {...a11yProps(12)} />
-        <Tab label="Item Fourteen" {...a11yProps(13)} />
+        <Tab
+          label="Choose a career in our sector"
+          icon={<WorkIcon />}
+          iconPosition="start"
+          {...a11yProps(0)}
+          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+        />
+        <Tab
+          label="Scarce Skills"
+          icon={<AcUnitIcon />}
+          iconPosition="start"
+          {...a11yProps(1)}
+          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+        />
+        <Tab
+          label="Career Guide Booklet"
+          icon={<EditRoadIcon />}
+          iconPosition="start"
+          {...a11yProps(2)}
+          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+        />
+        <Tab
+          label="Bursary"
+          icon={<CastForEducationIcon />}
+          iconPosition="start"
+          {...a11yProps(3)}
+          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+        />
+        <Tab
+          label="Career Portal"
+          icon={<AutoAwesomeIcon />}
+          iconPosition="start"
+          {...a11yProps(4)}
+          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+        />
       </Tabs>
       <TabPanel value={value} index={0}>
         Item One
@@ -91,33 +117,6 @@ const Learners = () => {
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Five
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Six
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven
-      </TabPanel>
-      <TabPanel value={value} index={7}>
-        Item Eight
-      </TabPanel>
-      <TabPanel value={value} index={8}>
-        Item Nine
-      </TabPanel>
-      <TabPanel value={value} index={9}>
-        Item Ten
-      </TabPanel>
-      <TabPanel value={value} index={10}>
-        Item Eleven
-      </TabPanel>
-      <TabPanel value={value} index={11}>
-        Item Twelve
-      </TabPanel>
-      <TabPanel value={value} index={12}>
-        Item Thirteen
-      </TabPanel>
-      <TabPanel value={value} index={13}>
-        Item Fourteen
       </TabPanel>
     </Box>
   );

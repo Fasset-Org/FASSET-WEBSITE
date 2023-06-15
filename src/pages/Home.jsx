@@ -8,6 +8,7 @@ import banner3 from "../images/sigmund-LCun3uxh-z0-unsplash.jpg";
 import banner4 from "../images/gallery-images/Nkandla.jpg";
 import Slideshow from "../components/SlideShow";
 import ValueCard from "../components/ValueCard";
+import FassetAssistant from "../components/FassetAssistant";
 
 const Home = ({ id }) => {
   const images2 = [banner1, banner2, banner3, banner4];
@@ -59,6 +60,9 @@ const Home = ({ id }) => {
           definition="We Continuously innovate and improve to add value to all our stakeholders. The Work of Setas"
         />
         <LatestNews />
+      </Stack>
+      <Stack>
+        <FassetAssistant />
       </Stack>
     </Stack>
   );

@@ -7,6 +7,7 @@ import {
   IconButton,
   List,
   ListItem,
+  Paper,
   Stack,
   Typography
 } from "@mui/material";
@@ -102,7 +103,7 @@ const AboutInfo = () => {
             Our Values
           </Typography>
         </Stack>
-        <Grid container mt={2}>
+        <Grid container mt={2} spacing={2}>
           <Grid item md={2}></Grid>
           <Grid
             item
@@ -111,15 +112,14 @@ const AboutInfo = () => {
             component={Stack}
             justifyContent="center"
             alignItems="center"
-            padding={2}
           >
             <Stack
               justifyContent="center"
               alignItems="center"
               width="100%"
               height={200}
-              // component={Card}
-              padding={2}
+              component={Paper}
+              p={2}
             >
               <Typography
                 textAlign="center"
@@ -131,7 +131,7 @@ const AboutInfo = () => {
               >
                 Professionalism And Accountability
               </Typography>
-              <Typography textAlign="center">
+              <Typography textAlign="center" padding={2} fontSize={14}>
                 We are a high-performance, professional team; we strive for
                 excellence through hard work and by taking responsibility and
                 being accountable within an accepted and agreed code of conduct.
@@ -142,7 +142,6 @@ const AboutInfo = () => {
             item
             xs={12}
             md={4}
-            padding={2}
             component={Stack}
             justifyContent="center"
             alignItems="center"
@@ -150,10 +149,10 @@ const AboutInfo = () => {
             <Stack
               justifyContent="center"
               alignItems="center"
-              padding={2}
               width="100%"
               height={200}
-              // component={Card}
+              component={Paper}
+              p={2}
             >
               <Typography
                 textAlign="center"
@@ -165,7 +164,7 @@ const AboutInfo = () => {
               >
                 Valuing People
               </Typography>
-              <Typography textAlign="center">
+              <Typography textAlign="center" padding={2}>
                 We strive to create a motivating and supportive culture by
                 understanding, respecting, developing and valuing each other.
               </Typography>
@@ -176,7 +175,6 @@ const AboutInfo = () => {
             item
             xs={12}
             md={4}
-            padding={2}
             component={Stack}
             justifyContent="center"
             alignItems="center"
@@ -186,8 +184,8 @@ const AboutInfo = () => {
               alignItems="center"
               width="100%"
               height={200}
-              // component={Card}
-              padding={2}
+              component={Paper}
+              p={2}
             >
               <Typography
                 textAlign="center"
@@ -212,15 +210,14 @@ const AboutInfo = () => {
             component={Stack}
             justifyContent="center"
             alignItems="center"
-            padding={2}
           >
             <Stack
               justifyContent="center"
               alignItems="center"
-              padding={2}
               width="100%"
-              // component={Card}
+              component={Paper}
               height={200}
+              p={2}
             >
               <Typography
                 textAlign="center"
@@ -245,14 +242,13 @@ const AboutInfo = () => {
             component={Stack}
             justifyContent="center"
             alignItems="center"
-            padding={2}
           >
             <Stack
               justifyContent="center"
               alignItems="center"
-              padding={2}
-              // component={Card}
+              component={Paper}
               height={200}
+              p={2}
             >
               <Typography
                 textAlign="center"

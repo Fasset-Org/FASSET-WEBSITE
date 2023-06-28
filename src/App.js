@@ -1,5 +1,4 @@
 import { ThemeProvider } from "@emotion/react";
-import { darkTheme, lightTheme } from "./fassetTheme";
 import { CssBaseline } from "@mui/material";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
@@ -20,6 +19,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Downloads from "./pages/Downloads/Downloads";
 import "./global.scss";
+import Employers from "./pages/Employers/Employers";
+import { themeDark, themeLight } from "./fassetTheme";
+import SupplyChain from "./pages/SupplyChain/SupplyChain";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -31,7 +33,7 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === "light" ? themeLight : themeDark}>
       <CssBaseline />
       <QueryClientProvider client={queryClient}>
         <Router>
@@ -47,6 +49,8 @@ function App() {
               <Route path="/learners" element={<Learners />} />
               <Route path="/contactus" element={<Home id="contact-us" />} />
               <Route path="/downloads" element={<Downloads />} />
+              <Route path="/employers" element={<Employers />} />
+              <Route path="/scm" element={<SupplyChain />} />
             </Route>
             {/* Auth Routes */}
             <Route path="/login" element={<LoginUser />} />

@@ -1,15 +1,18 @@
-import React from "react";
+import * as React from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import ChooseACareer from "../../components/Learners/ChooseACareer";
 import WorkIcon from "@mui/icons-material/Work";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import EditRoadIcon from "@mui/icons-material/EditRoad";
 import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
-// import ChooseACareer from "../../components/Learners/ChooseACareer";
+import ScarceSkills from "../../components/Learners/ScarceSkills";
+import CareerPortal from "../../components/Learners/CareerPortal";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -20,9 +23,10 @@ function TabPanel(props) {
       id={`vertical-tabpanel-${index}`}
       aria-labelledby={`vertical-tab-${index}`}
       {...other}
+      style={{ width: "80%" }}
     >
       {value === index && (
-        <Box sx={{ p: 3 }} {...other}>
+        <Box sx={{ p: 3 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -56,7 +60,7 @@ const Learners = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        flexDirection: 'row'
+        minHeight: 450
       }}
     >
       <Tabs
@@ -64,8 +68,14 @@ const Learners = () => {
         variant="scrollable"
         value={value}
         onChange={handleChange}
-        aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: "divider",}}
+        textColor="secondary"
+        sx={{
+          borderRight: 1,
+          borderColor: "lightgray",
+          borderBottomRightRadius: 10,
+          borderTopRightRadius: 3,
+          backgroundColor: "primary.main"
+        }}
       >
         <Tab
           label="Choose a career in our sector"
@@ -104,22 +114,101 @@ const Learners = () => {
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Item One
+        <ChooseACareer />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <ScarceSkills />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        Career Guide PDF will be displayed and obviously have a download button
+        for downloading
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        About Fasset Bursary will be defined here and provide a link to the
+        bursary system
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item Five
+        <CareerPortal />
       </TabPanel>
     </Box>
   );
 };
+
+// return (
+//   <Box
+//     sx={{
+//       flexGrow: 1,
+//       bgcolor: "background.paper",
+//       display: "flex",
+//       flexDirection: "row",
+//       height: 400
+//     }}
+//   >
+//     <Tabs
+//       orientation="vertical"
+//       variant="scrollable"
+//       value={value}
+//       onChange={handleChange}
+//       aria-label="Vertical tabs example"
+//       // sx={{ borderRight: 1, borderColor: "divider",}}
+//       sx={{
+//         flexGrow: 1,
+//         bgcolor: "background.paper",
+//         display: "flex",
+//         // height: 224
+//       }}
+//     >
+//       <Tab
+//         label="Choose a career in our sector"
+//         icon={<WorkIcon />}
+//         iconPosition="start"
+//         {...a11yProps(0)}
+//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
+//       />
+//       <Tab
+//         label="Scarce Skills"
+//         icon={<AcUnitIcon />}
+//         iconPosition="start"
+//         {...a11yProps(1)}
+//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
+//       />
+//       <Tab
+// label="Career Guide Booklet"
+// icon={<EditRoadIcon />}
+// iconPosition="start"
+//         {...a11yProps(2)}
+//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
+//       />
+//       <Tab
+//         label="Bursary"
+//         icon={<CastForEducationIcon />}
+//         iconPosition="start"
+//         {...a11yProps(3)}
+//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
+//       />
+//       <Tab
+//         label="Career Portal"
+//         icon={<AutoAwesomeIcon />}
+//         iconPosition="start"
+//         {...a11yProps(4)}
+//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
+//       />
+//     </Tabs>
+//     <TabPanel value={value} index={0}>
+//       {/* <ChooseACareer /> */}
+//     </TabPanel>
+//     <TabPanel value={value} index={1}>
+//       Item Two
+//     </TabPanel>
+//     <TabPanel value={value} index={2}>
+//       Item Three
+//     </TabPanel>
+//     <TabPanel value={value} index={3}>
+//       Item Four
+//     </TabPanel>
+//     <TabPanel value={value} index={4}>
+//       Item Five
+//     </TabPanel>
+//   </Box>
 
 export default Learners;

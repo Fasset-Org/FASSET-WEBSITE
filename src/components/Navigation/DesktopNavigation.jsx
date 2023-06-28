@@ -1,17 +1,32 @@
-import { AppBar, Box, Button, Stack } from "@mui/material";
+import { AppBar, Box, Button, Stack, styled } from "@mui/material";
 import React from "react";
-// import logo from "../../images/square-logo.jpeg";
-import { Link, Outlet } from "react-router-dom";
-// import FacebookIcon from "@mui/icons-material/Facebook";
-// import TwitterIcon from "@mui/icons-material/Twitter";
-// import InstagramIcon from "@mui/icons-material/Instagram";
-// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { NavLink, Outlet } from "react-router-dom";
 import LinksFooter from "../LinksFooter";
-import "./Navigation.scss";
 import TopContactNavigation from "./TopContactNavigation";
 import TopLinksNavigation from "./TopLinksNavigation";
 
 const DesktopNavigation = () => {
+  const Link = styled(NavLink)({
+    color: "white",
+    fontFamily: "Gothic A1",
+    fontWeight: 700,
+    textTransform: "uppercase",
+    fontSize: 14,
+    padding: 8,
+    "&:hover": {
+      transform: "none",
+      backgroundColor: "#14a37f",
+      borderRadius: 8,
+      fontWeight: 'bolder'
+    },
+    "&.active": {
+      transform: "none",
+      backgroundColor: "#14a37f",
+      borderRadius: 8,
+      fontWeight: 'bolder'
+    }
+  });
+
   return (
     <Stack>
       <TopContactNavigation />
@@ -30,11 +45,10 @@ const DesktopNavigation = () => {
             height="100%"
             justifyContent="center"
             alignItems="center"
-            spacing={2}
+            spacing={1}
             direction="row"
             width="100%"
             flex={9}
-            // border={1}
           >
             {/* <img
               src={logo}
@@ -43,60 +57,21 @@ const DesktopNavigation = () => {
               width={70}
               style={{ border: "1px solid #163683", padding: "10px" }}
             /> */}
-            <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
-              Home
-            </Link>
-            <Link
-              to="/aboutus"
-              className="nav-link"
-              style={{ cursor: "pointer" }}
-            >
-              About Us
-            </Link>
-            <Link
-              to="/learners"
-              className="nav-link"
-              style={{ cursor: "pointer" }}
-            >
-              Learners
-            </Link>
-            <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
-              Employers
-            </Link>
-            <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
-              Professional Bodies
-            </Link>
+            <Link to="/home">Home</Link>
+            <Link to="/aboutus">About Us</Link>
+            <Link to="/learners">Learners</Link>
+            <Link to="/employers">Employers</Link>
+            <Link to="/home">Professional Bodies</Link>
             {/* <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Institutions
             </Link> */}
-            <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
-              Supply Chain
-            </Link>
-            <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
-              Resources
-            </Link>
-            <Link
-              to="/downloads"
-              className="nav-link"
-              style={{ cursor: "pointer" }}
-            >
-              Downloads
-            </Link>
-            <Link
-              to="/vacancies"
-              className="nav-link"
-              style={{ cursor: "pointer" }}
-            >
-              Vacancies
-            </Link>
+            <Link to="/scm">Supply Chain</Link>
+            <Link to="/home">Resources</Link>
+            <Link to="/downloads">Downloads</Link>
+            <Link to="/vacancies">Vacancies</Link>
             <Button
               variant="contained"
-              sx={{
-                fontSize: 13,
-                color: "#FFFFFF",
-                backgroundColor: "primary.dark"
-                // borderRadius: 1
-              }}
+              sx={{ backgroundColor: "primary.dark" }}
             >
               Fasset Assistant
             </Button>

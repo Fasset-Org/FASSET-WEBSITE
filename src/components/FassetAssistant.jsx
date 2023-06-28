@@ -1,4 +1,4 @@
-import { Button, IconButton, Stack, Typography } from "@mui/material";
+import { Button, IconButton, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import EventIcon from "@mui/icons-material/Event";
 import SupportIcon from "@mui/icons-material/Support";
@@ -20,7 +20,7 @@ const FassetAssistant = () => {
         Fasset Assistant
       </Typography>
       <Stack direction="row" spacing={2} justifyContent="center">
-        <Stack spacing={2}>
+        <Stack spacing={2} component={Paper} padding={2}>
           <IconButton>
             <EventIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
@@ -29,7 +29,7 @@ const FassetAssistant = () => {
           </Button>
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack spacing={2} component={Paper} padding={2}>
           <IconButton>
             <EventIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
@@ -38,7 +38,7 @@ const FassetAssistant = () => {
           </Button>
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack spacing={2} component={Paper} padding={2}>
           <IconButton>
             <SupportIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
@@ -47,7 +47,7 @@ const FassetAssistant = () => {
           </Button>
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack spacing={2} component={Paper} padding={2}>
           <IconButton>
             <HelpCenterIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
@@ -56,7 +56,7 @@ const FassetAssistant = () => {
           </Button>
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack spacing={2} component={Paper} padding={2}>
           <IconButton>
             <CastForEducationIcon
               fontSize="large"
@@ -68,7 +68,7 @@ const FassetAssistant = () => {
           </Button>
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack spacing={2} component={Paper} padding={2}>
           <IconButton>
             <EventRepeatIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>

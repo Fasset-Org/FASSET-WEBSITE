@@ -21,6 +21,10 @@ const Home = ({ id }) => {
         <WelcomeComponent />
       </Stack>
 
+      <Stack>
+        <FassetAssistant />
+      </Stack>
+
       <Typography
         fontSize={30}
         fontWeight="bolder"
@@ -61,9 +65,7 @@ const Home = ({ id }) => {
         />
         <LatestNews />
       </Stack>
-      <Stack>
-        <FassetAssistant />
-      </Stack>
+      
     </Stack>
   );
 };

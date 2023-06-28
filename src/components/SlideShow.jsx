@@ -1,15 +1,16 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import "./Navigation/tab.css";
 
 const Slideshow = ({ images, height }) => {
   return (
-    <Slide
+    <Fade
       autoplay={true}
       indicators={true}
       pauseOnHover={false}
       cssClass="slideshow"
+      arrows={false}
     >
       {images.map((slideImage, index) => (
         <div key={index}>
@@ -32,7 +33,7 @@ const Slideshow = ({ images, height }) => {
           </div>
         </div>
       ))}
-    </Slide>
+    </Fade>
   );
 };
 

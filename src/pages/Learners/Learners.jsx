@@ -73,8 +73,13 @@ const Learners = () => {
           borderRight: 1,
           borderColor: "lightgray",
           borderBottomRightRadius: 10,
-          borderTopRightRadius: 3,
           backgroundColor: "primary.main"
+        }}
+        TabIndicatorProps={{
+          sx: {
+            border: 3,
+            borderColor: "secondary.main"
+          }
         }}
       >
         <Tab
@@ -82,35 +87,35 @@ const Learners = () => {
           icon={<WorkIcon />}
           iconPosition="start"
           {...a11yProps(0)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", px: 4 }}
         />
         <Tab
           label="Scarce Skills"
           icon={<AcUnitIcon />}
           iconPosition="start"
           {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="Career Guide Booklet"
           icon={<EditRoadIcon />}
           iconPosition="start"
           {...a11yProps(2)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="Bursary"
           icon={<CastForEducationIcon />}
           iconPosition="start"
           {...a11yProps(3)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="Career Portal"
           icon={<AutoAwesomeIcon />}
           iconPosition="start"
           {...a11yProps(4)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
       </Tabs>
       <TabPanel value={value} index={0}>

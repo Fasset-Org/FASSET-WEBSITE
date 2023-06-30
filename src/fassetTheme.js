@@ -76,7 +76,6 @@ export const themeLight = createTheme({
       styleOverrides: {
         root: {
           textTransform: "none",
-          color: "#FFFFFF"
         }
       }
     },
@@ -120,7 +119,8 @@ export const themeLight = createTheme({
       '"Lucida"',
       '"Gothic A1"',
       '"Segoe UI Symbol"'
-    ].join(",")
+    ].join(","),
+    fontSize: 12
   }
 });
 
@@ -145,23 +145,7 @@ export const NeoBrutalism = createTheme({
         }
       }
     },
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          textTransform: "none"
-        }
-      }
-    },
-
-    MuiTabs: {
-      styleOverrides: {
-        root: {
-          "& .MuiTabs-indicator": {
-            display: "none"
-          }
-        }
-      }
-    }
+ 
   },
   palette: {
     mode: "light",

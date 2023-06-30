@@ -4,11 +4,11 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ChooseACareer from "../../components/Learners/ChooseACareer";
-import EditRoadIcon from "@mui/icons-material/EditRoad";
-import ScarceSkills from "../../components/Learners/ScarceSkills";
-import ToggleOnIcon from "@mui/icons-material/ToggleOn";
-import ToggleOffIcon from "@mui/icons-material/ToggleOff";
+import AdjustIcon from "@mui/icons-material/Adjust";
+import EditNoteIcon from "@mui/icons-material/EditNote";
+import ActiveTenders from "../../components/SupplyChain/ActiveTenders";
+import PastTenders from "../../components/SupplyChain/PastTenders";
+import CancelledTenders from "../../components/SupplyChain/CancelledTenders";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,7 +57,6 @@ const SupplyChain = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        maxHeight: 400
       }}
     >
       <Tabs
@@ -65,42 +64,57 @@ const SupplyChain = () => {
         variant="scrollable"
         value={value}
         onChange={handleChange}
-        aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: "lightgray" }}
+        textColor="secondary"
+        indicatorColor="secondary"
+        sx={{
+          borderRight: 1,
+          borderColor: "lightgray",
+          borderBottomRightRadius: 10,
+          backgroundColor: "primary.main",
+        }}
+        TabIndicatorProps={{
+          sx: {
+            border: 3,
+            borderColor: "secondary.main"
+          }
+        }}
       >
         <Tab
-          label="Active Tenders"
-          icon={
-            <ToggleOnIcon sx={{ color: "secondary.main" }} fontSize="large" />
-          }
+          label="Fasset Current Tenders"
+          icon={<AdjustIcon />}
           iconPosition="start"
           {...a11yProps(0)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF",
+            paddingX: 6
+          }}
         />
         <Tab
-          label="Past Tenders"
-          icon={<ToggleOffIcon fontSize="large" />}
+          label="Fasset Past Tenders"
+          icon={<EditNoteIcon />}
           iconPosition="start"
           {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
+
         <Tab
-          label="Cancelled Tenders"
-          icon={<EditRoadIcon />}
+          label="Fasset Candelled Tenders"
+          icon={<EditNoteIcon />}
           iconPosition="start"
-          {...a11yProps(2)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          {...a11yProps(1)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <ChooseACareer />
+        <ActiveTenders />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ScarceSkills />
+        <PastTenders />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Career Guide PDF will be displayed and obviously have a download button
-        for downloading
+        <CancelledTenders />
       </TabPanel>
     </Box>
   );

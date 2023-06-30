@@ -4,14 +4,16 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ChooseACareer from "../../components/Learners/ChooseACareer";
-import AdjustIcon from '@mui/icons-material/Adjust';
-import EditNoteIcon from '@mui/icons-material/EditNote';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import PixIcon from '@mui/icons-material/Pix';
-import ModelTrainingIcon from '@mui/icons-material/ModelTraining';
-import ScarceSkills from "../../components/Learners/ScarceSkills";
-import CareerPortal from "../../components/Learners/CareerPortal";
+import AdjustIcon from "@mui/icons-material/Adjust";
+import EditNoteIcon from "@mui/icons-material/EditNote";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import PixIcon from "@mui/icons-material/Pix";
+import ModelTrainingIcon from "@mui/icons-material/ModelTraining";
+import SkillsProgramme from "../../components/Employers/SkillsProgramme";
+import WorkbasedProgramme from "../../components/Employers/WorkbasedProgramme";
+import MandatoryGrants from "../../components/Employers/MandatoryGrants";
+import DiscretionaryGrants from "../../components/Employers/DiscretionaryGrants";
+import TrainingProviders from "../../components/Employers/TrainingProviders";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,7 +62,6 @@ const Employers = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        height: 450,
       }}
     >
       <Tabs
@@ -69,12 +70,18 @@ const Employers = () => {
         value={value}
         onChange={handleChange}
         textColor="secondary"
+        indicatorColor="secondary"
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
           borderBottomRightRadius: 10,
-          borderTopRightRadius: 3,
           backgroundColor: "primary.main"
+        }}
+        TabIndicatorProps={{
+          sx: {
+            border: 3,
+            borderColor: "secondary.main"
+          }
         }}
       >
         <Tab
@@ -82,53 +89,51 @@ const Employers = () => {
           icon={<AdjustIcon />}
           iconPosition="start"
           {...a11yProps(0)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF",  }}
         />
         <Tab
-          label="TVET Workbased Programme "
+          label="TVET Workbased Programme"
           icon={<EditNoteIcon />}
           iconPosition="start"
           {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", px: 4 }}
         />
         <Tab
           label="Mandatory Grants"
           icon={<AccountBalanceIcon />}
           iconPosition="start"
           {...a11yProps(2)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="Discretionary Grants"
           icon={<PixIcon />}
           iconPosition="start"
           {...a11yProps(3)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="Training Providers "
           icon={<ModelTrainingIcon />}
           iconPosition="start"
           {...a11yProps(4)}
-          sx={{ borderBottom: 1, borderColor: "lightgray" }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <ChooseACareer />
+        <SkillsProgramme />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ScarceSkills />
+        <WorkbasedProgramme />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Career Guide PDF will be displayed and obviously have a download button
-        for downloading
+        <MandatoryGrants />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        About Fasset Bursary will be defined here and provide a link to the
-        bursary system
+        <DiscretionaryGrants />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <CareerPortal />
+        <TrainingProviders />
       </TabPanel>
     </Box>
   );

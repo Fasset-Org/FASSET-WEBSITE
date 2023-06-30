@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Vacancies from "./pages/Vacancies/Vacancies";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import FassetProgrammes from "./pages/FassetProgrammes/FassetProgrammes";
 import VacancyDetails from "./pages/Vacancies/VacancyDetails";
 import "./App.css";
 import DesktopNavigation from "./components/Navigation/DesktopNavigation";
@@ -22,6 +21,8 @@ import "./global.scss";
 import Employers from "./pages/Employers/Employers";
 import { themeDark, themeLight } from "./fassetTheme";
 import SupplyChain from "./pages/SupplyChain/SupplyChain";
+import Resources from "./pages/Resources/Resources";
+import ProfessionalBodies from "./pages/ProfessionalBodies/ProfessionalBodies";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -45,12 +46,16 @@ function App() {
               <Route path="/vacancies" element={<Vacancies />} />
               <Route path="/vacancies/:id" element={<VacancyDetails />} />
               <Route path="/aboutus" element={<AboutUs />} />
-              <Route path="/fassetprogrammes" element={<FassetProgrammes />} />
               <Route path="/learners" element={<Learners />} />
               <Route path="/contactus" element={<Home id="contact-us" />} />
               <Route path="/downloads" element={<Downloads />} />
               <Route path="/employers" element={<Employers />} />
               <Route path="/scm" element={<SupplyChain />} />
+              <Route
+                path="/professionalBodies"
+                element={<ProfessionalBodies />}
+              />
+              <Route path="/resources" element={<Resources />} />
             </Route>
             {/* Auth Routes */}
             <Route path="/login" element={<LoginUser />} />

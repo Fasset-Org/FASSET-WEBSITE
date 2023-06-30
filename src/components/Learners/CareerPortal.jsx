@@ -45,8 +45,8 @@ const CareerPortal = () => {
       </Typography>
       <Typography textAlign="justify">
         If you are interested in learning more about how FASSET can help you
-        achieve more in your career, please click{" "}
-        <Link sx={{ cursor: "pointer" }}>here</Link> to register on our career
+        achieve more in your career, please  
+         &nbsp;<Link sx={{ cursor: "pointer" }}>Click here</Link> to register on our career
         portal
       </Typography>
     </Stack>

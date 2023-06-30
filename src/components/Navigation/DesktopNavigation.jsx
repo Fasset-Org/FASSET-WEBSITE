@@ -33,7 +33,7 @@ const DesktopNavigation = () => {
       <TopLinksNavigation />
       <AppBar
         position="sticky"
-        sx={{ height: 64, backgroundColor: "primary.main" }}
+        sx={{ height: 80, backgroundColor: "primary.main" }}
       >
         <Stack
           width="100%"
@@ -61,12 +61,12 @@ const DesktopNavigation = () => {
             <Link to="/aboutus">About Us</Link>
             <Link to="/learners">Learners</Link>
             <Link to="/employers">Employers</Link>
-            <Link to="/home">Professional Bodies</Link>
+            <Link to="/professionalBodies">Professional Bodies</Link>
             {/* <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Institutions
             </Link> */}
             <Link to="/scm">Supply Chain</Link>
-            <Link to="/home">Resources</Link>
+            <Link to="/resources">Resources</Link>
             <Link to="/downloads">Downloads</Link>
             <Link to="/vacancies">Vacancies</Link>
             <Button

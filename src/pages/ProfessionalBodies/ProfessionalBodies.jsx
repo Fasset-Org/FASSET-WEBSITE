@@ -6,8 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import EditNoteIcon from "@mui/icons-material/EditNote";
-import SkillsProgramme from "../../components/Employers/SkillsProgramme";
-import WorkbasedProgramme from "../../components/Employers/WorkbasedProgramme";
+import AboutFassetLearnerships from "../../components/ProfessionalBodies/AboutFassetLearnerships";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,8 +54,7 @@ const ProfessionalBodies = () => {
       sx={{
         flexGrow: 1,
         bgcolor: "background.paper",
-        display: "flex",
-        height: 450
+        display: "flex"
       }}
     >
       <Tabs
@@ -70,7 +68,8 @@ const ProfessionalBodies = () => {
           borderRight: 1,
           borderColor: "lightgray",
           borderBottomRightRadius: 10,
-          backgroundColor: "primary.main"
+          backgroundColor: "primary.main",
+          minHeight: 450
         }}
         TabIndicatorProps={{
           sx: {
@@ -84,7 +83,12 @@ const ProfessionalBodies = () => {
           icon={<AdjustIcon />}
           iconPosition="start"
           {...a11yProps(0)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", px: 4 }}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF",
+            px: 4
+          }}
         />
         <Tab
           label="Lifelong Learning Events"
@@ -95,10 +99,10 @@ const ProfessionalBodies = () => {
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <SkillsProgramme />
+        <AboutFassetLearnerships />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <WorkbasedProgramme />
+        Lifelong Events
       </TabPanel>
     </Box>
   );

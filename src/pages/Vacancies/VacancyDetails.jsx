@@ -40,7 +40,6 @@ const VacancyDetails = () => {
           width="100%"
           direction="row"
           justifyContent="space-between"
-          sx={{ backgroundColor: "background.paper" }}
           // border={1}
         >
           <Typography

@@ -6,8 +6,9 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import EditNoteIcon from "@mui/icons-material/EditNote";
-import SkillsProgramme from "../../components/Employers/SkillsProgramme";
-import WorkbasedProgramme from "../../components/Employers/WorkbasedProgramme";
+import Downloads from "../../components/Resources/Downloads";
+import Research from "../../components/Resources/Research";
+import AnnualReports from "../../components/Resources/AnnualReports";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,7 +57,7 @@ const Resources = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        height: 450
+        minHeight: 450
       }}
     >
       <Tabs
@@ -84,7 +85,12 @@ const Resources = () => {
           icon={<AdjustIcon />}
           iconPosition="start"
           {...a11yProps(0)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", paddingX: 10 }}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF",
+            paddingX: 10
+          }}
         />
         <Tab
           label="Research"
@@ -103,13 +109,16 @@ const Resources = () => {
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <SkillsProgramme />
+        <Downloads />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <WorkbasedProgramme />
+        <Research />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <AnnualReports />
       </TabPanel>
     </Box>
   );
 };
 
-export default Resources
+export default Resources;

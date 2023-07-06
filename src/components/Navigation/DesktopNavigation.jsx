@@ -15,13 +15,13 @@ const DesktopNavigation = () => {
     padding: 8,
     "&:hover": {
       transform: "none",
-      backgroundColor: "#14a37f",
+      backgroundColor: "#a6aa15",
       borderRadius: 8,
       fontWeight: 'bolder'
     },
     "&.active": {
       transform: "none",
-      backgroundColor: "#14a37f",
+      backgroundColor: "#a6aa15",
       borderRadius: 8,
       fontWeight: 'bolder'
     }
@@ -65,9 +65,9 @@ const DesktopNavigation = () => {
             {/* <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Institutions
             </Link> */}
-            <Link to="/scm">Supply Chain</Link>
+            <Link to="/tenders">Supply Chain</Link>
             <Link to="/resources">Resources</Link>
-            <Link to="/downloads">Downloads</Link>
+            {/* <Link to="/downloads">Downloads</Link> */}
             <Link to="/vacancies">Vacancies</Link>
             <Button
               variant="contained"

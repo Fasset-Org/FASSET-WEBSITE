@@ -88,18 +88,25 @@ export const themeLight = createTheme({
           }
         }
       }
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          color: '#FFFFFF'
+        },
+      }
     }
   },
   palette: {
     mode: "light",
     primary: {
       light: "#3a9bfb",
-      main: "#0f4c81",
+      main: "#163683",
       info: "#333",
       contrastText: "#ffffff"
     },
     secondary: {
-      main: "#14a37f",
+      main: "#a6aa15",
       contrastText: "#ffffff"
     },
     background: {

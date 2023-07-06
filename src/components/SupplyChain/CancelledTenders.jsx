@@ -12,7 +12,8 @@ import {
   Stack,
   TableFooter,
   TablePagination,
-  Tooltip
+  Tooltip,
+  Typography
 } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DownloadIcon from "@mui/icons-material/Download";
@@ -54,8 +55,17 @@ const CancelledTenders = () => {
   };
 
   return (
-    <Stack paddingX={10}>
-      <TableContainer component={Paper}>
+    <Stack spacing={2}>
+      <Typography
+        textAlign="center"
+        fontFamily="Helvetica Neue"
+        fontWeight="bolder"
+        fontSize={20}
+        sx={{ color: "primary.main" }}
+      >
+        Current Tenders
+      </Typography>
+      <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>
             <TableRow>
@@ -69,7 +79,7 @@ const CancelledTenders = () => {
                 align="center"
                 sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
               >
-                Tender Code
+                Tender Reference
               </TableCell>
               <TableCell
                 align="center"

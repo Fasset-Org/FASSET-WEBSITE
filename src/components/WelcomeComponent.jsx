@@ -26,7 +26,7 @@ const WelcomeComponent = () => {
             fontSize={30}
             fontWeight="bolder"
             textTransform="uppercase"
-            fontFamily="Helvetica Neue"
+            sx={{ color: "primary.main" }}
           >
             Welcome to fasset
           </Typography>

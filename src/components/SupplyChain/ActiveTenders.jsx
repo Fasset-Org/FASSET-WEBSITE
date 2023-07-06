@@ -12,11 +12,13 @@ import {
   Stack,
   TableFooter,
   TablePagination,
-  Tooltip
+  Tooltip,
+  Typography
 } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DownloadIcon from "@mui/icons-material/Download";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
+import { useNavigate } from "react-router-dom";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -41,6 +43,7 @@ const rows = [
 ];
 
 const ActiveTenders = () => {
+  const navigate = useNavigate();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
@@ -54,8 +57,56 @@ const ActiveTenders = () => {
   };
 
   return (
-    <Stack paddingX={10}>
-      <TableContainer component={Paper}>
+    <Stack spacing={2}>
+      <Typography
+        textAlign="center"
+        fontFamily="Helvetica Neue"
+        fontWeight="bolder"
+        fontSize={20}
+        sx={{ color: "primary.main" }}
+      >
+        Current Tenders
+      </Typography>
+      {/* <Grid container spacing={2}>
+        <Grid item xs={12} md={4}>
+          <Stack
+            component={Paper}
+            height={300}
+            width="100%"
+            spacing={1}
+          >
+            <Stack
+              height={40}
+              width="100%"
+              sx={{ backgroundColor: "primary.main", color: "#FFFFFF" }}
+              justifyContent="center"
+              alignItems="center"
+            >
+              NETWORK UPGRADE
+            </Stack>
+
+            <Stack justifyContent="center" alignItems="center">
+              <Typography fontSize={12} fontWeight="bolder">
+                FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23
+              </Typography>
+            </Stack>
+          </Stack>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Stack component={Paper} height={300} width="100%"></Stack>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Stack component={Paper} height={300} width="100%"></Stack>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Stack component={Paper} height={300} width="100%"></Stack>
+        </Grid>
+      </Grid> */}
+
+      <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>
             <TableRow>
@@ -69,7 +120,7 @@ const ActiveTenders = () => {
                 align="center"
                 sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
               >
-                Tender Code
+                Tender Reference
               </TableCell>
               <TableCell
                 align="center"
@@ -125,7 +176,10 @@ const ActiveTenders = () => {
                 <TableCell align="center" scope="row">
                   <Stack direction="row">
                     <Tooltip title="View">
-                      <IconButton color="secondary">
+                      <IconButton
+                        color="secondary"
+                        onClick={() => navigate(`/tenders/${1}`)}
+                      >
                         <VisibilityIcon />
                       </IconButton>
                     </Tooltip>

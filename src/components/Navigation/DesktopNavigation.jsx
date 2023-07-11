@@ -29,6 +29,7 @@ const DesktopNavigation = () => {
 
   return (
     <Stack>
+      <Typography sx={{color: 'red'}}>Small change</Typography>
       <TopContactNavigation />
       <TopLinksNavigation />
       <AppBar

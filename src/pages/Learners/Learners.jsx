@@ -62,6 +62,7 @@ const Learners = () => {
         display: "flex",
         minHeight: 450
       }}
+      position='sticky'
     >
       <Tabs
         orientation="vertical"

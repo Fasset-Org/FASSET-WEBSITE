@@ -17,19 +17,21 @@ const DesktopNavigation = () => {
       transform: "none",
       backgroundColor: "#a6aa15",
       borderRadius: 8,
-      fontWeight: 'bolder'
+      fontWeight: "bolder"
     },
     "&.active": {
       transform: "none",
       backgroundColor: "#a6aa15",
       borderRadius: 8,
-      fontWeight: 'bolder'
+      fontWeight: "bolder"
     }
   });
 
   return (
     <Stack>
-      <Typography sx={{color: 'red'}}>Small change</Typography>
+      <Typography sx={{ color: "red", textAlign: "center", fontSize: 20 }}>
+        Small change
+      </Typography>
       <TopContactNavigation />
       <TopLinksNavigation />
       <AppBar

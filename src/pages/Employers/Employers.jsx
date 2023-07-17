@@ -88,6 +88,7 @@ const Employers = () => {
           label="Skills Programmes"
           icon={<AdjustIcon />}
           iconPosition="start"
+          
           {...a11yProps(0)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF",  }}
         />
@@ -96,7 +97,7 @@ const Employers = () => {
           icon={<EditNoteIcon />}
           iconPosition="start"
           {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", px: 4 }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", }}
         />
         <Tab
           label="Mandatory Grants"

@@ -89,7 +89,6 @@ const Resources = () => {
             borderBottom: 1,
             borderColor: "lightgray",
             color: "#FFFFFF",
-            paddingX: 10
           }}
         />
         <Tab

@@ -62,7 +62,7 @@ const Learners = () => {
         display: "flex",
         minHeight: 450
       }}
-      position='sticky'
+      position="sticky"
     >
       <Tabs
         orientation="vertical"
@@ -78,7 +78,7 @@ const Learners = () => {
         }}
         TabIndicatorProps={{
           sx: {
-            border: 3,
+            borderBottom: 1,
             borderColor: "secondary.main"
           }
         }}
@@ -88,14 +88,23 @@ const Learners = () => {
           icon={<WorkIcon />}
           iconPosition="start"
           {...a11yProps(0)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", px: 4 }}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF"
+          }}
         />
         <Tab
           label="Scarce Skills"
           icon={<AcUnitIcon />}
           iconPosition="start"
           {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF",
+            textAlign: "start"
+          }}
         />
         <Tab
           label="Career Guide Booklet"

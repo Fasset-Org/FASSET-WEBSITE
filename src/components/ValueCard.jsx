@@ -3,7 +3,7 @@ import React from "react";
 
 const ValueCard = ({ title, definition }) => {
   return (
-    <Card className="v-card" sx={{ height: 250, width: "20%" }}>
+    <Card className="v-card" sx={{ minHeight: 260, width: "20%", }}>
       <Stack height='100%' sx={{ position: "relative" }}>
         <Stack
           height={210}

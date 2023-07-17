@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Stack, Typography, styled } from "@mui/material";
+import { AppBar, Box, Button, Stack, styled } from "@mui/material";
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import LinksFooter from "../LinksFooter";
@@ -29,9 +29,6 @@ const DesktopNavigation = () => {
 
   return (
     <Stack>
-      <Typography sx={{ color: "red", textAlign: "center", fontSize: 20 }}>
-        Small change
-      </Typography>
       <TopContactNavigation />
       <TopLinksNavigation />
       <AppBar

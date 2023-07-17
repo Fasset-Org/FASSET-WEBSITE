@@ -86,8 +86,7 @@ const ProfessionalBodies = () => {
           sx={{
             borderBottom: 1,
             borderColor: "lightgray",
-            color: "#FFFFFF",
-            px: 4
+            color: "#FFFFFF"
           }}
         />
         <Tab

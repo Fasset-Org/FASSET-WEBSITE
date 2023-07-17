@@ -75,7 +75,7 @@ export const themeLight = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
-          textTransform: "none",
+          textTransform: "none"
         }
       }
     },
@@ -85,15 +85,19 @@ export const themeLight = createTheme({
         root: {
           "& .MuiTabs-indicator": {
             display: "none"
-          }
+          },
+          "& .MuiButtonBase-root": {
+            justifyContent: "start"
+          },
+          width: 250
         }
       }
     },
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          color: '#FFFFFF'
-        },
+          color: "#FFFFFF"
+        }
       }
     }
   },
@@ -151,8 +155,7 @@ export const NeoBrutalism = createTheme({
           borderRadius: 8
         }
       }
-    },
- 
+    }
   },
   palette: {
     mode: "light",

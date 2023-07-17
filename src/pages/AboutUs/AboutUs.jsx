@@ -1,25 +1,152 @@
-import React from "react";
-import { Stack } from "@mui/material";
-import WelcomeComponent from "../../components/WelcomeComponent";
-import AboutBanner from "../../components/AboutUs/AboutBanner";
-import AboutInfo from "../../components/AboutUs/AboutInfo";
-import OurMandate from "../../components/AboutUs/OurMandate";
-import Executives from "../../components/AboutUs/Executives";
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import ScarceSkills from "../../components/Learners/ScarceSkills";
+import CareerPortal from "../../components/Learners/CareerPortal";
+import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
+import RoomPreferencesIcon from "@mui/icons-material/RoomPreferences";
+import Diversity3Icon from "@mui/icons-material/Diversity3";
+import PolicyIcon from "@mui/icons-material/Policy";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import WhoWeAre from "../../components/AboutUs/WhoWeAre";
 
-const AboutUs = () => {
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
   return (
-    <Stack spacing={2}>
-      {/* <WhoWeAre />
-      <OurMandate /> */}
-      <AboutBanner />
-      <Stack px={15} spacing={2}>
-        <WelcomeComponent />
-        <AboutInfo />
-        <OurMandate />
-        <Executives />
-      </Stack>
-    </Stack>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
+      {...other}
+      style={{ width: "80%" }}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired
+};
+
+function a11yProps(index) {
+  return {
+    id: `vertical-tab-${index}`,
+    "aria-controls": `vertical-tabpanel-${index}`
+  };
+}
+
+const Learners = () => {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box
+      sx={{
+        flexGrow: 1,
+        bgcolor: "background.paper",
+        display: "flex",
+        minHeight: 450
+      }}
+      position="sticky"
+    >
+      <Tabs
+        orientation="vertical"
+        variant="scrollable"
+        value={value}
+        onChange={handleChange}
+        textColor="secondary"
+        sx={{
+          borderRight: 1,
+          borderColor: "lightgray",
+          borderBottomRightRadius: 10,
+          backgroundColor: "primary.main"
+        }}
+        TabIndicatorProps={{
+          sx: {
+            borderBottom: 1,
+            borderColor: "secondary.main"
+          }
+        }}
+      >
+        <Tab
+          label="About Fasset"
+          icon={<AssignmentIndIcon />}
+          iconPosition="start"
+          {...a11yProps(0)}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF"
+          }}
+        />
+        <Tab
+          label="Our Mandate"
+          icon={<RoomPreferencesIcon />}
+          iconPosition="start"
+          {...a11yProps(1)}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF",
+            textAlign: "start"
+          }}
+        />
+        <Tab
+          label="Board & Committees"
+          icon={<Diversity3Icon />}
+          iconPosition="start"
+          {...a11yProps(2)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="Fasset Construction"
+          icon={<ConstructionIcon />}
+          iconPosition="start"
+          {...a11yProps(3)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="Fasset Policies"
+          icon={<PolicyIcon />}
+          iconPosition="start"
+          {...a11yProps(4)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+      </Tabs>
+      <TabPanel value={value} index={0}>
+        <WhoWeAre />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <ScarceSkills />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        Career Guide PDF will be displayed and obviously have a download button
+        for downloading
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        About Fasset Bursary will be defined here and provide a link to the
+        bursary system
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <CareerPortal />
+      </TabPanel>
+    </Box>
   );
 };
 
-export default AboutUs;
+export default Learners;

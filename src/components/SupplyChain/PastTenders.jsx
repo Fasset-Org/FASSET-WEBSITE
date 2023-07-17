@@ -57,7 +57,6 @@ const PastTenders = () => {
   return (
     <Stack spacing={2} justifyContent="center">
       <Typography
-        textAlign="center"
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}

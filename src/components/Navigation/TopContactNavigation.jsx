@@ -9,7 +9,7 @@ const TopContactNavigation = () => {
     <Stack height={40} direction="row" justifyContent="center">
       <Stack
         height="100%"
-        width="80%"
+        width="100%"
         sx={{
           backgroundColor: "primary.main",
           color: "#FFFFFF"

@@ -33,7 +33,7 @@ const DesktopNavigation = () => {
       <TopLinksNavigation />
       <AppBar
         position="sticky"
-        sx={{ height: 80, backgroundColor: "primary.main" }}
+        sx={{ height: 65, backgroundColor: "primary.main" }}
       >
         <Stack
           width="100%"

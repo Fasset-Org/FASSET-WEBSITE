@@ -4,7 +4,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ScarceSkills from "../../components/Learners/ScarceSkills";
 import CareerPortal from "../../components/Learners/CareerPortal";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import RoomPreferencesIcon from "@mui/icons-material/RoomPreferences";
@@ -12,6 +11,8 @@ import Diversity3Icon from "@mui/icons-material/Diversity3";
 import PolicyIcon from "@mui/icons-material/Policy";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import WhoWeAre from "../../components/AboutUs/WhoWeAre";
+import OurMandate from "../../components/AboutUs/OurMandate";
+import BoardMembers from "../../components/AboutUs/BoardMembers";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -107,24 +108,31 @@ const Learners = () => {
           }}
         />
         <Tab
-          label="Board & Committees"
+          label="Board"
           icon={<Diversity3Icon />}
           iconPosition="start"
           {...a11yProps(2)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
+          label="Committees"
+          icon={<Diversity3Icon />}
+          iconPosition="start"
+          {...a11yProps(3)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
           label="Fasset Construction"
           icon={<ConstructionIcon />}
           iconPosition="start"
-          {...a11yProps(3)}
+          {...a11yProps(4)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="Fasset Policies"
           icon={<PolicyIcon />}
           iconPosition="start"
-          {...a11yProps(4)}
+          {...a11yProps(5)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
       </Tabs>
@@ -132,11 +140,10 @@ const Learners = () => {
         <WhoWeAre />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ScarceSkills />
+        <OurMandate />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Career Guide PDF will be displayed and obviously have a download button
-        for downloading
+        <BoardMembers />
       </TabPanel>
       <TabPanel value={value} index={3}>
         About Fasset Bursary will be defined here and provide a link to the

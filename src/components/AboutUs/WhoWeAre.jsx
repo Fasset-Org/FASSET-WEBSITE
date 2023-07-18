@@ -160,7 +160,7 @@ const WhoWeAre = () => {
         fontSize={20}
         sx={{ color: "primary.main" }}
       >
-        Relevant Legislation
+        Purpose of the Skills Development Act 
       </Typography>
       <Typography>
         The short supply of skilled staff is a serious obstacle to the

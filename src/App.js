@@ -2,7 +2,12 @@ import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes
+} from "react-router-dom";
 import Vacancies from "./pages/Vacancies/Vacancies";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import VacancyDetails from "./pages/Vacancies/VacancyDetails";
@@ -23,6 +28,7 @@ import SupplyChain from "./pages/SupplyChain/SupplyChain";
 import Resources from "./pages/Resources/Resources";
 import ProfessionalBodies from "./pages/ProfessionalBodies/ProfessionalBodies";
 import TenderDetails from "./pages/SupplyChain/TenderDetails";
+import FallbackError from "./pages/FallbackError";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -38,10 +44,16 @@ function App() {
       <CssBaseline />
       <QueryClientProvider client={queryClient}>
         <Router>
-          <Routes>
+        <Routes>
             {/* Website Routes */}
+            <Route path="*" element={<FallbackError />} />
             <Route path="/" element={<DesktopNavigation />}>
-              <Route path="/" element={<Home />} index />
+              <Route
+                path="/"
+                Component={() => {
+                  return <Navigate to="/home" />;
+                }}
+              />
               <Route path="/home" element={<Home />} index />
               <Route path="/vacancies" element={<Vacancies />} />
               <Route path="/vacancies/:id" element={<VacancyDetails />} />

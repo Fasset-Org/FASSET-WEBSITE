@@ -20,7 +20,8 @@ const ProfileCard = ({name, position, imgSrc}) => {
         component={Paper}
         width="80%"
         m="auto"
-        sx={{ position: "relative", bottom: 20, borderRadius: 0 }}
+        sx={{ position: "relative", bottom: 30, borderRadius: 0 }}
+        elevation={5}
       >
         <Typography
           sx={{

@@ -1,5 +1,4 @@
 import React from "react";
-import WelcomeComponent from "../components/WelcomeComponent";
 import { Stack, Typography } from "@mui/material";
 import LatestNews from "../components/Latest News/LatestNews";
 import banner1 from "../images/bgImage1.avif";
@@ -9,6 +8,7 @@ import banner4 from "../images/gallery-images/Nkandla.jpg";
 import Slideshow from "../components/SlideShow";
 import ValueCard from "../components/ValueCard";
 import FassetAssistant from "../components/FassetAssistant";
+import NoticeBoardModal from "../components/NoticeBoardModal";
 
 const Home = ({ id }) => {
   const images2 = [banner1, banner2, banner3, banner4];
@@ -17,9 +17,8 @@ const Home = ({ id }) => {
     <Stack spacing={2} width="100%">
       {/* <DesktopBanner /> */}
       <Slideshow images={images2} height="500px" />
-      <Stack paddingX={15}>
-        <WelcomeComponent />
-      </Stack>
+
+      <NoticeBoardModal />
 
       <Stack>
         <FassetAssistant />

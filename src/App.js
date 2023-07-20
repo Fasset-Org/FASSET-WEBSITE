@@ -44,7 +44,7 @@ function App() {
       <CssBaseline />
       <QueryClientProvider client={queryClient}>
         <Router>
-        <Routes>
+          <Routes>
             {/* Website Routes */}
             <Route path="*" element={<FallbackError />} />
             <Route path="/" element={<DesktopNavigation />}>

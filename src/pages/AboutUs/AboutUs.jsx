@@ -4,7 +4,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import CareerPortal from "../../components/Learners/CareerPortal";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import RoomPreferencesIcon from "@mui/icons-material/RoomPreferences";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
@@ -14,6 +13,7 @@ import WhoWeAre from "../../components/AboutUs/WhoWeAre";
 import OurMandate from "../../components/AboutUs/OurMandate";
 import BoardMembers from "../../components/AboutUs/BoardMembers";
 import Committees from "../../components/AboutUs/Committees";
+import Constitution from "../../components/AboutUs/Constitution";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -123,7 +123,7 @@ const Learners = () => {
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
-          label="Fasset Construction"
+          label="Fasset Constitution"
           icon={<ConstructionIcon />}
           iconPosition="start"
           {...a11yProps(4)}
@@ -150,7 +150,7 @@ const Learners = () => {
         <Committees />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <CareerPortal />
+        <Constitution />
       </TabPanel>
     </Box>
   );

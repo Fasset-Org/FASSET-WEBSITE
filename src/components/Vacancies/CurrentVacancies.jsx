@@ -1,5 +1,4 @@
-
-import { Grid } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import VacancyCard from "../../components/VacancyCard";
@@ -44,14 +43,21 @@ const CurrentVacancies = () => {
   ];
 
   return (
-    <Grid
-      container
-      spacing={2}
-    >
-      {vacancies.map((vacancy, i) => {
-        return <VacancyCard vacancy={vacancy} />;
-      })}
-    </Grid>
+    <Stack spacing={1}>
+      <Typography
+        fontFamily="Helvetica Neue"
+        fontWeight="bolder"
+        fontSize={20}
+        sx={{ color: "primary.main" }}
+      >
+        Available Vacancies
+      </Typography>
+      <Grid container spacing={2}>
+        {vacancies.map((vacancy, i) => {
+          return <VacancyCard vacancy={vacancy} />;
+        })}
+      </Grid>
+    </Stack>
   );
 };
 

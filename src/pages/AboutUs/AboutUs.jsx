@@ -13,6 +13,7 @@ import ConstructionIcon from "@mui/icons-material/Construction";
 import WhoWeAre from "../../components/AboutUs/WhoWeAre";
 import OurMandate from "../../components/AboutUs/OurMandate";
 import BoardMembers from "../../components/AboutUs/BoardMembers";
+import Committees from "../../components/AboutUs/Committees";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -146,8 +147,7 @@ const Learners = () => {
         <BoardMembers />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        About Fasset Bursary will be defined here and provide a link to the
-        bursary system
+        <Committees />
       </TabPanel>
       <TabPanel value={value} index={4}>
         <CareerPortal />

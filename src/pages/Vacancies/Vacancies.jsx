@@ -6,8 +6,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import RoomPreferencesIcon from "@mui/icons-material/RoomPreferences";
-import OurMandate from "../../components/AboutUs/OurMandate";
 import CurrentVacancies from "../../components/Vacancies/CurrentVacancies";
+import PreviousVacancies from "../../components/Vacancies/PreviousVacancies";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,7 +55,7 @@ const Vacancies = () => {
       sx={{
         flexGrow: 1,
         bgcolor: "background.paper",
-        display: "flex",
+        display: "flex"
       }}
     >
       <Tabs
@@ -71,7 +71,7 @@ const Vacancies = () => {
           backgroundColor: "primary.main",
           height: 450,
           mt: 3,
-          ml:3
+          ml: 3
         }}
         TabIndicatorProps={{
           sx: {
@@ -108,7 +108,7 @@ const Vacancies = () => {
         <CurrentVacancies />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <OurMandate />
+        <PreviousVacancies />
       </TabPanel>
     </Box>
   );

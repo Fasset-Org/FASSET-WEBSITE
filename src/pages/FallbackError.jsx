@@ -13,15 +13,15 @@ const FallbackError = () => {
         justifyContent="center"
         alignItems="center"
         padding={2}
-        sx={{backgroundColor: 'background.paper'}}
+        sx={{ backgroundColor: "background.paper" }}
       >
-        <Typography
-          sx={{ fontWeight: "bolder",  fontSize: 20 }}
-        >
-          The page you are looking for does not exist or have been named to a
-          different name, please click to <Button variant="outlined"> <Link to='/home'>Go Home</Link></Button>
+        <Typography sx={{ fontWeight: "bolder", fontSize: 20 }}>
+          The resource you are looking for has been removed, had its name
+          changed, or is temporarily unavailable.
+          <Button variant="outlined">
+            <Link to="/home">Go Home</Link>
+          </Button>
         </Typography>
-        
       </Stack>
     </Stack>
   );

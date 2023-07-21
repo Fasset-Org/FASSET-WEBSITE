@@ -23,9 +23,9 @@ const WhoWeAre = () => {
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
-        About Fasset
+        About
       </Typography>
       <Typography textAlign="justify">
         Fasset is the Finance and Accounting Services Sector Education and
@@ -160,7 +160,7 @@ const WhoWeAre = () => {
         fontSize={20}
         sx={{ color: "primary.main" }}
       >
-        Purpose of the Skills Development Act 
+        Purpose of the Skills Development Act
       </Typography>
       <Typography>
         The short supply of skilled staff is a serious obstacle to the

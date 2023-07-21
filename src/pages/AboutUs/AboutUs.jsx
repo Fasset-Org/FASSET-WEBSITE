@@ -86,7 +86,7 @@ const Learners = () => {
         }}
       >
         <Tab
-          label="About Fasset"
+          label="About"
           icon={<AssignmentIndIcon />}
           iconPosition="start"
           {...a11yProps(0)}

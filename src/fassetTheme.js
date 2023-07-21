@@ -119,18 +119,6 @@ export const themeLight = createTheme({
     }
   },
   typography: {
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Open Sans"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Lucida"',
-      '"Gothic A1"',
-      '"Segoe UI Symbol"'
-    ].join(","),
     fontSize: 12
   }
 });

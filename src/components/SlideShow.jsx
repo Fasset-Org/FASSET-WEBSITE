@@ -26,7 +26,7 @@ const Slideshow = ({ images, height }) => {
             <img
               src={slideImage}
               alt=""
-              style={{ objectFit: "cover", objectPosition: "100% 100%" }}
+              style={{ objectFit: "scale-down", height:'fit-content', maxHeight: 300, objectPosition: "100% 100%" }}
               height="100%"
               width="100%"
             />

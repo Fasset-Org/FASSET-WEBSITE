@@ -24,26 +24,26 @@ const FassetAssistant = () => {
           <IconButton>
             <EventIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
-          <Button variant="contained" sx={{ fontSize: 12, width: 160 }}>
+          <Button variant="contained" sx={{ fontSize: 12, width: 170 }}>
             Book Appointment
           </Button>
         </Stack>
 
-        <Stack spacing={2} component={Paper} padding={2}>
+        {/* <Stack spacing={2} component={Paper} padding={2}>
           <IconButton>
             <EventIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
           <Button variant="contained" sx={{ fontSize: 12, width: 160 }}>
             WSP
           </Button>
-        </Stack>
+        </Stack> */}
 
         <Stack spacing={2} component={Paper} padding={2}>
           <IconButton>
             <SupportIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
-          <Button variant="contained" sx={{ fontSize: 12, width: 160 }}>
-            ICT Support
+          <Button variant="contained" sx={{ fontSize: 12, width: 170 }}>
+            Business Support
           </Button>
         </Stack>
 
@@ -51,7 +51,7 @@ const FassetAssistant = () => {
           <IconButton>
             <HelpCenterIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
-          <Button variant="contained" sx={{ fontSize: 12, width: 160 }}>
+          <Button variant="contained" sx={{ fontSize: 12, width: 170 }}>
             Log A Query
           </Button>
         </Stack>
@@ -63,17 +63,17 @@ const FassetAssistant = () => {
               sx={{ color: "primary.main" }}
             />
           </IconButton>
-          <Button variant="contained" sx={{ fontSize: 12, width: 160 }}>
+          <Button variant="contained" sx={{ fontSize: 12, width: 170 }}>
             Bursaries
           </Button>
         </Stack>
 
-        <Stack spacing={2} component={Paper} padding={2}>
+        <Stack spacing={2} component={Paper} p={2}>
           <IconButton>
             <EventRepeatIcon fontSize="large" sx={{ color: "primary.main" }} />
           </IconButton>
-          <Button variant="contained" sx={{ fontSize: 12, width: 160 }}>
-            Event Queries
+          <Button variant="contained" sx={{ fontSize: 12, width: 170 }}>
+            Events
           </Button>
         </Stack>
       </Stack>

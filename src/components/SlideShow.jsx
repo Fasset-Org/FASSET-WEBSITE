@@ -13,7 +13,7 @@ const Slideshow = ({ images, height }) => {
       arrows={false}
     >
       {images.map((slideImage, index) => (
-        <div key={index}>
+        <div key={index} style={{width: '100%', display: 'block'}}>
           <div
             style={{
               height: height

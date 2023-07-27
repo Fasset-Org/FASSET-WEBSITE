@@ -2,7 +2,6 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
@@ -23,7 +22,7 @@ import PestControlIcon from "@mui/icons-material/PestControl";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import { Collapse } from "@mui/material";
+import { Collapse, Stack } from "@mui/material";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { useState } from "react";
 // About Us Icons
@@ -67,24 +66,6 @@ import { Outlet } from "react-router-dom";
 
 const drawerWidth = 280;
 
-const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
-  ({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    }),
-    // marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create("margin", {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen
-      }),
-      marginLeft: 0
-    })
-  })
-);
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open"
@@ -119,7 +100,8 @@ export default function MobileNavigation() {
     {
       parent: "Home",
       children: [],
-      icon: HomeIcon
+      icon: HomeIcon,
+      open: false
     },
     {
       parent: "About",
@@ -215,8 +197,8 @@ export default function MobileNavigation() {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
+    <Stack>
+      {/* <TopContactNavigation /> */}
       <AppBar position="fixed" open={open} sx={{ display: "block" }}>
         <Toolbar>
           <IconButton
@@ -258,20 +240,14 @@ export default function MobileNavigation() {
         <List disablePadding>
           {menu?.map((link, index) => (
             <React.Fragment key={index}>
-              <ListItem disablePadding>
+              <ListItem disablePadding onClick={() => handleClick(index)}>
                 <ListItemButton>
                   <ListItemIcon>
                     <link.icon sx={{ color: "#FFFFFF" }} />
                   </ListItemIcon>
                   <ListItemText primary={link.parent} />
                   {link.children.length > 0 && (
-                    <>
-                      {link.open ? (
-                        <ExpandLess onClick={() => handleClick(index)} />
-                      ) : (
-                        <ExpandMore onClick={() => handleClick(index)} />
-                      )}
-                    </>
+                    <>{link.open ? <ExpandLess /> : <ExpandMore />}</>
                   )}
                 </ListItemButton>
               </ListItem>
@@ -295,13 +271,12 @@ export default function MobileNavigation() {
           ))}
         </List>
       </Drawer>
-      <Main open={open}>
+      <Box>
         <DrawerHeader />
-        <Box>
-          <Outlet />
-          {/* <LinksFooter /> */}
-        </Box>
-      </Main>
-    </Box>
+
+        <Outlet />
+        {/* <LinksFooter /> */}
+      </Box>
+    </Stack>
   );
 }

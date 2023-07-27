@@ -24,7 +24,7 @@ const Home = ({ id }) => {
 
       {xs || sm || md ? (
         <>
-          <Slideshow images={images2} height="200px" />
+          <Slideshow images={images2} height="fit-content" />
         </>
       ) : (
         <>

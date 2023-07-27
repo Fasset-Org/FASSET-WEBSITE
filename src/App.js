@@ -12,7 +12,6 @@ import Vacancies from "./pages/Vacancies/Vacancies";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import VacancyDetails from "./pages/Vacancies/VacancyDetails";
 import "./App.css";
-import DesktopNavigation from "./components/Navigation/DesktopNavigation";
 import Learners from "./pages/Learners/Learners";
 import LoginUser from "./pages/FMS/Auth/LoginUser";
 import Navigation from "./components/FMS/Navigation/Navigation";
@@ -29,6 +28,7 @@ import Resources from "./pages/Resources/Resources";
 import ProfessionalBodies from "./pages/ProfessionalBodies/ProfessionalBodies";
 import TenderDetails from "./pages/SupplyChain/TenderDetails";
 import FallbackError from "./pages/FallbackError";
+import MainNavigation from "./components/Navigation/MainNavigation";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -47,7 +47,7 @@ function App() {
           <Routes>
             {/* Website Routes */}
             <Route path="*" element={<FallbackError />} />
-            <Route path="/" element={<DesktopNavigation />}>
+            <Route path="/" element={<MainNavigation />}>
               <Route
                 path="/"
                 Component={() => {

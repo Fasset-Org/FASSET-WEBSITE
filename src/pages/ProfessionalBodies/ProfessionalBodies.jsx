@@ -4,8 +4,8 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import AdjustIcon from "@mui/icons-material/Adjust";
-import EditNoteIcon from "@mui/icons-material/EditNote";
+import SchoolIcon from '@mui/icons-material/School';
+import EventRepeatIcon from '@mui/icons-material/EventRepeat';
 import AboutFassetLearnerships from "../../components/ProfessionalBodies/AboutFassetLearnerships";
 
 function TabPanel(props) {
@@ -80,7 +80,7 @@ const ProfessionalBodies = () => {
       >
         <Tab
           label="About FASSET Learnerships"
-          icon={<AdjustIcon />}
+          icon={<SchoolIcon />}
           iconPosition="start"
           {...a11yProps(0)}
           sx={{
@@ -91,7 +91,7 @@ const ProfessionalBodies = () => {
         />
         <Tab
           label="Lifelong Learning Events"
-          icon={<EditNoteIcon />}
+          icon={<EventRepeatIcon />}
           iconPosition="start"
           {...a11yProps(1)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}

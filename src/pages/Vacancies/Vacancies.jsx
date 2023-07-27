@@ -4,8 +4,8 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
-import RoomPreferencesIcon from "@mui/icons-material/RoomPreferences";
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import CurrentVacancies from "../../components/Vacancies/CurrentVacancies";
 import PreviousVacancies from "../../components/Vacancies/PreviousVacancies";
 
@@ -82,7 +82,7 @@ const Vacancies = () => {
       >
         <Tab
           label="Available Vacancies"
-          icon={<AssignmentIndIcon />}
+          icon={<ArrowCircleDownIcon />}
           iconPosition="start"
           {...a11yProps(0)}
           sx={{
@@ -93,7 +93,7 @@ const Vacancies = () => {
         />
         <Tab
           label="Previous Vacancies"
-          icon={<RoomPreferencesIcon />}
+          icon={<ArrowCircleUpIcon />}
           iconPosition="start"
           {...a11yProps(1)}
           sx={{

@@ -63,6 +63,7 @@ import SummarizeIcon from "@mui/icons-material/Summarize";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import { Outlet } from "react-router-dom";
+// import TopContactNavigation from "../../Navigation/TopContactNavigation";
 
 const drawerWidth = 280;
 
@@ -200,6 +201,7 @@ export default function MobileNavigation() {
     <Stack>
       {/* <TopContactNavigation /> */}
       <AppBar position="fixed" open={open} sx={{ display: "block" }}>
+      
         <Toolbar>
           <IconButton
             color="inherit"

@@ -22,64 +22,62 @@ const Home = ({ id }) => {
     <Stack spacing={2} width="100%">
       {/* <DesktopBanner /> */}
 
-      {xs ||
-        sm ||
-        (md ? (
-          <>
-            <Stack height={500} sx={{bgcolor: 'red'}}>Hi</Stack>
-          </>
-        ) : (
-          <>
-            <Slideshow images={images2} height="400px" />
+      {xs || sm || md ? (
+        <>
+          <Slideshow images={images2} height="200px" />
+        </>
+      ) : (
+        <>
+          <Slideshow images={images2} height="400px" />
 
-            <NoticeBoardModal />
+          <NoticeBoardModal />
 
-            <Stack>
-              <FassetAssistant />
-            </Stack>
+          <Stack>
+            <FassetAssistant />
+          </Stack>
 
-            <Typography
-              fontSize={30}
-              fontWeight="bolder"
-              textTransform="uppercase"
-              fontFamily="Helvetica Neue"
-              textAlign="center"
-              sx={{ color: "primary.main" }}
-            >
-              Values
-            </Typography>
+          <Typography
+            fontSize={30}
+            fontWeight="bolder"
+            textTransform="uppercase"
+            fontFamily="Helvetica Neue"
+            textAlign="center"
+            sx={{ color: "primary.main" }}
+          >
+            Values
+          </Typography>
 
-            <Stack direction="row" spacing={2} padding={2}>
-              <ValueCard
-                title="Professionalism And Accountability"
-                definition={
-                  "We are a high-performance, professional team; we strive for excellence through hard work and by taking responsibility and being accountable within an accepted and agreed code of conduct."
-                }
-              />
-              <ValueCard
-                title="Ethics"
-                definition="We work with integrity and honesty and respect internal and external stakeholders at all times."
-              />
-              <ValueCard
-                title="Making A Difference"
-                definition={
-                  "We make a difference to the lives of all our stakeholders by identifying their needs and exceeding expectations."
-                }
-              />
-              <ValueCard
-                title="Valuing People"
-                definition={
-                  "We strive to create a motivating and supportive culture by understanding, respecting, developing and valuing each other."
-                }
-              />
-              <ValueCard
-                title="Innovation"
-                definition="We Continuously innovate and improve to add value to all our stakeholders. The Work of Setas"
-              />
-              <LatestNews />
-            </Stack>
-          </>
-        ))}
+          <Stack direction="row" spacing={2} padding={2}>
+            <ValueCard
+              title="Professionalism And Accountability"
+              definition={
+                "We are a high-performance, professional team; we strive for excellence through hard work and by taking responsibility and being accountable within an accepted and agreed code of conduct."
+              }
+            />
+            <ValueCard
+              title="Ethics"
+              definition="We work with integrity and honesty and respect internal and external stakeholders at all times."
+            />
+            <ValueCard
+              title="Making A Difference"
+              definition={
+                "We make a difference to the lives of all our stakeholders by identifying their needs and exceeding expectations."
+              }
+            />
+            <ValueCard
+              title="Valuing People"
+              definition={
+                "We strive to create a motivating and supportive culture by understanding, respecting, developing and valuing each other."
+              }
+            />
+            <ValueCard
+              title="Innovation"
+              definition="We Continuously innovate and improve to add value to all our stakeholders. The Work of Setas"
+            />
+            <LatestNews />
+          </Stack>
+        </>
+      )}
     </Stack>
   );
 };

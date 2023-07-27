@@ -4,8 +4,9 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import AdjustIcon from "@mui/icons-material/Adjust";
-import EditNoteIcon from "@mui/icons-material/EditNote";
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import ScienceIcon from '@mui/icons-material/Science';
+import SummarizeIcon from '@mui/icons-material/Summarize';
 import Downloads from "../../components/Resources/Downloads";
 import Research from "../../components/Resources/Research";
 import AnnualReports from "../../components/Resources/AnnualReports";
@@ -82,7 +83,7 @@ const Resources = () => {
       >
         <Tab
           label="Downloads"
-          icon={<AdjustIcon />}
+          icon={<CloudDownloadIcon />}
           iconPosition="start"
           {...a11yProps(0)}
           sx={{
@@ -93,7 +94,7 @@ const Resources = () => {
         />
         <Tab
           label="Research"
-          icon={<EditNoteIcon />}
+          icon={<ScienceIcon />}
           iconPosition="start"
           {...a11yProps(1)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
@@ -101,7 +102,7 @@ const Resources = () => {
 
         <Tab
           label="Annual Reports"
-          icon={<EditNoteIcon />}
+          icon={<SummarizeIcon />}
           iconPosition="start"
           {...a11yProps(1)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}

@@ -6,7 +6,7 @@ import MailIcon from "@mui/icons-material/Mail";
 
 const TopContactNavigation = () => {
   return (
-    <Stack height={40} direction="row" justifyContent="center">
+    <Stack height={40} direction="row" justifyContent="center" width='100%'>
       <Stack
         height="100%"
         width="100%"

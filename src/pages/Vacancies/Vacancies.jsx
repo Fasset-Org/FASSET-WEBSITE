@@ -67,11 +67,8 @@ const Vacancies = () => {
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
-          borderRadius: 2,
           backgroundColor: "primary.main",
           height: 450,
-          mt: 3,
-          ml: 3
         }}
         TabIndicatorProps={{
           sx: {

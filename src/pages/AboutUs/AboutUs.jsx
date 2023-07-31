@@ -62,7 +62,6 @@ const Learners = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        minHeight: 450
       }}
       position="sticky"
     >
@@ -76,7 +75,8 @@ const Learners = () => {
           borderRight: 1,
           borderColor: "lightgray",
           borderBottomRightRadius: 10,
-          backgroundColor: "primary.main"
+          backgroundColor: "primary.main",
+          height: 450
         }}
         TabIndicatorProps={{
           sx: {

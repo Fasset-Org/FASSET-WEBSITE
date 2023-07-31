@@ -69,7 +69,7 @@ const ProfessionalBodies = () => {
           borderColor: "lightgray",
           borderBottomRightRadius: 10,
           backgroundColor: "primary.main",
-          minHeight: 450
+          height: 450
         }}
         TabIndicatorProps={{
           sx: {

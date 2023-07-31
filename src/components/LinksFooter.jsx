@@ -12,36 +12,31 @@ const LinksFooter = () => {
     <Stack
       paddingTop={2}
       sx={{
-        // backgroundColor: "#f2f3f3",
-        backgroundColor: '#FFFFFF',
+        backgroundColor: "#FFFFFF"
       }}
     >
       <Stack
-        direction={{
-          md: "row",
-          lg: "row",
-          xl: "row",
-          xs: "column",
-          sm: "column"
-        }}
-        sx={{
-          height: 300
-          // border: 1,
-          // borderColor: "lightgray",
-        }}
-        justifyContent={{
-          md: "center",
-          lg: "center",
-          xl: "center",
-          xs: "center",
-          sm: "center"
-        }}
+        direction={{ xs: "column-reverse", md: "row" }}
+        height={{ md: 300 }}
+        justifyContent="center"
+        alignItems="center"
+        // sx={{
+        //   "& :nth-child(1)": {
+        //     order: { xs: 4 }
+        //   },
+        //   "& :nth-child(2)": {
+        //     order: { xs: 1 }
+        //   }
+        // }}
       >
         <Stack
-          width="33.33%"
+          width={{ xs: "100%", md: "33.33%" }}
+          height={{ xs: 200, md: "100%" }}
           direction="column"
           justifyContent="center"
           alignItems="center"
+          border={1}
+          borderColor={"red"}
         >
           <img src={logo} alt="" />
           <Stack direction="row" spacing={2} zIndex={1}>
@@ -60,12 +55,13 @@ const LinksFooter = () => {
           </Stack>
         </Stack>
         <Stack
-          width="22.2233%"
-          // border={1}
-          // borderColor="lightgray"
+          width={{ xs: "100%", md: "33.33%" }}
+          height={{ xs: 200, md: "100%" }}
           direction="column"
           justifyContent="center"
           alignItems="center"
+          border={1}
+          borderColor={"red"}
         >
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             About Us
@@ -90,9 +86,10 @@ const LinksFooter = () => {
           </Link>
         </Stack>
         <Stack
-          width="22.2233%"
-          // border={1}
-          // borderColor="lightgray"
+          width={{ xs: "100%", md: "33.33%" }}
+          height={{ xs: 200, md: "100%" }}
+          border={1}
+          borderColor={"red"}
           direction="column"
           justifyContent="center"
           alignItems="center"
@@ -108,12 +105,13 @@ const LinksFooter = () => {
           <Link sx={{ color: "primary.main" }}>Press Articles</Link>
         </Stack>
         <Stack
-          width="22.2233%"
-          // border={1}
-          // borderColor="lightgray"
+          width={{ xs: "100%", md: "33.33%" }}
+          height={{ xs: 200, md: "100%" }}
           direction="column"
           justifyContent="center"
           alignItems="center"
+          border={1}
+          borderColor={"red"}
         >
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             Other

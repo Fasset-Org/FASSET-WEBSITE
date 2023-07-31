@@ -58,7 +58,6 @@ const Resources = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        minHeight: 450
       }}
     >
       <Tabs
@@ -72,7 +71,8 @@ const Resources = () => {
           borderRight: 1,
           borderColor: "lightgray",
           borderBottomRightRadius: 10,
-          backgroundColor: "primary.main"
+          backgroundColor: "primary.main",
+          height: 450
         }}
         TabIndicatorProps={{
           sx: {

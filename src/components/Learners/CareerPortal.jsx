@@ -10,7 +10,7 @@ const CareerPortal = () => {
         // textTransform="uppercase"
         fontFamily="Helvetica Neue"
         // textAlign="center"
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: 'uppercase' }}
       >
         Career Portal
       </Typography>

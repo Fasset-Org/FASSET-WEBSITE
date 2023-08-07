@@ -14,10 +14,10 @@ import VacancyDetails from "./pages/Vacancies/VacancyDetails";
 import "./App.css";
 import Learners from "./pages/Learners/Learners";
 import LoginUser from "./pages/FMS/Auth/LoginUser";
-import Navigation from "./components/FMS/Navigation/Navigation";
-import Dashboard from "./pages/FMS/Auth/Dashboard";
-import UsersList from "./pages/FMS/Auth/User/UsersList";
-import AssetsAllocated from "./pages/FMS/Assets/AssetsAllocated";
+// import Navigation from "./components/FMS/Navigation/Navigation";
+// import Dashboard from "./pages/FMS/Auth/Dashboard";
+// import UsersList from "./pages/FMS/Auth/User/UsersList";
+// import AssetsAllocated from "./pages/FMS/Assets/AssetsAllocated";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "./global.scss";
@@ -74,11 +74,11 @@ function App() {
 
             {/* Content Management Routes */}
 
-            <Route path="/fms" element={<Navigation />}>
+            {/* <Route path="/fms" element={<Navigation />}>
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="users" element={<UsersList />} />
               <Route path="assets" element={<AssetsAllocated />} />
-            </Route>
+            </Route> */}
           </Routes>
         </Router>
         <ReactQueryDevtools initialIsOpen={false} />

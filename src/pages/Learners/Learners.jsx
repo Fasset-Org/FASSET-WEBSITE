@@ -13,6 +13,7 @@ import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import ScarceSkills from "../../components/Learners/ScarceSkills";
 import CareerPortal from "../../components/Learners/CareerPortal";
 import DownloadCard from "../../components/DownloadCard";
+import { Grid, Stack } from "@mui/material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -136,7 +137,23 @@ const Learners = () => {
         <ScarceSkills />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <DownloadCard fileName='Career Guide' />
+        <Stack spacing={1}>
+          <Typography
+            fontSize={20}
+            fontWeight="bolder"
+            // textTransform="uppercase"
+            fontFamily="Helvetica Neue"
+            // textAlign="center"
+            sx={{ color: "primary.main", textTransform: "uppercase" }}
+          >
+            Career Guide
+          </Typography>
+          <Grid container>
+            <Grid xs={12} md={4}>
+              <DownloadCard fileName="Career Guide" />
+            </Grid>
+          </Grid>
+        </Stack>
       </TabPanel>
       <TabPanel value={value} index={3}>
         About Fasset Bursary will be defined here and provide a link to the

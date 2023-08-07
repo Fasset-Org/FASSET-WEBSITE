@@ -34,7 +34,7 @@ const Policies = () => {
         The complete document can be downloaded below.
       </Typography>
 
-      <Grid container spacing={2}>
+      <Grid container spacing={{md: 2}} rowGap={{xs: 2}}>
         <Grid item xs={12} md={4}>
           <DownloadCard fileName="English Version" />
         </Grid>

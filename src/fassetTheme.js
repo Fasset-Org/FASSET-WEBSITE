@@ -119,7 +119,7 @@ export const themeLight = createTheme({
     }
   },
   typography: {
-    fontSize: 11
+    fontSize: 12
   }
 });
 

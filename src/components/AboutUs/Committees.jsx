@@ -24,7 +24,7 @@ const Committees = () => {
       imgSrc: DCS
     },
     {
-      name: "Not Sure",
+      name: "Mapula Thabethe",
       position: "COSEC",
       imgSrc: Cosec
     },

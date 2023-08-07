@@ -14,6 +14,7 @@ import OurMandate from "../../components/AboutUs/OurMandate";
 import BoardMembers from "../../components/AboutUs/BoardMembers";
 import Committees from "../../components/AboutUs/Committees";
 import Constitution from "../../components/AboutUs/Constitution";
+import Policies from "../../components/AboutUs/Policies";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -151,6 +152,9 @@ const Learners = () => {
       </TabPanel>
       <TabPanel value={value} index={4}>
         <Constitution />
+      </TabPanel>
+      <TabPanel value={value} index={5}>
+        <Policies />
       </TabPanel>
     </Box>
   );

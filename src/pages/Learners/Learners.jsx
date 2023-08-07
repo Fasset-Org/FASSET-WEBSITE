@@ -12,6 +12,7 @@ import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import ScarceSkills from "../../components/Learners/ScarceSkills";
 import CareerPortal from "../../components/Learners/CareerPortal";
+import DownloadCard from "../../components/DownloadCard";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -135,8 +136,7 @@ const Learners = () => {
         <ScarceSkills />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Career Guide PDF will be displayed and obviously have a download button
-        for downloading
+        <DownloadCard fileName='Career Guide' />
       </TabPanel>
       <TabPanel value={value} index={3}>
         About Fasset Bursary will be defined here and provide a link to the

@@ -35,8 +35,8 @@ const LinksFooter = () => {
           direction="column"
           justifyContent="center"
           alignItems="center"
-          border={1}
-          borderColor={"red"}
+          // border={1}
+          // borderColor={"red"}
         >
           <img src={logo} alt="" />
           <Stack direction="row" spacing={2} zIndex={1}>
@@ -60,8 +60,8 @@ const LinksFooter = () => {
           direction="column"
           justifyContent="center"
           alignItems="center"
-          border={1}
-          borderColor={"red"}
+          // border={1}
+          // borderColor={"red"}
         >
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             About Us
@@ -88,8 +88,8 @@ const LinksFooter = () => {
         <Stack
           width={{ xs: "100%", md: "33.33%" }}
           height={{ xs: 200, md: "100%" }}
-          border={1}
-          borderColor={"red"}
+          // border={1}
+          // borderColor={"red"}
           direction="column"
           justifyContent="center"
           alignItems="center"
@@ -110,8 +110,8 @@ const LinksFooter = () => {
           direction="column"
           justifyContent="center"
           alignItems="center"
-          border={1}
-          borderColor={"red"}
+          // border={1}
+          // borderColor={"red"}
         >
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             Other

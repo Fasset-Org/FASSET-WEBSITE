@@ -22,7 +22,7 @@ import PestControlIcon from "@mui/icons-material/PestControl";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import { Collapse, Stack } from "@mui/material";
+import { Avatar, Collapse, Stack } from "@mui/material";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import whiteLogo from "../../../images/square-logo.jpeg";
 import { useState } from "react";
@@ -212,7 +212,7 @@ export default function MobileNavigation() {
             padding={2}
             spacing={2}
           >
-            <img src={whiteLogo} alt="Logo" width={35} height={35} />
+            <Avatar src={whiteLogo} sx={{padding: 0.4}} />
             <Typography
               variant="h6"
               noWrap

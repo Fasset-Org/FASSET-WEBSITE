@@ -9,7 +9,9 @@ import {
   ListItem,
   Paper,
   Stack,
-  Typography
+  Typography,
+  useMediaQuery,
+  useTheme
 } from "@mui/material";
 import React from "react";
 import VacancyCard from "../../components/VacancyCard";
@@ -21,6 +23,10 @@ import { useNavigate } from "react-router-dom";
 
 const VacancyDetails = () => {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const xs = useMediaQuery(theme.breakpoints.down("xs"));
+  const sm = useMediaQuery(theme.breakpoints.down("sm"));
+  console.log(xs, sm)
   const responsibilities = [
     "Ensure that employer grants are evaluated, approved and processed according to FASSET criteria, guidelines and standards",
     "Process all employers grant payments accurately and on time",
@@ -57,10 +63,14 @@ const VacancyDetails = () => {
         >
           Job Title
         </Typography>
-        <Box></Box>
-        <Box></Box>
+        {(!xs || !sm) && <Box></Box>}
+        {(!xs || !sm) && <Box></Box>}
       </Stack>
-      <Stack direction="row" px={4} py={2}>
+      <Stack
+        direction={{ xs: "column", md: "row", sm: "column" }}
+        px={{ md: 4 }}
+        py={{ md: 2 }}
+      >
         <Stack
           width={{ md: "70%", xs: "100%" }}
           // justifyContent="center"
@@ -72,9 +82,10 @@ const VacancyDetails = () => {
         >
           <Stack
             width="100%"
-            direction="row"
+            direction={{ xs: "column", md: "row", sm: "column" }}
             justifyContent="space-between"
             // border={1}
+            padding={{ xs: 2 }}
           >
             <Typography
               fontSize={20}
@@ -90,20 +101,20 @@ const VacancyDetails = () => {
             >
               Closing Date : 30 May 2022
             </Typography>
-            <JobApplyModal />
+            {(!xs || !sm) ? <JobApplyModal /> : ""}
           </Stack>
           <Stack
             width="100%"
-            direction="row"
+            direction={{ xs: "column", md: "row", sm: "column" }}
             // border={1}
             alignItems="center"
           >
-            <Stack width="30%">
+            <Stack width={{ xs: "100%", md: "30%", sm: "100%" }}>
               <Typography fontSize={15} fontWeight="bolder">
                 Purpose Of The Job
               </Typography>
             </Stack>
-            <Stack width="70%">
+            <Stack width={{ xs: "100%", sm: "100%", md: "70%" }}>
               <Typography>
                 The primary purpose of this position is to provide
                 administrations on the approval of sector grants and stakeholder
@@ -115,11 +126,11 @@ const VacancyDetails = () => {
 
           <Stack
             width="100%"
-            direction="row"
+            direction={{ xs: "column", md: "row", sm: "column" }}
             // border={1}
             // alignItems="center"
           >
-            <Typography width="30%" fontSize={15} fontWeight="bolder">
+            <Typography width={{ md: "30%" }} fontSize={15} fontWeight="bolder">
               Department
             </Typography>
             <Typography>ICT</Typography>
@@ -127,11 +138,11 @@ const VacancyDetails = () => {
 
           <Stack
             width="100%"
-            direction="row"
+            direction={{ xs: "column", md: "row", sm: "column" }}
             // border={1}
             // alignItems="center"
           >
-            <Typography width="30%" fontSize={15} fontWeight="bolder">
+            <Typography width={{ md: "30%" }} fontSize={15} fontWeight="bolder">
               Reporting Line
             </Typography>
             <Typography>Grants Specialist</Typography>
@@ -349,9 +360,14 @@ const VacancyDetails = () => {
               </AccordionDetails>
             </Accordion>
           </Stack>
-          <Stack direction="row" justifyContent="end" spacing={2} width="100%">
+          <Stack
+            direction={{ xs: "column", md: "row", sm: "column" }}
+            justifyContent="end"
+            spacing={2}
+            width="100%"
+          >
             <Button variant="outlined">Download Job Description</Button>
-            <Button variant="contained">Apply Now</Button>
+            <JobApplyModal />
           </Stack>
         </Stack>
 

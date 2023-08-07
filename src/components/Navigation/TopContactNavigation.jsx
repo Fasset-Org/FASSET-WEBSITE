@@ -49,7 +49,7 @@ const TopContactNavigation = () => {
           <PhoneIcon sx={{ fontWeight: "bolder" }} />
 
           <Typography>Switchboard :</Typography>
-          <Typography>&nbsp;087 821 2680</Typography>
+          <Typography>&nbsp; 011 476 8570</Typography>
         </Typography>
         <Divider
           orientation="vertical"
@@ -68,7 +68,7 @@ const TopContactNavigation = () => {
 
           <Typography>Email :</Typography>
           <Typography>
-            &nbsp;fassetcallcentre@fasset.org.za
+            &nbsp;fassetcallcentre(@)fasset.org.za
           </Typography>
         </Typography>
       </Stack>

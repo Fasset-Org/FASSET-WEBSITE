@@ -24,7 +24,7 @@ const DiscretionaryGrants = () => {
       <Typography
         fontSize={20}
         fontWeight="bolder"
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         Discretionary Grants
       </Typography>

@@ -87,7 +87,7 @@ const WhoWeAre = () => {
 
       <Stack direction="row" spacing={1}>
         <ValueCard
-          title="Professionalism And Accountability"
+          title="Professionalism & Accountability"
           definition={
             "We are a high-performance, professional team; we strive for excellence through hard work and by taking responsibility and being accountable within an accepted and agreed code of conduct."
           }

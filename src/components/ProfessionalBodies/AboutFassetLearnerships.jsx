@@ -59,7 +59,7 @@ const AboutFassetLearnerships = () => {
         info@aatsa.org.za
       </Typography>
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>
             <TableRow>
               <TableCell

@@ -10,7 +10,7 @@ const ProfileCard = ({name, position, imgSrc}) => {
         width="100%"
         height="70%"
         style={{
-          objectFit: "cover",
+          objectFit: "scale-down",
           objectPosition: "center top",
           borderRadius: 10
         }}

@@ -24,6 +24,7 @@ import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import { Collapse, Stack } from "@mui/material";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
+import whiteLogo from "../../../images/square-logo.jpeg";
 import { useState } from "react";
 // About Us Icons
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
@@ -67,7 +68,6 @@ import LinksFooter from "../../LinksFooter";
 // import TopContactNavigation from "../../Navigation/TopContactNavigation";
 
 const drawerWidth = 280;
-
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open"
@@ -202,20 +202,34 @@ export default function MobileNavigation() {
     <Stack>
       {/* <TopContactNavigation /> */}
       <AppBar position="fixed" open={open} sx={{ display: "block" }}>
-      
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(open && { display: "none" }) }}
+            sx={{
+              mr: 2,
+              ...(open && { display: "none" })
+            }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
+          <Stack
+            direction="row"
+            // border={1}
+            width="100%"
+            height={50}
+            justifyContent="center"
+            alignItems="center"
+            padding={2}
+            spacing={2}
+          >
+            <img src={whiteLogo} alt="Logo" width={35} height={35} />
+            <Typography variant="h6" noWrap component="div">
+              Fasset
+            </Typography>
+          </Stack>
         </Toolbar>
       </AppBar>
       <Drawer

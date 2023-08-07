@@ -10,7 +10,7 @@ const ChooseACareer = () => {
         // textTransform="uppercase"
         fontFamily="Helvetica Neue"
         // textAlign="center"
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: 'uppercase' }}
       >
         Choosing a career
       </Typography>

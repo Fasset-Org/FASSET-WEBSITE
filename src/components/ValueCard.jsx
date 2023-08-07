@@ -13,7 +13,10 @@ const ValueCard = ({ title, definition }) => {
       }}
     >
       <Stack height="80%" justifyContent="center" alignItems="center">
-        <Typography textAlign="center" sx={{ width: "fit-content" }}>
+        <Typography
+          textAlign="center"
+          sx={{ width: "fit-content", padding: 2 }}
+        >
           {definition}
         </Typography>
       </Stack>

@@ -60,7 +60,7 @@ const PastTenders = () => {
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         Passed Tenders
       </Typography>

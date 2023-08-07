@@ -203,11 +203,31 @@ export default function MobileNavigation() {
       {/* <TopContactNavigation /> */}
       <AppBar position="fixed" open={open} sx={{ display: "block" }}>
         <Toolbar>
+          <Stack
+            direction="row"
+            // border={1}
+            width="100%"
+            height={50}
+            alignItems="center"
+            padding={2}
+            spacing={2}
+          >
+            <img src={whiteLogo} alt="Logo" width={35} height={35} />
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              textTransform="uppercase"
+              fontSize={20}
+            >
+              Fasset
+            </Typography>
+          </Stack>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
-            edge="start"
+            edge="end"
             sx={{
               mr: 2,
               ...(open && { display: "none" })
@@ -215,21 +235,6 @@ export default function MobileNavigation() {
           >
             <MenuIcon fontSize="large" />
           </IconButton>
-          <Stack
-            direction="row"
-            // border={1}
-            width="100%"
-            height={50}
-            justifyContent="center"
-            alignItems="center"
-            padding={2}
-            spacing={2}
-          >
-            <img src={whiteLogo} alt="Logo" width={35} height={35} />
-            <Typography variant="h6" noWrap component="div">
-              Fasset
-            </Typography>
-          </Stack>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -244,7 +249,7 @@ export default function MobileNavigation() {
           }
         }}
         variant="temporary"
-        anchor="left"
+        anchor="right"
         open={open}
       >
         <DrawerHeader>

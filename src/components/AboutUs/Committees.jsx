@@ -20,7 +20,7 @@ const Committees = () => {
     },
     {
       name: "Nokulunga Mthombeni",
-      position: "DCS",
+      position: "Director Corporate Services (DCS)",
       imgSrc: DCS
     },
     {

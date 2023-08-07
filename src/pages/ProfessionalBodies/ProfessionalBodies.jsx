@@ -101,7 +101,7 @@ const ProfessionalBodies = () => {
         <AboutFassetLearnerships />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Lifelong Events
+        Lifelong Events Under Construction
       </TabPanel>
     </Box>
   );

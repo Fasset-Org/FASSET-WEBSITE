@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import LatestNews from "../components/Latest News/LatestNews";
-import banner1 from "../images/bgImage1.avif";
+// import banner1 from "../images/bgImage1.avif";
 import banner2 from "../images/Website-Deadline-Extension.png";
 import banner3 from "../images/sigmund-LCun3uxh-z0-unsplash.jpg";
 import banner4 from "../images/gallery-images/Nkandla.jpg";
@@ -11,7 +11,7 @@ import FassetAssistant from "../components/FassetAssistant";
 import NoticeBoardModal from "../components/NoticeBoardModal";
 
 const Home = ({ id }) => {
-  const images2 = [banner1, banner2, banner3, banner4];
+  const images2 = [banner2, banner3, banner4];
 
   const theme = useTheme();
   const xs = useMediaQuery(theme.breakpoints.down("xs"));

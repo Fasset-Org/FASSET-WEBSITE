@@ -29,6 +29,30 @@ import ProfessionalBodies from "./pages/ProfessionalBodies/ProfessionalBodies";
 import TenderDetails from "./pages/SupplyChain/TenderDetails";
 import FallbackError from "./pages/FallbackError";
 import MainNavigation from "./components/Navigation/MainNavigation";
+import WorkbasedProgrammeMobile from "./pages/Mobile/Employers/WorkbasedProgrammeMobile";
+import WhoWeAreMobile from "./pages/Mobile/AboutUs/WhoWeAreMobile";
+import OurMandateMobile from "./pages/Mobile/AboutUs/OurMandateMobile";
+import BoardMobile from "./pages/Mobile/AboutUs/BoardMobile";
+import CommitteesMobile from "./pages/Mobile/AboutUs/CommitteesMobile";
+import ConstitutionMobile from "./pages/Mobile/AboutUs/ConstitutionMobile";
+import PoliciesMobile from "./pages/Mobile/AboutUs/PoliciesMobile";
+import ChooseCareerMobile from "./pages/Mobile/Learners/ChooseCareerMobile";
+import ScarceSkilsMobile from "./pages/Mobile/Learners/ScarceSkilsMobile";
+import CareerGuideMobile from "./pages/Mobile/Learners/CareerGuideMobile";
+import BursaryMobile from "./pages/Mobile/Learners/BursaryMobile";
+import CareerPortalMobile from "./pages/Mobile/Learners/CareerPortalMobile";
+import SkillsProgrammeMobile from "./pages/Mobile/Employers/SkillsProgrammeMobile";
+import MandatoryGrantsMobile from "./pages/Mobile/Employers/MandatoryGrantsMobile";
+import DiscretionaryGrantsMobile from "./pages/Mobile/Employers/DiscretionaryGrantsMobile";
+import TrainingProvidersMobile from "./pages/Mobile/Employers/TrainingProvidersMobile";
+import AboutFassetLearnershipsMobile from "./pages/Mobile/ProfessionalBodies/AboutFassetLearnershipsMobile";
+import CurrentTendersMobile from "./pages/Mobile/SupplyChain/CurrentTendersMobile";
+import PastTendersMobile from "./pages/Mobile/SupplyChain/PastTendersMobile";
+import CancelledTendersMobile from "./pages/Mobile/SupplyChain/CancelledTendersMobile";
+import DownloadsMobile from "./pages/Mobile/Resources/DownloadsMobile";
+import ResearchMobile from "./pages/Mobile/Resources/ResearchMobile";
+import AvailableVacanciesMobile from "./pages/Mobile/Vacancies/AvailableVacanciesMobile";
+import PreviousVacanciesMobile from "./pages/Mobile/Vacancies/PreviousVacanciesMobile";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -68,7 +92,65 @@ function App() {
                 element={<ProfessionalBodies />}
               />
               <Route path="/resources" element={<Resources />} />
+              {/* Mobile Routes */}
+              <Route path="/whoweare" element={<WhoWeAreMobile />} />
+              <Route path="/ourMandate" element={<OurMandateMobile />} />
+              <Route path="/board" element={<BoardMobile />} />
+              <Route path="/committees" element={<CommitteesMobile />} />
+              <Route path="/constitution" element={<ConstitutionMobile />} />
+              <Route path="/policies" element={<PoliciesMobile />} />
+              <Route path="/chooseCarrer" element={<ChooseCareerMobile />} />
+              <Route path="/scarceSkils" element={<ScarceSkilsMobile />} />
+              <Route path="/carrerGuide" element={<CareerGuideMobile />} />
+              <Route path="/bursary" element={<BursaryMobile />} />
+              <Route path="/careerPortal" element={<CareerPortalMobile />} />
+              <Route
+                path="/skillsProgramme"
+                element={<SkillsProgrammeMobile />}
+              />
+              <Route
+                path="/workbasedProgramme"
+                element={<WorkbasedProgrammeMobile />}
+              />
+              <Route
+                path="/mandateGrants"
+                element={<MandatoryGrantsMobile />}
+              />
+              <Route
+                path="/discreteGrants"
+                element={<DiscretionaryGrantsMobile />}
+              />
+              <Route
+                path="/trainingProviders"
+                element={<TrainingProvidersMobile />}
+              />
+              <Route
+                path="/leanersships"
+                element={<AboutFassetLearnershipsMobile />}
+              />
+
+              <Route
+                path="/currentTenders"
+                element={<CurrentTendersMobile />}
+              />
+              <Route path="/pastTenders" element={<PastTendersMobile />} />
+              <Route
+                path="/cancelledTenders"
+                element={<CancelledTendersMobile />}
+              />
+
+              <Route path="/downloads" element={<DownloadsMobile />} />
+              <Route path="/research" element={<ResearchMobile />} />
+              <Route
+                path="/availablePositions"
+                element={<AvailableVacanciesMobile />}
+              />
+              <Route
+                path="/previousPositions"
+                element={<PreviousVacanciesMobile />}
+              />
             </Route>
+
             {/* Auth Routes */}
             <Route path="/login" element={<LoginUser />} />
 

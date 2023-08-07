@@ -68,6 +68,14 @@ const Downloads = () => {
 
   return (
     <Stack spacing={1} justifyContent="center">
+      <Typography
+        fontFamily="Helvetica Neue"
+        fontWeight="bolder"
+        fontSize={20}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
+      >
+        Downloads
+      </Typography>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}

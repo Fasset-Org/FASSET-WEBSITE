@@ -243,7 +243,7 @@ export default function MobileNavigation() {
         open={open}
         sx={{ display: "block", padding: 0 }}
       >
-        <Toolbar sx={{ border: 1, padding: 0 }}>
+        <Toolbar sx={{ padding: 0 }}>
           <Stack
             direction="row"
             // border={1}

@@ -36,12 +36,12 @@ const Committees = () => {
   ];
 
   return (
-    <Stack spacing={1}>
+    <Stack>
       <Typography
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+        sx={{ color: "primary.main", textTransform: 'uppercase', mb: 2 }}
       >
         Executive Members
       </Typography>

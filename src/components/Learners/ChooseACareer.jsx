@@ -10,7 +10,7 @@ const ChooseACareer = () => {
         // textTransform="uppercase"
         fontFamily="Helvetica Neue"
         // textAlign="center"
-        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         Choosing a career
       </Typography>
@@ -23,14 +23,15 @@ const ChooseACareer = () => {
         which you will start working and the income that you will earn.
       </Typography>
 
-      <Typography component={Stack} textAlign='justify'>
+      <Typography component={Stack} textAlign="justify">
         With colleges and universities offering numerous courses today, for
         students it is truly confusing making a career choice. For a student,
         choosing a career path that is far from ones’ interest and ability can
         cause dissatisfaction in the long run. Hence it is important to plan
         one’s career from a long term perspective. Follow the below steps to
         pick a career that is fitting for you or download ​the Fasset Career
-        Guide for more information. Click <Link component={"span"}>Here</Link>
+        Guide for more information. &nbsp;
+        <Link sx={{ cursor: "pointer" }}>Click here</Link>
         to download.
       </Typography>
     </Stack>

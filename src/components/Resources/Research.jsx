@@ -15,6 +15,14 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const Research = () => {
   return (
     <Stack spacing={1}>
+      <Typography
+        fontFamily="Helvetica Neue"
+        fontWeight="bolder"
+        fontSize={20}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
+      >
+        Research
+      </Typography>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}

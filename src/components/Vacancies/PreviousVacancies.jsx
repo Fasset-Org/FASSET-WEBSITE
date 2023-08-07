@@ -1,4 +1,3 @@
-
 import { Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -44,23 +43,20 @@ const PreviousVacancies = () => {
   ];
 
   return (
-    <Stack spacing={1}>
+    <Stack>
       <Typography
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+        sx={{ color: "primary.main", textTransform: "uppercase", mb: 2 }}
       >
-       Previous Vacancies
+        Previous Vacancies
       </Typography>
-      <Grid
-      container
-      spacing={2}
-    >
-      {vacancies.map((vacancy, i) => {
-        return <VacancyCard vacancy={vacancy} />;
-      })}
-    </Grid>
+      <Grid container spacing={2}>
+        {vacancies.map((vacancy, i) => {
+          return <VacancyCard vacancy={vacancy} />;
+        })}
+      </Grid>
     </Stack>
   );
 };

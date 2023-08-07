@@ -25,7 +25,7 @@ const Committees = () => {
     },
     {
       name: "Mapula Thabethe",
-      position: "COSEC",
+      position: "Company Secretary (COSEC)",
       imgSrc: Cosec
     },
     {

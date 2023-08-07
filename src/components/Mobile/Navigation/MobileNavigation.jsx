@@ -63,7 +63,7 @@ import SummarizeIcon from "@mui/icons-material/Summarize";
 // Vacancies Icons
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import LinksFooter from "../../LinksFooter";
 // import TopContactNavigation from "../../Navigation/TopContactNavigation";
 
@@ -97,6 +97,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 export default function MobileNavigation() {
   const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const [menu, setMenu] = useState([
     {
@@ -108,12 +109,12 @@ export default function MobileNavigation() {
     {
       parent: "About",
       children: [
-        { name: "About", icon: AssignmentIndIcon },
-        { name: "Our Mandate", icon: RoomPreferencesIcon },
-        { name: "Board", icon: Diversity3Icon },
-        { name: "Committees", icon: Diversity3Icon },
-        { name: "Constitution", icon: PolicyIcon },
-        { name: "Policies", icon: ConstructionIcon }
+        { name: "About", icon: AssignmentIndIcon, url: "/whoweare" },
+        { name: "Our Mandate", icon: RoomPreferencesIcon, url: "/ourMandate" },
+        { name: "Board", icon: Diversity3Icon, url: "/board" },
+        { name: "Committees", icon: Diversity3Icon, url: "/committees" },
+        { name: "Constitution", icon: PolicyIcon, url: "/constitution" },
+        { name: "Policies", icon: ConstructionIcon, url: "/policies" }
       ],
       icon: InfoIcon,
       open: false
@@ -121,11 +122,19 @@ export default function MobileNavigation() {
     {
       parent: "Leaners",
       children: [
-        { name: "Choose career in our sector", icon: WorkIcon },
-        { name: "Scarce Skills", icon: AcUnitIcon },
-        { name: "Career Guide Booklet", icon: EditRoadIcon },
-        { name: "Bursary", icon: CastForEducationIcon },
-        { name: "Career Portal", icon: AutoAwesomeIcon }
+        {
+          name: "Choose career in our sector",
+          icon: WorkIcon,
+          url: "/chooseCarrer"
+        },
+        { name: "Scarce Skills", icon: AcUnitIcon, url: "/scarceSkils" },
+        {
+          name: "Career Guide Booklet",
+          icon: EditRoadIcon,
+          url: "/carrerGuide"
+        },
+        { name: "Bursary", icon: CastForEducationIcon, url: "/bursary" },
+        { name: "Career Portal", icon: AutoAwesomeIcon, url: "/careerPortal" }
       ],
       icon: SchoolIcon,
       open: false
@@ -133,11 +142,23 @@ export default function MobileNavigation() {
     {
       parent: "Employers",
       children: [
-        { name: "Skills Programme", icon: AdjustIcon },
-        { name: "TVET Workbased Programme", icon: EditNoteIcon },
-        { name: "Mandatory Grants", icon: AccountBalanceIcon },
-        { name: "Discretionary Grants", icon: PixIcon },
-        { name: "Training Providers", icon: ModelTrainingIcon }
+        { name: "Skills Programme", icon: AdjustIcon, url: "/skillsProgramme" },
+        {
+          name: "TVET Workbased Programme",
+          icon: EditNoteIcon,
+          url: "/workbasedProgramme"
+        },
+        {
+          name: "Mandatory Grants",
+          icon: AccountBalanceIcon,
+          url: "/mandateGrants"
+        },
+        { name: "Discretionary Grants", icon: PixIcon, url: "/discreteGrants" },
+        {
+          name: "Training Providers",
+          icon: ModelTrainingIcon,
+          url: "/trainingProviders"
+        }
       ],
       icon: AssuredWorkloadIcon,
       open: false
@@ -145,8 +166,12 @@ export default function MobileNavigation() {
     {
       parent: "Proffessional Bodies",
       children: [
-        { name: "Leanersships", icon: SchoolIcon },
-        { name: "Lifeling Learning Events", icon: EventRepeatIcon }
+        { name: "Leanersships", icon: SchoolIcon, url: "/leanersships" },
+        {
+          name: "Lifeling Learning Events",
+          icon: EventRepeatIcon,
+          url: "/learningEvents"
+        }
       ],
       icon: PestControlIcon,
       open: false
@@ -154,9 +179,13 @@ export default function MobileNavigation() {
     {
       parent: "Supply Chain",
       children: [
-        { name: "Current Tenders", icon: TaskIcon },
-        { name: "Past Tenders", icon: FileOpenIcon },
-        { name: "Cancelled Tenders", icon: WebAssetOffIcon }
+        { name: "Current Tenders", icon: TaskIcon, url: "/currentTenders" },
+        { name: "Past Tenders", icon: FileOpenIcon, url: "/pastTenders" },
+        {
+          name: "Cancelled Tenders",
+          icon: WebAssetOffIcon,
+          url: "/cancelledTenders"
+        }
       ],
       icon: ProductionQuantityLimitsIcon,
       open: false
@@ -164,9 +193,9 @@ export default function MobileNavigation() {
     {
       parent: "Resources",
       children: [
-        { name: "Downloads", icon: CloudDownloadIcon },
-        { name: "Research", icon: ScienceIcon },
-        { name: "Annual Reports", icon: SummarizeIcon }
+        { name: "Downloads", icon: CloudDownloadIcon, url: "/downloads" },
+        { name: "Research", icon: ScienceIcon, url: "/research" },
+        { name: "Annual Reports", icon: SummarizeIcon, url: "/annualReports" }
       ],
       icon: SystemUpdateAltIcon,
       open: false
@@ -174,8 +203,16 @@ export default function MobileNavigation() {
     {
       parent: "Vacancies",
       children: [
-        { name: "Available Vacancies", icon: ArrowCircleDownIcon },
-        { name: "Previous Vacancies", icon: ArrowCircleUpIcon }
+        {
+          name: "Available Vacancies",
+          icon: ArrowCircleDownIcon,
+          url: "/availablePositions"
+        },
+        {
+          name: "Previous Vacancies",
+          icon: ArrowCircleUpIcon,
+          url: "/previousPositions"
+        }
       ],
       icon: WorkHistoryIcon,
       open: false
@@ -201,8 +238,12 @@ export default function MobileNavigation() {
   return (
     <Stack>
       {/* <TopContactNavigation /> */}
-      <AppBar position="fixed" open={open} sx={{ display: "block" }}>
-        <Toolbar>
+      <AppBar
+        position="fixed"
+        open={open}
+        sx={{ display: "block", padding: 0 }}
+      >
+        <Toolbar sx={{ border: 1, padding: 0 }}>
           <Stack
             direction="row"
             // border={1}
@@ -210,14 +251,14 @@ export default function MobileNavigation() {
             height={50}
             alignItems="center"
             padding={2}
-            spacing={2}
+            spacing={1}
           >
-            <Avatar src={whiteLogo} sx={{padding: 0.4}} />
+            <Avatar src={whiteLogo} sx={{ padding: 0.4 }} />
             <Typography
               variant="h6"
               noWrap
               component="div"
-              textTransform="uppercase"
+              // textTransform="uppercase"
               fontSize={20}
             >
               Fasset
@@ -278,7 +319,15 @@ export default function MobileNavigation() {
                   <List component="div" disablePadding>
                     {link.children.map((child, i) => {
                       return (
-                        <ListItemButton sx={{ pl: 6 }} key={i} disableGutters>
+                        <ListItemButton
+                          sx={{ pl: 6 }}
+                          key={i}
+                          disableGutters
+                          onClick={() => {
+                            navigate(child.url);
+                            setOpen(!open);
+                          }}
+                        >
                           <ListItemIcon>
                             <child.icon sx={{ color: "#FFFFFF" }} />
                           </ListItemIcon>
@@ -296,7 +345,9 @@ export default function MobileNavigation() {
       <Box>
         <DrawerHeader />
 
-        <Outlet />
+        <Box minHeight={400}>
+          <Outlet />
+        </Box>
         <LinksFooter />
       </Box>
     </Stack>

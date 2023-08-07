@@ -85,7 +85,7 @@ const WhoWeAre = () => {
         Our Values
       </Typography>
 
-      <Stack direction="row" spacing={1}>
+      <Stack direction={{ xs: "column", md: "row" }} spacing={1}>
         <ValueCard
           title="Professionalism & Accountability"
           definition={

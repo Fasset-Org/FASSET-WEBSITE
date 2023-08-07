@@ -1,7 +1,6 @@
 import { Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import ProfileCard from "./ProfileCard";
-import Charles from "../../images/board/Dr Charles Motaung.JPG";
 import Mathibela from "../../images/board/Bongani Mathibela-Organised Business.JPG";
 import Minister from "../../images/board/Minister of Higher Education, Science and Technology Dr Blade Nzimande NGI_8470.jpg";
 import James from "../../images/board/Mr James Maboa.JPG";
@@ -19,11 +18,6 @@ import Tlakale from "../../images/board/Ms Tlakale Phatlane-Organised Labour .JP
 
 const BoardMembers = () => {
   const boardMembers = [
-    {
-      name: "Dr Charles Motaung",
-      position: "Organised Labour",
-      imgSrc: Charles
-    },
     {
       name: "Mr Bongani Mathibela",
       position: "Organised Bussiness",

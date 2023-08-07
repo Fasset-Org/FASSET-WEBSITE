@@ -33,6 +33,14 @@ const Dashboard = () => {
         <Grid item md={3} xs={12}>
           <DashboardCard title="Human Resource" Icon={WorkIcon} />
         </Grid>
+
+        <Grid item md={3} xs={12}>
+          <DashboardCard title="Supply Chain" Icon={WorkIcon} />
+        </Grid>
+
+        <Grid item md={3} xs={12}>
+          <DashboardCard title="Downloads" Icon={WorkIcon} />
+        </Grid>
       </Grid>
     </Stack>
   );

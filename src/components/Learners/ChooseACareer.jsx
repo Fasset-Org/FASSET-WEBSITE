@@ -8,7 +8,6 @@ const ChooseACareer = () => {
         fontSize={20}
         fontWeight="bolder"
         // textTransform="uppercase"
-        fontFamily="Helvetica Neue"
         // textAlign="center"
         sx={{ color: "primary.main", textTransform: "uppercase" }}
       >

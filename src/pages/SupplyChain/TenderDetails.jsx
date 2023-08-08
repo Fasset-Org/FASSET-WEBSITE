@@ -56,7 +56,7 @@ const TenderDetails = () => {
   const xs = useMediaQuery(theme.breakpoints.down("xs"));
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
 
-  console.log(xs, sm)
+  console.log(xs, sm);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -121,9 +121,20 @@ const TenderDetails = () => {
             Closing Date : 30 July 2023
           </Typography>
         </Stack>
-        <Stack direction={{xs: 'column', sm: 'column', md: 'row'}} spacing={{md: 2}} width="100%">
+        <Stack
+          direction={{ xs: "column", sm: "column", md: "row" }}
+          spacing={{ md: 2 }}
+          width="100%"
+          alignItems={{ xs: "center", sm: "center" }}
+        >
           <Typography fontWeight="bolder">Tender Reference</Typography>
-          <Typography>FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23</Typography>
+          <Typography
+            textAlign={{ xs: "center", sm: "center" }}
+            fontSize={{ xs: 11, sm: 11 }}
+            fontWeight={{ xs: "bolder", sm: "bolder" }}
+          >
+            FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23
+          </Typography>
         </Stack>
 
         <Stack spacing={2}>

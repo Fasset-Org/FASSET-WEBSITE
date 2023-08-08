@@ -20,7 +20,6 @@ const WhoWeAre = () => {
   return (
     <Stack spacing={1}>
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main", textTransform: "uppercase" }}
@@ -50,7 +49,6 @@ const WhoWeAre = () => {
       </Typography>
 
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main" }}
@@ -62,7 +60,6 @@ const WhoWeAre = () => {
         services skills.
       </Typography>
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main" }}
@@ -77,7 +74,6 @@ const WhoWeAre = () => {
       </Typography>
 
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main" }}
@@ -115,7 +111,6 @@ const WhoWeAre = () => {
       </Stack>
 
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main" }}
@@ -135,7 +130,6 @@ const WhoWeAre = () => {
       </List>
 
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main" }}
@@ -155,7 +149,6 @@ const WhoWeAre = () => {
       </List>
 
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main" }}

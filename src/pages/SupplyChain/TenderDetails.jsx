@@ -16,7 +16,9 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Typography
+  Typography,
+  useMediaQuery,
+  useTheme
 } from "@mui/material";
 import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -50,6 +52,11 @@ const TenderDetails = () => {
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const theme = useTheme();
+  const xs = useMediaQuery(theme.breakpoints.down("xs"));
+  const sm = useMediaQuery(theme.breakpoints.down("sm"));
+
+  console.log(xs, sm)
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -78,7 +85,7 @@ const TenderDetails = () => {
         spacing={2}
         border={1}
         borderColor="lightgray"
-        width="70%"
+        width={{ xs: "100%", sm: "100%", md: "70%" }}
         padding={2}
         justifyContent="center"
         alignItems="center"
@@ -92,7 +99,7 @@ const TenderDetails = () => {
         </Typography>
         <Stack
           justifyContent="space-between"
-          direction="row"
+          direction={{ md: "row", xs: "column", sm: "column" }}
           width="100%"
           alignItems="center"
         >
@@ -102,9 +109,11 @@ const TenderDetails = () => {
           >
             Date Advertised : 03 July 2023
           </Typography>
-          <Button variant="contained" sx={{ width: 180 }}>
-            Donwload
-          </Button>
+          {!(xs || sm) && (
+            <Button variant="contained" sx={{ width: 180 }}>
+              Donwload
+            </Button>
+          )}
           <Typography
             fontWeight="bolder"
             sx={{ color: "primary.main", fontSize: 15 }}
@@ -112,9 +121,8 @@ const TenderDetails = () => {
             Closing Date : 30 July 2023
           </Typography>
         </Stack>
-        <Stack direction="row" spacing={2} width="100%">
+        <Stack direction={{xs: 'column', sm: 'column', md: 'row'}} spacing={{md: 2}} width="100%">
           <Typography fontWeight="bolder">Tender Reference</Typography>
-          <Typography>:</Typography>
           <Typography>FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23</Typography>
         </Stack>
 
@@ -187,7 +195,7 @@ const TenderDetails = () => {
           </Typography>
         </Stack>
 
-        <Accordion sx={{width: '100%'}}>
+        <Accordion sx={{ width: "100%" }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
             aria-controls="panel1a-content"

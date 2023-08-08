@@ -57,7 +57,6 @@ const CancelledTenders = () => {
   return (
     <Stack spacing={2}>
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main", textTransform: "uppercase" }}

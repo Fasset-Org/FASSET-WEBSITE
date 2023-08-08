@@ -85,7 +85,7 @@ const VacancyDetails = () => {
             direction={{ xs: "column", md: "row", sm: "column" }}
             justifyContent="space-between"
             // border={1}
-            padding={{ xs: 2 }}
+            // padding={{ xs: 2 }}
           >
             <Typography
               fontSize={20}

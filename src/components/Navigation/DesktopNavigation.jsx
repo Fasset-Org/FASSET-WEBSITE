@@ -8,7 +8,6 @@ import TopLinksNavigation from "./TopLinksNavigation";
 const DesktopNavigation = () => {
   const Link = styled(NavLink)({
     color: "white",
-    fontFamily: "Gothic A1",
     fontWeight: 700,
     textTransform: "uppercase",
     fontSize: 14,

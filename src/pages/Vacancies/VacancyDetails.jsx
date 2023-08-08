@@ -26,7 +26,7 @@ const VacancyDetails = () => {
   const theme = useTheme();
   const xs = useMediaQuery(theme.breakpoints.down("xs"));
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
-  console.log(xs, sm)
+  console.log(xs, sm);
   const responsibilities = [
     "Ensure that employer grants are evaluated, approved and processed according to FASSET criteria, guidelines and standards",
     "Process all employers grant payments accurately and on time",
@@ -101,7 +101,7 @@ const VacancyDetails = () => {
             >
               Closing Date : 30 May 2022
             </Typography>
-            {(!xs || !sm) ? <JobApplyModal /> : ""}
+            {!(xs || sm) ? <JobApplyModal /> : ""}
           </Stack>
           <Stack
             width="100%"

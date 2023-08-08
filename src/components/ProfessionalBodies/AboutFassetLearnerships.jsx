@@ -47,7 +47,6 @@ const AboutFassetLearnerships = () => {
   return (
     <Stack spacing={2} justifyContent="center">
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main", textTransform: "uppercase" }}

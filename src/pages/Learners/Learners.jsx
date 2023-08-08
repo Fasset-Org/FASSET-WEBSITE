@@ -141,9 +141,6 @@ const Learners = () => {
           <Typography
             fontSize={20}
             fontWeight="bolder"
-            // textTransform="uppercase"
-            fontFamily="Helvetica Neue"
-            // textAlign="center"
             sx={{ color: "primary.main", textTransform: "uppercase" }}
           >
             Career Guide
@@ -165,82 +162,5 @@ const Learners = () => {
     </Box>
   );
 };
-
-// return (
-//   <Box
-//     sx={{
-//       flexGrow: 1,
-//       bgcolor: "background.paper",
-//       display: "flex",
-//       flexDirection: "row",
-//       height: 400
-//     }}
-//   >
-//     <Tabs
-//       orientation="vertical"
-//       variant="scrollable"
-//       value={value}
-//       onChange={handleChange}
-//       aria-label="Vertical tabs example"
-//       // sx={{ borderRight: 1, borderColor: "divider",}}
-//       sx={{
-//         flexGrow: 1,
-//         bgcolor: "background.paper",
-//         display: "flex",
-//         // height: 224
-//       }}
-//     >
-//       <Tab
-//         label="Choose a career in our sector"
-//         icon={<WorkIcon />}
-//         iconPosition="start"
-//         {...a11yProps(0)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//       <Tab
-//         label="Scarce Skills"
-//         icon={<AcUnitIcon />}
-//         iconPosition="start"
-//         {...a11yProps(1)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//       <Tab
-// label="Career Guide Booklet"
-// icon={<EditRoadIcon />}
-// iconPosition="start"
-//         {...a11yProps(2)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//       <Tab
-//         label="Bursary"
-//         icon={<CastForEducationIcon />}
-//         iconPosition="start"
-//         {...a11yProps(3)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//       <Tab
-//         label="Career Portal"
-//         icon={<AutoAwesomeIcon />}
-//         iconPosition="start"
-//         {...a11yProps(4)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//     </Tabs>
-//     <TabPanel value={value} index={0}>
-//       {/* <ChooseACareer /> */}
-//     </TabPanel>
-//     <TabPanel value={value} index={1}>
-//       Item Two
-//     </TabPanel>
-//     <TabPanel value={value} index={2}>
-//       Item Three
-//     </TabPanel>
-//     <TabPanel value={value} index={3}>
-//       Item Four
-//     </TabPanel>
-//     <TabPanel value={value} index={4}>
-//       Item Five
-//     </TabPanel>
-//   </Box>
 
 export default Learners;

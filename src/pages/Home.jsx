@@ -31,7 +31,6 @@ const Home = ({ id }) => {
             fontSize={30}
             fontWeight="bolder"
             textTransform="uppercase"
-            fontFamily="Helvetica Neue"
             textAlign="center"
             sx={{ color: "primary.main" }}
           >
@@ -86,7 +85,6 @@ const Home = ({ id }) => {
             fontSize={30}
             fontWeight="bolder"
             textTransform="uppercase"
-            fontFamily="Helvetica Neue"
             textAlign="center"
             sx={{ color: "primary.main" }}
           >

@@ -2,6 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Box,
   Button,
   IconButton,
   Menu,
@@ -24,6 +25,8 @@ import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { ArrowBack } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -55,9 +58,7 @@ const TenderDetails = () => {
   const theme = useTheme();
   const xs = useMediaQuery(theme.breakpoints.down("xs"));
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
-
-  console.log(xs, sm);
-
+  const navigate = useNavigate();
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -81,6 +82,35 @@ const TenderDetails = () => {
       // sx={{ backgroundColor: "#FFFFFF" }}
       padding={2}
     >
+      <Stack
+        height={60}
+        width="100%"
+        component={Paper}
+        // border={1}
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        padding={2}
+        sx={{ borderColor: "primary.main", mb: 2 }}
+      >
+        <Button
+          variant="outlined"
+          startIcon={<ArrowBack />}
+          onClick={() => navigate(-1)}
+        >
+          Back
+        </Button>
+        <Typography
+          fontSize={20}
+          fontWeight="bolder"
+          sx={{ color: "primary.main" }}
+        >
+          Job Title
+        </Typography>
+        {(!xs || !sm) && <Box></Box>}
+        {(!xs || !sm) && <Box></Box>}
+      </Stack>
+
       <Stack
         spacing={2}
         border={1}

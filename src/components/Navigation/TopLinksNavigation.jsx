@@ -51,7 +51,7 @@ const TopLinksNavigation = () => {
             textTransform="uppercase"
             fontWeight="bolder"
             sx={{ color: "primary.main" }}
-            // border={1}
+            letterSpacing={6}
           >
             Fasset
           </Typography>

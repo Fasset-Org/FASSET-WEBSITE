@@ -3,7 +3,6 @@ import { Grid, Stack, Typography } from "@mui/material";
 import TenderCard from "./TenderCard";
 
 const ActiveTenders = () => {
-  
   return (
     <Stack>
       <Typography
@@ -16,8 +15,8 @@ const ActiveTenders = () => {
       <Grid container spacing={2}>
         {[...Array(5)].map((option, i) => {
           return (
-            <Grid key={i} xs={12} md={6} item >
-              <TenderCard />
+            <Grid key={i} xs={12} md={6} item>
+              <TenderCard state="active" />
             </Grid>
           );
         })}

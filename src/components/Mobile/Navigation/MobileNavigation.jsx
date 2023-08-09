@@ -5,7 +5,7 @@ import Drawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
-// import Typography from "@mui/material/Typography";
+import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -22,9 +22,9 @@ import PestControlIcon from "@mui/icons-material/PestControl";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import { Collapse, Stack } from "@mui/material";
+import { Avatar, Collapse, Stack } from "@mui/material";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import whiteLogo from "../../../images/hor_blue_text_logo.png";
+import whiteLogo from "../../../images/square-logo.jpeg";
 import { useState } from "react";
 // About Us Icons
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
@@ -253,20 +253,25 @@ export default function MobileNavigation() {
             padding={2}
             spacing={1}
           >
-            <img src={whiteLogo} alt="Logo" width="60%" height={40} />
-            {/* <IconButton onClick={() => navigate("/home")}>
-              <Avatar src={whiteLogo} sx={{ padding: 0.4 }} />
-            </IconButton> */}
-            {/* <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              // textTransform="uppercase"
-              fontSize={20}
-              onClick={() => navigate("/home")}
-            >
-              Fasset
-            </Typography> */}
+            <Stack direction="row" alignItems="center" width="100%">
+              <IconButton onClick={() => navigate("/home")}>
+                <Avatar src={whiteLogo} sx={{ padding: 0.4 }} />
+              </IconButton>
+              <Stack width="100%">
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  // textTransform="uppercase"
+                  fontSize={20}
+                  onClick={() => navigate("/home")}
+                  textTransform="uppercase"
+                >
+                  Fasset
+                </Typography>
+                <Typography fontSize={9}><i>Make the future count</i></Typography>
+              </Stack>
+            </Stack>
           </Stack>
           <IconButton
             color="inherit"

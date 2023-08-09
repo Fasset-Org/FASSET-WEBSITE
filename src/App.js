@@ -152,7 +152,7 @@ function App() {
             </Route>
 
             {/* Auth Routes */}
-            <Route path="/login" element={<LoginUser />} />
+            {/* <Route path="/login" element={<LoginUser />} /> */}
 
             {/* Content Management Routes */}
 

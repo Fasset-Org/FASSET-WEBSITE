@@ -13,7 +13,6 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import VacancyDetails from "./pages/Vacancies/VacancyDetails";
 import "./App.css";
 import Learners from "./pages/Learners/Learners";
-import LoginUser from "./pages/FMS/Auth/LoginUser";
 // import Navigation from "./components/FMS/Navigation/Navigation";
 // import Dashboard from "./pages/FMS/Auth/Dashboard";
 // import UsersList from "./pages/FMS/Auth/User/UsersList";

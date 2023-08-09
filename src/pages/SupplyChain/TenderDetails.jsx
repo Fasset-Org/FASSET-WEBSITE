@@ -4,6 +4,7 @@ import {
   AccordionSummary,
   Box,
   Button,
+  Chip,
   IconButton,
   Menu,
   MenuItem,
@@ -105,7 +106,7 @@ const TenderDetails = () => {
           fontWeight="bolder"
           sx={{ color: "primary.main" }}
         >
-          Job Title
+          Network Upgrade
         </Typography>
         {(!xs || !sm) && <Box></Box>}
         {(!xs || !sm) && <Box></Box>}
@@ -122,11 +123,24 @@ const TenderDetails = () => {
         component={Paper}
         sx={{ borderRadius: 0 }}
       >
-        <Typography
-          sx={{ fontWeight: "bolder", color: "primary.main", fontSize: 20 }}
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          width="100%"
+          alignItems="center"
         >
-          NETWORK UPGRADE
-        </Typography>
+          <Typography
+            sx={{
+              fontWeight: "bolder",
+              color: "primary.main",
+              fontSize: 15,
+              textAlign: "center"
+            }}
+          >
+            NETWORK UPGRADE
+          </Typography>
+          <Chip label="active" color="success" sx={{ height: 20 }} />
+        </Stack>
         <Stack
           justifyContent="space-between"
           direction={{ md: "row", xs: "column", sm: "column" }}
@@ -371,6 +385,11 @@ const TenderDetails = () => {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
+        {(xs || sm) && (
+          <Button variant="contained" fullWidth>
+            Donwload
+          </Button>
+        )}
       </Stack>
     </Stack>
   );

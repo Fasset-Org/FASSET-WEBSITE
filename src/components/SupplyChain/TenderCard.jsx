@@ -46,7 +46,7 @@ const TenderCard = ({ state }) => {
               ? "warning"
               : "error"
           }
-          sx={{ height: 20 }}
+          sx={{ height: 20, fontWeight: "bolder" }}
         />
       </Stack>
       <Stack

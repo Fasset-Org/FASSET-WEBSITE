@@ -267,6 +267,7 @@ export default function MobileNavigation() {
                   onClick={() => navigate("/home")}
                   textTransform="uppercase"
                   fontWeight='bolder'
+                  letterSpacing={6}
                   // border={1}
                 >
                   Fasset
@@ -326,7 +327,7 @@ export default function MobileNavigation() {
                   onClick={() => navigate("/home")}
                   textTransform="uppercase"
                   fontWeight='bolder'
-                  // border={1}
+                  letterSpacing={6}
                 >
                   Fasset
                 </Typography>

@@ -253,13 +253,16 @@ export default function MobileNavigation() {
             padding={2}
             spacing={1}
           >
-            <Avatar src={whiteLogo} sx={{ padding: 0.4 }} />
+            <IconButton onClick={() => navigate("/home")}>
+              <Avatar src={whiteLogo} sx={{ padding: 0.4 }} />
+            </IconButton>
             <Typography
               variant="h6"
               noWrap
               component="div"
               // textTransform="uppercase"
               fontSize={20}
+              onClick={() => navigate("/home")}
             >
               Fasset
             </Typography>
@@ -308,7 +311,14 @@ export default function MobileNavigation() {
                   <ListItemIcon>
                     <link.icon sx={{ color: "#FFFFFF" }} />
                   </ListItemIcon>
-                  <ListItemText primary={link.parent} />
+                  {link.parent === "Home" ? (
+                    <ListItemText
+                      primary={link.parent}
+                      onClick={() => navigate("/home")}
+                    />
+                  ) : (
+                    <ListItemText primary={link.parent} />
+                  )}
                   {link.children.length > 0 && (
                     <>{link.open ? <ExpandLess /> : <ExpandMore />}</>
                   )}

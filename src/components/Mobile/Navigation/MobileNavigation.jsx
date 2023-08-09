@@ -312,6 +312,34 @@ export default function MobileNavigation() {
         open={open}
       >
         <DrawerHeader>
+        <Stack direction="row" alignItems="center" width="100%">
+              <IconButton onClick={() => navigate("/home")}>
+                <Avatar src={whiteLogo} sx={{ padding: 0.4 }} />
+              </IconButton>
+              <Stack width="100%">
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  // textTransform="uppercase"
+                  fontSize={15}
+                  onClick={() => navigate("/home")}
+                  textTransform="uppercase"
+                  fontWeight='bolder'
+                  // border={1}
+                >
+                  Fasset
+                </Typography>
+                <Typography
+                  fontSize={9}
+                  // border={1}
+                  sx={{ position: "relative", bottom: 5, height: 10 }}
+                  
+                >
+                  <i>Make the future count</i>
+                </Typography>
+              </Stack>
+            </Stack>
           <IconButton onClick={handleDrawerClose}>
             <CloseIcon sx={{ color: "#FFFFFF" }} />
           </IconButton>

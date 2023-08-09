@@ -1,8 +1,8 @@
-import { Button, Paper, Stack, Typography } from "@mui/material";
+import { Button, Chip, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const TenderCard = () => {
+const TenderCard = ({ state }) => {
   const navigate = useNavigate();
 
   return (
@@ -15,16 +15,40 @@ const TenderCard = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Typography
-        sx={{
-          fontWeight: "bolder",
-          color: "primary.main",
-          fontSize: 15,
-          textAlign: "center"
-        }}
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        width="100%"
+        alignItems="center"
       >
-        NETWORK UPGRADE
-      </Typography>
+        <Typography
+          sx={{
+            fontWeight: "bolder",
+            color: "primary.main",
+            fontSize: 15,
+            textAlign: "center"
+          }}
+        >
+          NETWORK UPGRADE
+        </Typography>
+        <Chip
+          label={
+            state === "active"
+              ? "active"
+              : state === "past"
+              ? "previous"
+              : "cancelled"
+          }
+          color={
+            state === "active"
+              ? "success"
+              : state === "past"
+              ? "warning"
+              : "error"
+          }
+          sx={{ height: 20 }}
+        />
+      </Stack>
       <Stack
         direction="row"
         justifyContent={{ md: "space-between", xs: "center", sm: "center" }}
@@ -49,7 +73,9 @@ const TenderCard = () => {
         accounting skills’ in the sub-sectors that fall with the sector scope of
         Fasset i.e., Finance and Accounting Services.
       </Typography>
-      <Button variant="contained" onClick={() => navigate('/tenders/1')}>Read More</Button>
+      <Button variant="contained" onClick={() => navigate("/tenders/1")}>
+        Read More
+      </Button>
     </Stack>
   );
 };

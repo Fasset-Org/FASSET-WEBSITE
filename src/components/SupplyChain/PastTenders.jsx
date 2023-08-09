@@ -16,7 +16,7 @@ const PastTenders = () => {
         {[...Array(5)].map((option, i) => {
           return (
             <Grid key={i} xs={12} md={6} item>
-              <TenderCard />
+              <TenderCard state="past" />
             </Grid>
           );
         })}

@@ -25,6 +25,7 @@ const Home = ({ id }) => {
       {xs || sm || md ? (
         <>
           <Slideshow images={images2} height="300px" />
+          <NoticeBoardModal />
           <FassetAssistant />
 
           <Typography

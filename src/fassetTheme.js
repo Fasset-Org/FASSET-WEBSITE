@@ -104,7 +104,7 @@ export const themeLight = createTheme({
   palette: {
     mode: "light",
     primary: {
-      light: "#3a9bfb",
+      light: "#1f2f79",
       main: "#163683",
       info: "#333",
       contrastText: "#ffffff"

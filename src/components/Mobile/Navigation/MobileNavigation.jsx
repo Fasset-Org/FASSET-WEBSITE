@@ -263,13 +263,22 @@ export default function MobileNavigation() {
                   noWrap
                   component="div"
                   // textTransform="uppercase"
-                  fontSize={20}
+                  fontSize={15}
                   onClick={() => navigate("/home")}
                   textTransform="uppercase"
+                  fontWeight='bolder'
+                  // border={1}
                 >
                   Fasset
                 </Typography>
-                <Typography fontSize={9}><i>Make the future count</i></Typography>
+                <Typography
+                  fontSize={9}
+                  // border={1}
+                  sx={{ position: "relative", bottom: 5, height: 10 }}
+                  
+                >
+                  <i>Make the future count</i>
+                </Typography>
               </Stack>
             </Stack>
           </Stack>

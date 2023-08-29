@@ -8,8 +8,8 @@ import TopLinksNavigation from "./TopLinksNavigation";
 const DesktopNavigation = () => {
   const Link = styled(NavLink)({
     color: "white",
-    fontWeight: 700,
-    textTransform: "uppercase",
+    // fontWeight: 700,
+    // textTransform: "uppercase",
     fontSize: 14,
     padding: 8,
     "&:hover": {

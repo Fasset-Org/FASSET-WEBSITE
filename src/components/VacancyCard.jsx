@@ -4,7 +4,7 @@ import {
   Card,
   CardContent,
   Grid,
-  Typography,
+  Typography
 } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -31,10 +31,18 @@ const VacancyCard = ({ vacancy }) => {
             fontSize={25}
             sx={{ color: "primary.main" }}
           >
-            {vacancy.jobTitle} - R{vacancy.jobRem}
+            {vacancy.jobTitle} - R{vacancy.remuneration}
           </Typography>
-          <Typography textAlign="center" mt={2}>
-            {vacancy.jobDescription}
+          <Typography
+            textAlign="center"
+            mt={2}
+            sx={{
+              maxHeight: 100,
+              overflow: "hidden",
+              textOverflow: "ellipsis"
+            }}
+          >
+            {vacancy.purposeOfJob}
           </Typography>
           <Box textAlign="center">
             <Button

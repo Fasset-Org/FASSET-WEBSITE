@@ -75,7 +75,7 @@ export const themeLight = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
-          textTransform: "none",
+          textTransform: "none"
         }
       }
     },
@@ -85,22 +85,26 @@ export const themeLight = createTheme({
         root: {
           "& .MuiTabs-indicator": {
             display: "none"
-          }
+          },
+          "& .MuiButtonBase-root": {
+            justifyContent: "start"
+          },
+          width: 250
         }
       }
     },
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          color: '#FFFFFF'
-        },
+          color: "#FFFFFF"
+        }
       }
     }
   },
   palette: {
     mode: "light",
     primary: {
-      light: "#3a9bfb",
+      light: "#1f2f79",
       main: "#163683",
       info: "#333",
       contrastText: "#ffffff"
@@ -115,18 +119,6 @@ export const themeLight = createTheme({
     }
   },
   typography: {
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Open Sans"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Lucida"',
-      '"Gothic A1"',
-      '"Segoe UI Symbol"'
-    ].join(","),
     fontSize: 12
   }
 });
@@ -151,8 +143,7 @@ export const NeoBrutalism = createTheme({
           borderRadius: 8
         }
       }
-    },
- 
+    }
   },
   palette: {
     mode: "light",

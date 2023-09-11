@@ -12,6 +12,8 @@ import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import ScarceSkills from "../../components/Learners/ScarceSkills";
 import CareerPortal from "../../components/Learners/CareerPortal";
+import DownloadCard from "../../components/DownloadCard";
+import { Grid, Stack } from "@mui/material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -62,7 +64,7 @@ const Learners = () => {
         display: "flex",
         minHeight: 450
       }}
-      position='sticky'
+      position="sticky"
     >
       <Tabs
         orientation="vertical"
@@ -78,7 +80,7 @@ const Learners = () => {
         }}
         TabIndicatorProps={{
           sx: {
-            border: 3,
+            borderBottom: 1,
             borderColor: "secondary.main"
           }
         }}
@@ -88,14 +90,23 @@ const Learners = () => {
           icon={<WorkIcon />}
           iconPosition="start"
           {...a11yProps(0)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", px: 4 }}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF"
+          }}
         />
         <Tab
           label="Scarce Skills"
           icon={<AcUnitIcon />}
           iconPosition="start"
           {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF",
+            textAlign: "start"
+          }}
         />
         <Tab
           label="Career Guide Booklet"
@@ -126,8 +137,20 @@ const Learners = () => {
         <ScarceSkills />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Career Guide PDF will be displayed and obviously have a download button
-        for downloading
+        <Stack spacing={1}>
+          <Typography
+            fontSize={20}
+            fontWeight="bolder"
+            sx={{ color: "primary.main", textTransform: "uppercase" }}
+          >
+            Career Guide
+          </Typography>
+          <Grid container>
+            <Grid xs={12} md={4}>
+              <DownloadCard fileName="Career Guide" />
+            </Grid>
+          </Grid>
+        </Stack>
       </TabPanel>
       <TabPanel value={value} index={3}>
         About Fasset Bursary will be defined here and provide a link to the
@@ -139,82 +162,5 @@ const Learners = () => {
     </Box>
   );
 };
-
-// return (
-//   <Box
-//     sx={{
-//       flexGrow: 1,
-//       bgcolor: "background.paper",
-//       display: "flex",
-//       flexDirection: "row",
-//       height: 400
-//     }}
-//   >
-//     <Tabs
-//       orientation="vertical"
-//       variant="scrollable"
-//       value={value}
-//       onChange={handleChange}
-//       aria-label="Vertical tabs example"
-//       // sx={{ borderRight: 1, borderColor: "divider",}}
-//       sx={{
-//         flexGrow: 1,
-//         bgcolor: "background.paper",
-//         display: "flex",
-//         // height: 224
-//       }}
-//     >
-//       <Tab
-//         label="Choose a career in our sector"
-//         icon={<WorkIcon />}
-//         iconPosition="start"
-//         {...a11yProps(0)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//       <Tab
-//         label="Scarce Skills"
-//         icon={<AcUnitIcon />}
-//         iconPosition="start"
-//         {...a11yProps(1)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//       <Tab
-// label="Career Guide Booklet"
-// icon={<EditRoadIcon />}
-// iconPosition="start"
-//         {...a11yProps(2)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//       <Tab
-//         label="Bursary"
-//         icon={<CastForEducationIcon />}
-//         iconPosition="start"
-//         {...a11yProps(3)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//       <Tab
-//         label="Career Portal"
-//         icon={<AutoAwesomeIcon />}
-//         iconPosition="start"
-//         {...a11yProps(4)}
-//         sx={{ borderBottom: 1, borderColor: "lightgray" }}
-//       />
-//     </Tabs>
-//     <TabPanel value={value} index={0}>
-//       {/* <ChooseACareer /> */}
-//     </TabPanel>
-//     <TabPanel value={value} index={1}>
-//       Item Two
-//     </TabPanel>
-//     <TabPanel value={value} index={2}>
-//       Item Three
-//     </TabPanel>
-//     <TabPanel value={value} index={3}>
-//       Item Four
-//     </TabPanel>
-//     <TabPanel value={value} index={4}>
-//       Item Five
-//     </TabPanel>
-//   </Box>
 
 export default Learners;

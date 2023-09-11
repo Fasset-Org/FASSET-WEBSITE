@@ -19,8 +19,8 @@ const DashboardCard = ({ title, Icon, ...otherProps }) => {
       className="linear-bg-2"
     >
       <CardContent component={Stack} alignItems="center">
-        <Icon fontSize="large" sx={{ color: "#FFFFFF" }} />
-        <Typography sx={{ color: "#FFFFFF" }} fontSize={17} fontWeight="bolder">
+        <Icon fontSize="large" sx={{ color: "primary.main" }} />
+        <Typography sx={{ color: "primary.main" }} fontSize={17} fontWeight="bolder">
           {title}
         </Typography>
       </CardContent>

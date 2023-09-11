@@ -6,10 +6,10 @@ import MailIcon from "@mui/icons-material/Mail";
 
 const TopContactNavigation = () => {
   return (
-    <Stack height={40} direction="row" justifyContent="center">
+    <Stack height={40} direction="row" justifyContent="center" width='100%' display='block'>
       <Stack
         height="100%"
-        width="80%"
+        width="100%"
         sx={{
           backgroundColor: "primary.main",
           color: "#FFFFFF"
@@ -49,7 +49,7 @@ const TopContactNavigation = () => {
           <PhoneIcon sx={{ fontWeight: "bolder" }} />
 
           <Typography>Switchboard :</Typography>
-          <Typography>&nbsp;087 821 2680</Typography>
+          <Typography>&nbsp; 011 476 8570</Typography>
         </Typography>
         <Divider
           orientation="vertical"
@@ -68,7 +68,7 @@ const TopContactNavigation = () => {
 
           <Typography>Email :</Typography>
           <Typography>
-            &nbsp;fassetcallcentre@fasset.org.za
+            &nbsp;fassetcallcentre(@)fasset.org.za
           </Typography>
         </Typography>
       </Stack>

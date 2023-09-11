@@ -7,6 +7,13 @@ const TrainingProviders = () => {
       <Typography
         fontSize={20}
         fontWeight="bolder"
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
+      >
+        Training Providers
+      </Typography>
+      <Typography
+        fontSize={20}
+        fontWeight="bolder"
         sx={{ color: "primary.main" }}
       >
         Provider Accreditation

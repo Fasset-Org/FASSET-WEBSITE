@@ -7,7 +7,7 @@ const WorkbasedProgramme = () => {
       <Typography
         fontSize={20}
         fontWeight="bolder"
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: 'uppercase' }}
       >
         TVET Workbased Programme
       </Typography>

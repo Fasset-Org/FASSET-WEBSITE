@@ -1,42 +1,39 @@
-import { Box, Card, Stack, Typography } from "@mui/material";
+import { Card, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const ValueCard = ({ title, definition }) => {
   return (
-    <Card className="v-card" sx={{ height: 250, width: "20%" }}>
-      <Stack height='100%' sx={{ position: "relative" }}>
-        <Stack
-          height={210}
-          alignItems="center"
-          justifyContent="center"
-          direction="row"
-          position="absolute"
-          top={0}
-          padding={2}
-        >
-          <Typography textAlign="center">{definition}</Typography>
-        </Stack>
-        <Box
-          border={1}
-          height={40}
-          width="100%"
+    <Card
+      className="v-card"
+      sx={{
+        height: 210,
+        width: { xs: "100%", md: "20%" },
+        borderRadius: 0,
+        p: 0
+      }}
+    >
+      <Stack height="80%" justifyContent="center" alignItems="center">
+        <Typography
           textAlign="center"
-          component={Stack}
-          alignItems="center"
-          justifyContent="center"
-          direction="row"
-          padding={2}
-          sx={{
-            position: "absolute",
-            bottom: 0,
-            backgroundColor: "primary.main",
-            color: "#FFFFFF"
-          }}
+          sx={{ width: "fit-content", padding: 2 }}
         >
-          <Typography textAlign="center" fontWeight="bolder">
-            {title}
-          </Typography>
-        </Box>
+          {definition}
+        </Typography>
+      </Stack>
+      <Stack
+        height="20%"
+        justifyContent="center"
+        alignItems="center"
+        sx={{ backgroundColor: "primary.main" }}
+      >
+        <Typography
+          textTransform="uppercase"
+          color="#FFFFFF"
+          fontWeight="bolder"
+          padding={2}
+        >
+          {title}
+        </Typography>
       </Stack>
     </Card>
   );

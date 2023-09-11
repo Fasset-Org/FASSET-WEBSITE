@@ -47,11 +47,9 @@ const AboutFassetLearnerships = () => {
   return (
     <Stack spacing={2} justifyContent="center">
       <Typography
-        textAlign="center"
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         About Fasset Learnerships
       </Typography>
@@ -60,7 +58,7 @@ const AboutFassetLearnerships = () => {
         info@aatsa.org.za
       </Typography>
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>
             <TableRow>
               <TableCell

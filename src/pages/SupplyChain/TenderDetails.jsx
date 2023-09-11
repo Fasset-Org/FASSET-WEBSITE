@@ -2,7 +2,9 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Box,
   Button,
+  Chip,
   IconButton,
   Menu,
   MenuItem,
@@ -16,12 +18,16 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Typography
+  Typography,
+  useMediaQuery,
+  useTheme
 } from "@mui/material";
 import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { ArrowBack } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -50,7 +56,10 @@ const TenderDetails = () => {
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
+  const theme = useTheme();
+  const xs = useMediaQuery(theme.breakpoints.down("xs"));
+  const sm = useMediaQuery(theme.breakpoints.down("sm"));
+  const navigate = useNavigate();
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -75,24 +84,66 @@ const TenderDetails = () => {
       padding={2}
     >
       <Stack
+        height={60}
+        width="100%"
+        component={Paper}
+        // border={1}
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        padding={2}
+        sx={{ borderColor: "primary.main", mb: 2 }}
+      >
+        <Button
+          variant="outlined"
+          startIcon={<ArrowBack />}
+          onClick={() => navigate(-1)}
+        >
+          Back
+        </Button>
+        <Typography
+          fontSize={20}
+          fontWeight="bolder"
+          sx={{ color: "primary.main" }}
+        >
+          Network Upgrade
+        </Typography>
+        {(!xs || !sm) && <Box></Box>}
+        {(!xs || !sm) && <Box></Box>}
+      </Stack>
+
+      <Stack
         spacing={2}
         border={1}
         borderColor="lightgray"
-        width="70%"
+        width={{ xs: "100%", sm: "100%", md: "70%" }}
         padding={2}
         justifyContent="center"
         alignItems="center"
         component={Paper}
         sx={{ borderRadius: 0 }}
       >
-        <Typography
-          sx={{ fontWeight: "bolder", color: "primary.main", fontSize: 20 }}
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          width="100%"
+          alignItems="center"
         >
-          NETWORK UPGRADE
-        </Typography>
+          <Typography
+            sx={{
+              fontWeight: "bolder",
+              color: "primary.main",
+              fontSize: 15,
+              textAlign: "center"
+            }}
+          >
+            NETWORK UPGRADE
+          </Typography>
+          <Chip label="active" color="success" sx={{ height: 20 }} />
+        </Stack>
         <Stack
           justifyContent="space-between"
-          direction="row"
+          direction={{ md: "row", xs: "column", sm: "column" }}
           width="100%"
           alignItems="center"
         >
@@ -102,9 +153,11 @@ const TenderDetails = () => {
           >
             Date Advertised : 03 July 2023
           </Typography>
-          <Button variant="contained" sx={{ width: 180 }}>
-            Donwload
-          </Button>
+          {!(xs || sm) && (
+            <Button variant="contained" sx={{ width: 180 }}>
+              Donwload
+            </Button>
+          )}
           <Typography
             fontWeight="bolder"
             sx={{ color: "primary.main", fontSize: 15 }}
@@ -112,10 +165,20 @@ const TenderDetails = () => {
             Closing Date : 30 July 2023
           </Typography>
         </Stack>
-        <Stack direction="row" spacing={2} width="100%">
+        <Stack
+          direction={{ xs: "column", sm: "column", md: "row" }}
+          spacing={{ md: 2 }}
+          width="100%"
+          alignItems={{ xs: "center", sm: "center" }}
+        >
           <Typography fontWeight="bolder">Tender Reference</Typography>
-          <Typography>:</Typography>
-          <Typography>FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23</Typography>
+          <Typography
+            textAlign={{ xs: "center", sm: "center" }}
+            fontSize={{ xs: 11, sm: 11 }}
+            fontWeight={{ xs: "bolder", sm: "bolder" }}
+          >
+            FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23
+          </Typography>
         </Stack>
 
         <Stack spacing={2}>
@@ -187,7 +250,7 @@ const TenderDetails = () => {
           </Typography>
         </Stack>
 
-        <Accordion sx={{width: '100%'}}>
+        <Accordion sx={{ width: "100%" }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
             aria-controls="panel1a-content"
@@ -322,6 +385,11 @@ const TenderDetails = () => {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
+        {(xs || sm) && (
+          <Button variant="contained" fullWidth>
+            Donwload
+          </Button>
+        )}
       </Stack>
     </Stack>
   );

@@ -13,7 +13,7 @@ const Slideshow = ({ images, height }) => {
       arrows={false}
     >
       {images.map((slideImage, index) => (
-        <div key={index}>
+        <div key={index} style={{ width: "100%", display: "block" }}>
           <div
             style={{
               height: height
@@ -26,7 +26,11 @@ const Slideshow = ({ images, height }) => {
             <img
               src={slideImage}
               alt=""
-              style={{ objectFit: "cover", objectPosition: "100% 100%" }}
+              style={{
+                objectFit: "cover",
+                height: height,
+                objectPosition: "100% 100%"
+              }}
               height="100%"
               width="100%"
             />

@@ -4,6 +4,13 @@ import React from "react";
 const MandatoryGrants = () => {
   return (
     <Stack spacing={2}>
+    <Typography
+        fontSize={20}
+        fontWeight="bolder"
+        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+      >
+        Mandatory Grants
+      </Typography>
       <Typography
         fontSize={20}
         fontWeight="bolder"

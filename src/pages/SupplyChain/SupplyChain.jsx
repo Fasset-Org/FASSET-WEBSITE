@@ -4,11 +4,12 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import AdjustIcon from "@mui/icons-material/Adjust";
-import EditNoteIcon from "@mui/icons-material/EditNote";
 import ActiveTenders from "../../components/SupplyChain/ActiveTenders";
 import PastTenders from "../../components/SupplyChain/PastTenders";
 import CancelledTenders from "../../components/SupplyChain/CancelledTenders";
+import TaskIcon from "@mui/icons-material/Task";
+import FileOpenIcon from "@mui/icons-material/FileOpen";
+import WebAssetOffIcon from "@mui/icons-material/WebAssetOff";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,7 +57,7 @@ const SupplyChain = () => {
       sx={{
         flexGrow: 1,
         bgcolor: "background.paper",
-        display: "flex",
+        display: "flex"
       }}
     >
       <Tabs
@@ -71,6 +72,7 @@ const SupplyChain = () => {
           borderColor: "lightgray",
           borderBottomRightRadius: 10,
           backgroundColor: "primary.main",
+          height: 450
         }}
         TabIndicatorProps={{
           sx: {
@@ -81,19 +83,18 @@ const SupplyChain = () => {
       >
         <Tab
           label="Fasset Current Tenders"
-          icon={<AdjustIcon />}
+          icon={<TaskIcon />}
           iconPosition="start"
           {...a11yProps(0)}
           sx={{
             borderBottom: 1,
             borderColor: "lightgray",
-            color: "#FFFFFF",
-            paddingX: 6
+            color: "#FFFFFF"
           }}
         />
         <Tab
           label="Fasset Past Tenders"
-          icon={<EditNoteIcon />}
+          icon={<FileOpenIcon />}
           iconPosition="start"
           {...a11yProps(1)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
@@ -101,7 +102,7 @@ const SupplyChain = () => {
 
         <Tab
           label="Fasset Candelled Tenders"
-          icon={<EditNoteIcon />}
+          icon={<WebAssetOffIcon />}
           iconPosition="start"
           {...a11yProps(1)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}

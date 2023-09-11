@@ -24,7 +24,7 @@ const DiscretionaryGrants = () => {
       <Typography
         fontSize={20}
         fontWeight="bolder"
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         Discretionary Grants
       </Typography>
@@ -43,7 +43,7 @@ const DiscretionaryGrants = () => {
         Benefits available to Fasset levy-paying and non- levy paying employers
       </Typography>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>
             <TableRow>
               <TableCell

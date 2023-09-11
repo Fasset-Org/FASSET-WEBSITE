@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Stack, Typography, styled } from "@mui/material";
+import { AppBar, Box, Button, Stack, styled } from "@mui/material";
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import LinksFooter from "../LinksFooter";
@@ -8,9 +8,8 @@ import TopLinksNavigation from "./TopLinksNavigation";
 const DesktopNavigation = () => {
   const Link = styled(NavLink)({
     color: "white",
-    fontFamily: "Gothic A1",
-    fontWeight: 700,
-    textTransform: "uppercase",
+    // fontWeight: 700,
+    // textTransform: "uppercase",
     fontSize: 14,
     padding: 8,
     "&:hover": {
@@ -29,14 +28,11 @@ const DesktopNavigation = () => {
 
   return (
     <Stack>
-      <Typography sx={{ color: "red", textAlign: "center", fontSize: 20 }}>
-        Small change
-      </Typography>
       <TopContactNavigation />
       <TopLinksNavigation />
       <AppBar
         position="sticky"
-        sx={{ height: 80, backgroundColor: "primary.main" }}
+        sx={{ height: 65, backgroundColor: "primary.main" }}
       >
         <Stack
           width="100%"

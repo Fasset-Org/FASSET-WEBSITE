@@ -10,7 +10,7 @@ const ScarceSkills = () => {
         // textTransform="uppercase"
         fontFamily="Helvetica Neue"
         // textAlign="center"
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: 'uppercase' }}
       >
         Scarce Skills
       </Typography>

@@ -1,15 +1,18 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import { Link, Stack } from "@mui/material";
+import { Link, Stack, useMediaQuery, useTheme } from "@mui/material";
 import img from "../../images/Bridging_Programmes.png";
 
 const SkillsProgramme = () => {
+  const theme = useTheme()
+  const xs = useMediaQuery(theme.breakpoints.down('xs'))
+  const sm = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Stack spacing={2}>
       <Typography
         fontSize={20}
         fontWeight="bolder"
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: 'uppercase' }}
       >
         Skills Programme
       </Typography>
@@ -24,8 +27,8 @@ const SkillsProgramme = () => {
       <img
         src={img}
         alt=""
-        width={600}
-        height={300}
+        width={xs || sm ? '100%' : 600 }
+        height={xs || sm ? 'auto%' : 300}
         style={{ objectFit: "fill" }}
       />
 

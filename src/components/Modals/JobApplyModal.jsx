@@ -43,7 +43,7 @@ const JobApplyModal = () => {
 
   return (
     <Box>
-      <Button variant="contained" onClick={handleClickOpen}>
+      <Button variant="contained" onClick={handleClickOpen} fullWidth>
         Apply Now
       </Button>
       <Dialog

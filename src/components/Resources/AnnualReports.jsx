@@ -5,11 +5,9 @@ const AnnualReports = () => {
   return (
     <Stack spacing={1}>
       <Typography
-        textAlign="center"
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main" }}
+        sx={{ color: "primary.main", textTransform: 'uppercase' }}
       >
         Annual Reports
       </Typography>

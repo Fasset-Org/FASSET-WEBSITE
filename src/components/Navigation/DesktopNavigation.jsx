@@ -66,7 +66,7 @@ const DesktopNavigation = () => {
             </Link> */}
             <Link to="/tenders">Supply Chain</Link>
             <Link to="/resources">Resources</Link>
-            {/* <Link to="/downloads">Downloads</Link> */}
+            <Link to="/downloads">Downloads</Link>
             <Link to="/vacancies">Vacancies</Link>
             <Button
               variant="contained"

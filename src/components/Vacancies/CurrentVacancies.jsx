@@ -1,46 +1,21 @@
-import { Grid, Stack, Typography } from "@mui/material";
+import { Alert, Grid, LinearProgress, Stack, Typography } from "@mui/material";
 import React from "react";
-import { v4 as uuidv4 } from "uuid";
 import VacancyCard from "../../components/VacancyCard";
+import { useQuery } from "@tanstack/react-query";
+import UserQuery from "../../stateQueries/User";
 
 const CurrentVacancies = () => {
-  const vacancies = [
-    {
-      id: uuidv4(),
-      jobTitle: "Frontend Developer C1",
-      jobDescription:
-        "An opportunity to work abroad has been made available with one of the leading Travel Business that provide strategic solutions to clients with high quality",
-      jobRem: "650K"
-    },
-    {
-      id: uuidv4(),
-      jobTitle: "Frontend Developer C1",
-      jobDescription:
-        "An opportunity to work abroad has been made available with one of the leading Travel Business that provide strategic solutions to clients with high quality",
-      jobRem: "650K"
-    },
-    {
-      id: uuidv4(),
-      jobTitle: "Frontend Developer C1",
-      jobDescription:
-        "An opportunity to work abroad has been made available with one of the leading Travel Business that provide strategic solutions to clients with high quality",
-      jobRem: "650K"
-    },
-    {
-      id: uuidv4(),
-      jobTitle: "Frontend Developer C1",
-      jobDescription:
-        "An opportunity to work abroad has been made available with one of the leading Travel Business that provide strategic solutions to clients with high quality",
-      jobRem: "650K"
-    },
-    {
-      id: uuidv4(),
-      jobTitle: "Frontend Developer C1",
-      jobDescription:
-        "An opportunity to work abroad has been made available with one of the leading Travel Business that provide strategic solutions to clients with high quality",
-      jobRem: "650K"
+  const { data, isLoading } = useQuery({
+    queryKey: ["positions"],
+    queryFn: async () => {
+      return await UserQuery.getAllPositions();
     }
-  ];
+  });
+
+  if (isLoading) {
+    return <LinearProgress />;
+  }
+
 
   return (
     <Stack>
@@ -48,14 +23,21 @@ const CurrentVacancies = () => {
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
+
         sx={{ color: "primary.main", textTransform: 'uppercase', mb: 2 }}
+
       >
         Available Vacancies
       </Typography>
       <Grid container spacing={2}>
-        {vacancies.map((vacancy, i) => {
-          return <VacancyCard vacancy={vacancy} />;
-        })}
+
+        {data?.positions?.length > 0 ? (
+          data?.positions?.map((position) => {
+            return <VacancyCard vacancy={position} key={position.id} />;
+          })
+        ) : (
+          <Alert severity="info">No Positions Available</Alert>
+        )}
       </Grid>
     </Stack>
   );

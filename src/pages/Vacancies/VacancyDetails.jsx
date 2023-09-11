@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Divider,
+  LinearProgress,
   List,
   ListItem,
   Paper,
@@ -19,14 +20,32 @@ import { v4 as uuidv4 } from "uuid";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import JobApplyModal from "../../components/Modals/JobApplyModal";
 import { ArrowBack } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import UserQuery from "../../stateQueries/User";
 
 const VacancyDetails = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const xs = useMediaQuery(theme.breakpoints.down("xs"));
   const sm = useMediaQuery(theme.breakpoints.down("sm"));
-  console.log(xs, sm);
+
+  const {id} = useParams()
+
+  const {data, isLoading} = useQuery({
+    queryKey: ['position'],
+    queryFn: async () => {
+      return UserQuery.getPositionById(id)
+    },
+    enabled: !!id
+  })
+
+  console.log(data)
+
+  if(isLoading){
+    return <LinearProgress />
+  }
+
   const responsibilities = [
     "Ensure that employer grants are evaluated, approved and processed according to FASSET criteria, guidelines and standards",
     "Process all employers grant payments accurately and on time",
@@ -61,7 +80,7 @@ const VacancyDetails = () => {
           fontWeight="bolder"
           sx={{ color: "primary.main" }}
         >
-          Job Title
+          {data?.position?.jobTitle}
         </Typography>
         {(!xs || !sm) && <Box></Box>}
         {(!xs || !sm) && <Box></Box>}
@@ -92,14 +111,14 @@ const VacancyDetails = () => {
               fontWeight="bolder"
               sx={{ color: "primary.main" }}
             >
-              Job Title
+              {data?.position?.jobTitle}
             </Typography>
             <Typography
               fontSize={20}
               fontWeight="bolder"
               sx={{ color: "primary.main" }}
             >
-              Closing Date : 30 May 2022
+              Closing Date : {`${data?.position?.closingDate}`}
             </Typography>
             {!(xs || sm) ? <JobApplyModal /> : ""}
           </Stack>
@@ -116,10 +135,7 @@ const VacancyDetails = () => {
             </Stack>
             <Stack width={{ xs: "100%", sm: "100%", md: "70%" }}>
               <Typography>
-                The primary purpose of this position is to provide
-                administrations on the approval of sector grants and stakeholder
-                needs according to FASSET regulations, processes, and
-                procedures.
+              {data?.position?.purposeOfJob}
               </Typography>
             </Stack>
           </Stack>
@@ -133,7 +149,7 @@ const VacancyDetails = () => {
             <Typography width={{ md: "30%" }} fontSize={15} fontWeight="bolder">
               Department
             </Typography>
-            <Typography>ICT</Typography>
+            <Typography>{data?.position?.Department?.departmentName}</Typography>
           </Stack>
 
           <Stack
@@ -145,7 +161,7 @@ const VacancyDetails = () => {
             <Typography width={{ md: "30%" }} fontSize={15} fontWeight="bolder">
               Reporting Line
             </Typography>
-            <Typography>Grants Specialist</Typography>
+            <Typography>{data?.position?.reportingTo}</Typography>
           </Stack>
 
           <Stack width="100%">

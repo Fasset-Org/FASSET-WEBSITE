@@ -3,6 +3,9 @@ import { Grid, Stack, Typography } from "@mui/material";
 import TenderCard from "./TenderCard";
 
 const ActiveTenders = () => {
+
+  
+
   return (
     <Stack>
       <Typography

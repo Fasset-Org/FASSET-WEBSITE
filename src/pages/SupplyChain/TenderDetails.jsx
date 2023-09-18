@@ -2,12 +2,9 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Box,
   Button,
   Chip,
-  IconButton,
-  Menu,
-  MenuItem,
+  LinearProgress,
   Paper,
   Stack,
   Table,
@@ -18,47 +15,19 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Typography,
-  useMediaQuery,
-  useTheme
+  Typography
 } from "@mui/material";
 import React from "react";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ArrowBack } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9)
-];
+import { useNavigate, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import UserQuery from "../../stateQueries/User";
 
 const TenderDetails = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const theme = useTheme();
-  const xs = useMediaQuery(theme.breakpoints.down("xs"));
-  const sm = useMediaQuery(theme.breakpoints.down("sm"));
   const navigate = useNavigate();
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -69,12 +38,25 @@ const TenderDetails = () => {
     setPage(0);
   };
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const { id } = useParams();
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["tender"],
+    queryFn: async () => {
+      return await UserQuery.getTenderById(id);
+    }
+  });
+
+  const winner =
+    (data &&
+      data?.tender?.bidders.find(
+        (bidder) => bidder.hasOwnProperty("winner") && bidder.winner === true
+      )) ||
+    null;
+
+  if (isLoading) {
+    return <LinearProgress />;
+  }
 
   return (
     <Stack
@@ -101,15 +83,6 @@ const TenderDetails = () => {
         >
           Back
         </Button>
-        <Typography
-          fontSize={20}
-          fontWeight="bolder"
-          sx={{ color: "primary.main" }}
-        >
-          Network Upgrade
-        </Typography>
-        {(!xs || !sm) && <Box></Box>}
-        {(!xs || !sm) && <Box></Box>}
       </Stack>
 
       <Stack
@@ -119,7 +92,6 @@ const TenderDetails = () => {
         width={{ xs: "100%", sm: "100%", md: "70%" }}
         padding={2}
         justifyContent="center"
-        alignItems="center"
         component={Paper}
         sx={{ borderRadius: 0 }}
       >
@@ -137,7 +109,7 @@ const TenderDetails = () => {
               textAlign: "center"
             }}
           >
-            NETWORK UPGRADE
+            {data?.tender?.tenderName}
           </Typography>
           <Chip label="active" color="success" sx={{ height: 20 }} />
         </Stack>
@@ -149,20 +121,27 @@ const TenderDetails = () => {
         >
           <Typography
             fontWeight="bolder"
-            sx={{ color: "primary.main", fontSize: 15 }}
+            sx={{ color: "primary.main", fontSize: { md: 15, xs: 12 } }}
           >
-            Date Advertised : 03 July 2023
+            Date Advertised : {new Date(data?.tender?.createdAt).toDateString()}
           </Typography>
-          {!(xs || sm) && (
-            <Button variant="contained" sx={{ width: 180 }}>
-              Donwload
-            </Button>
-          )}
+
           <Typography
             fontWeight="bolder"
-            sx={{ color: "primary.main", fontSize: 15 }}
+            sx={{ color: "primary.main", fontSize: { md: 15, xs: 12 } }}
           >
-            Closing Date : 30 July 2023
+            Closing Date :
+            {`${new Date(data?.tender?.closingDate).toDateString()} @ ${
+              new Date(data?.tender?.closingDate).getHours() > 11
+                ? new Date(data?.tender?.closingDate).getHours() +
+                  ":" +
+                  new Date(data?.tender?.closingDate).getMinutes() +
+                  "PM"
+                : new Date(data?.tender?.closingDate).getHours() +
+                  ":" +
+                  new Date(data?.tender?.closingDate).getMinutes() +
+                  "AM"
+            }`}
           </Typography>
         </Stack>
         <Stack
@@ -171,225 +150,272 @@ const TenderDetails = () => {
           width="100%"
           alignItems={{ xs: "center", sm: "center" }}
         >
-          <Typography fontWeight="bolder">Tender Reference</Typography>
+          <Typography fontWeight="bolder">Tender Reference:</Typography>
           <Typography
             textAlign={{ xs: "center", sm: "center" }}
             fontSize={{ xs: 11, sm: 11 }}
             fontWeight={{ xs: "bolder", sm: "bolder" }}
           >
-            FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23
+            {data?.tender?.tenderReference}
           </Typography>
         </Stack>
 
-        <Stack spacing={2}>
-          <Typography fontWeight="bolder">INVITATION TO BID</Typography>
+        <Typography fontWeight="bolder">INVITATION TO BID</Typography>
 
-          <Typography>
-            Fasset is a statutory body established through the Skills
-            Development Act No 97 of 1998, as amended. The goal of the Act in
-            respect of the Fasset Seta is ‘To facilitate the achievement of
-            world-class finance and accounting skills’ in the sub-sectors that
-            fall with the sector scope of Fasset i.e., Finance and Accounting
-            Services.
-          </Typography>
+        <Typography fontSize={{ xs: 12 }}>
+          {data?.tender?.invitationMessage}
+        </Typography>
 
-          <Typography>
-            FASSET invites suitable service providers to submit proposals to
-            supply, deliver, install a new network nfrastructure as well as
-            maintenance for a period of 36 months.
-          </Typography>
+        <Typography fontSize={{ xs: 12 }}>
+          {data?.tender?.bidMessage}
+        </Typography>
 
-          <Typography>
-            Please Tender Reference:
-            <span style={{ fontWeight: "bolder" }}>
-              FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23
-            </span>
-            in all correspondence. Correspondence without a reference number
-            will not be attended to.
-          </Typography>
-        </Stack>
+        <Typography fontSize={{ xs: 12 }} width="100%">
+          Please Refer: {data?.tender?.tenderReference} in all correspondence.
+          Correspondence without a reference number will not be attended to.
+        </Typography>
+
         <Stack spacing={2} sx={{ color: "error.main" }}>
-          <Typography>
-            NOTE: A compulsory briefing session will be held on Friday 02 June
-            2023 at 09:00 AM – 10:30 AM virtually.
-          </Typography>
+          {data?.tender?.meetingLink && (
+            <>
+              <Typography>
+                NOTE: A compulsory briefing session will be held on &nbsp;
+                {`${new Date(data?.tender?.meetingDate).toDateString()} @ ${
+                  new Date(data?.tender?.meetingDate).getHours() > 11
+                    ? new Date(data?.tender?.meetingDate).getHours() +
+                      ":" +
+                      new Date(data?.tender?.meetingDate).getMinutes() +
+                      "PM"
+                    : new Date(data?.tender?.meetingDate).getHours() +
+                      ":" +
+                      new Date(data?.tender?.meetingDate).getMinutes() +
+                      "AM"
+                }`}{" "}
+                &nbsp; AM virtually.
+              </Typography>
 
-          <Typography>
-            Microsoft Teams meeting Join on your computer, mobile app or room
-            device&nbsp;
-            <span style={{ color: "blue", cursor: "pointer" }}>
-              Click here to join the meeting
-            </span>
-            &nbsp; Meeting ID: 357 365 426 44 Passcode: Gm2Rhw
-          </Typography>
+              <Typography>
+                Microsoft Teams meeting Join on your computer, mobile app or
+                room device&nbsp;
+                <a
+                  href={data?.tender?.meetingLink}
+                  style={{ color: "blue", cursor: "pointer" }}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Click here to join the meeting
+                </a>
+                &nbsp; Meeting ID: {data?.tender?.meetinngId} Passcode:
+                {data?.tender?.meetingPasscode}
+              </Typography>
+            </>
+          )}
         </Stack>
 
-        <Stack spacing={2}>
-          <Typography>
-            Bid documentation is available for downloading from the Fasset
-            website (www.fasset.org.za) or electronically,on request by e-mail,
-            Mathapelo Makomene at mathapelo.makomene@fasset.org.za
-          </Typography>
-
-          <Typography>
-            <span>Click here</span> to download the tender information.
-          </Typography>
-
-          <Typography>
-            The closing date for submissions is 02 June 2023, at 11H00.
-          </Typography>
-
-          <Typography>
-            No late submissions will be considered. Submissions should be
-            delivered to: Supply Chain Management, Fasset Offices, First Floor,
-            296 Kent Avenue, Randburg, Johannesburg.
-          </Typography>
-
-          <Typography>
-            The procurement process is administered by Fasset.
-          </Typography>
-        </Stack>
-
-        <Accordion sx={{ width: "100%" }}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-            sx={{ backgroundColor: "primary.main" }}
+        <Typography>
+          Bid documentation is available for downloading on this link&nbsp;
+          <a
+            href={`${process.env.REACT_APP_API_URL}/scm/downloadTenderDocument?filename=${data?.tender?.tenderDocument}`}
+            download
+            target="_blank"
+            rel="noreferrer"
           >
-            <Typography>Bids Received</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography
-              textAlign="center"
-              fontFamily="Helvetica Neue"
-              fontWeight="bolder"
-              fontSize={20}
-            >
-              Date Posted: 30 June 2022
-            </Typography>
+            download
+          </a>
+          &nbsp; or electronically,on request by e-mail:
+          <a href={`mailto:${data?.tender?.queryEmail}`}>
+            {data?.tender?.queryEmail}
+          </a>
+        </Typography>
 
-            <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
-              <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead sx={{ backgroundColor: "primary.main" }}>
-                  <TableRow>
-                    <TableCell
-                      align="center"
-                      sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-                    >
-                      No#
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-                    >
-                      Year
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-                    >
-                      Document Title
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-                    >
-                      Action
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {(rowsPerPage > 0
-                    ? rows.slice(
-                        page * rowsPerPage,
-                        page * rowsPerPage + rowsPerPage
-                      )
-                    : rows
-                  ).map((row, i) => (
-                    <TableRow
-                      key={row.name}
-                      sx={{
-                        backgroundColor: i % 2 === 0 ? "action.hover" : ""
-                      }}
-                    >
-                      <TableCell align="center" component="th" scope="row">
-                        {i + 1}
+        <Typography>
+          The closing date for submissions is &nbsp;
+          {`${new Date(data?.tender?.closingDate).toDateString()} @ ${
+            new Date(data?.tender?.closingDate).getHours() > 11
+              ? new Date(data?.tender?.closingDate).getHours() +
+                ":" +
+                new Date(data?.tender?.closingDate).getMinutes() +
+                "PM"
+              : new Date(data?.tender?.closingDate).getHours() +
+                ":" +
+                new Date(data?.tender?.closingDate).getMinutes() +
+                "AM"
+          }`}
+        </Typography>
+
+        <Typography>
+          No late submissions will be considered. Submissions should be
+          delivered to: Supply Chain Management, Fasset Offices, First Floor,
+          296 Kent Avenue, Randburg, Johannesburg.
+        </Typography>
+
+        <Typography>
+          The procurement process is administered by Fasset.
+        </Typography>
+
+        {data?.tender?.bidders?.length > 0 && (
+          <Accordion sx={{ width: "100%" }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              sx={{ backgroundColor: "primary.main" }}
+            >
+              <Typography>Bids Received</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography
+                textAlign="center"
+                fontFamily="Helvetica Neue"
+                fontWeight="bolder"
+                fontSize={20}
+              >
+                Date Posted:
+                <span style={{ color: "#1f2f79", fontWeight: "lighter" }}>
+                  {new Date(data?.tender.bidders[0].datePosted).toDateString()}
+                </span>
+              </Typography>
+
+              <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
+                <Table aria-label="simple table">
+                  <TableHead sx={{ backgroundColor: "primary.main" }}>
+                    <TableRow>
+                      <TableCell
+                        align="center"
+                        sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
+                      >
+                        Name Of Bidder
                       </TableCell>
-                      <TableCell align="center" component="th" scope="row">
-                        2022/2023
-                      </TableCell>
-                      <TableCell align="center" component="th" scope="row">
-                        FASSET 2023-24 SSP Final Annual Update
-                      </TableCell>
-                      <TableCell align="center" scope="row">
-                        <IconButton
-                          id="demo-positioned-button"
-                          aria-controls={
-                            open ? "demo-positioned-menu" : undefined
-                          }
-                          aria-haspopup="true"
-                          aria-expanded={open ? "true" : undefined}
-                          onClick={handleClick}
-                        >
-                          <MoreVertIcon />
-                        </IconButton>
-                        <Menu
-                          id="demo-positioned-menu"
-                          aria-labelledby="demo-positioned-button"
-                          anchorEl={anchorEl}
-                          open={open}
-                          onClose={handleClose}
-                          anchorOrigin={{
-                            vertical: "top",
-                            horizontal: "left"
-                          }}
-                          transformOrigin={{
-                            vertical: "top",
-                            horizontal: "left"
-                          }}
-                        >
-                          <MenuItem onClick={handleClose}>View</MenuItem>
-                          <MenuItem onClick={handleClose}>Download</MenuItem>
-                        </Menu>
+                      <TableCell
+                        align="center"
+                        sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
+                      >
+                        B-BBEE Levels
                       </TableCell>
                     </TableRow>
-                  ))}
-                </TableBody>
-                <TableFooter>
-                  <TableRow>
-                    <TablePagination
-                      rowsPerPageOptions={[
-                        5,
-                        10,
-                        25,
-                        { label: "All", value: -1 }
-                      ]}
-                      // colSpan={3}
-                      count={rows?.length || 0}
-                      rowsPerPage={rowsPerPage}
-                      page={page}
-                      SelectProps={{
-                        inputProps: {
-                          "aria-label": "rows per page"
-                        },
-                        native: true
-                      }}
-                      onPageChange={handleChangePage}
-                      onRowsPerPageChange={handleChangeRowsPerPage}
-                      ActionsComponent={TablePaginationActions}
-                    />
-                  </TableRow>
-                </TableFooter>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-        {(xs || sm) && (
-          <Button variant="contained" fullWidth>
-            Donwload
-          </Button>
+                  </TableHead>
+                  <TableBody>
+                    {(rowsPerPage > 0
+                      ? data?.tender?.bidders?.slice(
+                          page * rowsPerPage,
+                          page * rowsPerPage + rowsPerPage
+                        )
+                      : data?.tender?.bidders
+                    ).map((bidder, i) => (
+                      <TableRow
+                        key={i}
+                        sx={{
+                          backgroundColor: i % 2 === 0 ? "action.hover" : ""
+                        }}
+                      >
+                        <TableCell align="center" component="th" scope="row">
+                          {bidder.bidderName}
+                        </TableCell>
+                        <TableCell align="center" component="th" scope="row">
+                          {bidder.bbeeLevel}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                  <TableFooter>
+                    <TableRow>
+                      <TablePagination
+                        rowsPerPageOptions={[
+                          5,
+                          10,
+                          25,
+                          { label: "All", value: -1 }
+                        ]}
+                        // colSpan={3}
+                        count={data?.tender?.bidders?.length || 0}
+                        rowsPerPage={rowsPerPage}
+                        page={page}
+                        SelectProps={{
+                          inputProps: {
+                            "aria-label": "rows per page"
+                          },
+                          native: true
+                        }}
+                        onPageChange={handleChangePage}
+                        onRowsPerPageChange={handleChangeRowsPerPage}
+                        ActionsComponent={TablePaginationActions}
+                      />
+                    </TableRow>
+                  </TableFooter>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
         )}
+
+        {winner && (
+          <Accordion sx={{ width: "100%" }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              sx={{ backgroundColor: "primary.main" }}
+            >
+              <Typography>Awarded Bidder</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography
+                textAlign="center"
+                fontFamily="Helvetica Neue"
+                fontWeight="bolder"
+                fontSize={20}
+              >
+                Date Posted:
+                <span style={{ color: "#1f2f79", fontWeight: "lighter" }}>
+                  {new Date(winner.datePosted).toDateString()}
+                </span>
+              </Typography>
+
+              <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
+                <Table aria-label="simple table">
+                  <TableHead sx={{ backgroundColor: "primary.main" }}>
+                    <TableRow>
+                      <TableCell
+                        align="center"
+                        sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
+                      >
+                        Name Of Bidder
+                      </TableCell>
+                      <TableCell
+                        align="center"
+                        sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
+                      >
+                        B-BBEE Levels
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell align="center" component="th" scope="row">
+                        {winner.bidderName}
+                      </TableCell>
+                      <TableCell align="center" component="th" scope="row">
+                        {winner.bbeeLevel}
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+        )}
+
+        <Button variant="contained" fullWidth>
+          <a
+            href={`${process.env.REACT_APP_API_URL}/scm/downloadTenderDocument?filename=${data?.tender?.tenderDocument}`}
+            download
+            target="_blank"
+            rel="noreferrer"
+            style={{ all: "unset" }}
+          >
+            Download Tender Document
+          </a>
+        </Button>
       </Stack>
     </Stack>
   );

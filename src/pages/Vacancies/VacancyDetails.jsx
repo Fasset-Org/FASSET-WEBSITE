@@ -2,14 +2,11 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Box,
   Button,
   LinearProgress,
   Paper,
   Stack,
-  Typography,
-  useMediaQuery,
-  useTheme
+  Typography
 } from "@mui/material";
 import React from "react";
 
@@ -22,9 +19,6 @@ import UserQuery from "../../stateQueries/User";
 
 const VacancyDetails = () => {
   const navigate = useNavigate();
-  const theme = useTheme();
-  const xs = useMediaQuery(theme.breakpoints.down("xs"));
-  const sm = useMediaQuery(theme.breakpoints.down("sm"));
 
   const { id } = useParams();
 
@@ -35,8 +29,6 @@ const VacancyDetails = () => {
     },
     enabled: !!id
   });
-
-  console.log(data);
 
   if (isLoading) {
     return <LinearProgress />;
@@ -62,15 +54,6 @@ const VacancyDetails = () => {
         >
           Back
         </Button>
-        <Typography
-          fontSize={20}
-          fontWeight="bolder"
-          sx={{ color: "primary.main" }}
-        >
-          {data?.position?.jobTitle}
-        </Typography>
-        {(!xs || !sm) && <Box></Box>}
-        {(!xs || !sm) && <Box></Box>}
       </Stack>
       <Stack
         direction={{ xs: "column", md: "row", sm: "column" }}
@@ -94,14 +77,14 @@ const VacancyDetails = () => {
             // padding={{ xs: 2 }}
           >
             <Typography
-              fontSize={20}
+              fontSize={15}
               fontWeight="bolder"
               sx={{ color: "primary.main" }}
             >
               {data?.position?.jobTitle}
             </Typography>
             <Typography
-              fontSize={20}
+              fontSize={15}
               fontWeight="bolder"
               sx={{ color: "primary.main" }}
             >
@@ -118,7 +101,6 @@ const VacancyDetails = () => {
                     "AM"
               }`}
             </Typography>
-            {!(xs || sm) ? <JobApplyModal /> : ""}
           </Stack>
           <Stack
             width="100%"
@@ -273,8 +255,18 @@ const VacancyDetails = () => {
             spacing={2}
             width="100%"
           >
-            <Button variant="outlined">Download Job Description</Button>
-            <JobApplyModal />
+            <Button variant="outlined">
+              <a
+                href={`${process.env.REACT_APP_API_URL}/humanResource/downloadJobSpecDocument?filename=${data?.position?.jobSpecDocumentName}`}
+                download
+                target="_blank"
+                rel="noreferrer"
+                style={{ all: "unset" }}
+              >
+                Download Job Description
+              </a>
+            </Button>
+            <JobApplyModal position={data?.position} />
           </Stack>
         </Stack>
       </Stack>

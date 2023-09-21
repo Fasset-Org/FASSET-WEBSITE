@@ -32,7 +32,7 @@ const CurrentVacancies = () => {
             return <VacancyCard vacancy={position} key={position.id} />;
           })
         ) : (
-          <Stack width="100%">
+          <Stack width="100%" spacing={2} ml={2}>
             <Alert severity="info">No Positions Available</Alert>
           </Stack>
         )}

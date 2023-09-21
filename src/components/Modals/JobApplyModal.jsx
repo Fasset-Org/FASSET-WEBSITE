@@ -15,6 +15,9 @@ import React from "react";
 import TextFieldWrapper from "../FormComponents/TextFieldWrapper";
 import SelectFieldWrapper from "../FormComponents/SelectFieldWrapper";
 import * as Yup from "yup";
+import { useMutation } from "@tanstack/react-query";
+import UserQuery from "../../stateQueries/User";
+import AlertPopup from "../AlertPopup";
 
 const JobApplyModal = ({ position }) => {
   const [open, setOpen] = React.useState(false);
@@ -30,6 +33,15 @@ const JobApplyModal = ({ position }) => {
     setOpen(false);
   };
 
+  const {mutate, isError, isSuccess, data, error} = useMutation({
+    mutationFn: async (formData) => {
+      return await UserQuery.jobApplication(formData);
+    },
+     onSuccess: data => {
+      console.log(data);
+     }
+  })
+
   const genderOptions = [
     {
       value: "Male",
@@ -41,13 +53,24 @@ const JobApplyModal = ({ position }) => {
     }
   ];
 
-  console.log(position);
 
   return (
     <Box>
       <Button variant="contained" onClick={handleClickOpen} fullWidth>
         Apply Now
       </Button>
+      {isError && (
+        <AlertPopup
+          open={true}
+          severity="error"
+          message={
+            error?.response?.data?.message || "Server Error"
+          }
+        />
+      )}
+      {isSuccess && (
+        <AlertPopup open={true} message={data?.message} />
+      )}
       <Dialog
         open={open}
         onClose={handleClose}
@@ -60,6 +83,7 @@ const JobApplyModal = ({ position }) => {
           <Formik
             initialValues={{
               positionId: position.id || "",
+              jobTitle: position?.jobTitle || "",
               fullname: "",
               email: "",
               nationality: "",
@@ -91,9 +115,18 @@ const JobApplyModal = ({ position }) => {
                 "Please upload your qualification"
               )
             })}
-            onSubmit={(values) => {}}
+            onSubmit={(values) => {
+              const formData = new FormData();
+              for (const [key, value] of Object.entries(values)) {
+                formData.append(key, value);
+              }
+
+              mutate(formData)
+
+            }}
           >
             {({ values, setFieldValue }) => {
+              console.log(values)
               return (
                 <Form>
                   <Grid container spacing={2}>
@@ -241,7 +274,7 @@ const JobApplyModal = ({ position }) => {
                       )} */}
 
                     <Grid item xs={12} md={12}>
-                      <Stack spacing={2} direction="row" justifyContent='end'>
+                      <Stack spacing={2} direction="row" justifyContent="end">
                         <Button
                           onClick={handleClose}
                           color="error"

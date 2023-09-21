@@ -17,6 +17,14 @@ const UserQuery = {
     return resp?.data;
   },
 
+  jobApplication : async(formData) => {
+
+    const resp = await axiosInstance.post('/humanResource/jobApplication', formData);
+
+    return resp?.data;
+
+  },
+
   getAllCurrentTenders: async () => {
     const resp = await axiosInstance.get("/scm/currentTenders");
 

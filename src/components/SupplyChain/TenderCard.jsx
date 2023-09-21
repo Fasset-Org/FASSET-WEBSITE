@@ -2,7 +2,7 @@ import { Button, Chip, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const TenderCard = ({ state }) => {
+const TenderCard = ({ tender, state }) => {
   const navigate = useNavigate();
 
   return (
@@ -29,7 +29,7 @@ const TenderCard = ({ state }) => {
             textAlign: "center"
           }}
         >
-          NETWORK UPGRADE
+          {tender?.tenderName}
         </Typography>
         <Chip
           label={
@@ -50,12 +50,12 @@ const TenderCard = ({ state }) => {
         />
       </Stack>
       <Stack
-        direction="row"
+        direction={{md: 'row', xs: 'column'}}
         justifyContent={{ md: "space-between", xs: "center", sm: "center" }}
         alignItems="center"
       >
         <Typography fontWeight="bolder">Tender Reference:</Typography>
-        <Typography> FAS/TM/ICT/NET-INFRA-UPGRADE/CON3254/23</Typography>
+        <Typography>{tender?.tenderReference}</Typography>
       </Stack>
       <Typography
         sx={{
@@ -64,16 +64,13 @@ const TenderCard = ({ state }) => {
           textAlign: { md: "center" }
         }}
       >
-        INVITATION TO BID
+        BID MESSAGE
       </Typography>
-      <Typography>
-        Fasset is a statutory body established through the Skills Development
-        Act No 97 of 1998, as amended. The goal of the Act in respect of the
-        Fasset Seta is ‘To facilitate the achievement of world-class finance and
-        accounting skills’ in the sub-sectors that fall with the sector scope of
-        Fasset i.e., Finance and Accounting Services.
-      </Typography>
-      <Button variant="contained" onClick={() => navigate("/tenders/1")}>
+      <Typography>{tender?.bidMessage}</Typography>
+      <Button
+        variant="contained"
+        onClick={() => navigate(`/tenders/${tender?.id}`)}
+      >
         Read More
       </Button>
     </Stack>

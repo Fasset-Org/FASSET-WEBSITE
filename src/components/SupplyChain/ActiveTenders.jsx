@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Grid, LinearProgress, Stack, Typography } from "@mui/material";
+import { Alert, Grid, LinearProgress, Stack, Typography } from "@mui/material";
 import TenderCard from "./TenderCard";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../../stateQueries/User";
@@ -30,12 +30,14 @@ const ActiveTenders = () => {
           data?.currentTenders?.map((tender, i) => {
             return (
               <Grid key={i} xs={12} md={6} item>
-                <TenderCard state="active" tender={tender} />
+                <TenderCard state={tender.tenderStatus} tender={tender} />
               </Grid>
             );
           })
         ) : (
-          <Typography>No Tenders Available</Typography>
+          <Grid item xs={12} md={12}>
+            <Alert severity="info">No Tenders Available</Alert>
+          </Grid>
         )}
       </Grid>
     </Stack>

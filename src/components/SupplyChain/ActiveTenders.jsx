@@ -29,7 +29,7 @@ const ActiveTenders = () => {
         {data?.currentTenders?.length > 0 ? (
           data?.currentTenders?.map((tender, i) => {
             return (
-              <Grid key={i} xs={12} md={6} item>
+              <Grid item key={i} xs={12} md={6}>
                 <TenderCard state={tender.tenderStatus} tender={tender} />
               </Grid>
             );

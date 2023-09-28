@@ -70,9 +70,9 @@ const SupplyChain = () => {
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
-          borderBottomRightRadius: 10,
+          // borderBottomRightRadius: 10,
           backgroundColor: "primary.main",
-          height: 450
+          // height: 450
         }}
         TabIndicatorProps={{
           sx: {

@@ -1,22 +1,31 @@
 import React from "react";
-import { Fade } from "react-slideshow-image";
+import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import "./Navigation/tab.css";
+import { useQuery } from "@tanstack/react-query";
+import UserQuery from "../stateQueries/User";
 
-const Slideshow = ({ images, height }) => {
+const Slideshow = ({ banners }) => {
+  const { data } = useQuery({
+    queryKey: ["banners"],
+    queryFn: async () => {
+      return UserQuery.getAllBanners();
+    }
+  });
+
   return (
-    <Fade
+    <Slide
       autoplay={true}
       indicators={true}
       pauseOnHover={false}
       cssClass="slideshow"
       arrows={false}
     >
-      {images.map((slideImage, index) => (
+      {data?.banners.map((banner, index) => (
         <div key={index} style={{ width: "100%", display: "block" }}>
           <div
             style={{
-              height: height
+              height: 400
               // backgroundImage: `url(${slideImage.url})`,
               // backgroundRepeat: "cover",
               // backgroundSize: "100% 100%",
@@ -24,11 +33,11 @@ const Slideshow = ({ images, height }) => {
             }}
           >
             <img
-              src={slideImage}
+              src={`http://localhost:8001/uploads/banners/${banner.bannerImageURL}`}
               alt=""
               style={{
-                objectFit: "cover",
-                height: height,
+                objectFit: "fit",
+                height: 400,
                 objectPosition: "100% 100%"
               }}
               height="100%"
@@ -37,7 +46,7 @@ const Slideshow = ({ images, height }) => {
           </div>
         </div>
       ))}
-    </Fade>
+    </Slide>
   );
 };
 

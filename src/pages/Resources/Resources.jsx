@@ -4,9 +4,9 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
-import ScienceIcon from '@mui/icons-material/Science';
-import SummarizeIcon from '@mui/icons-material/Summarize';
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import ScienceIcon from "@mui/icons-material/Science";
+import SummarizeIcon from "@mui/icons-material/Summarize";
 import Downloads from "../../components/Resources/Downloads";
 import Research from "../../components/Resources/Research";
 import AnnualReports from "../../components/Resources/AnnualReports";
@@ -57,7 +57,7 @@ const Resources = () => {
       sx={{
         flexGrow: 1,
         bgcolor: "background.paper",
-        display: "flex",
+        display: "flex"
       }}
     >
       <Tabs
@@ -70,9 +70,10 @@ const Resources = () => {
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
-          borderBottomRightRadius: 10,
+          borderBottomRightRadius: 0,
           backgroundColor: "primary.main",
-          height: 450
+          minHeight: 450,
+          m: 2
         }}
         TabIndicatorProps={{
           sx: {
@@ -89,7 +90,7 @@ const Resources = () => {
           sx={{
             borderBottom: 1,
             borderColor: "lightgray",
-            color: "#FFFFFF",
+            color: "#FFFFFF"
           }}
         />
         <Tab

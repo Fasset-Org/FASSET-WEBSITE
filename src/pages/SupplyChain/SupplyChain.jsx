@@ -57,7 +57,8 @@ const SupplyChain = () => {
       sx={{
         flexGrow: 1,
         bgcolor: "background.paper",
-        display: "flex"
+        display: "flex",
+        minHeight: 450
       }}
     >
       <Tabs
@@ -70,9 +71,9 @@ const SupplyChain = () => {
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
-          // borderBottomRightRadius: 10,
+          borderBottomRightRadius: 0,
           backgroundColor: "primary.main",
-          // height: 450
+          m: 2
         }}
         TabIndicatorProps={{
           sx: {

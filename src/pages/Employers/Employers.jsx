@@ -62,6 +62,7 @@ const Employers = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
+        minHeight: 450
       }}
     >
       <Tabs
@@ -74,9 +75,9 @@ const Employers = () => {
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
-          borderBottomRightRadius: 10,
+          borderBottomRightRadius: 0,
           backgroundColor: "primary.main",
-          height: 450
+          m: 2
         }}
         TabIndicatorProps={{
           sx: {
@@ -89,16 +90,15 @@ const Employers = () => {
           label="Skills Programmes"
           icon={<AdjustIcon />}
           iconPosition="start"
-          
           {...a11yProps(0)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF",  }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="TVET Workbased Programme"
           icon={<EditNoteIcon />}
           iconPosition="start"
           {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF", }}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="Mandatory Grants"

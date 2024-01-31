@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Stack, styled } from "@mui/material";
+import { AppBar, Box, Stack, styled } from "@mui/material";
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import LinksFooter from "../LinksFooter";
@@ -12,6 +12,7 @@ const DesktopNavigation = () => {
     // textTransform: "uppercase",
     fontSize: 14,
     padding: 8,
+    textTransform: "uppercase",
     "&:hover": {
       transform: "none",
       backgroundColor: "#a6aa15",
@@ -66,14 +67,13 @@ const DesktopNavigation = () => {
             </Link> */}
             <Link to="/tenders">Supply Chain</Link>
             <Link to="/resources">Resources</Link>
-            <Link to="/downloads">Downloads</Link>
             <Link to="/vacancies">Vacancies</Link>
-            <Button
+            {/* <Button
               variant="contained"
               sx={{ backgroundColor: "primary.dark" }}
             >
               Fasset Assistant
-            </Button>
+            </Button> */}
           </Stack>
         </Stack>
       </AppBar>

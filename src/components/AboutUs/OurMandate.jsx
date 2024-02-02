@@ -1,9 +1,8 @@
 import {
-  List,
-  ListItem,
-  ListItemText,
+  Box,
+
   Stack,
-  Typography
+  Typography,
 } from "@mui/material";
 import React from "react";
 
@@ -14,18 +13,18 @@ const OurMandate = () => {
       children: [
         "Improving the quality of life of employees, their prospects of work and labour mobility.",
         "Improving productivity in the workplace and the competitiveness of employers.",
-        "Promoting self-employment in situations where the sector is experiencing job shrinkage."
-      ]
+        "Promoting self-employment in situations where the sector is experiencing job shrinkage.",
+      ],
     },
     {
       parent:
         "To increase the levels of investment in education and training and to optimise the return on this investment.",
-      children: []
+      children: [],
     },
     {
       parent:
         "To position this sector as the 'sector of career choice' for prospective learners and entrants into the labour market.",
-      children: []
+      children: [],
     },
     {
       parent:
@@ -33,113 +32,113 @@ const OurMandate = () => {
       children: [
         "The workplace as an active learning environment.",
         "Providing employees with the opportunities to acquire new skills.",
-        "Providing opportunities for new entrants and potential entrants into the sector labour market and enhancing access to opportunities to gain work experience."
-      ]
+        "Providing opportunities for new entrants and potential entrants into the sector labour market and enhancing access to opportunities to gain work experience.",
+      ],
     },
     {
       parent: "To support the objectives of the Employment Equity Act of 1998.",
-      children: []
+      children: [],
     },
     {
       parent:
         "To enhance access to learning opportunities and to facilitate the recognition of prior learning.",
-      children: []
+      children: [],
     },
     {
       parent: "To ensure the quality of education and training in the sector.",
-      children: []
+      children: [],
     },
     {
       parent:
         "To expand the provision of education and training in this sector through sound partnerships with public and private sector service providers.",
-      children: []
+      children: [],
     },
     {
       parent:
         "To encourage greater cooperation between the public and private sectors.",
-      children: []
+      children: [],
     },
     {
       parent:
         "To co-operate with the South African Qualifications Authority and other Setas, in support of the objectives of the Act.",
-      children: []
-    }
+      children: [],
+    },
   ];
 
   const services = [
     {
       parent:
         "Facilitate strategic human resource development planning within this sector;",
-      children: []
+      children: [],
     },
     {
       parent:
         "Propose education and training standards and qualifications to bodies registered with SAQA and be responsible for developing education and training standards;",
-      children: []
+      children: [],
     },
     {
       parent:
         "Monitor and audit achievements in terms of those standards and qualifications",
-      children: []
+      children: [],
     },
     {
       parent:
         "Accredit providers, assessors and moderators of education and training in this sector",
-      children: []
+      children: [],
     },
     {
       parent:
         "Assure the quality of education and training in this sector without itself being a provider of education and training",
-      children: []
+      children: [],
     },
     {
       parent:
         "Analyse and prioritise education and training needs within this sector and develop skills development strategies to address identified priorities",
-      children: []
+      children: [],
     },
     {
       parent: "Enhance access to learning opportunities including:",
       children: [
         "Career paths and progression pathways",
         "NQF qualifications",
-        "Learnerships."
-      ]
+        "Learnerships.",
+      ],
     },
     {
       parent: "Manage and administer all learnerships within Fasset",
-      children: []
+      children: [],
     },
     {
       parent: "Manage the administration of levy disbursements in this sector",
-      children: []
+      children: [],
     },
     {
       parent:
         "Promote a culture of learning within this sector and encourage active employer and employee organisation participation in the strategies and activities of Fasset",
-      children: []
+      children: [],
     },
     {
       parent:
         "Promote and market Fasset through regular communication with all stakeholders and potential stakeholders",
-      children: []
+      children: [],
     },
     {
       parent:
         "Perform any other function required by SAQA in terms of Fasset's registration",
-      children: []
+      children: [],
     },
     {
       parent:
         "Perform any other function that must be performed by Fasset in terms of the Skills Development Act or any other applicable law.",
-      children: []
-    }
+      children: [],
+    },
   ];
 
   const skills = [
     {
       parent:
         "Develop a sector skills plan within the framework of the national skills development strategy for Fasset",
-      children: []
+      children: [],
     },
     {
       parent: "Implement a sector skills plan by:",
@@ -147,16 +146,16 @@ const OurMandate = () => {
         "Approving and monitoring workplace skills plans.",
         "Establishing learnerships.",
         "Allocating grants to employers, education and training service providers and employees.",
-        "Monitoring education and training in this sector."
-      ]
+        "Monitoring education and training in this sector.",
+      ],
     },
     {
       parent: "Promote learnerships by:",
       children: [
         "Identifying appropriate workplaces where individuals can gain practical work experience",
         "Improving and supporting learning through the development of learning methodologies and materials",
-        "Assisting in the conclusion, registration and monitoring of learnership agreements."
-      ]
+        "Assisting in the conclusion, registration and monitoring of learnership agreements.",
+      ],
     },
     {
       parent:
@@ -164,21 +163,21 @@ const OurMandate = () => {
       children: [
         "National skills strategy",
         "Skills development policy",
-        "Its own sector skills plan."
-      ]
+        "Its own sector skills plan.",
+      ],
     },
     {
       parent:
         "Report to the Director-General of Labour on the implementation of its sector skills plan, its income and expenditure;",
-      children: []
+      children: [],
     },
     {
       parent:
         "Liaise with the employment services of the Department of Labour and education councils and other regulatory bodies in terms of education laws of South Africa in order to improve the quality of information:",
       children: [
         "About employment opportunities",
-        "Between education providers and the labour market."
-      ]
+        "Between education providers and the labour market.",
+      ],
     },
     {
       parent:
@@ -187,9 +186,9 @@ const OurMandate = () => {
         "Address the competency requirements for social delivery",
         "Address the learning needs of the most vulnerable segments of the sector",
         "Promote training in SMME's to enable them to qualify for public contracts",
-        "Perform any other duties imposed by the Act or any other function not specifically mentioned, in order to fulfill the objectives of Fasset."
-      ]
-    }
+        "Perform any other duties imposed by the Act or any other function not specifically mentioned, in order to fulfill the objectives of Fasset.",
+      ],
+    },
   ];
 
   return (
@@ -197,7 +196,7 @@ const OurMandate = () => {
       <Typography
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         Our Mandate
       </Typography>
@@ -207,34 +206,23 @@ const OurMandate = () => {
       {objectives.map((option, idx) => {
         return (
           <>
-            <ListItem disablePadding disableGutters key={idx} sx={{ pl: 2 }}>
-              <span style={{ color: "#163683", fontWeight: "bolder" }}>
-                &#x2022;&nbsp;
-              </span>
-              <ListItemText primary={option.parent} />
-            </ListItem>
+            <ul>
+              <li>
+                <Typography>{option.parent}</Typography>
+              </li>
+            </ul>
             {option.children.length > 0 && (
-              <List
-                component="div"
-                disableGutters
-                disablePadding
-                sx={{ pl: 6 }}
-              >
-                {option.children.map((child) => {
-                  return (
-                    <>
-                      <Typography>
-                        <span
-                          style={{ color: "#163683", fontWeight: "bolder" }}
-                        >
-                          &#62;&nbsp;
-                        </span>
-                        {child}
-                      </Typography>
-                    </>
-                  );
-                })}
-              </List>
+              <Box pl={3}>
+                <ul style={{ listStyleType: "circle" }}>
+                  {option.children.map((child) => {
+                    return (
+                      <li>
+                        <Typography>{child}</Typography>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Box>
             )}
           </>
         );
@@ -253,34 +241,29 @@ const OurMandate = () => {
       {services.map((option, idx) => {
         return (
           <>
-            <ListItem disablePadding disableGutters key={idx} sx={{ pl: 2 }}>
-              <span style={{ color: "#163683", fontWeight: "bolder" }}>
-                &#x2022;&nbsp;
-              </span>
-              <ListItemText primary={option.parent} />
-            </ListItem>
+            <ul> 
+              <li><Typography>{option.parent}</Typography></li>
+              
+              </ul>
             {option.children.length > 0 && (
-              <List
-                component="div"
-                disableGutters
-                disablePadding
-                sx={{ pl: 6 }}
-              >
-                {option.children.map((child) => {
+              <Box pl={3}>
+                <ul style={{ listStyle: "circle"}}>
+                {option.children.map((child) => { 
+                
+              
+               
+                
                   return (
-                    <>
+                    <li>
                       <Typography>
-                        <span
-                          style={{ color: "#163683", fontWeight: "bolder" }}
-                        >
-                          &#62;&nbsp;
-                        </span>
+                        
                         {child}
                       </Typography>
-                    </>
+                      </li>
                   );
                 })}
-              </List>
+                </ul>
+              </Box>
             )}
           </>
         );
@@ -292,34 +275,27 @@ const OurMandate = () => {
       {skills.map((option, idx) => {
         return (
           <>
-            <ListItem disablePadding disableGutters key={idx} sx={{ pl: 2 }}>
-              <span style={{ color: "#163683", fontWeight: "bolder" }}>
-                &#x2022;&nbsp;
-              </span>
-              <ListItemText primary={option.parent} />
-            </ListItem>
+            <ul>
+              <li><Typography>{option.parent}</Typography></li>
+              
+              </ul> 
             {option.children.length > 0 && (
-              <List
-                component="div"
-                disableGutters
-                disablePadding
-                sx={{ pl: 6 }}
-              >
+              <Box pl={3}>
+                <ul style={{ listStyle: "circle"}}>
+                  
+                
                 {option.children.map((child) => {
                   return (
-                    <>
+                    <li>
                       <Typography>
-                        <span
-                          style={{ color: "#163683", fontWeight: "bolder" }}
-                        >
-                          &#62;&nbsp;
-                        </span>
+                        
                         {child}
                       </Typography>
-                    </>
+                    </li>
                   );
                 })}
-              </List>
+                </ul>
+              </Box>
             )}
           </>
         );

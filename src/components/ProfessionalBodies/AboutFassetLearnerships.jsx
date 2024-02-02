@@ -57,6 +57,18 @@ const AboutFassetLearnerships = () => {
         Association of Accounting Technicians (AAT(SA)) 011 621 6888 –
         info@aatsa.org.za
       </Typography>
+
+      <Typography fontWeight="bolder">
+      Workplace Accreditation
+      </Typography>
+      <Typography>Workplace accreditation is a requirement for all employers, regardless of sector, who wishes to register learners on Fasset learnerships. The accreditation aims to verify the ability of the workplace to host a specific learnership. Criteria for accreditation include access to resources related to the learnership, the relevance of the work experience component to the qualification, and the structures in place to ensure successful implementation and completion of the learnership.<br/>
+      <br/>
+      For the majority of learnerships, Fasset has agreements with professional bodies and Assessment Quality Partners (AQP’s) which are responsible for the accreditation of workplaces.
+      </Typography>
+      <Typography fontWeight="bolder">
+      Fasset Learnerships
+      </Typography>
+      <Typography>Click on the learnership titles below for information on each learnership</Typography>
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>

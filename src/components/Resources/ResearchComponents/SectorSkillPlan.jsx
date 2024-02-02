@@ -116,7 +116,7 @@ const SectorSkillPlan = () => {
       ))}
 
       <Typography fontWeight="bolder">
-        TResponsibility for producing the SSP rests with Fasset and therefore,
+        Responsibility for producing the SSP rests with Fasset and therefore,
         the members of Fasset representing organised labour, organised
         employers, relevant government departments and other members appointed
         to the Fasset Board. As a strategic Seta document, the main stakeholders

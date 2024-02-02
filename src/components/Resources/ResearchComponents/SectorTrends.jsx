@@ -86,6 +86,19 @@ const SectorTrends = () => {
         sector.
       </Typography>
 
+      <Typography
+        textAlign="center"
+        fontFamily="Helvetica Neue"
+        fontWeight="bolder"
+        fontSize={20}
+        sx={{ color: "primary.main" }}
+      >
+        Download the Sector Trend
+      </Typography>
+      <Typography>
+      To download Fasset’s Sector Trend Reports, click on your choice in the table below.
+      </Typography>
+
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>

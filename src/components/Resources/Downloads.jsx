@@ -75,6 +75,17 @@ const Downloads = () => {
       >
         Downloads
       </Typography>
+      <Typography>TIPS for Hassle-free Downloading Click here to download the Acrobat (PDF) Reader Software</Typography>
+      <Typography>
+        <ol>
+          <li>Download documentation is available in either Microsoft Word or Adobe PDF format. If neither of these formats is suitable for your use, or if you encounter problems when downloading a file, please request an e-mail or fax version of the document you require from our Call Centre on 086 101 0001.</li>
+          <li>Adobe PDF files open in a new browser with the 'Save' and 'Save as...' options disabled in the drop-down “File” menu. In most instances the new browser will offer a 'Save' button which, when selected, will allow you to save the document.
+            Try right clicking on the initial file link and choose the 'Save Target As...' option to save.</li>
+          <li>Certain files require a large amount of memory to download, open, or display correctly. Please be patient and allow sufficient time for file operations to complete.</li>
+          <li>It is often quicker to save a file to a drive on your computer before opening as opposed to opening from the website and then saving it.</li>
+          <li>WinZip files (*.zip files), require the WinZip software package which you can download for free from www.winzip.com.</li>
+        </ol>
+      </Typography>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}

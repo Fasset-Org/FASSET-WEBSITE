@@ -37,6 +37,7 @@ const BoardMembers = () => {
       >
         Board Members
       </Typography>
+      <p>The Board is Fasset’s Accounting Authority. As the highest governing structure, the Board provides strategic leadership for Fasset; it provide assurance to all stakeholders that Fasset is fulfilling its obligations in terms of the Fasset constitution and the Skills Development Act, and reports to the Minister of Higher Education and Training as the Executive Authority of the Seta.</p>
 
       <Grid container spacing={2}>
         {data?.boardMembers.map((member) => {

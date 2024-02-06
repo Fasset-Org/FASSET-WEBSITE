@@ -63,6 +63,16 @@ const UserQuery = {
     const resp = await axiosInstance.get("/cse/committeeMembers");
 
     return resp?.data;
+  },
+  getlAllDocumentsTitle: async () => {
+    const resp = await axiosInstance.get(`/cse/downloadsTitle`);
+
+    return resp?.data;
+  },
+  getAllAnnualReports: async () => {
+    const resp = await axiosInstance.get("/cse/annualReports");
+
+    return resp?.data;
   }
 };
 

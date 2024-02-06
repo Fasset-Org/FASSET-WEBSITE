@@ -9,26 +9,21 @@ import Paper from "@mui/material/Paper";
 import { Stack, TableFooter, TablePagination, Typography } from "@mui/material";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9)
+  {
+    title: "Certificate: Local Government Accounting",
+    NQLevel: "3",
+    learnershipCode: "01/Q010026/00/120/3",
+    SAQAIdNo: "59751"
+  },
+
+  {
+    title: "Certificate: Local Government Accounting",
+    NQLevel: "3",
+    learnershipCode: "01/Q010026/00/120/3",
+    SAQAIdNo: "59751"
+  }
 ];
 
 const AboutFassetLearnerships = () => {
@@ -58,17 +53,26 @@ const AboutFassetLearnerships = () => {
         info@aatsa.org.za
       </Typography>
 
-      <Typography fontWeight="bolder">
-      Workplace Accreditation
+      <Typography fontWeight="bolder">Workplace Accreditation</Typography>
+      <Typography>
+        Workplace accreditation is a requirement for all employers, regardless
+        of sector, who wishes to register learners on Fasset learnerships. The
+        accreditation aims to verify the ability of the workplace to host a
+        specific learnership. Criteria for accreditation include access to
+        resources related to the learnership, the relevance of the work
+        experience component to the qualification, and the structures in place
+        to ensure successful implementation and completion of the learnership.
+        <br />
+        <br />
+        For the majority of learnerships, Fasset has agreements with
+        professional bodies and Assessment Quality Partners (AQP’s) which are
+        responsible for the accreditation of workplaces.
       </Typography>
-      <Typography>Workplace accreditation is a requirement for all employers, regardless of sector, who wishes to register learners on Fasset learnerships. The accreditation aims to verify the ability of the workplace to host a specific learnership. Criteria for accreditation include access to resources related to the learnership, the relevance of the work experience component to the qualification, and the structures in place to ensure successful implementation and completion of the learnership.<br/>
-      <br/>
-      For the majority of learnerships, Fasset has agreements with professional bodies and Assessment Quality Partners (AQP’s) which are responsible for the accreditation of workplaces.
+      <Typography fontWeight="bolder">Fasset Learnerships</Typography>
+      <Typography>
+        Click on the learnership titles below for information on each
+        learnership
       </Typography>
-      <Typography fontWeight="bolder">
-      Fasset Learnerships
-      </Typography>
-      <Typography>Click on the learnership titles below for information on each learnership</Typography>
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>
@@ -111,23 +115,23 @@ const AboutFassetLearnerships = () => {
               : rows
             ).map((row, i) => (
               <TableRow
-                key={row.name}
+                key={row?.title}
                 sx={{ backgroundColor: i % 2 === 0 ? "action.hover" : "" }}
               >
                 <TableCell align="center" component="th" scope="row">
                   {i + 1}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  Certificate: Local Government Accounting
+                  {row?.title}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  3
+                  {row?.NQLevel}
                 </TableCell>
                 <TableCell align="center" scope="row">
-                  01/Q010026/00/120/3
+                  {row?.learnershipCode}
                 </TableCell>
                 <TableCell align="center" scope="row">
-                  59751
+                  {row.SAQAIdNo}
                 </TableCell>
               </TableRow>
             ))}
@@ -159,36 +163,76 @@ const AboutFassetLearnerships = () => {
         fontWeight="bolder"
         sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
-        
-Learnership Agreement Registration Procedures
+        Learnership Agreement Registration Procedures
       </Typography>
-      <Typography fontWeight="bolder"> a. Employers Register​ed with Fasset wishing to implement a Fasset Learnership:</Typography>
+      <Typography fontWeight="bolder">
+        {" "}
+        a. Employers Register​ed with Fasset wishing to implement a Fasset
+        Learnership:
+      </Typography>
       <Typography>
         <ol>
-          <li>Apply for accreditation as an accredited workplace training provider with the professional body or AQP responsible for the learnership, or with Fasset (as applicable)</li>
-          <li>Register the learner with the relevant professional body and/or training provider</li>
+          <li>
+            Apply for accreditation as an accredited workplace training provider
+            with the professional body or AQP responsible for the learnership,
+            or with Fasset (as applicable)
+          </li>
+          <li>
+            Register the learner with the relevant professional body and/or
+            training provider
+          </li>
           <li>Sign an employment contract with the learner</li>
           <li>Sign a Learnership Agreement with the learner</li>
-          <li>Submit the Learnership Agreement to Fasset together with the following:</li>
-          <Typography>Proof of learner registration with the professional body or AQP, if applicable
-Employer accreditation status with professional body or AQP (copy of letter/certificate), if applicable
-Copy of the learner’s employment contract
-Certified copy of the learner’s ID document.</Typography>
-<Typography>The Learnership Agreement and other supplementary documentation can be accessed under the  section of the website. Please Note: Learnership regulations require the Seta to decide if it will register the agreement within 7 days of receipt.
-Learnership regulations require the SETA to register the learnership agreement within 21 days of that decision.
-If the agreement has any outstanding information, the learnership agreement will be returned to the employer, accompanied by a letter indicating reasons for non-registration. The employer may resubmit the learnership agreement, together with all required documentation
-If all the required documents are attached, Fasset will issue the employer with a Confirmation letter. The Confirmation letter may be used to claim the SARS income tax deduction.</Typography>
+          <li>
+            Submit the Learnership Agreement to Fasset together with the
+            following:
+          </li>
+          <Typography>
+            Proof of learner registration with the professional body or AQP, if
+            applicable Employer accreditation status with professional body or
+            AQP (copy of letter/certificate), if applicable Copy of the
+            learner’s employment contract Certified copy of the learner’s ID
+            document.
+          </Typography>
+          <Typography>
+            The Learnership Agreement and other supplementary documentation can
+            be accessed under the section of the website. Please Note:
+            Learnership regulations require the Seta to decide if it will
+            register the agreement within 7 days of receipt. Learnership
+            regulations require the SETA to register the learnership agreement
+            within 21 days of that decision. If the agreement has any
+            outstanding information, the learnership agreement will be returned
+            to the employer, accompanied by a letter indicating reasons for
+            non-registration. The employer may resubmit the learnership
+            agreement, together with all required documentation If all the
+            required documents are attached, Fasset will issue the employer with
+            a Confirmation letter. The Confirmation letter may be used to claim
+            the SARS income tax deduction.
+          </Typography>
         </ol>
       </Typography>
-      <Typography fontWeight= "bolder">b.Employers Registered with Fasset wishing to implement a Learnership from another Seta</Typography>
-      <Typography>Contact the SETA to which the learnership belongs to ascertain if the employer fulfils all the requirements to implement the learnership.
-Complete the Fasset learnership agreement and submit it to Fasset.
-Fasset will register the Learnership Agreement and issue the employer with a confirmation letter.</Typography>
-<Typography fontWeight="bolder">c. Employers not Registered with Fasset wishing to implement a Fasset Learnership</Typography>
-<Typography>The employer contacts the relevant professional body / AQP / Fasset to become an accredited workplace provider.
-Once accredited, the employer completes their SETA’s learnership agreement.
-The employer submits the learnership agreement to their SETA.
-The Learnership Agreement will be registered by the other SETA.</Typography>
+      <Typography fontWeight="bolder">
+        b.Employers Registered with Fasset wishing to implement a Learnership
+        from another Seta
+      </Typography>
+      <Typography>
+        Contact the SETA to which the learnership belongs to ascertain if the
+        employer fulfils all the requirements to implement the learnership.
+        Complete the Fasset learnership agreement and submit it to Fasset.
+        Fasset will register the Learnership Agreement and issue the employer
+        with a confirmation letter.
+      </Typography>
+      <Typography fontWeight="bolder">
+        c. Employers not Registered with Fasset wishing to implement a Fasset
+        Learnership
+      </Typography>
+      <Typography>
+        The employer contacts the relevant professional body / AQP / Fasset to
+        become an accredited workplace provider. Once accredited, the employer
+        completes their SETA’s learnership agreement. The employer submits the
+        learnership agreement to their SETA. The Learnership Agreement will be
+        registered by the other SETA.
+      </Typography>
     </Stack>
   );
 };

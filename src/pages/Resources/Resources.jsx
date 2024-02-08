@@ -117,14 +117,6 @@ const Resources = () => {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <AnnualReports />
-        <Typography>Fasset's Annual Integrated Report for the period 1 April 2021 to 31 March 2022 is available for download.
-Hard copies are also available from Thabiso Sebashe at Fasset on 011 476 8570.</Typography>
-<br/>
-<Typography>Click below to download an electronic version. Note: This file is fairly large and may take a while to download.</Typography><br/>
-<br/>
-<br/>
-<Typography>Fasset Five Year Overview</Typography>
-<Typography>The Fasset Five Year Overview was included as a separate insert to the Year 5 annual report. It provides a wonderful snapshot of Fasset's achievements in terms of the first five year NSDS and we are proud to report that we have excelled in all areas.</Typography>
       </TabPanel>
     </Box>
   );

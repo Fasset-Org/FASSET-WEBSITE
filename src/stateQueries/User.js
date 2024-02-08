@@ -73,7 +73,12 @@ const UserQuery = {
     const resp = await axiosInstance.get("/cse/annualReports");
 
     return resp?.data;
-  }
+  },
+  getAllResearcheports: async () => {
+    const resp = await axiosInstance.get("/cse/researchReports");
+
+    return resp?.data;
+  },
 };
 
 export default UserQuery;

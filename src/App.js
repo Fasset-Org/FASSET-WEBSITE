@@ -52,6 +52,7 @@ import DownloadsMobile from "./pages/Mobile/Resources/DownloadsMobile";
 import ResearchMobile from "./pages/Mobile/Resources/ResearchMobile";
 import AvailableVacanciesMobile from "./pages/Mobile/Vacancies/AvailableVacanciesMobile";
 import PreviousVacanciesMobile from "./pages/Mobile/Vacancies/PreviousVacanciesMobile";
+import AnnualReportsMobile from "./pages/Mobile/Resources/AnnualReportsMobile";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -140,6 +141,7 @@ function App() {
 
               <Route path="/downloads" element={<DownloadsMobile />} />
               <Route path="/research" element={<ResearchMobile />} />
+              <Route path="/annualReports" element={<AnnualReportsMobile />} />
               <Route
                 path="/availablePositions"
                 element={<AvailableVacanciesMobile />}

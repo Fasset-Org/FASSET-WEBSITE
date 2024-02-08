@@ -42,7 +42,7 @@ const BoardMembers = () => {
       <Grid container spacing={2}>
         {data?.boardMembers.map((member) => {
           return (
-            <Grid item xs={12} md={4} key={member.id}>
+            <Grid item xs={12} md={4} xl={3} key={member.id}>
               <ProfileCard
                 title={member.title}
                 fullName={member.fullname}

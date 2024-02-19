@@ -25,7 +25,7 @@ const Slideshow = ({ banners }) => {
         <div key={index} style={{ width: "100%", display: "block" }}>
           <div
             style={{
-              height: 450
+              height: 350
               // backgroundImage: `url(${slideImage.url})`,
               // backgroundRepeat: "cover",
               // backgroundSize: "100% 100%",
@@ -37,7 +37,7 @@ const Slideshow = ({ banners }) => {
               alt=""
               style={{
                 objectFit: "fit",
-                height: 450,
+                height: 350,
                 objectPosition: "100% 100%"
               }}
               height="100%"

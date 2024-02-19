@@ -3,7 +3,7 @@ import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import LatestNews from "../components/Latest News/LatestNews";
 import Slideshow from "../components/SlideShow";
 import ValueCard from "../components/ValueCard";
-import FassetAssistant from "../components/FassetAssistant";
+// import FassetAssistant from "../components/FassetAssistant";
 import NoticeBoardModal from "../components/NoticeBoardModal";
 
 const Home = ({ id }) => {
@@ -20,7 +20,7 @@ const Home = ({ id }) => {
         <>
           <Slideshow />
           <NoticeBoardModal />
-          <FassetAssistant />
+          {/* <FassetAssistant /> */}
 
           <Typography
             fontSize={30}
@@ -69,11 +69,11 @@ const Home = ({ id }) => {
           <NoticeBoardModal />
 
           <Stack>
-            <FassetAssistant />
+            {/* <FassetAssistant /> */}
           </Stack>
 
           <Typography
-            fontSize={30}
+            fontSize={20}
             fontWeight="bolder"
             textTransform="uppercase"
             textAlign="center"
@@ -109,10 +109,11 @@ const Home = ({ id }) => {
               title="Innovation"
               definition="We Continuously innovate and improve to add value to all our stakeholders. The Work of Setas"
             />
-            <LatestNews />
+            
           </Stack>
         </>
       )}
+      <LatestNews />
     </Stack>
   );
 };

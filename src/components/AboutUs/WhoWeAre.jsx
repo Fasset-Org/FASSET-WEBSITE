@@ -32,8 +32,7 @@ const WhoWeAre = () => {
         Training Authority. The finance and accounting services sector is
         particularly important because it is the largest employer of people with
         financial management, accounting, and auditing skills. In 2018 more than
-        168 000 people worked in the sector.<br/>
-        <br/> 
+        168 000 people worked in the sector.
         The demarcation and definition of
         this sector differs in the different data sources available, as well as
         in different environments. In the national accounts and in employment
@@ -41,8 +40,7 @@ const WhoWeAre = () => {
         Survey (LFS)) the sector includes real estate activities and an array of
         other business services such as labour brokerages, information
         technology services, legal services, and engineering and architectural
-        services. <br/>
-        <br/>
+        services. 
         The Financial and Accounting Services Sector refers to the
         organisations served by Fasset. This sector includes: investment
         entities and trusts and company secretary services; stockbroking and

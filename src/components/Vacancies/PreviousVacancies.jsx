@@ -19,7 +19,6 @@ const PreviousVacancies = () => {
   return (
     <Stack>
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main", textTransform: "uppercase", mb: 2 }}

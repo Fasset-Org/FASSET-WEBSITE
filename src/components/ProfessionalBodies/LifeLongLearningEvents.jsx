@@ -83,7 +83,97 @@ function LifeLongLearningEvents() {
                 
                 
               </TableRow>
+              <TableRow>
+                
+                
+              
+                <TableCell align="center" component="th" scope="row">
+                2
+                </TableCell>
+                <TableCell align="center" component="th" scope="row">
+                The South African Institute of Financial Markets (SAIFM)
+                </TableCell>
+                <TableCell align="center" component="th" scope="row">
+                Crypto Assets Webinar
+                </TableCell>
+                <TableCell align="center" scope="row">
+                <ul>
+                  <li>06 February 2024 (10h00 -12h30)</li>
+                  <li>13 February 2024 (10h00 -12h30)
+                  </li>
+                  <li>20 February 2024 (10h00 -12h30)</li>
+                  <li>27 February 2024 (10h00 -12h30)</li>
+                </ul>
+                </TableCell>
+                <TableCell align="center" scope="row">
+                Register
+                          
+                </TableCell>
+
+                
+                
+              </TableRow>
+
+
+              <TableRow>
+                
+                
+              
+                <TableCell align="center" component="th" scope="row">
+                3
+                </TableCell>
+                <TableCell align="center" component="th" scope="row">
+                South African Institute of Government (SAIGA)	
+                </TableCell>
+                <TableCell align="center" component="th" scope="row">
+                Governance
+                </TableCell>
+                <TableCell align="center" scope="row">
+                <p>08 February 2024 (14h00 – 16h30)</p>
+                <p>22 February 2024 (16h00 – 18h00)</p>
+                </TableCell>
+                <TableCell align="center" scope="row">
+                Register
+                          
+                </TableCell>
+
+                
+                
+              </TableRow>
+              <TableRow>
+                
+                
+              
+                <TableCell align="center" component="th" scope="row">
+                4
+                </TableCell>
+                <TableCell align="center" component="th" scope="row">
+                The Institute of Internal Auditors South Africa (IIASA)	
+                </TableCell>
+                <TableCell align="center" component="th" scope="row">
+                Global Internal Audit Standards Update
+                </TableCell>
+                <TableCell align="center" scope="row">
+                <p>27 February 2024 (17h00 – 19h30)</p>
+                <hr/>
+                <p>19 March 2024 (17h00 -19h30)</p>
+                </TableCell>
+                <TableCell align="center" scope="row">
+                Register
+                          
+                </TableCell>
+
+                
+                
+              </TableRow>
+              
+
               </TableBody>
+              
+
+                
+                
+              
           
             
         </Table>

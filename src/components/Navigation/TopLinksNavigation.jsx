@@ -34,11 +34,26 @@ const TopLinksNavigation = () => {
       alignItems="center"
       spacing={2}
     >
-      <NavLink>INVOICE MANAGEMENT</NavLink>
-      <NavLink>ODOO LMIS</NavLink>
+      <NavLink
+        href="http://102.37.217.58:8000/fasset-ims/login"
+        target="_blank"
+        rel="noreferrer"
+      >
+        INVOICE MANAGEMENT
+      </NavLink>
+      <NavLink
+        href="https://portal.fasset.org.za/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        ODOO LMIS
+      </NavLink>
       <Stack direction="row" alignItems="center">
         <IconButton onClick={() => navigate("/home")}>
-          <Avatar src={logo} sx={{backgroundColor: '#FFFFFF', padding: 0.4, borderRadius: 0}} />
+          <Avatar
+            src={logo}
+            sx={{ backgroundColor: "#FFFFFF", padding: 0.4, borderRadius: 0 }}
+          />
         </IconButton>
         <Stack width="100%">
           <Typography
@@ -69,8 +84,20 @@ const TopLinksNavigation = () => {
           </Typography>
         </Stack>
       </Stack>
-      <NavLink>BURSARY MANGEMENT SYSTEM</NavLink>
-      <NavLink>CAREER PORTAL</NavLink>
+      <NavLink
+        href="https://fassetapps.co.za/#/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        BURSARY MANGEMENT SYSTEM
+      </NavLink>
+      <NavLink
+        href="https://www.fasset.org.za/learner_portal/index.php"
+        target="_blank"
+        rel="noreferrer"
+      >
+        CAREER PORTAL
+      </NavLink>
     </Stack>
   );
 };

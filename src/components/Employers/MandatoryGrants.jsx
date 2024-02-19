@@ -4,10 +4,10 @@ import React from "react";
 const MandatoryGrants = () => {
   return (
     <Stack spacing={2}>
-    <Typography
+      <Typography
         fontSize={20}
         fontWeight="bolder"
-        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         Mandatory Grants
       </Typography>
@@ -185,7 +185,14 @@ const MandatoryGrants = () => {
 
       <Typography>
         Please contact the PQA Department (011) 476-8570 with any enquiries in
-        this regard or consult the page for additional information
+        this regard or consult the{" "}
+        <a
+          href="#123"
+          style={{ color: "primary.main", cursor: "pointer" }}
+        >
+          download
+        </a>{" "}
+        page for additional information
       </Typography>
     </Stack>
   );

@@ -1,6 +1,5 @@
-import { Grid, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import React from "react";
-import DownloadCard from "../DownloadCard";
 
 const Constitution = () => {
   return (
@@ -8,15 +7,26 @@ const Constitution = () => {
       <Typography
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main", textTransform: 'uppercase', mb: 2 }}
+        sx={{ color: "primary.main", textTransform: "uppercase", mb: 2 }}
       >
         Constitution
       </Typography>
-      <Grid container spacing={2}>
+
+      <Typography>
+        &nbsp;
+        <a
+          href="#123"
+          style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+        >
+          Click here.
+        </a>{" "}
+        to view Fasset's Constitution.
+      </Typography>
+      {/* <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
           <DownloadCard fileName={"Fasset's Constitution"} />
         </Grid>
-      </Grid>
+      </Grid> */}
     </Stack>
   );
 };

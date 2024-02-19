@@ -1,6 +1,5 @@
-import { Grid, Link, Stack, Typography } from "@mui/material";
+import { Link, Stack, Typography } from "@mui/material";
 import React from "react";
-import DownloadCard from "../DownloadCard";
 
 const Policies = () => {
   return (
@@ -17,8 +16,13 @@ const Policies = () => {
         requirement of the Use of Official Languages Act, No. 12 of 2012 and is
         aligned to the principle of promoting functional multilingualism as
         enshrined in the Constitution of the Republic of South Africa, 1996 and
-        Bill of Rights contained therein. to download the policy.{" "}
-        <Link>Click here</Link> Fasset's Proatia Manual
+        Bill of Rights contained therein. to download the policy{" "}
+        <a
+          href="#123"
+          style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+        >
+          click here.
+        </a>{" "}
       </Typography>
       <Typography textAlign="justify">
         Fasset has in place a Proatia Manual in terms of Section 14 of the
@@ -33,7 +37,19 @@ const Policies = () => {
         The complete document can be downloaded below.
       </Typography>
 
-      <Grid container spacing={{md: 2}} rowGap={{xs: 2}}>
+      <ul>
+        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
+          <li>English Version</li>
+        </Link>
+        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
+          <li>Afrikaans Version</li>
+        </Link>
+        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
+          <li>Xhosa Version</li>
+        </Link>
+      </ul>
+
+      {/* <Grid container spacing={{md: 2}} rowGap={{xs: 2}}>
         <Grid item xs={12} md={4}>
           <DownloadCard fileName="English Version" />
         </Grid>
@@ -43,7 +59,7 @@ const Policies = () => {
         <Grid item xs={12} md={4}>
           <DownloadCard fileName="Xhosa Version" />
         </Grid>
-      </Grid>
+      </Grid> */}
       <Typography fontWeight="bold">Fraud Policy Statement</Typography>
       <Typography textAlign="justify">
         Fasset’s Fraud Prevention Plan is implemented as a means of
@@ -85,12 +101,14 @@ const Policies = () => {
         official Government issues that we are not able to accept for
         distribution to our membership any deliveries of stocks of newpapers,
         newsletters, journals or magazines. Any such unsolicited deliveries made
-        to the Fasset offices will not be accepted. There may be exceptional
-        circumstances where a specific edition of a specific publication will be
-        accepted by Fasset, but prior arrangements are to be made with the
-        Fasset manager responsible for the subsequent distribution and delivery
-        of stocks is to be addressed to the specified manager and accepted by
-        them.
+        to the Fasset offices will not be accepted.
+      </Typography>
+      <Typography textAlign="justify">
+        There may be exceptional circumstances where a specific edition of a
+        specific publication will be accepted by Fasset, but prior arrangements
+        are to be made with the Fasset manager responsible for the subsequent
+        distribution and delivery of stocks is to be addressed to the specified
+        manager and accepted by them.
       </Typography>
     </Stack>
   );

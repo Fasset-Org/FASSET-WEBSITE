@@ -89,7 +89,8 @@ export const themeLight = createTheme({
           "& .MuiButtonBase-root": {
             justifyContent: "start"
           },
-          width: 250
+          width: 250,
+          fontWeight: 'bolder'
         }
       }
     },
@@ -119,7 +120,7 @@ export const themeLight = createTheme({
     }
   },
   typography: {
-    fontSize: 12
+    fontSize: 11
   }
 });
 

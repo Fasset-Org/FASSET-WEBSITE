@@ -74,9 +74,10 @@ const Learners = () => {
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
-          borderBottomRightRadius: 10,
+          borderBottomRightRadius: 0,
           backgroundColor: "primary.main",
-          height: 450
+          m: 2
+          // height: 450
         }}
         TabIndicatorProps={{
           sx: {

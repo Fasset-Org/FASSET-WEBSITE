@@ -4,8 +4,8 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
-import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import CurrentVacancies from "../../components/Vacancies/CurrentVacancies";
 import PreviousVacancies from "../../components/Vacancies/PreviousVacancies";
 
@@ -68,7 +68,9 @@ const Vacancies = () => {
           borderRight: 1,
           borderColor: "lightgray",
           backgroundColor: "primary.main",
-          height: 450,
+          borderRadius: 0,
+          m: 2,
+          minHeight: 450
         }}
         TabIndicatorProps={{
           sx: {

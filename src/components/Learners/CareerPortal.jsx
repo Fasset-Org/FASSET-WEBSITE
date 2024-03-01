@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import React from "react";
 
 const CareerPortal = () => {
@@ -9,7 +9,7 @@ const CareerPortal = () => {
         fontWeight="bolder"
         // textTransform="uppercase"
         // textAlign="center"
-        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         Career Portal
       </Typography>
@@ -44,9 +44,16 @@ const CareerPortal = () => {
       </Typography>
       <Typography textAlign="justify">
         If you are interested in learning more about how FASSET can help you
-        achieve more in your career, please  
-         &nbsp;<Link sx={{ cursor: "pointer" }}>Click here</Link> to register on our career
-        portal
+        achieve more in your career, please{" "}
+        <a
+          href="https://www.fasset.org.za/learner_portal/index.php"
+          target="_blank"
+          rel="noreferrer"
+          style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+        >
+          click here
+        </a>{" "}
+        to register on our career portal
       </Typography>
     </Stack>
   );

@@ -9,26 +9,226 @@ import Paper from "@mui/material/Paper";
 import { Stack, TableFooter, TablePagination, Typography } from "@mui/material";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9)
+  {
+    title: "Certificate: Local Government Accounting",
+    NQLevel: "3",
+    learnershipCode: "01/Q010026/00/120/3",
+    SAQAIdNo: "59751"
+  },
+
+  {
+    title: "Certificate: Accounting Technician",
+    NQLevel: "3",
+    learnershipCode: "01/Q010036/00/120/3",
+    SAQAIdNo: "73710"
+  },
+  {
+    title: "Further Education and Training Certificate: Accounting Technician",
+    NQLevel: "4",
+    learnershipCode: "01/Q010038/00/120/4",
+    SAQAIdNo: "77143"
+  },
+  {
+    title: "Advanced Certificate: Local Government Accounting",
+    NQLevel: "4",
+    learnershipCode: "01/Q010037/00/120/4",
+    SAQAIdNo: "73710"
+  },
+  {
+    title: "Certificate: Accounting",
+    NQLevel: "5",
+    learnershipCode: "01/Q010039/00/120/5",
+    SAQAIdNo: "80189"
+  },
+
+  {
+    title: "Advanced Certificate: Forensic Practitioner",
+    NQLevel: "5",
+    learnershipCode: "01/Q010035/00/120/6",
+    SAQAIdNo: "67269"
+  },
+ 
+  {
+    title: "Certificate: Certified Accounting Technician",
+    NQLevel: "5",
+    learnershipCode: "01/Q010013/00/390/5",
+    SAQAIdNo: "20397"
+  },
+  {
+    title: "Chartered Certified Accountant",
+    NQLevel: "8",
+    learnershipCode: "01/Q010005/00/780/7",
+    SAQAIdNo: "	63550"
+  },
+  {
+    title: "National Certificate: Business Accounting",
+    NQLevel: "5",
+    learnershipCode: "01/Q010016/00/120/5",
+    SAQAIdNo: "24418"
+  },
+
+  {
+    title: "National Diploma : Management Accounting",
+    NQLevel: "6",
+    learnershipCode: "01/Q010017/00/240/6",
+    SAQAIdNo: "24406"
+  },
+
+  {
+    title: "Professional Qualification: Chartered Management Accountant",
+    NQLevel: "7",
+    learnershipCode: "01/Q010012/00/930/7",
+    SAQAIdNo: "20400"
+  },
+
+  {
+    title: "CIS Professional Qual. Management and Administration",
+    NQLevel: "6",
+    learnershipCode: "01/Q010032/00/130/5",
+    SAQAIdNo: "60653"
+  },
+
+  {
+    title: "CIS Professional Advanced Qualification: Governance and Admin",
+    NQLevel: "6",
+    learnershipCode: "01/Q010033/00/120/6",
+    SAQAIdNo: "60655"
+  },
+  {
+    title: "CIS Professional Post – Graduate Qualification: Company Secretarial and Governance Practice",
+    NQLevel: "8",
+    learnershipCode: "01/Q010030/00/120/7",
+    SAQAIdNo: "	60654"
+  },
+  {
+    title: "CIS Professional Qual. Governance and Admin",
+    NQLevel: "6",
+    learnershipCode: "01/Q010034/00/120/5",
+    SAQAIdNo: "60651"
+  },
+  {
+    title: "Further Education and Training Certificate: Debt Recovery",
+    NQLevel: "4",
+    learnershipCode: "01/Q010024/26/149/4",
+    SAQAIdNo: "49021"
+  },
+  {
+    title: "National Certificate: Bookkeeping",
+    NQLevel: "3",
+    learnershipCode: "01/Q010027/26/120/3",
+    SAQAIdNo: "58375"
+  },
+
+  {
+    title: "Further Education and Training Certificate: Bookkeeper",
+    NQLevel: "4",
+    learnershipCode: "01/Q010028/28/130/4",
+    SAQAIdNo: "58376"
+  },
+
+  {
+    title: "National Certificate: Public Sector Accounting",
+    NQLevel: "4",
+    learnershipCode: "01/Q010019/00/120/4",
+    SAQAIdNo: "20352"
+  },
+
+  {
+    title: "National Certificate: Small Business Financial Management",
+    NQLevel: "4",
+    learnershipCode: "01/Q010023/24/120/4",
+    SAQAIdNo: "	48736"
+  },
+
+  {
+    title: "Certificate: Office Administration",
+    NQLevel: "5",
+    learnershipCode: "01/Q010021/00/120/5",
+    SAQAIdNo: "23618"
+  },
+
+  {
+    title: "Senior Office Administrator",
+    NQLevel: "5",
+    learnershipCode: "01/Q010040/00/240/5",
+    SAQAIdNo: "23619"
+  },
+
+  {
+    title: "National Diploma: Technical Financial Accounting",
+    NQLevel: "5",
+    learnershipCode: "01/Q010022/28/251/5",
+    SAQAIdNo: "36213"
+  },
+
+  {
+    title: "Diploma : Public Sector Accounting",
+    NQLevel: "5",
+    learnershipCode: "01/Q010020/00/240/5",
+    SAQAIdNo: "20353"
+  },
+  {
+    title: "Certificate: General Internal Auditing",
+    NQLevel: "8",
+    learnershipCode: "01/Q010025/00/120/7",
+    SAQAIdNo: "20359"
+  },
+
+  {
+    title: "Chartered Accountant: Auditing",
+    NQLevel: "7",
+    learnershipCode: "01/Q010001/00/480/7",
+    SAQAIdNo: "48913"
+  },
+  {
+    title: "Post-graduate professional qualification: Professional Accountant in Business",
+    NQLevel: "7",
+    learnershipCode: "01/Q010007/00/480/7",
+    SAQAIdNo: "20392"
+  },
+  {
+    title: "Post-graduate Diploma: Professional Accountant in Practice 	",
+    NQLevel: "8",
+    learnershipCode: "01/Q010008/00/480/7",
+    SAQAIdNo: "20391"
+  },
+  {
+    title: "Occupational Certificate: Financial Markets Practitioner",
+    NQLevel: "5",
+    learnershipCode: "01/Q010044/00/120/7",
+    SAQAIdNo: "93603"
+  },
+  {
+    title: "Occupational Certificate: Tax Professional",
+    NQLevel: "8",
+    learnershipCode: "01/Q010048/00/400/8",
+    SAQAIdNo: "93624"
+  },
+  {
+    title: "Occupational Certificate: Tax Technician",
+    NQLevel: "6",
+    learnershipCode: "01/Q010057/99/399/6",
+    SAQAIdNo: "20353"
+  },
+  {
+    title: "Advanced Certificate: Forensic Practitioner",
+    NQLevel: "7",
+    learnershipCode: "01Q010035001206",
+    SAQAIdNo: "93624"
+  },
+  {
+    title: "Diploma: Management (IAC Accounting Officer)",
+    NQLevel: "7",
+    learnershipCode: "01/Q010029/00/420/6",
+    SAQAIdNo: "67694"
+  },
+
+
+
+
+
 ];
 
 const AboutFassetLearnerships = () => {
@@ -56,6 +256,27 @@ const AboutFassetLearnerships = () => {
       <Typography fontWeight="bolder">
         Association of Accounting Technicians (AAT(SA)) 011 621 6888 –
         info@aatsa.org.za
+      </Typography>
+
+      <Typography fontWeight="bolder">Workplace Accreditation</Typography>
+      <Typography>
+        Workplace accreditation is a requirement for all employers, regardless
+        of sector, who wishes to register learners on Fasset learnerships. The
+        accreditation aims to verify the ability of the workplace to host a
+        specific learnership. Criteria for accreditation include access to
+        resources related to the learnership, the relevance of the work
+        experience component to the qualification, and the structures in place
+        to ensure successful implementation and completion of the learnership.
+        <br />
+        <br />
+        For the majority of learnerships, Fasset has agreements with
+        professional bodies and Assessment Quality Partners (AQP’s) which are
+        responsible for the accreditation of workplaces.
+      </Typography>
+      <Typography fontWeight="bolder">Fasset Learnerships</Typography>
+      <Typography>
+        Click on the learnership titles below for information on each
+        learnership
       </Typography>
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table aria-label="simple table">
@@ -99,23 +320,23 @@ const AboutFassetLearnerships = () => {
               : rows
             ).map((row, i) => (
               <TableRow
-                key={row.name}
+                key={row?.title}
                 sx={{ backgroundColor: i % 2 === 0 ? "action.hover" : "" }}
               >
                 <TableCell align="center" component="th" scope="row">
                   {i + 1}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  Certificate: Local Government Accounting
+                  {row?.title}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  3
+                  {row?.NQLevel}
                 </TableCell>
                 <TableCell align="center" scope="row">
-                  01/Q010026/00/120/3
+                  {row?.learnershipCode}
                 </TableCell>
                 <TableCell align="center" scope="row">
-                  59751
+                  {row.SAQAIdNo}
                 </TableCell>
               </TableRow>
             ))}
@@ -142,6 +363,81 @@ const AboutFassetLearnerships = () => {
           </TableFooter>
         </Table>
       </TableContainer>
+      <Typography
+        fontSize={20}
+        fontWeight="bolder"
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
+      >
+        Learnership Agreement Registration Procedures
+      </Typography>
+      <Typography fontWeight="bolder">
+        {" "}
+        a. Employers Register​ed with Fasset wishing to implement a Fasset
+        Learnership:
+      </Typography>
+      <Typography>
+        <ol>
+          <li>
+            Apply for accreditation as an accredited workplace training provider
+            with the professional body or AQP responsible for the learnership,
+            or with Fasset (as applicable)
+          </li>
+          <li>
+            Register the learner with the relevant professional body and/or
+            training provider
+          </li>
+          <li>Sign an employment contract with the learner</li>
+          <li>Sign a Learnership Agreement with the learner</li>
+          <li>
+            Submit the Learnership Agreement to Fasset together with the
+            following:
+          </li>
+          <Typography>
+            Proof of learner registration with the professional body or AQP, if
+            applicable Employer accreditation status with professional body or
+            AQP (copy of letter/certificate), if applicable Copy of the
+            learner’s employment contract Certified copy of the learner’s ID
+            document.
+          </Typography>
+          <Typography>
+            The Learnership Agreement and other supplementary documentation can
+            be accessed under the section of the website. Please Note:
+            Learnership regulations require the Seta to decide if it will
+            register the agreement within 7 days of receipt. Learnership
+            regulations require the SETA to register the learnership agreement
+            within 21 days of that decision. If the agreement has any
+            outstanding information, the learnership agreement will be returned
+            to the employer, accompanied by a letter indicating reasons for
+            non-registration. The employer may resubmit the learnership
+            agreement, together with all required documentation If all the
+            required documents are attached, Fasset will issue the employer with
+            a Confirmation letter. The Confirmation letter may be used to claim
+            the SARS income tax deduction.
+          </Typography>
+        </ol>
+      </Typography>
+      <Typography fontWeight="bolder">
+        b.Employers Registered with Fasset wishing to implement a Learnership
+        from another Seta
+      </Typography>
+      <Typography>
+        Contact the SETA to which the learnership belongs to ascertain if the
+        employer fulfils all the requirements to implement the learnership.
+        Complete the Fasset learnership agreement and submit it to Fasset.
+        Fasset will register the Learnership Agreement and issue the employer
+        with a confirmation letter.
+      </Typography>
+      <Typography fontWeight="bolder">
+        c. Employers not Registered with Fasset wishing to implement a Fasset
+        Learnership
+      </Typography>
+      <Typography>
+        The employer contacts the relevant professional body / AQP / Fasset to
+        become an accredited workplace provider. Once accredited, the employer
+        completes their SETA’s learnership agreement. The employer submits the
+        learnership agreement to their SETA. The Learnership Agreement will be
+        registered by the other SETA.
+      </Typography>
     </Stack>
   );
 };

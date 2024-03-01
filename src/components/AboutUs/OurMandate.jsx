@@ -1,10 +1,4 @@
-import {
-  List,
-  ListItem,
-  ListItemText,
-  Stack,
-  Typography
-} from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const OurMandate = () => {
@@ -197,7 +191,7 @@ const OurMandate = () => {
       <Typography
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         Our Mandate
       </Typography>
@@ -207,34 +201,23 @@ const OurMandate = () => {
       {objectives.map((option, idx) => {
         return (
           <>
-            <ListItem disablePadding disableGutters key={idx} sx={{ pl: 2 }}>
-              <span style={{ color: "#163683", fontWeight: "bolder" }}>
-                &#x2022;&nbsp;
-              </span>
-              <ListItemText primary={option.parent} />
-            </ListItem>
+            <ul>
+              <li>
+                <Typography>{option.parent}</Typography>
+              </li>
+            </ul>
             {option.children.length > 0 && (
-              <List
-                component="div"
-                disableGutters
-                disablePadding
-                sx={{ pl: 6 }}
-              >
-                {option.children.map((child) => {
-                  return (
-                    <>
-                      <Typography>
-                        <span
-                          style={{ color: "#163683", fontWeight: "bolder" }}
-                        >
-                          &#62;&nbsp;
-                        </span>
-                        {child}
-                      </Typography>
-                    </>
-                  );
-                })}
-              </List>
+              <Box pl={3}>
+                <ul style={{ listStyleType: "circle" }}>
+                  {option.children.map((child) => {
+                    return (
+                      <li>
+                        <Typography>{child}</Typography>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Box>
             )}
           </>
         );
@@ -253,34 +236,23 @@ const OurMandate = () => {
       {services.map((option, idx) => {
         return (
           <>
-            <ListItem disablePadding disableGutters key={idx} sx={{ pl: 2 }}>
-              <span style={{ color: "#163683", fontWeight: "bolder" }}>
-                &#x2022;&nbsp;
-              </span>
-              <ListItemText primary={option.parent} />
-            </ListItem>
+            <ul>
+              <li>
+                <Typography>{option.parent}</Typography>
+              </li>
+            </ul>
             {option.children.length > 0 && (
-              <List
-                component="div"
-                disableGutters
-                disablePadding
-                sx={{ pl: 6 }}
-              >
-                {option.children.map((child) => {
-                  return (
-                    <>
-                      <Typography>
-                        <span
-                          style={{ color: "#163683", fontWeight: "bolder" }}
-                        >
-                          &#62;&nbsp;
-                        </span>
-                        {child}
-                      </Typography>
-                    </>
-                  );
-                })}
-              </List>
+              <Box pl={3}>
+                <ul style={{ listStyle: "circle" }}>
+                  {option.children.map((child) => {
+                    return (
+                      <li>
+                        <Typography>{child}</Typography>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Box>
             )}
           </>
         );
@@ -292,34 +264,23 @@ const OurMandate = () => {
       {skills.map((option, idx) => {
         return (
           <>
-            <ListItem disablePadding disableGutters key={idx} sx={{ pl: 2 }}>
-              <span style={{ color: "#163683", fontWeight: "bolder" }}>
-                &#x2022;&nbsp;
-              </span>
-              <ListItemText primary={option.parent} />
-            </ListItem>
+            <ul>
+              <li>
+                <Typography>{option.parent}</Typography>
+              </li>
+            </ul>
             {option.children.length > 0 && (
-              <List
-                component="div"
-                disableGutters
-                disablePadding
-                sx={{ pl: 6 }}
-              >
-                {option.children.map((child) => {
-                  return (
-                    <>
-                      <Typography>
-                        <span
-                          style={{ color: "#163683", fontWeight: "bolder" }}
-                        >
-                          &#62;&nbsp;
-                        </span>
-                        {child}
-                      </Typography>
-                    </>
-                  );
-                })}
-              </List>
+              <Box pl={3}>
+                <ul style={{ listStyle: "circle" }}>
+                  {option.children.map((child) => {
+                    return (
+                      <li>
+                        <Typography>{child}</Typography>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Box>
             )}
           </>
         );

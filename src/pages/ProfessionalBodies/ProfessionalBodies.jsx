@@ -1,12 +1,15 @@
 import * as React from "react";
+
+
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import SchoolIcon from '@mui/icons-material/School';
-import EventRepeatIcon from '@mui/icons-material/EventRepeat';
+import SchoolIcon from "@mui/icons-material/School";
+import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AboutFassetLearnerships from "../../components/ProfessionalBodies/AboutFassetLearnerships";
+import LifeLongLearningEvents from "../../components/ProfessionalBodies/LifeLongLearningEvents";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,7 +57,8 @@ const ProfessionalBodies = () => {
       sx={{
         flexGrow: 1,
         bgcolor: "background.paper",
-        display: "flex"
+        display: "flex",
+        minHeight: 450
       }}
     >
       <Tabs
@@ -67,9 +71,9 @@ const ProfessionalBodies = () => {
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
-          borderBottomRightRadius: 10,
+          borderBottomRightRadius: 0,
           backgroundColor: "primary.main",
-          height: 450
+          m: 2
         }}
         TabIndicatorProps={{
           sx: {
@@ -101,9 +105,12 @@ const ProfessionalBodies = () => {
         <AboutFassetLearnerships />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Lifelong Events Under Construction
+      <LifeLongLearningEvents/>
+  
       </TabPanel>
+      
     </Box>
+    
   );
 };
 

@@ -3,10 +3,6 @@ import React from "react";
 import Countdown from "react-countdown";
 
 const WindowCountDown = () => {
-  console.log({
-    apple: 1,
-    mongo: 2
-  });
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a complete state
@@ -46,7 +42,7 @@ const WindowCountDown = () => {
   };
   return (
     <Stack>
-      <Countdown date={new Date("2023-08-31")} renderer={renderer} />
+      <Countdown date={new Date("2023-11-31")} renderer={renderer} />
     </Stack>
   );
 };

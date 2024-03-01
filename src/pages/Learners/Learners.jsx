@@ -12,8 +12,9 @@ import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import ScarceSkills from "../../components/Learners/ScarceSkills";
 import CareerPortal from "../../components/Learners/CareerPortal";
-import DownloadCard from "../../components/DownloadCard";
-import { Grid, Stack } from "@mui/material";
+// import DownloadCard from "../../components/DownloadCard";
+import { Stack } from "@mui/material";
+import Bursary from "../../components/Learners/Bursary";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -75,8 +76,9 @@ const Learners = () => {
         sx={{
           borderRight: 1,
           borderColor: "lightgray",
-          borderBottomRightRadius: 10,
-          backgroundColor: "primary.main"
+          borderBottomRightRadius: 0,
+          backgroundColor: "primary.main",
+          m: 2
         }}
         TabIndicatorProps={{
           sx: {
@@ -138,23 +140,26 @@ const Learners = () => {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Stack spacing={1}>
-          <Typography
-            fontSize={20}
-            fontWeight="bolder"
-            sx={{ color: "primary.main", textTransform: "uppercase" }}
-          >
-            Career Guide
+          <Typography>
+            &nbsp;
+            <a
+              href="#123"
+              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+            >
+              Click here.
+            </a>{" "}
+            to view Fasset's Career Guide.
           </Typography>
-          <Grid container>
+
+          {/* <Grid container>
             <Grid xs={12} md={4}>
               <DownloadCard fileName="Career Guide" />
             </Grid>
-          </Grid>
+          </Grid> */}
         </Stack>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        About Fasset Bursary will be defined here and provide a link to the
-        bursary system
+        <Bursary />
       </TabPanel>
       <TabPanel value={value} index={4}>
         <CareerPortal />

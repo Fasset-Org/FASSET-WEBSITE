@@ -1,20 +1,21 @@
-import { List, ListItem, ListItemText, Stack, Typography } from "@mui/material";
+import {  Stack, Typography } from "@mui/material";
 import React from "react";
 import ValueCard from "../ValueCard";
 
 const WhoWeAre = () => {
   const determine = [
+    "Determine the vision and mission of the Seta.",
     "Develop and adapt the sector's skill strategy.",
     "Set strategic targets in line with national policies and priorities, national sectoral priorities and sub-sectoral or chamber priorities.",
     "Enter signed agreements on targets for delivery with chambers or sub-sectors.",
     "Monitor and evaluate the implementation of strategies and the achievement of targets.",
     "Assume accountability in terms of the Skills Development Act, the Skills Development Levies Act, Public Finance Management Act and the SAQA Act.",
-    "Quality assure education and training providers via an Education and Training Quality Assurance body. Be responsible for Learnerships."
+    "Quality assure education and training providers via an Education and Training Quality Assurance body. Be responsible for Learnerships.",
   ];
 
   const legislation = [
     "Skills Development Act (Act 97 of 1998).",
-    "Skills Development Levies Act (Act no 9 of 1999)."
+    "Skills Development Levies Act (Act no 9 of 1999).",
   ];
 
   return (
@@ -31,14 +32,16 @@ const WhoWeAre = () => {
         Training Authority. The finance and accounting services sector is
         particularly important because it is the largest employer of people with
         financial management, accounting, and auditing skills. In 2018 more than
-        168 000 people worked in the sector. The demarcation and definition of
+        168 000 people worked in the sector.
+        The demarcation and definition of
         this sector differs in the different data sources available, as well as
         in different environments. In the national accounts and in employment
         surveys conducted by Statistics South Africa (such as the Labour Force
         Survey (LFS)) the sector includes real estate activities and an array of
         other business services such as labour brokerages, information
         technology services, legal services, and engineering and architectural
-        services. The Financial and Accounting Services Sector refers to the
+        services. 
+        The Financial and Accounting Services Sector refers to the
         organisations served by Fasset. This sector includes: investment
         entities and trusts and company secretary services; stockbroking and
         financial markets; financial development organisations; accounting,
@@ -115,19 +118,18 @@ const WhoWeAre = () => {
         fontSize={20}
         sx={{ color: "primary.main" }}
       >
-        Determine the vision and mission of the Seta.
+        The Work of Setas
       </Typography>
 
-      <List disablePadding sx={{ paddingLeft: 2 }}>
+      <ul>
         {determine.map((item, i) => {
           return (
-            <ListItem disablePadding disableGutters key={i}>
-              &#x2022;&nbsp;
-              <ListItemText primary={item} />
-            </ListItem>
+            <li>
+              <Typography>{item}</Typography>
+            </li>
           );
         })}
-      </List>
+      </ul>
 
       <Typography
         fontWeight="bolder"
@@ -137,16 +139,15 @@ const WhoWeAre = () => {
         Relevant Legislation
       </Typography>
 
-      <List disablePadding sx={{ paddingLeft: 2 }}>
+      <ul>
         {legislation.map((item, i) => {
           return (
-            <ListItem disablePadding disableGutters key={i}>
-              &#x2022;&nbsp;
-              <ListItemText primary={item} />
-            </ListItem>
+            <li>
+              <Typography>{item}</Typography>
+            </li>
           );
         })}
-      </List>
+      </ul>
 
       <Typography
         fontWeight="bolder"

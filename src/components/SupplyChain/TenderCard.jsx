@@ -11,9 +11,9 @@ const TenderCard = ({ tender, state }) => {
       borderRadius={0}
       padding={2}
       spacing={2}
-      minheight={300}
       justifyContent="center"
       alignItems="center"
+      height={300}
     >
       <Stack
         direction="row"
@@ -66,7 +66,7 @@ const TenderCard = ({ tender, state }) => {
       >
         BID MESSAGE
       </Typography>
-      <Typography>{tender?.bidMessage}</Typography>
+      <Typography>{tender?.invitationMessage}</Typography>
       <Button
         variant="contained"
         onClick={() => navigate(`/tenders/${tender?.id}`)}

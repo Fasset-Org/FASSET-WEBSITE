@@ -8,7 +8,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import { Slide, useMediaQuery } from "@mui/material";
+import { Paper, Slide, Stack, Typography, useMediaQuery } from "@mui/material";
 import WindowCountDown from "./WindowCountDown";
 
 function BootstrapDialogTitle(props) {
@@ -66,7 +66,27 @@ export default function NoticeBoardModal() {
         Notice Board
       </BootstrapDialogTitle>
       <DialogContent dividers>
-        <WindowCountDown />
+        <Stack spacing={2}>
+          <WindowCountDown />
+          <Stack width="100%" spacing={1} component={Paper} padding={2}>
+            <Typography fontSize={16} fontWeight="bolder">
+              Dear Stakeholders
+            </Typography>
+            <Typography>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+              fugiat iusto fuga praesentium optio, eaque rerum! Provident
+              similique accusantium nemo autem. Veritatis obcaecati tenetur iure
+              eius earum ut molestias architecto voluptate aliquam nihil,
+              eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+              tenetur error, harum nesciunt ipsum debitis quas aliquid.
+              Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa
+              laudantium molestias eos sapiente officiis modi at sunt excepturi
+              expedita sint?
+            </Typography>
+          </Stack>
+        </Stack>
       </DialogContent>
       <DialogActions>
         <Button variant="contained" onClick={handleClose}>

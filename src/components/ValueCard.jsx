@@ -6,7 +6,7 @@ const ValueCard = ({ title, definition }) => {
     <Card
       className="v-card"
       sx={{
-        height: 210,
+        minHeight: 210,
         width: { xs: "100%", md: "20%" },
         borderRadius: 0,
         p: 0
@@ -15,7 +15,7 @@ const ValueCard = ({ title, definition }) => {
       <Stack height="80%" justifyContent="center" alignItems="center">
         <Typography
           textAlign="center"
-          sx={{ width: "fit-content", padding: 2 }}
+          sx={{ width: "fit-content", padding: 1 }}
         >
           {definition}
         </Typography>

@@ -7,7 +7,7 @@ const WorkbasedProgramme = () => {
       <Typography
         fontSize={20}
         fontWeight="bolder"
-        sx={{ color: "primary.main", textTransform: 'uppercase' }}
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
         TVET Workbased Programme
       </Typography>
@@ -38,11 +38,27 @@ const WorkbasedProgramme = () => {
         experience.
       </Typography>
 
-      <Typography>
+      <Typography fontWeight="bold">
         Fasset will be recruiting learners who have specialised in one of the
-        following areas: Financial Management, Business Management, Marketing
-        Management, HR Management, and Management Assistant.
+        following areas:
       </Typography>
+      <ul>
+        <li>
+          <Typography>Financial Management</Typography>
+        </li>
+        <li>
+          <Typography>Business Management</Typography>
+        </li>
+        <li>
+          <Typography>Marketing Management</Typography>
+        </li>
+        <li>
+          <Typography>HR Management</Typography>
+        </li>
+        <li>
+          <Typography>Management Assistant</Typography>
+        </li>
+      </ul>
     </Stack>
   );
 };

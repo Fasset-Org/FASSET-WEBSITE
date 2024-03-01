@@ -1,5 +1,6 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import React from "react";
+import StepGuideImage from "../../images/Fasset Choose Career Guide.png";
 
 const ChooseACareer = () => {
   return (
@@ -22,17 +23,47 @@ const ChooseACareer = () => {
         which you will start working and the income that you will earn.
       </Typography>
 
-      <Typography component={Stack} textAlign="justify">
+      <Typography textAlign="justify">
         With colleges and universities offering numerous courses today, for
         students it is truly confusing making a career choice. For a student,
         choosing a career path that is far from ones’ interest and ability can
         cause dissatisfaction in the long run. Hence it is important to plan
         one’s career from a long term perspective. Follow the below steps to
         pick a career that is fitting for you or download ​the Fasset Career
-        Guide for more information. &nbsp;
-        <Link sx={{ cursor: "pointer" }}>Click here</Link>
+        Guide for more information{" "}
+        <a
+          href="#123"
+          style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+        >
+          click here
+        </a>{" "}
         to download.
       </Typography>
+      <Typography fontSize={14} fontWeight="bolder">
+        How does career planning happen today?
+      </Typography>
+      <Typography fontSize={13} fontWeight="lighter">
+        Most often students choose careers based on other’s preferences be it:
+      </Typography>
+      <ul>
+        <li>
+          <Typography>Following the crowd (peers)</Typography>
+        </li>
+        <li>
+          <Typography>Accepting choices made by parents</Typography>
+        </li>
+        <li>
+          <Typography>Influence by media</Typography>
+        </li>
+        <li>
+          <Typography>
+            Following current trends or availing the most sought after career
+            opportunities.
+          </Typography>
+        </li>
+      </ul>
+
+      <img src={StepGuideImage} alt="" width='70%' height={500} />
     </Stack>
   );
 };

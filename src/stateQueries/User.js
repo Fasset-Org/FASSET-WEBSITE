@@ -17,12 +17,13 @@ const UserQuery = {
     return resp?.data;
   },
 
-  jobApplication : async(formData) => {
-
-    const resp = await axiosInstance.post('/humanResource/jobApplication', formData);
+  jobApplication: async (formData) => {
+    const resp = await axiosInstance.post(
+      "/humanResource/jobApplication",
+      formData
+    );
 
     return resp?.data;
-
   },
 
   getAllCurrentTenders: async () => {
@@ -44,7 +45,40 @@ const UserQuery = {
     const resp = await axiosInstance.get(`/scm/tender/${id}`);
 
     return resp?.data;
-  }
+  },
+
+  // Get Banners
+
+  getAllBanners: async () => {
+    const resp = await axiosInstance.get("/cse/banners");
+
+    return resp?.data;
+  },
+  getAllBoardMembers: async () => {
+    const resp = await axiosInstance.get("/cse/boardMembers");
+
+    return resp?.data;
+  },
+  getAllCommitteeMembers: async () => {
+    const resp = await axiosInstance.get("/cse/committeeMembers");
+
+    return resp?.data;
+  },
+  getlAllDocumentsTitle: async () => {
+    const resp = await axiosInstance.get(`/cse/downloadsTitle`);
+
+    return resp?.data;
+  },
+  getAllAnnualReports: async () => {
+    const resp = await axiosInstance.get("/cse/annualReports");
+
+    return resp?.data;
+  },
+  getAllResearcheports: async () => {
+    const resp = await axiosInstance.get("/cse/researchReports");
+
+    return resp?.data;
+  },
 };
 
 export default UserQuery;

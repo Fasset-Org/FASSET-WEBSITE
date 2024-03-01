@@ -1,5 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
+import ConstitutionFile from "../../images/SETA_Standard_Constitution_Fasset_Final_Amended_Nov_2017.pdf";
 
 const Constitution = () => {
   return (
@@ -15,8 +16,10 @@ const Constitution = () => {
       <Typography>
         &nbsp;
         <a
-          href="#123"
+          href={ConstitutionFile}
           style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+          target="_blank"
+          rel="noreferrer"
         >
           Click here.
         </a>{" "}

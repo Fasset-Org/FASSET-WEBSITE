@@ -1,10 +1,10 @@
 import React from "react";
 import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
-import LatestNews from "../components/Latest News/LatestNews";
 import Slideshow from "../components/SlideShow";
 import ValueCard from "../components/ValueCard";
 // import FassetAssistant from "../components/FassetAssistant";
 import NoticeBoardModal from "../components/NoticeBoardModal";
+import StandardImageList from "../components/Gallerry";
 
 const Home = ({ id }) => {
   const theme = useTheme();
@@ -23,7 +23,7 @@ const Home = ({ id }) => {
           {/* <FassetAssistant /> */}
 
           <Typography
-            fontSize={30}
+            fontSize={20}
             fontWeight="bolder"
             textTransform="uppercase"
             textAlign="center"
@@ -32,7 +32,7 @@ const Home = ({ id }) => {
             Values
           </Typography>
 
-          <Stack direction="column" spacing={2} padding={2}>
+          <Stack direction="column" spacing={2} paddingX={{ md: 10, xs: 2 }}>
             <ValueCard
               title="Professionalism & Accountability"
               definition={
@@ -59,7 +59,7 @@ const Home = ({ id }) => {
               title="Innovation"
               definition="We Continuously innovate and improve to add value to all our stakeholders. The Work of Setas"
             />
-            <LatestNews />
+            <StandardImageList />
           </Stack>
         </>
       ) : (
@@ -68,9 +68,7 @@ const Home = ({ id }) => {
 
           <NoticeBoardModal />
 
-          <Stack>
-            {/* <FassetAssistant /> */}
-          </Stack>
+          <Stack>{/* <FassetAssistant /> */}</Stack>
 
           <Typography
             fontSize={20}
@@ -82,7 +80,7 @@ const Home = ({ id }) => {
             Values
           </Typography>
 
-          <Stack direction="row" spacing={2} padding={2}>
+          <Stack direction="row" spacing={2} paddingX={{ md: 10, xs: 2 }}>
             <ValueCard
               title="Professionalism And Accountability"
               definition={
@@ -109,11 +107,10 @@ const Home = ({ id }) => {
               title="Innovation"
               definition="We Continuously innovate and improve to add value to all our stakeholders. The Work of Setas"
             />
-            
           </Stack>
         </>
       )}
-      <LatestNews />
+      <StandardImageList />
     </Stack>
   );
 };

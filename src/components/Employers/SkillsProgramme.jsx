@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import { Stack, useMediaQuery, useTheme } from "@mui/material";
 import img from "../../images/Bridging_Programmes.png";
+import FundedCourse from "../../files/Employers/Projects_that_are_funded_Fasset_2019.docx";
 
 const SkillsProgramme = () => {
   const theme = useTheme();
@@ -55,8 +56,10 @@ const SkillsProgramme = () => {
       <Typography>
         {" "}
         <a
-          href="#123"
+          href={FundedCourse}
           style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+          target="_blank"
+          rel="noreferrer"
         >
           Click here
         </a>{" "}

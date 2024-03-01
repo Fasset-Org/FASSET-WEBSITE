@@ -15,6 +15,7 @@ import CareerPortal from "../../components/Learners/CareerPortal";
 // import DownloadCard from "../../components/DownloadCard";
 import { Stack } from "@mui/material";
 import Bursary from "../../components/Learners/Bursary";
+import CareerGuide from '../../images/Leaners/Fasset Career Guide 2020 - Cropped.pdf'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -143,8 +144,10 @@ const Learners = () => {
           <Typography>
             &nbsp;
             <a
-              href="#123"
+              href={CareerGuide}
               style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+              target="_blank"
+              rel="noreferrer"
             >
               Click here.
             </a>{" "}

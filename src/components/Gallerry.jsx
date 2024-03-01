@@ -1,58 +1,95 @@
 import * as React from "react";
-import image1 from "../images/AGM.jpg";
-import image2 from "../images/IMG_4228.JPG";
-import image3 from "../images/Mandela Day.jpg";
-import image4 from "../images/kwanongoma.jpg";
-import image5 from "../images/Nkandla.jpg";
-import image6 from "../images/IMG_4544.JPG";
-import { useState } from "react";
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import { Stack, Typography } from "@mui/material";
+import img1 from "../images/2023 AGM/ZooM-6849.jpg";
+import img2 from "../images/2023 AGM/ZooM-6852.jpg";
+import img3 from "../images/2023 AGM/ZooM-6926 (1).jpg";
+import img4 from "../images/2023 AGM/ZooM-6978.jpg";
+import img5 from "../images/2023 AGM/ZooM-7190.jpg";
+import img6 from "../images/2023 AGM/ZooM-7229.jpg";
+import img7 from "../images/2023 AGM/ZooM-7233.jpg";
+import img8 from "../images/2023 AGM/ZooM-7268.jpg";
+import img9 from "../images/2023 AGM/ZooM-7285.jpg";
+import img10 from "../images/2023 AGM/ZooM-7294.jpg";
+import img11 from "../images/2023 AGM/ZooM-7310.jpg";
+import img12 from "../images/2023 AGM/ZooM-6849.jpg";
 
-const images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6
-];
-
-export default function Gallery() {
-  const [currentImage, setCurrentImage] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((currentImage + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [currentImage]);
+export default function StandardImageList() {
   return (
-    <div style={{ position: "relative", overflow: "hidden" }}>
-      <motion.div
-        style={{
-          display: "flex",
-          width: `${images.length * 100}%`,
-          position: "absolute",
-          left: `-${currentImage * 100}%`
-        }}
-        animate={{ left: `-${currentImage * 100}%` }}
-        transition={{ duration: 0.5 }}
+    <Stack paddingX={{ md: 10, xs: 2 }}>
+      <Typography
+        fontSize={20}
+        fontWeight="bolder"
+        textTransform="uppercase"
+        textAlign="center"
+        sx={{ color: "primary.main", mb: 1 }}
       >
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            style={{ width: `${100 / images.length}%`, objectFit: "cover" }}
-            alt=""
-          />
+        Gallery
+      </Typography>
+      <ImageList sx={{ width: "100%" }} cols={3}>
+        {itemData.map((item) => (
+          <ImageListItem key={item.img}>
+            <img
+              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+              alt={item.title}
+              loading="lazy"
+            />
+          </ImageListItem>
         ))}
-      </motion.div>
-    </div>
+      </ImageList>
+    </Stack>
   );
 }
+
+const itemData = [
+  {
+    img: img1,
+    title: "Breakfast"
+  },
+  {
+    img: img2,
+    title: "Burger"
+  },
+  {
+    img: img3,
+    title: "Camera"
+  },
+  {
+    img: img4,
+    title: "Coffee"
+  },
+  {
+    img: img5,
+    title: "Hats"
+  },
+  {
+    img: img6,
+    title: "Honey"
+  },
+  {
+    img: img7,
+    title: "Basketball"
+  },
+  {
+    img: img8,
+    title: "Fern"
+  },
+  {
+    img: img9,
+    title: "Mushrooms"
+  },
+  {
+    img: img10,
+    title: "Tomato basil"
+  },
+  {
+    img: img11,
+    title: "Sea star"
+  },
+  {
+    img: img12,
+    title: "Bike"
+  }
+];

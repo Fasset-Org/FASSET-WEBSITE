@@ -17,27 +17,22 @@ import {
 import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
+import Trend2021 from "../../../files/Reseources/Sector-Trends/Fasset Sector Trends 2021 - Final.pdf";
+import Trend2020 from "../../../files/Reseources/Sector-Trends/Fasset_Sector_Trends_2020_30_March_2020EB.pdf";
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9)
+  {
+    period: "2021",
+    documentName: "Sector Trends Study",
+    desc: "Trends in Employment and Training in the FASSET Sector",
+    fileUrl: Trend2021
+  },
+  {
+    period: "2020",
+    documentName: "Fasset Trends Study",
+    desc: "Fasset commissioned a survey of the sector (employers, professional institutes, education and training institutions and learners) and concluded with a labour market demand and supply analysis, and a skills needs analysis. This document is intended to provide strategic direction for the sector and highlight skills deficits and skills priorities. This is the third sector survey",
+    fileUrl: Trend2020
+  }
 ];
 
 const SectorTrends = () => {
@@ -65,7 +60,6 @@ const SectorTrends = () => {
   return (
     <Stack spacing={1}>
       <Typography
-        textAlign="center"
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
@@ -87,7 +81,6 @@ const SectorTrends = () => {
       </Typography>
 
       <Typography
-        textAlign="center"
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
@@ -96,7 +89,8 @@ const SectorTrends = () => {
         Download the Sector Trend
       </Typography>
       <Typography>
-      To download Fasset’s Sector Trend Reports, click on your choice in the table below.
+        To download Fasset’s Sector Trend Reports, click on your choice in the
+        table below.
       </Typography>
 
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
@@ -148,13 +142,13 @@ const SectorTrends = () => {
                   {i + 1}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  2021
+                  {row.period}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  Sector Trends Study
+                  {row.documentName}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  Trends in Employment and Training in the FASSET Sector
+                  {row.desc}
                 </TableCell>
 
                 <TableCell align="center" scope="row">
@@ -182,8 +176,26 @@ const SectorTrends = () => {
                       horizontal: "left"
                     }}
                   >
-                    <MenuItem onClick={handleClose}>View</MenuItem>
-                    <MenuItem onClick={handleClose}>Download</MenuItem>
+                    <MenuItem>
+                      <a
+                        href={row.fileUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{ all: "unset" }}
+                      >
+                        View
+                      </a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a
+                        href={row.fileUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{ all: "unset" }}
+                      >
+                        Download
+                      </a>
+                    </MenuItem>
                   </Menu>
                 </TableCell>
               </TableRow>

@@ -64,6 +64,11 @@ const UserQuery = {
 
     return resp?.data;
   },
+  getAllCommiteeNames: async () => {
+    const resp = await axiosInstance.get("/cse/committees");
+
+    return resp?.data;
+  },
   getlAllDocumentsTitle: async () => {
     const resp = await axiosInstance.get(`/cse/downloadsTitle`);
 
@@ -79,6 +84,19 @@ const UserQuery = {
 
     return resp?.data;
   },
+
+  // Get Notices
+
+  getAllGeneralNotices: async () => {
+    const resp = await axiosInstance.get("/cse/generalNotices");
+
+    return resp?.data;
+  },
+  getAllGrantsWindows: async () => {
+    const resp = await axiosInstance.get("/cse/grantWindows");
+
+    return resp?.data;
+  }
 };
 
 export default UserQuery;

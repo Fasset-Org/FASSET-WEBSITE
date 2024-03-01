@@ -6,7 +6,7 @@ const ValueCard = ({ title, definition }) => {
     <Card
       className="v-card"
       sx={{
-        minHeight: 210,
+        // minHeight: 210,
         width: { xs: "100%", md: "20%" },
         borderRadius: 0,
         p: 0

@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 import StepGuideImage from "../../images/Fasset Choose Career Guide.png";
+import CareerGuide from '../../images/Leaners/Fasset Career Guide 2020 - Cropped.pdf'
 
 const ChooseACareer = () => {
   return (
@@ -32,8 +33,10 @@ const ChooseACareer = () => {
         pick a career that is fitting for you or download ​the Fasset Career
         Guide for more information{" "}
         <a
-          href="#123"
+          href={CareerGuide}
           style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+          target="_blank"
+          rel="noreferrer"
         >
           click here
         </a>{" "}

@@ -6,229 +6,288 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { Stack, TableFooter, TablePagination, Typography } from "@mui/material";
+import {
+  IconButton,
+  Stack,
+  TableFooter,
+  TablePagination,
+  Typography
+} from "@mui/material";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
-
+import LocalGovernment from "../../files/Professional-Bodies/11_Advanced_Certificate_Local_Government_Accounting_.pdf";
+import AccountingTechinitian from "../../files/Professional-Bodies/8_Certificate_Accounting_Technician_.pdf";
+import FurtherEducation from "../../files/Professional-Bodies/8_Certificate_Accounting_Technician_1_.pdf";
+import DiplomaAccounting from "../../files/Professional-Bodies/9_Diploma_Accounting_Technician_.pdf";
+import CertificateAccounting from "../../files/Professional-Bodies/Certificate_Accounting.pdf";
+import AdvanceForensic from "../../files/Professional-Bodies/Advanced_Certificate_Forensic_Practitioner_14_02_2017w.pdf";
+import AccTechnitian from "../../files/Professional-Bodies/acca_cat_learnership.pdf";
+import ChateredAccountant from "../../files/Professional-Bodies/1_Professional_Qualification_Chartered_Certified_Accountant.pdf";
+import BusinessAccounting from "../../files/Professional-Bodies/5_CIMA_CMA_NQF5.docx";
+import ManagementAccounting from "../../files/Professional-Bodies/4_CIMA_CMA_NQF6.docx";
+import ChateredManagementAccounting from "../../files/Professional-Bodies/3_CIMA_CMA_NQF7.docx";
+import CSIChateredAccounting from "../../files/Professional-Bodies/29_Professional_Qualification_Management_and_.Administration.docx";
+import CSIGovernance from "../../files/Professional-Bodies/27_Professional_Qualification_Governance_Administration.docx";
+import CSIProfessional from "../../files/Professional-Bodies/28_Professional_Advanced_Qualification_Governance_and_Administration.docx";
+import CSIProfessionalPost from "../../files/Professional-Bodies/30_Professional_Post-Graduate_Qualification_Company_Secretarial_and_Governance_Practice.docx";
+import DebtRecovery from "../../files/Professional-Bodies/22_FET_Certificate_Debt_Recovery.pdf";
+import BookKeeping from "../../files/Professional-Bodies/13_National_Certificate_Bookkeeping.pdf";
+import BookKeeper from "../../files/Professional-Bodies/17_Further_Education_and_Training_Certificate_Bookkeeping.pdf";
+import SectorAccounting from "../../files/Professional-Bodies/18_Certificate_Public_Sector_Accounting.pdf";
+import FinanceManagement from "../../files/Professional-Bodies/15_National_Certificate_Small_Business_Financial_Management.pdf";
+import OfficeAdministration from "../../files/Professional-Bodies/16_Certificate_Office_Administration.pdf";
+import SeniorOfficeAdministration from "../../files/Professional-Bodies/Senior_Office_Administrator.pdf";
+import TechnicalFinancialAccounting from "../../files/Professional-Bodies/14_National_Diploma_Technical_Financial_Accountant.pdf";
+import PublicSectorAcccounting from "../../files/Professional-Bodies/19_Diploma_Public_Sector_Accounting.pdf";
+import InternalAuditing from "../../files/Professional-Bodies/24_Certificate_General_Internal_Auditing.docx";
+import ChateredAccountingAuditing from "../../files/Professional-Bodies/21_SAICA _Chartered Accountant_Auditing.docx";
+import AccountingBusiness from "../../files/Professional-Bodies/6_Post_Graduate_Professional_Qualification_Professional_Accountant_in_Business.pdf";
+import ProfessionalAccountant from "../../files/Professional-Bodies/SAIPA_-_Professional_Accountant_in_.Practice.docx";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
 const rows = [
   {
     title: "Certificate: Local Government Accounting",
     NQLevel: "3",
     learnershipCode: "01/Q010026/00/120/3",
-    SAQAIdNo: "59751"
+    SAQAIdNo: "59751",
+    fileUrl: LocalGovernment
   },
 
   {
     title: "Certificate: Accounting Technician",
     NQLevel: "3",
     learnershipCode: "01/Q010036/00/120/3",
-    SAQAIdNo: "73710"
+    SAQAIdNo: "73710",
+    fileUrl: AccountingTechinitian
   },
   {
     title: "Further Education and Training Certificate: Accounting Technician",
     NQLevel: "4",
     learnershipCode: "01/Q010038/00/120/4",
-    SAQAIdNo: "77143"
+    SAQAIdNo: "77143",
+    fileUrl: FurtherEducation
   },
   {
     title: "Advanced Certificate: Local Government Accounting",
     NQLevel: "4",
     learnershipCode: "01/Q010037/00/120/4",
-    SAQAIdNo: "73710"
+    SAQAIdNo: "73710",
+    fileUrl: DiplomaAccounting
   },
   {
     title: "Certificate: Accounting",
     NQLevel: "5",
     learnershipCode: "01/Q010039/00/120/5",
-    SAQAIdNo: "80189"
+    SAQAIdNo: "80189",
+    fileUrl: CertificateAccounting
   },
 
   {
     title: "Advanced Certificate: Forensic Practitioner",
     NQLevel: "5",
     learnershipCode: "01/Q010035/00/120/6",
-    SAQAIdNo: "67269"
+    SAQAIdNo: "67269",
+    fileUrl: AdvanceForensic
   },
- 
+
   {
     title: "Certificate: Certified Accounting Technician",
     NQLevel: "5",
     learnershipCode: "01/Q010013/00/390/5",
-    SAQAIdNo: "20397"
+    SAQAIdNo: "20397",
+    fileUrl: AccTechnitian
   },
   {
     title: "Chartered Certified Accountant",
     NQLevel: "8",
     learnershipCode: "01/Q010005/00/780/7",
-    SAQAIdNo: "	63550"
+    SAQAIdNo: "	63550",
+    fileUrl: ChateredAccountant
   },
   {
     title: "National Certificate: Business Accounting",
     NQLevel: "5",
     learnershipCode: "01/Q010016/00/120/5",
-    SAQAIdNo: "24418"
+    SAQAIdNo: "24418",
+    fileUrl: BusinessAccounting
   },
 
   {
     title: "National Diploma : Management Accounting",
     NQLevel: "6",
     learnershipCode: "01/Q010017/00/240/6",
-    SAQAIdNo: "24406"
+    SAQAIdNo: "24406",
+    fileUrl: ManagementAccounting
   },
 
   {
     title: "Professional Qualification: Chartered Management Accountant",
     NQLevel: "7",
     learnershipCode: "01/Q010012/00/930/7",
-    SAQAIdNo: "20400"
+    SAQAIdNo: "20400",
+    fileUrl: ChateredManagementAccounting
   },
 
   {
     title: "CIS Professional Qual. Management and Administration",
     NQLevel: "6",
     learnershipCode: "01/Q010032/00/130/5",
-    SAQAIdNo: "60653"
+    SAQAIdNo: "60653",
+    fileUrl: CSIChateredAccounting
   },
 
   {
     title: "CIS Professional Advanced Qualification: Governance and Admin",
     NQLevel: "6",
     learnershipCode: "01/Q010033/00/120/6",
-    SAQAIdNo: "60655"
+    SAQAIdNo: "60655",
+    fileUrl: CSIGovernance
   },
   {
-    title: "CIS Professional Post – Graduate Qualification: Company Secretarial and Governance Practice",
+    title:
+      "CIS Professional Post – Graduate Qualification: Company Secretarial and Governance Practice",
     NQLevel: "8",
     learnershipCode: "01/Q010030/00/120/7",
-    SAQAIdNo: "	60654"
+    SAQAIdNo: "	60654",
+    fileUrl: CSIProfessional
   },
   {
     title: "CIS Professional Qual. Governance and Admin",
     NQLevel: "6",
     learnershipCode: "01/Q010034/00/120/5",
-    SAQAIdNo: "60651"
+    SAQAIdNo: "60651",
+    fileUrl: CSIProfessionalPost
   },
   {
     title: "Further Education and Training Certificate: Debt Recovery",
     NQLevel: "4",
     learnershipCode: "01/Q010024/26/149/4",
-    SAQAIdNo: "49021"
+    SAQAIdNo: "49021",
+    fileUrl: DebtRecovery
   },
   {
     title: "National Certificate: Bookkeeping",
     NQLevel: "3",
     learnershipCode: "01/Q010027/26/120/3",
-    SAQAIdNo: "58375"
+    SAQAIdNo: "58375",
+    fileUrl: BookKeeping
   },
 
   {
     title: "Further Education and Training Certificate: Bookkeeper",
     NQLevel: "4",
     learnershipCode: "01/Q010028/28/130/4",
-    SAQAIdNo: "58376"
+    SAQAIdNo: "58376",
+    fileUrl: BookKeeper
   },
 
   {
     title: "National Certificate: Public Sector Accounting",
     NQLevel: "4",
     learnershipCode: "01/Q010019/00/120/4",
-    SAQAIdNo: "20352"
+    SAQAIdNo: "20352",
+    fileUrl: SectorAccounting
   },
 
   {
     title: "National Certificate: Small Business Financial Management",
     NQLevel: "4",
     learnershipCode: "01/Q010023/24/120/4",
-    SAQAIdNo: "	48736"
+    SAQAIdNo: "	48736",
+    fileUrl: FinanceManagement
   },
 
   {
     title: "Certificate: Office Administration",
     NQLevel: "5",
     learnershipCode: "01/Q010021/00/120/5",
-    SAQAIdNo: "23618"
+    SAQAIdNo: "23618",
+    fileUrl: OfficeAdministration
   },
 
   {
     title: "Senior Office Administrator",
     NQLevel: "5",
     learnershipCode: "01/Q010040/00/240/5",
-    SAQAIdNo: "23619"
+    SAQAIdNo: "23619",
+    fileUrl: SeniorOfficeAdministration
   },
 
   {
     title: "National Diploma: Technical Financial Accounting",
     NQLevel: "5",
     learnershipCode: "01/Q010022/28/251/5",
-    SAQAIdNo: "36213"
+    SAQAIdNo: "36213",
+    fileUrl: TechnicalFinancialAccounting
   },
 
   {
     title: "Diploma : Public Sector Accounting",
     NQLevel: "5",
     learnershipCode: "01/Q010020/00/240/5",
-    SAQAIdNo: "20353"
+    SAQAIdNo: "20353",
+    fileUrl: PublicSectorAcccounting
   },
   {
     title: "Certificate: General Internal Auditing",
     NQLevel: "8",
     learnershipCode: "01/Q010025/00/120/7",
-    SAQAIdNo: "20359"
+    SAQAIdNo: "20359",
+    fileUrl: InternalAuditing
   },
 
   {
     title: "Chartered Accountant: Auditing",
     NQLevel: "7",
     learnershipCode: "01/Q010001/00/480/7",
-    SAQAIdNo: "48913"
+    SAQAIdNo: "48913",
+    fileUrl: ChateredAccountingAuditing
   },
   {
-    title: "Post-graduate professional qualification: Professional Accountant in Business",
+    title:
+      "Post-graduate professional qualification: Professional Accountant in Business",
     NQLevel: "7",
     learnershipCode: "01/Q010007/00/480/7",
-    SAQAIdNo: "20392"
+    SAQAIdNo: "20392",
+    fileUrl: AccountingBusiness
   },
   {
     title: "Post-graduate Diploma: Professional Accountant in Practice 	",
     NQLevel: "8",
     learnershipCode: "01/Q010008/00/480/7",
-    SAQAIdNo: "20391"
-  },
-  {
-    title: "Occupational Certificate: Financial Markets Practitioner",
-    NQLevel: "5",
-    learnershipCode: "01/Q010044/00/120/7",
-    SAQAIdNo: "93603"
-  },
-  {
-    title: "Occupational Certificate: Tax Professional",
-    NQLevel: "8",
-    learnershipCode: "01/Q010048/00/400/8",
-    SAQAIdNo: "93624"
-  },
-  {
-    title: "Occupational Certificate: Tax Technician",
-    NQLevel: "6",
-    learnershipCode: "01/Q010057/99/399/6",
-    SAQAIdNo: "20353"
-  },
-  {
-    title: "Advanced Certificate: Forensic Practitioner",
-    NQLevel: "7",
-    learnershipCode: "01Q010035001206",
-    SAQAIdNo: "93624"
-  },
-  {
-    title: "Diploma: Management (IAC Accounting Officer)",
-    NQLevel: "7",
-    learnershipCode: "01/Q010029/00/420/6",
-    SAQAIdNo: "67694"
-  },
-
-
-
-
-
+    SAQAIdNo: "20391",
+    fileUrl: ProfessionalAccountant
+  }
+  // {
+  //   title: "Occupational Certificate: Financial Markets Practitioner",
+  //   NQLevel: "5",
+  //   learnershipCode: "01/Q010044/00/120/7",
+  //   SAQAIdNo: "93603"
+  // },
+  // {
+  //   title: "Occupational Certificate: Tax Professional",
+  //   NQLevel: "8",
+  //   learnershipCode: "01/Q010048/00/400/8",
+  //   SAQAIdNo: "93624"
+  // },
+  // {
+  //   title: "Occupational Certificate: Tax Technician",
+  //   NQLevel: "6",
+  //   learnershipCode: "01/Q010057/99/399/6",
+  //   SAQAIdNo: "20353"
+  // },
+  // {
+  //   title: "Advanced Certificate: Forensic Practitioner",
+  //   NQLevel: "7",
+  //   learnershipCode: "01Q010035001206",
+  //   SAQAIdNo: "93624"
+  // },
+  // {
+  //   title: "Diploma: Management (IAC Accounting Officer)",
+  //   NQLevel: "7",
+  //   learnershipCode: "01/Q010029/00/420/6",
+  //   SAQAIdNo: "67694"
+  // },
 ];
 
 const AboutFassetLearnerships = () => {
@@ -312,6 +371,13 @@ const AboutFassetLearnerships = () => {
               >
                 SAQA ID No
               </TableCell>
+
+              <TableCell
+                align="center"
+                sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
+              >
+                Action
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -337,6 +403,18 @@ const AboutFassetLearnerships = () => {
                 </TableCell>
                 <TableCell align="center" scope="row">
                   {row.SAQAIdNo}
+                </TableCell>
+                <TableCell align="center" scope="row">
+                  <IconButton>
+                    <a
+                      href={row.fileUrl}
+                      style={{ all: "unset" }}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <VisibilityIcon />
+                    </a>
+                  </IconButton>
                 </TableCell>
               </TableRow>
             ))}

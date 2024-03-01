@@ -1,8 +1,6 @@
 import {
   IconButton,
   ListItem,
-  Menu,
-  MenuItem,
   Paper,
   Stack,
   Table,
@@ -16,36 +14,45 @@ import {
   Typography
 } from "@mui/material";
 import React from "react";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
+import UpdateFile2024 from "../../../files/Reseources/Skills-Plan/FASSET Sector Skills Plan Update 2024-25 v006 (002).pdf";
+import UpdateFile2023 from "../../../files/Reseources/Skills-Plan/FASSET 2023-24 SSP Final Annual Update.pdf";
+import UpdateFile2022 from "../../../files/Reseources/Skills-Plan/FASSET 2022-23 SSP Final Annual Update.pdf";
+import UpdateFile2021 from "../../../files/Reseources/Skills-Plan/Fasset Sector Skills Plan 2021-22 Update - Final.pdf";
+import UpdateFile2019 from "../../../files/Reseources/Skills-Plan/Fasset SSP 2019 - 2020.pdf";
+import { Visibility } from "@mui/icons-material";
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9)
+  {
+    period: "2024/2025",
+    documentName: "FASSET Sector Skills Plan Update 2024-25",
+    fileUrl: UpdateFile2024
+  },
+  {
+    period: "2023/2024",
+    documentName: "FASSET 2023-24 SSP Final Annual Update",
+    fileUrl: UpdateFile2023
+  },
+  {
+    period: "2022/2023",
+    documentName: "FASSET 2022-23 SSP Final Annual Update",
+    fileUrl: UpdateFile2022
+  },
+  {
+    period: "2021/2022",
+    documentName: "Fasset Sector Skills Plan 2021-22 Update",
+    fileUrl: UpdateFile2021
+  },
+  {
+    period: "2019/2020",
+    documentName: "Fasset SSP 2019 - 2020",
+    fileUrl: UpdateFile2019
+  }
 ];
 
 const SectorSkillPlan = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -56,17 +63,9 @@ const SectorSkillPlan = () => {
     setPage(0);
   };
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   return (
     <Stack spacing={1}>
       <Typography
-        textAlign="center"
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
@@ -139,7 +138,7 @@ const SectorSkillPlan = () => {
                 align="center"
                 sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
               >
-                Year
+                Update Periods
               </TableCell>
               <TableCell
                 align="center"
@@ -168,39 +167,22 @@ const SectorSkillPlan = () => {
                   {i + 1}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  2022/2023
+                  {row.period}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  FASSET 2023-24 SSP Final Annual Update
+                  {row.documentName}
                 </TableCell>
                 <TableCell align="center" scope="row">
-                  <IconButton
-                    id="demo-positioned-button"
-                    aria-controls={open ? "demo-positioned-menu" : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? "true" : undefined}
-                    onClick={handleClick}
-                  >
-                    <MoreVertIcon />
+                  <IconButton>
+                    <a
+                      href={row.fileUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{ all: "unset" }}
+                    >
+                      <Visibility />
+                    </a>
                   </IconButton>
-                  <Menu
-                    id="demo-positioned-menu"
-                    aria-labelledby="demo-positioned-button"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    anchorOrigin={{
-                      vertical: "top",
-                      horizontal: "left"
-                    }}
-                    transformOrigin={{
-                      vertical: "top",
-                      horizontal: "left"
-                    }}
-                  >
-                    <MenuItem onClick={handleClose}>View</MenuItem>
-                    <MenuItem onClick={handleClose}>Download</MenuItem>
-                  </Menu>
                 </TableCell>
               </TableRow>
             ))}

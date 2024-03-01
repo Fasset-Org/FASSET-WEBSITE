@@ -5,7 +5,6 @@ const ResearchRequest = () => {
   return (
     <Stack spacing={1}>
       <Typography
-        textAlign="center"
         fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}

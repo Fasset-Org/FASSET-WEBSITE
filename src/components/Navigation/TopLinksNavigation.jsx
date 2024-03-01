@@ -7,7 +7,7 @@ import {
   styled
 } from "@mui/material";
 import React from "react";
-import logo from "../../images/square-logo.jpeg";
+import logo from "../../images/homoLogo 2.png";
 import { useNavigate } from "react-router-dom";
 
 const NavLink = styled(Link)({
@@ -52,7 +52,7 @@ const TopLinksNavigation = () => {
         <IconButton onClick={() => navigate("/home")}>
           <Avatar
             src={logo}
-            sx={{ backgroundColor: "#FFFFFF", padding: 0.4, borderRadius: 0 }}
+            sx={{ backgroundColor: "#FFFFFF", borderRadius: 5 }}
           />
         </IconButton>
         <Stack width="100%">

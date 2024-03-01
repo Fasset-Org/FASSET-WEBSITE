@@ -1,5 +1,9 @@
 import { Link, Stack, Typography } from "@mui/material";
 import React from "react";
+import LaguagePolicy from "../../images/Language Policy .pdf";
+import EnglishManual from "../../images/policies_S14_Manual - English.pdf";
+import AfrikaansManual from "../../images/policies_S14_Manual_Afrikaans.pdf";
+import XhosaManual from "../../images/policies_S14_Manual_Xhosa.doc";
 
 const Policies = () => {
   return (
@@ -18,8 +22,10 @@ const Policies = () => {
         enshrined in the Constitution of the Republic of South Africa, 1996 and
         Bill of Rights contained therein. to download the policy{" "}
         <a
-          href="#123"
+          href={LaguagePolicy}
           style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+          target="_blank"
+          rel="noreferrer"
         >
           click here.
         </a>{" "}
@@ -39,13 +45,43 @@ const Policies = () => {
 
       <ul>
         <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>English Version</li>
+          <li>
+            {" "}
+            <a
+              href={EnglishManual}
+              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              English Version
+            </a>
+          </li>
         </Link>
         <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>Afrikaans Version</li>
+          <li>
+            {" "}
+            <a
+              href={AfrikaansManual}
+              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Afrikaans Version
+            </a>
+          </li>
         </Link>
         <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>Xhosa Version</li>
+          <li>
+            {" "}
+            <a
+              href={XhosaManual}
+              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Xhosa Version
+            </a>
+          </li>
         </Link>
       </ul>
 

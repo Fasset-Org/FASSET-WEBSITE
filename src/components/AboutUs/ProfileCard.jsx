@@ -5,7 +5,7 @@ const ProfileCard = ({ title, fullName, position, imageFileURL }) => {
   return (
     <Stack component={Paper} height={300} boxShadow={5} borderRadius={3}>
       <img
-        src={`http://102.37.217.58:5000//uploads/board-members/${imageFileURL}`}
+        src={`http://102.37.217.58:5000/uploads/board-members/${imageFileURL}`}
         alt=""
         width="100%"
         height="70%"

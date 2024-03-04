@@ -85,7 +85,7 @@ const Committees = () => {
               <Typography>{committee.committeeName}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {committee.committeeName === "Executive" ||
+              {committee.committeeName === "Executives" ||
               committee.committeeName === "Audit & Risk" ? (
                 <Grid container spacing={2}>
                   {committee?.Committees?.map((member) => {

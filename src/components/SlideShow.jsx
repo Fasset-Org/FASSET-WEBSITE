@@ -33,7 +33,7 @@ const Slideshow = ({ banners }) => {
             }}
           >
             <img
-              src={`http://localhost:8001/uploads/banners/${banner.bannerImageURL}`}
+              src={`http://102.37.217.58:5000//uploads/banners/${banner.bannerImageURL}`}
               alt=""
               style={{
                 objectFit: "fit",

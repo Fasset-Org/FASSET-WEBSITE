@@ -115,8 +115,19 @@ const AnnualReports = () => {
                   {annualReport?.annualReportFileURL}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
-                  {new Date(annualReport.startDate).toDateString()} {" - "}{" "}
-                  {new Date(annualReport.endDate).toDateString()}
+                  {annualReport.startDate.toLocaleDateString("en-ZA", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                  })}
+                  {" - "}{" "}
+                  {annualReport.endDate.toLocaleDateString("en-ZA", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                  })}
+                  {/* {new Date(annualReport.startDate).toDateString()} {" - "}{" "}
+                  {new Date(annualReport.endDate).toDateString()} */}
                 </TableCell>
 
                 <TableCell align="center" scope="row">

@@ -126,8 +126,8 @@ const AnnualReports = () => {
                     month: "short",
                     year: "numeric"
                   })} */}
-                  {new Date(annualReport.startDate).toDateString().split("").slice(1)} {" - "}{" "}
-                  {new Date(annualReport.endDate).toDateString().split("").slice(1)}
+                  {new Date(annualReport.startDate).toDateString().split(" ").slice(1).join(" ")} {" - "}{" "}
+                  {new Date(annualReport.endDate).toDateString().split(" ").slice(1).join(" ")}
                 </TableCell>
 
                 <TableCell align="center" scope="row">

@@ -171,11 +171,25 @@ const Downloads = () => {
                                     horizontal: "left"
                                   }}
                                 >
-                                  <MenuItem onClick={handleClose}>
-                                    View
+                                  <MenuItem>
+                                    <a
+                                      href={doc.fileName}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      style={{ all: "unset" }}
+                                    >
+                                      View
+                                    </a>
                                   </MenuItem>
-                                  <MenuItem onClick={handleClose}>
-                                    Download
+                                  <MenuItem>
+                                    <a
+                                      href={doc.fileName}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      style={{ all: "unset" }}
+                                    >
+                                      Download
+                                    </a>
                                   </MenuItem>
                                 </Menu>
                               </TableCell>

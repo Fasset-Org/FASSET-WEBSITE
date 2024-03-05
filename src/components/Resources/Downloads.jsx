@@ -173,7 +173,11 @@ const Downloads = () => {
                                 >
                                   <MenuItem>
                                     <a
-                                      href={`${process.env.REACT_APP_API_URL}/cse/downloadDocument?fileName=${doc.fileName}`}
+                                      href={`${
+                                        process.env.REACT_APP_API_URL
+                                      }/cse/downloadDocument?fileName=${
+                                        doc.fileName
+                                      }.${doc.originalFileName.split(".")[1]}`}
                                       target="_blank"
                                       rel="noreferrer"
                                       style={{ all: "unset" }}
@@ -183,7 +187,11 @@ const Downloads = () => {
                                   </MenuItem>
                                   <MenuItem>
                                     <a
-                                      href={`${process.env.REACT_APP_API_URL}/cse/downloadDocument?fileName=${doc.fileName}`}
+                                      href={`${
+                                        process.env.REACT_APP_API_URL
+                                      }/cse/downloadDocument?fileName=${
+                                        doc.fileName
+                                      }.${doc.originalFileName.split(".")[1]}`}
                                       target="_blank"
                                       rel="noreferrer"
                                       style={{ all: "unset" }}

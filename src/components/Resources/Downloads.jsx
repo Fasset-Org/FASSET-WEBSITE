@@ -173,7 +173,7 @@ const Downloads = () => {
                                 >
                                   <MenuItem>
                                     <a
-                                      href={`http://102.37.217.58:5000/uploads/board-members/${doc.fileName}`}
+                                      href={`${process.env.REACT_APP_API_URL}/cse/downloadResearchReportDocument?fileName=${doc.fileName}`}
                                       target="_blank"
                                       rel="noreferrer"
                                       style={{ all: "unset" }}
@@ -183,7 +183,7 @@ const Downloads = () => {
                                   </MenuItem>
                                   <MenuItem>
                                     <a
-                                      href={`http://102.37.217.58:5000/uploads/board-members/${doc.fileName}`}
+                                      href={`${process.env.REACT_APP_API_URL}/cse/downloadResearchReportDocument?fileName=${doc.fileName}`}
                                       target="_blank"
                                       rel="noreferrer"
                                       style={{ all: "unset" }}

@@ -126,8 +126,17 @@ const AnnualReports = () => {
                     month: "short",
                     year: "numeric"
                   })} */}
-                  {new Date(annualReport.startDate).toDateString().split(" ").slice(1).join(" ")} {" - "}{" "}
-                  {new Date(annualReport.endDate).toDateString().split(" ").slice(1).join(" ")}
+                  {new Date(annualReport.startDate)
+                    .toDateString()
+                    .split(" ")
+                    .slice(1)
+                    .join(" ")}{" "}
+                  {" - "}{" "}
+                  {new Date(annualReport.endDate)
+                    .toDateString()
+                    .split(" ")
+                    .slice(1)
+                    .join(" ")}
                 </TableCell>
 
                 <TableCell align="center" scope="row">
@@ -157,7 +166,7 @@ const AnnualReports = () => {
                   >
                     <MenuItem>
                       <a
-                        href={`http://102.37.217.58:5000/uploads/board-members/${annualReport.annualReportFileURL}`}
+                        href={`${process.env.REACT_APP_API_URL}/cse/downloadAnnualReportDocument?fileName=${annualReport.annualReportFileURL}`}
                         target="_blank"
                         rel="noreferrer"
                         style={{ all: "unset" }}
@@ -167,7 +176,7 @@ const AnnualReports = () => {
                     </MenuItem>
                     <MenuItem>
                       <a
-                        href={`http://102.37.217.58:5000/uploads/board-members/${annualReport.annualReportFileURL}`}
+                        href={`${process.env.REACT_APP_API_URL}/cse/downloadAnnualReportDocument?fileName=${annualReport.annualReportFileURL}`}
                         target="_blank"
                         rel="noreferrer"
                         style={{ all: "unset" }}

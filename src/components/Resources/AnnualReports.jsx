@@ -144,8 +144,26 @@ const AnnualReports = () => {
                       horizontal: "left"
                     }}
                   >
-                    <MenuItem onClick={handleClose}>View</MenuItem>
-                    <MenuItem onClick={handleClose}>Download</MenuItem>
+                    <MenuItem>
+                      <a
+                        href={`http://localhost:8001/uploads/board-members/${annualReport.annualReportFileURL}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{ all: "unset" }}
+                      >
+                        View
+                      </a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a
+                        href={`http://localhost:8001/uploads/board-members/${annualReport.annualReportFileURL}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{ all: "unset" }}
+                      >
+                        Download
+                      </a>
+                    </MenuItem>
                   </Menu>
                 </TableCell>
               </TableRow>

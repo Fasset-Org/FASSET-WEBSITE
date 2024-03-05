@@ -165,7 +165,7 @@ const ResearchReports = () => {
                         >
                           <MenuItem>
                             <a
-                              href={row.researchReportFileURL}
+                              href={`http://localhost:8001/uploads/board-members/${row.researchReportFileURL}`}
                               target="_blank"
                               rel="noreferrer"
                               style={{ all: "unset" }}
@@ -175,7 +175,7 @@ const ResearchReports = () => {
                           </MenuItem>
                           <MenuItem>
                             <a
-                              href={row.researchReportFileURL}
+                              href={`http://localhost:8001/uploads/board-members/${row.researchReportFileURL}`}
                               target="_blank"
                               rel="noreferrer"
                               style={{ all: "unset" }}

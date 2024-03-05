@@ -50,7 +50,7 @@ const ResearchReports = () => {
     setAnchorEl(null);
   };
 
-  console.log(data)
+  console.log(data);
 
   return (
     <Stack spacing={1}>
@@ -163,8 +163,26 @@ const ResearchReports = () => {
                             horizontal: "left"
                           }}
                         >
-                          <MenuItem onClick={handleClose}>View</MenuItem>
-                          <MenuItem onClick={handleClose}>Download</MenuItem>
+                          <MenuItem>
+                            <a
+                              href={row.researchReportFileURL}
+                              target="_blank"
+                              rel="noreferrer"
+                              style={{ all: "unset" }}
+                            >
+                              View
+                            </a>
+                          </MenuItem>
+                          <MenuItem>
+                            <a
+                              href={row.researchReportFileURL}
+                              target="_blank"
+                              rel="noreferrer"
+                              style={{ all: "unset" }}
+                            >
+                              Download
+                            </a>
+                          </MenuItem>
                         </Menu>
                       </TableCell>
                     </TableRow>

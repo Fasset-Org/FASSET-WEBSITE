@@ -59,7 +59,7 @@ const DesktopNavigation = () => {
             /> */}
             <Link to="/home">Home</Link>
             <Link to="/aboutus">About Us</Link>
-            <Link to="/learners">Learners</Link>
+            <Link to="/learners">Learners Programmes</Link>
             <Link to="/employers">Employers</Link>
             <Link to="/professionalBodies">Professional Bodies</Link>
             {/* <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>

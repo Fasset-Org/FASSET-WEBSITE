@@ -9,7 +9,7 @@ const Bursary = () => {
         fontWeight="bolder"
         sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
-        Bursary
+        Bursaries
       </Typography>
       <Typography
         fontSize={20}
@@ -19,7 +19,9 @@ const Bursary = () => {
         About Bursaries
       </Typography>
 
-      <Typography textAlign="justify">
+      <Typography>Mamarothi to provide details</Typography>
+
+      {/* <Typography textAlign="justify">
         This will enable Fasset to partner with public providers from
         Universities and Universities of Technology registered with DHET to
         ensure that learners are fully bursared in order to obtain formal
@@ -88,7 +90,7 @@ const Bursary = () => {
         sx={{ color: "primary.main" }}
       >
         TVET WBE Program
-      </Typography>
+      </Typography> */}
     </Stack>
   );
 };

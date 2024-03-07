@@ -42,7 +42,7 @@ const VacancyCard = ({ vacancy }) => {
               textOverflow: "ellipsis"
             }}
           >
-            {vacancy.purposeOfJob}
+            {/* {vacancy.purposeOfJob} */}
           </Typography>
           <Box textAlign="center">
             <Button

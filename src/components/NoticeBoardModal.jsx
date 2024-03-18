@@ -17,7 +17,7 @@ function BootstrapDialogTitle(props) {
   const { children, onClose, ...other } = props;
 
   return (
-    <DialogTitle sx={{ m: 0, p: 2, fontWeight: "bolder" }} {...other}>
+    <DialogTitle sx={{ m: 0, p: 2, fontWeight: "bolder", backgroundColor: 'primary.main', color: '#FFFFFF' }} {...other}>
       {children}
       {onClose ? (
         <IconButton

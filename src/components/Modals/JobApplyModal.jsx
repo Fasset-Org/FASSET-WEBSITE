@@ -211,15 +211,27 @@ const JobApplyModal = ({ position }) => {
             })}
             onSubmit={(values) => {
               const formData = new FormData();
+              const regx =
+                /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+              let additionalQuestions = {};
               for (const [key, value] of Object.entries(values)) {
-                formData.append(key, value);
+                if (regx.test(key)) {
+                  Object.assign(additionalQuestions, { [key]: value });
+                } else {
+                  formData.append(key, value);
+                }
               }
+
+              formData.append(
+                "additionalQuestions",
+                JSON.stringify(additionalQuestions)
+              );
 
               mutate(formData);
             }}
           >
             {({ values, setFieldValue, getFieldMeta }) => {
-              console.log(values);
+              // console.log(values);
               return (
                 <Form>
                   <Grid container spacing={2}>

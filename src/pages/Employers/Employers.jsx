@@ -4,12 +4,12 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import AdjustIcon from "@mui/icons-material/Adjust";
+// import AdjustIcon from "@mui/icons-material/Adjust";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import PixIcon from "@mui/icons-material/Pix";
 import ModelTrainingIcon from "@mui/icons-material/ModelTraining";
-import SkillsProgramme from "../../components/Employers/SkillsProgramme";
+// import SkillsProgramme from "../../components/Employers/SkillsProgramme";
 import WorkbasedProgramme from "../../components/Employers/WorkbasedProgramme";
 import MandatoryGrants from "../../components/Employers/MandatoryGrants";
 import DiscretionaryGrants from "../../components/Employers/DiscretionaryGrants";
@@ -86,55 +86,55 @@ const Employers = () => {
           }
         }}
       >
-        <Tab
+        {/* <Tab
           label="Skills Programmes"
           icon={<AdjustIcon />}
           iconPosition="start"
           {...a11yProps(0)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
-        <Tab
+        /> */}
+        {/* <Tab
           label="TVET Workbased Programme"
           icon={<EditNoteIcon />}
           iconPosition="start"
           {...a11yProps(1)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
+        /> */}
         <Tab
           label="Mandatory Grants"
           icon={<AccountBalanceIcon />}
           iconPosition="start"
-          {...a11yProps(2)}
+          {...a11yProps(0)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
           label="Discretionary Grants"
           icon={<PixIcon />}
           iconPosition="start"
-          {...a11yProps(3)}
+          {...a11yProps(1)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
-          label="Training Providers "
+          label="Quality Assurance"
           icon={<ModelTrainingIcon />}
           iconPosition="start"
-          {...a11yProps(4)}
+          {...a11yProps(2)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
       </Tabs>
-      <TabPanel value={value} index={0}>
+      {/* <TabPanel value={value} index={0}>
         <SkillsProgramme />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
+      </TabPanel> */}
+      {/* <TabPanel value={value} index={1}>
         <WorkbasedProgramme />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
+      </TabPanel> */}
+      <TabPanel value={value} index={0}>
         <MandatoryGrants />
       </TabPanel>
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={1}>
         <DiscretionaryGrants />
       </TabPanel>
-      <TabPanel value={value} index={4}>
+      <TabPanel value={value} index={2}>
         <TrainingProviders />
       </TabPanel>
     </Box>

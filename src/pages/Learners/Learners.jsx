@@ -13,9 +13,15 @@ import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import ScarceSkills from "../../components/Learners/ScarceSkills";
 import CareerPortal from "../../components/Learners/CareerPortal";
 // import DownloadCard from "../../components/DownloadCard";
+import AdjustIcon from "@mui/icons-material/Adjust";
+import SchoolIcon from "@mui/icons-material/School";
 import { Stack } from "@mui/material";
 import Bursary from "../../components/Learners/Bursary";
-import CareerGuide from '../../images/Leaners/Fasset Career Guide 2020 - Cropped.pdf'
+// import CareerGuide from "../../images/Leaners/Fasset Career Guide 2020 - Cropped.pdf";
+import SkillsProgramme from "../../components/Learners/SkillsProgramme";
+import AboutFassetLearnerships from "../../components/ProfessionalBodies/AboutFassetLearnerships";
+import CareerGuide from "../../components/Learners/CareerGuide";
+import Internships from "../../components/Learners/Internships";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -89,7 +95,7 @@ const Learners = () => {
         }}
       >
         <Tab
-          label="Choose a career in our sector"
+          label="Career Guide"
           icon={<WorkIcon />}
           iconPosition="start"
           {...a11yProps(0)}
@@ -99,11 +105,52 @@ const Learners = () => {
             color: "#FFFFFF"
           }}
         />
+
         <Tab
+          label="Bursaries"
+          icon={<CastForEducationIcon />}
+          iconPosition="start"
+          {...a11yProps(1)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+
+        <Tab
+          label="Learnerships"
+          icon={<SchoolIcon />}
+          iconPosition="start"
+          {...a11yProps(2)}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF"
+          }}
+        />
+
+        <Tab
+          label="Internships"
+          icon={<SchoolIcon />}
+          iconPosition="start"
+          {...a11yProps(3)}
+          sx={{
+            borderBottom: 1,
+            borderColor: "lightgray",
+            color: "#FFFFFF"
+          }}
+        />
+
+        <Tab
+          label="Skills Programmes"
+          icon={<AdjustIcon />}
+          iconPosition="start"
+          {...a11yProps(4)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+
+        {/* <Tab
           label="Scarce Skills"
           icon={<AcUnitIcon />}
           iconPosition="start"
-          {...a11yProps(1)}
+          {...a11yProps(3)}
           sx={{
             borderBottom: 1,
             borderColor: "lightgray",
@@ -115,32 +162,33 @@ const Learners = () => {
           label="Career Guide Booklet"
           icon={<EditRoadIcon />}
           iconPosition="start"
-          {...a11yProps(2)}
+          {...a11yProps(4)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
-        <Tab
-          label="Bursary"
-          icon={<CastForEducationIcon />}
-          iconPosition="start"
-          {...a11yProps(3)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
+
         <Tab
           label="Career Portal"
           icon={<AutoAwesomeIcon />}
           iconPosition="start"
-          {...a11yProps(4)}
+          {...a11yProps(6)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
+        /> */}
       </Tabs>
       <TabPanel value={value} index={0}>
-        <ChooseACareer />
+        <CareerGuide />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ScarceSkills />
+        <Bursary />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Stack spacing={1}>
+        <AboutFassetLearnerships />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <Internships />
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <SkillsProgramme />
+        {/* <Stack spacing={1}>
           <Typography>
             &nbsp;
             <a
@@ -154,17 +202,17 @@ const Learners = () => {
             to view Fasset's Career Guide.
           </Typography>
 
-          {/* <Grid container>
+          <Grid container>
             <Grid xs={12} md={4}>
               <DownloadCard fileName="Career Guide" />
             </Grid>
-          </Grid> */}
-        </Stack>
+          </Grid>
+        </Stack> */}
       </TabPanel>
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={5}>
         <Bursary />
       </TabPanel>
-      <TabPanel value={value} index={4}>
+      <TabPanel value={value} index={6}>
         <CareerPortal />
       </TabPanel>
     </Box>

@@ -110,14 +110,14 @@ const Learners = () => {
           }}
         />
         <Tab
-          label="Board"
+          label="Accounting Authority"
           icon={<Diversity3Icon />}
           iconPosition="start"
           {...a11yProps(2)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
-          label="Committees"
+          label="Management"
           icon={<Diversity3Icon />}
           iconPosition="start"
           {...a11yProps(3)}

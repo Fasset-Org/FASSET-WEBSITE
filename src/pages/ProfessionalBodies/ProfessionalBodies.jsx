@@ -82,7 +82,7 @@ const ProfessionalBodies = () => {
           }
         }}
       >
-        <Tab
+        {/* <Tab
           label="About FASSET Learnerships"
           icon={<SchoolIcon />}
           iconPosition="start"
@@ -92,19 +92,19 @@ const ProfessionalBodies = () => {
             borderColor: "lightgray",
             color: "#FFFFFF"
           }}
-        />
+        /> */}
         <Tab
           label="Lifelong Learning Events"
           icon={<EventRepeatIcon />}
           iconPosition="start"
-          {...a11yProps(1)}
+          {...a11yProps(0)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
       </Tabs>
-      <TabPanel value={value} index={0}>
+      {/* <TabPanel value={value} index={1}>
         <AboutFassetLearnerships />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
+      </TabPanel> */}
+      <TabPanel value={value} index={0}>
       <LifeLongLearningEvents/>
   
       </TabPanel>

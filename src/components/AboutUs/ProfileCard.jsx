@@ -5,7 +5,7 @@ const ProfileCard = ({ title, fullName, position, imageFileURL }) => {
   return (
     <Stack component={Paper} height={300} boxShadow={5} borderRadius={3}>
       <img
-        src={`http://102.37.217.58:5000/uploads/board-members/${imageFileURL}`}
+        src={`${process.env.REACT_APP_API_URL}/uploads/board-members/${imageFileURL}`}
         alt=""
         width="100%"
         height="70%"
@@ -28,7 +28,7 @@ const ProfileCard = ({ title, fullName, position, imageFileURL }) => {
           sx={{
             fontWeight: "bolder",
             fontSize: 15,
-            textTransform: "uppercase",
+            // textTransform: "uppercase",
             color: "primary.main"
           }}
         >

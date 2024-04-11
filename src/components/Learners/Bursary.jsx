@@ -11,13 +11,13 @@ const Bursary = () => {
       >
         Bursaries
       </Typography>
-      <Typography
+      {/* <Typography
         fontSize={20}
         fontWeight="bolder"
         sx={{ color: "primary.main" }}
       >
         About Bursaries
-      </Typography>
+      </Typography> */}
 
       <Typography>Mamarothi to provide details</Typography>
 

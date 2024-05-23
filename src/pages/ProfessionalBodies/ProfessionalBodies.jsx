@@ -1,15 +1,28 @@
 import * as React from "react";
 
-
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import SchoolIcon from "@mui/icons-material/School";
-import EventRepeatIcon from "@mui/icons-material/EventRepeat";
-import AboutFassetLearnerships from "../../components/ProfessionalBodies/AboutFassetLearnerships";
-import LifeLongLearningEvents from "../../components/ProfessionalBodies/LifeLongLearningEvents";
+import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
+import CreditScoreIcon from "@mui/icons-material/CreditScore";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import Overview from "../../components/QualityAssurance/Overview";
+import SkillsDevelopmentProvidersAccreditation from "../../components/QualityAssurance/SkillsDevelopmentProvidersAccreditation";
+import Accreditation from "../../components/QualityAssurance/Accreditation";
+import AssessmentCentresAccreditation from "../../components/QualityAssurance/AssessmentCentresAccreditation";
+import SubjectMatterExpertsDatabaseRegistration from "../../components/QualityAssurance/SubjectMatterExpertsDatabaseRegistration";
+import EISA from "../../components/QualityAssurance/EISA";
+import WorkplaceApproval from "../../components/QualityAssurance/WorkplaceApproval";
+import ExternalModerationProcess from "../../components/QualityAssurance/ExternalModerationProcess";
+import QCTOPolicies from "../../components/QualityAssurance/QCTOPolicies";
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import SubjectIcon from '@mui/icons-material/Subject';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
+import RunningWithErrorsIcon from '@mui/icons-material/RunningWithErrors';
+import PolicyIcon from '@mui/icons-material/Policy';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -94,23 +107,100 @@ const ProfessionalBodies = () => {
           }}
         /> */}
         <Tab
-          label="Lifelong Learning Events"
-          icon={<EventRepeatIcon />}
+          label="Overview"
+          icon={<ScreenSearchDesktopIcon />}
           iconPosition="start"
           {...a11yProps(0)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
+        <Tab
+          label="Skills Development Providers Accreditation"
+          icon={<DesignServicesIcon />}
+          iconPosition="start"
+          {...a11yProps(2)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="Accreditation"
+          icon={<CreditScoreIcon />}
+          iconPosition="start"
+          {...a11yProps(1)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="Assessment Centres Accreditation"
+          icon={<AssessmentIcon />}
+          iconPosition="start"
+          {...a11yProps(3)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="Subject Matter Experts Database Registration"
+          icon={<SubjectIcon />}
+          iconPosition="start"
+          {...a11yProps(4)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="External Integrated Summative Assessment (EISA)"
+          icon={<IntegrationInstructionsIcon />}
+          iconPosition="start"
+          {...a11yProps(4)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="Workplace Approval"
+          icon={<FactCheckIcon />}
+          iconPosition="start"
+          {...a11yProps(4)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="External Moderation Process"
+          icon={<RunningWithErrorsIcon />}
+          iconPosition="start"
+          {...a11yProps(4)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        <Tab
+          label="QCTO Policies"
+          icon={<PolicyIcon />}
+          iconPosition="start"
+          {...a11yProps(4)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        F
       </Tabs>
-      {/* <TabPanel value={value} index={1}>
-        <AboutFassetLearnerships />
-      </TabPanel> */}
+
       <TabPanel value={value} index={0}>
-      <LifeLongLearningEvents/>
-  
+        <Overview />
       </TabPanel>
-      
+      <TabPanel value={value} index={1}>
+        <SkillsDevelopmentProvidersAccreditation />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <Accreditation />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <AssessmentCentresAccreditation />
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <SubjectMatterExpertsDatabaseRegistration />
+      </TabPanel>
+
+      <TabPanel value={value} index={5}>
+        <EISA />
+      </TabPanel>
+      <TabPanel value={value} index={6}>
+        <WorkplaceApproval />
+      </TabPanel>
+      <TabPanel value={value} index={7}>
+        <ExternalModerationProcess />
+      </TabPanel>
+      <TabPanel value={value} index={8}>
+        <QCTOPolicies />
+      </TabPanel>
     </Box>
-    
   );
 };
 

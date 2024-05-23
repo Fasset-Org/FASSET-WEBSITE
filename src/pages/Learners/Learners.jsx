@@ -64,7 +64,8 @@ const Learners = () => {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        minHeight: 450
+        minHeight: 450,
+        backgroundColor: '#FFFFFF'
       }}
       position="sticky"
     >

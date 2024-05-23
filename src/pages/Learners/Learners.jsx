@@ -4,18 +4,12 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ChooseACareer from "../../components/Learners/ChooseACareer";
 import WorkIcon from "@mui/icons-material/Work";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import EditRoadIcon from "@mui/icons-material/EditRoad";
 import CastForEducationIcon from "@mui/icons-material/CastForEducation";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
-import ScarceSkills from "../../components/Learners/ScarceSkills";
 import CareerPortal from "../../components/Learners/CareerPortal";
 // import DownloadCard from "../../components/DownloadCard";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import SchoolIcon from "@mui/icons-material/School";
-import { Stack } from "@mui/material";
 import Bursary from "../../components/Learners/Bursary";
 // import CareerGuide from "../../images/Leaners/Fasset Career Guide 2020 - Cropped.pdf";
 import SkillsProgramme from "../../components/Learners/SkillsProgramme";
@@ -95,7 +89,7 @@ const Learners = () => {
         }}
       >
         <Tab
-          label="Career Guide"
+          label="Overview"
           icon={<WorkIcon />}
           iconPosition="start"
           {...a11yProps(0)}

@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Divider, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const SkillsDevelopmentProvidersAccreditation = () => {
@@ -11,22 +11,21 @@ const SkillsDevelopmentProvidersAccreditation = () => {
       >
         Skills Development Providers Accreditation
       </Typography>
+      <Divider />
       <Typography textAlign="justify">
         On July 1, 2022, FASSET ceased to accept applications for Skills
         Development Providers (SDPs) accreditation against all previously
         registered qualifications, since June 2023 is the expiration date of
         these qualifications. The deadline for enrolled learners in historical
-        qualifications at accredited SDPs is June 30, 2024.
-      </Typography>
-      <Typography textAlign="justify">
-        With all of this in mind, the emphasis is now squarely on Occupational
-        Qualifications. In order to offer programs and qualifications that fall
-        under the registered occupational qualifications, Skills Development
-        Providers (SDPs) are encouraged to apply for accreditation against those
+        qualifications at accredited SDPs is June 30, 2024. With all of this in
+        mind, the emphasis is now squarely on Occupational Qualifications. In
+        order to offer programs and qualifications that fall under the
+        registered occupational qualifications, Skills Development Providers
+        (SDPs) are encouraged to apply for accreditation against those
         registered qualifications through the Quality Council for Trades and
         Occupations (QCTO).
       </Typography>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={15}

@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const Overview = () => {
@@ -11,7 +11,7 @@ const Overview = () => {
       >
         Overview
       </Typography>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={15}
@@ -27,15 +27,13 @@ const Overview = () => {
         functions to the Finance and Accounting Services Sector Education and
         Training Authority. (FASSET). The delegation was conferred to the FASSET
         as of 30 November 2022 and it is limited to the finance and accounting
-        service sector.
+        service sector. The delegation expires once the qualifications delegated
+        to the FASSET are reviewed and replaced by qualifications developed and
+        registered on the Occupational Qualifications Framework (OQF) or until
+        the qualifications reach their registration end date and teach out
+        periods or when the qualifications are withdrawn by the QCTO.
       </Typography>
-      <Typography sx={{ textAlign: "justify" }}>
-        The delegation expires once the qualifications delegated to the FASSET
-        are reviewed and replaced by qualifications developed and registered on
-        the Occupational Qualifications Framework (OQF) or until the
-        qualifications reach their registration end date and teach out periods
-        or when the qualifications are withdrawn by the QCTO.
-      </Typography>
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={15}

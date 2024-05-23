@@ -1,4 +1,5 @@
 import {
+  Divider,
   IconButton,
   Menu,
   MenuItem,
@@ -79,7 +80,7 @@ const SectorTrends = () => {
         Training Authority (FASSET) as well as to monitor transformation in the
         sector.
       </Typography>
-
+      <Divider />
       <Typography
         fontFamily="Helvetica Neue"
         fontWeight="bolder"

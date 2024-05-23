@@ -4,16 +4,13 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-// import AdjustIcon from "@mui/icons-material/Adjust";
-import EditNoteIcon from "@mui/icons-material/EditNote";
+
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import PixIcon from "@mui/icons-material/Pix";
-import ModelTrainingIcon from "@mui/icons-material/ModelTraining";
-// import SkillsProgramme from "../../components/Employers/SkillsProgramme";
-import WorkbasedProgramme from "../../components/Employers/WorkbasedProgramme";
 import MandatoryGrants from "../../components/Employers/MandatoryGrants";
 import DiscretionaryGrants from "../../components/Employers/DiscretionaryGrants";
-import TrainingProviders from "../../components/Employers/TrainingProviders";
+import EventRepeatIcon from '@mui/icons-material/EventRepeat';
+import LifeLongLearningEvents from "../../components/Employers/LifeLongLearningEvents";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -115,12 +112,19 @@ const Employers = () => {
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
+          label="Lifelong Learning Events"
+          icon={<EventRepeatIcon />}
+          iconPosition="start"
+          {...a11yProps(1)}
+          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+        />
+        {/* <Tab
           label="Quality Assurance"
           icon={<ModelTrainingIcon />}
           iconPosition="start"
           {...a11yProps(2)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
+        /> */}
       </Tabs>
       {/* <TabPanel value={value} index={0}>
         <SkillsProgramme />
@@ -135,8 +139,11 @@ const Employers = () => {
         <DiscretionaryGrants />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <TrainingProviders />
+        <LifeLongLearningEvents />
       </TabPanel>
+      {/* <TabPanel value={value} index={2}>
+        <TrainingProviders />
+      </TabPanel> */}
     </Box>
   );
 };

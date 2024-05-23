@@ -1,6 +1,7 @@
 import {
   Alert,
   Grid,
+  IconButton,
   LinearProgress,
   Paper,
   Stack,
@@ -18,11 +19,14 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../../stateQueries/User";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
-import { Link } from "react-router-dom";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import { useNavigate } from "react-router-dom";
 
 const CurrentVacancies = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+
+  const navigate = useNavigate();
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -136,7 +140,13 @@ const CurrentVacancies = () => {
                       </TableCell>
 
                       <TableCell>
-                        <Link to={`/vacancies/${position.id}`}>View</Link>
+                        <IconButton
+                          onClick={() => {
+                            navigate(`/vacancies/${position.id}`);
+                          }}
+                        >
+                          <VisibilityIcon />
+                        </IconButton>
                       </TableCell>
                     </TableRow>
                   );

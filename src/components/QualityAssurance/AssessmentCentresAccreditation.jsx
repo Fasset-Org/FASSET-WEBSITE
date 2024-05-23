@@ -20,9 +20,6 @@ const AssessmentCentresAccreditation = () => {
         qualification specific. This means that SDPs and other entities wishing
         to be accredited as assessment centres should apply for each
         occupational qualification they wish to assess.
-      </Typography>
-
-      <Typography textAlign="justify">
         The process for Assessment Centre accreditation is similar to that of
         SDP accreditation. Entities wishing to apply for accreditation as
         Assessment Centres should visit the website of the{" "}

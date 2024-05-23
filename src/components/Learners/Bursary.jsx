@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const Bursary = () => {
@@ -11,6 +11,7 @@ const Bursary = () => {
       >
         Bursaries
       </Typography>
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={15}
@@ -33,7 +34,7 @@ const Bursary = () => {
         income threshold is considered and subject to changes each financial
         year.
       </Typography>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={15}
@@ -53,7 +54,7 @@ const Bursary = () => {
         The bursary is capped at R40 000 however the cap amount may change each
         financial year dependable on the availability of the budget.
       </Typography>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={15}
@@ -75,7 +76,7 @@ const Bursary = () => {
         may change each financial year dependable on the availability of the
         budget.
       </Typography>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={15}

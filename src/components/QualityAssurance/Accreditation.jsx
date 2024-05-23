@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Divider, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const Accreditation = () => {
@@ -11,13 +11,11 @@ const Accreditation = () => {
       >
         Accreditation
       </Typography>
+      <Divider />
       <Typography textAlign="justify">
         Accreditation is the certification, usually for a certain period of time
         of a body or an institution, as having the capacity to fulfill a
         particular function within the quality assurance system set up by QCTO.
-      </Typography>
-
-      <Typography textAlign="justify">
         FASSET stopped accepting applications for Skills Development Providers
         (SDPs) accreditation against all historically registered qualifications
         as of 01.07.2022. Please visit the{" "}
@@ -28,20 +26,16 @@ const Accreditation = () => {
         >
           Quality Council for Trades and Occupations (QCTO)
         </Link>{" "}
-        for more information.
+        for more information. Accreditation is valid for a period of five years
+        from the date on which the QCTO granted accreditation to the SDP or
+        until the SDP is de-accredited by the QCTO. The accreditation may be
+        withdrawn by the QCTO if the SDP fails to perform its responsibilities
+        as stipulated in the QCTO Accreditation Policy, and/or contravenes the
+        provisions stipulated in the accreditation letter or act in a way that
+        is unlawful or unbecoming of a SDP. The following documents and
+        equipments are required to get accreditation with QCTO:
       </Typography>
-
-      <Typography textAlign="justify">
-        Accreditation is valid for a period of five years from the date on which
-        the QCTO granted accreditation to the SDP or until the SDP is
-        de-accredited by the QCTO. The accreditation may be withdrawn by the
-        QCTO if the SDP fails to perform its responsibilities as stipulated in
-        the QCTO Accreditation Policy, and/or contravenes the provisions
-        stipulated in the accreditation letter or act in a way that is unlawful
-        or unbecoming of a SDP. The following documents and equipments are
-        required to get accreditation with QCTO:
-      </Typography>
-
+      <Divider />
       <Stack>
         <Typography
           fontWeight="bolder"
@@ -101,7 +95,7 @@ const Accreditation = () => {
           </ul>
         </div>
       </Stack>
-
+      <Divider />
       <Stack>
         <Typography
           fontWeight="bolder"
@@ -214,7 +208,7 @@ const Accreditation = () => {
           </ul>
         </div>
       </Stack>
-
+      <Divider />
       <Stack>
         <Typography
           fontWeight="bolder"

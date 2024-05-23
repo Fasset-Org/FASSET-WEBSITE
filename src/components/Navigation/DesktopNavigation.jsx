@@ -78,7 +78,7 @@ const DesktopNavigation = () => {
           </Stack>
         </Stack>
       </AppBar>
-      <Box flex={1}>
+      <Box flex={1} sx={{backgroundColor: 'white'}}>
         <Outlet />
         <LinksFooter />
       </Box>

@@ -61,7 +61,7 @@ const DesktopNavigation = () => {
             <Link to="/aboutus">About Us</Link>
             <Link to="/learners">Learning Programmes</Link>
             <Link to="/employers">Employer</Link>
-            <Link to="/professionalBodies">Quality Assurance</Link>
+            <Link to="/qualityAssurance">Quality Assurance</Link>
             {/* <Link to="/trainingProviders">Quality Assurance</Link> */}
             {/* <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Institutions

@@ -74,8 +74,13 @@ export const themeLight = createTheme({
     },
     MuiTab: {
       styleOverrides: {
+        labelIcon: {
+          // fontSize: 10,
+          color: "red"
+        },
         root: {
           textTransform: "none"
+          // textAlign: "justify",
         }
       }
     },
@@ -83,14 +88,15 @@ export const themeLight = createTheme({
     MuiTabs: {
       styleOverrides: {
         root: {
-          "& .MuiTabs-indicator": {
-            display: "none"
-          },
+          // "& .MuiTabs-indicator": {
+          //   display: "none"
+          // },
           "& .MuiButtonBase-root": {
             justifyContent: "start"
           },
-          width: 250,
-          fontWeight: 'bolder'
+
+          width: 290,
+          fontWeight: "bolder"
         }
       }
     },
@@ -120,7 +126,7 @@ export const themeLight = createTheme({
     }
   },
   typography: {
-    fontSize: 11
+    fontSize: 12
   }
 });
 

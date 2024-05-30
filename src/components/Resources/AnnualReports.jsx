@@ -166,7 +166,7 @@ const AnnualReports = () => {
                   >
                     <MenuItem>
                       <a
-                        href={`${process.env.REACT_APP_API_URL}/cse/downloadAnnualReportDocument?fileName=${annualReport.annualReportFileURL}`}
+                        href={`${process.env.REACT_APP_API_URL}/api/dev/cse/downloadAnnualReportDocument?fileName=${annualReport.annualReportFileURL}`}
                         target="_blank"
                         rel="noreferrer"
                         style={{ all: "unset" }}
@@ -176,7 +176,7 @@ const AnnualReports = () => {
                     </MenuItem>
                     <MenuItem>
                       <a
-                        href={`${process.env.REACT_APP_API_URL}/cse/downloadAnnualReportDocument?fileName=${annualReport.annualReportFileURL}`}
+                        href={`${process.env.REACT_APP_API_URL}/api/dev/cse/downloadAnnualReportDocument?fileName=${annualReport.annualReportFileURL}`}
                         target="_blank"
                         rel="noreferrer"
                         style={{ all: "unset" }}

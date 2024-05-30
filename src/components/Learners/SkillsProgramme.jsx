@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import { Stack, useMediaQuery, useTheme } from "@mui/material";
-import img from "../../images/Bridging_Programmes.png";
+import img from "../../images/SkillProgramme.png";
 import FundedCourse from "../../files/Employers/Projects_that_are_funded_Fasset_2019.docx";
 
 const SkillsProgramme = () => {
@@ -28,9 +28,9 @@ const SkillsProgramme = () => {
       <img
         src={img}
         alt=""
-        width={xs || sm ? "100%" : 600}
+        width={xs || sm ? "100%" : '100%'}
         height={xs || sm ? "auto%" : 300}
-        style={{ objectFit: "fill" }}
+        style={{ objectFit: "contain" }}
       />
 
       <Typography>

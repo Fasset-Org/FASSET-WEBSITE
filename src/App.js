@@ -88,7 +88,7 @@ function App() {
               <Route path="/tenders" element={<SupplyChain />} />
               <Route path="/tenders/:id" element={<TenderDetails />} />
               <Route
-                path="/professionalBodies"
+                path="/qualityAssurance"
                 element={<ProfessionalBodies />}
               />
               <Route path="/resources" element={<Resources />} />

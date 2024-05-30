@@ -187,7 +187,56 @@ const JobApplyModal = ({ position }) => {
               rsaId: Yup.string().required("Please select"),
               idNumber: Yup.string().when("rsaId", {
                 is: "Yes",
-                then: () => Yup.string().required("ID number required")
+                then: () =>
+                  Yup.string()
+                    .required("ID number required")
+                    .test(
+                      "rsaId",
+                      "Please provide valid Identification Number",
+                      function (num) {
+                        let idNumber = num?.toString();
+                        var correct = true;
+                        if (
+                          idNumber?.length !== 13 ||
+                          !!isNaN(parseFloat(num))
+                        ) {
+                          correct = false;
+                        }
+                        var tempDate = new Date(
+                          idNumber?.substring(0, 2),
+                          idNumber?.substring(2, 4) - 1,
+                          idNumber?.substring(4, 6)
+                        );
+                        if (tempDate instanceof Date) {
+                          correct = true;
+                        } else {
+                          correct = false;
+                        }
+                        var tempTotal = 0;
+                        var checkSum = 0;
+                        var multiplier = 1;
+
+                        for (var i = 0; i < 13; ++i) {
+                          tempTotal =
+                            parseInt(idNumber?.charAt(i)) * multiplier;
+                          if (tempTotal > 9) {
+                            tempTotal =
+                              parseInt(tempTotal.toString().charAt(0)) +
+                              parseInt(tempTotal.toString().charAt(1));
+                          }
+                          checkSum = checkSum + tempTotal;
+                          multiplier = multiplier % 2 === 0 ? 1 : 2;
+                        }
+                        if (checkSum % 10 !== 0) {
+                          correct = false;
+                        }
+                        if (correct) {
+                          return true;
+                        } else {
+                          return false;
+                        }
+                      }
+                    )
               }),
               passportNumber: Yup.string().when("rsaId", {
                 is: "No",

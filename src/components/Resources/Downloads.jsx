@@ -175,7 +175,7 @@ const Downloads = () => {
                                     <a
                                       href={`${
                                         process.env.REACT_APP_API_URL
-                                      }/cse/downloadDocument?fileName=${
+                                      }/api/dev/cse/downloadDocument?fileName=${
                                         doc.fileName
                                       }.${doc.originalFileName.split(".")[1]}`}
                                       target="_blank"
@@ -189,7 +189,7 @@ const Downloads = () => {
                                     <a
                                       href={`${
                                         process.env.REACT_APP_API_URL
-                                      }/cse/downloadDocument?fileName=${
+                                      }/api/dev/cse/downloadDocument?fileName=${
                                         doc.fileName
                                       }.${doc.originalFileName.split(".")[1]}`}
                                       target="_blank"

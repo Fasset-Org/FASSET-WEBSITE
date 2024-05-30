@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const Bursary = () => {
@@ -11,86 +11,89 @@ const Bursary = () => {
       >
         Bursaries
       </Typography>
-      {/* <Typography
-        fontSize={20}
-        fontWeight="bolder"
-        sx={{ color: "primary.main" }}
-      >
-        About Bursaries
-      </Typography> */}
-
-      <Typography>Mamarothi to provide details</Typography>
-
-      {/* <Typography textAlign="justify">
-        This will enable Fasset to partner with public providers from
-        Universities and Universities of Technology registered with DHET to
-        ensure that learners are fully bursared in order to obtain formal
-        qualifications that will ultimately enhance their chances of securing
-        learnerships, internships or full time employment in the broader economy
-        including in the Fasset sector.
-      </Typography>
-      <br />
-      <Typography textAlign="justify">
-        Fasset is currently in the process of establishing the parameters to
-        issue bursaries to the “Missing Middle” as from January 2017 and is
-        working with Universities and Universities of Technology registered with
-        DHET to finalise.
-      </Typography>
-
+      <Divider />
       <Typography
-        fontSize={20}
         fontWeight="bolder"
+        fontSize={15}
         sx={{ color: "primary.main" }}
       >
-        Financial support for learners in the sector with student loans: #NSFAS
-        Loan Repayment Grant
+        TVET College unemployed learners bursaries
       </Typography>
 
       <Typography textAlign="justify">
-        This enables Fasset to identify young learners who have already
-        completed a qualification aligned to scarce skills within the sector and
-        are being hampered in achieving their full potential due to the
-        financial burden that they are carrying.
+        The TVET college learners bursaries targets students that are studying
+        through public TVET colleges. The bursary is targeted at learners
+        studying business stream qualifications including IT related
+        qualifications. The learners are funded until completion of the
+        qualification if they meet the terms and conditions to qualify for
+        continuous funding. The bursary covers Tuition, prescribed textbooks,
+        accommodation and learner allowances. The beneficiary might also qualify
+        to be provided with laptop to assist with their studies. The bursary is
+        capped at R40 000 however the cap amount may change each financial year
+        dependable on the availability of the budget. The combined household
+        income threshold is considered and subject to changes each financial
+        year.
       </Typography>
-      <br />
+      <Divider />
+      <Typography
+        fontWeight="bolder"
+        fontSize={15}
+        sx={{ color: "primary.main" }}
+      >
+        TVET College lecturers bursaries
+      </Typography>
+
       <Typography textAlign="justify">
-        The outcome of this intervention is that learners will be relieved of
-        their financial burden, will be able to complete their learnerships
-        without having to change jobs just for higher salaries to pay off their
-        loans AND re-inject additional funding into the NSFAS pool which will
-        enable additional learners to have access to full time study
-        opportunities. In other words this intervention will have a double
-        benefit to the post schooling system in that the Fasset sector will be
-        able to access learners who are not as financially burdened as they were
-        previously whilst also offering opportunities to new learners who are
-        seeking to enter the higher education and training area who are
-        financially constrained.
+        The TVET college lecturer bursaries is targeting lecturers that are
+        employed within the public TVET Colleges and lecturing in business
+        stream related qualifications including IT. The qualifications funded
+        are limited to FASSET related qualifications or Education related
+        qualifications. The funding is only available for registration in public
+        higher learning institutions. The funding is limited to one year however
+        the lecturer is eligible to reapply each year for continuous studies.
+        The bursary is capped at R40 000 however the cap amount may change each
+        financial year dependable on the availability of the budget.
+      </Typography>
+      <Divider />
+      <Typography
+        fontWeight="bolder"
+        fontSize={15}
+        sx={{ color: "primary.main" }}
+      >
+        University unemployed learners bursaries
       </Typography>
 
+      <Typography textAlign="justify">
+        The university learners bursaries targets students that are studying
+        through public universities or university of technologies. The bursary
+        is targeted at learners studying FASSET related qualifications,
+        Actuarial science studies and IT related qualifications. The learners
+        are funded until completion of the qualification if they meet the terms
+        and conditions to qualify for continuous funding. The bursary covers
+        Tuition, prescribed textbooks, accommodation and learner allowances. The
+        beneficiary might also qualify to be provided with laptop to assist with
+        their studies. The bursary is capped at R100 000 however the cap amount
+        may change each financial year dependable on the availability of the
+        budget.
+      </Typography>
+      <Divider />
       <Typography
-        fontSize={20}
         fontWeight="bolder"
+        fontSize={15}
         sx={{ color: "primary.main" }}
       >
-        Projects Beneficiary Success Stories Fasset Bursary Scheme
+        Employed bursaries
       </Typography>
-      <br />
 
-      <Typography
-        fontSize={20}
-        fontWeight="bolder"
-        sx={{ color: "primary.main" }}
-      >
-        Professional Body Institutions
+      <Typography textAlign="justify">
+        The employed bursaries is targeting employees employed within FASSET
+        sector . The qualifications funded are limited to FASSET top 10 scarce
+        and critical skills. The funding is only available for registration in
+        public higher learning institutions. The funding is limited to one year
+        however the employee is eligible to reapply each year for continuous
+        studies. The bursary is capped at R50 000 however the cap amount may
+        change each financial year dependable on the availability of the budget.
       </Typography>
-      <br />
-      <Typography
-        fontSize={20}
-        fontWeight="bolder"
-        sx={{ color: "primary.main" }}
-      >
-        TVET WBE Program
-      </Typography> */}
     </Stack>
   );
 };

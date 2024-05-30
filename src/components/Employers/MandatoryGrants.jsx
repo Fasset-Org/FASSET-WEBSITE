@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const MandatoryGrants = () => {
@@ -11,6 +11,7 @@ const MandatoryGrants = () => {
       >
         Mandatory Grants
       </Typography>
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -28,7 +29,7 @@ const MandatoryGrants = () => {
         Setas, is responsible for administering the Act, while the South African
         Revenue Service (SARS) is responsible for the collection of levies.
       </Typography>
-
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -49,7 +50,7 @@ const MandatoryGrants = () => {
         become SDL paying subsequently, they must advise SARS of this (to free
         up the greyed area).
       </Typography>
-
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -62,7 +63,7 @@ const MandatoryGrants = () => {
         of remuneration paid to employees. Any prescribed exclusions that are
         not leviable are subtracted from the total remuneration
       </Typography>
-
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -81,7 +82,7 @@ const MandatoryGrants = () => {
         possible. It should be noted that an approved SDP is a requirement for
         participation in any Fasset discretionary grants
       </Typography>
-
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -108,7 +109,7 @@ const MandatoryGrants = () => {
         new. In an organisation were there are no employees we also accept a nil
         return
       </Typography>
-
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -124,7 +125,7 @@ const MandatoryGrants = () => {
         been received. Mandatory Grant payments are scheduled as follows:
         February May August November
       </Typography>
-
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -138,7 +139,7 @@ const MandatoryGrants = () => {
         original stamped letter issued by the bank, or an original cancelled
         cheque, is required to process any changes in banking details.
       </Typography>
-
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -175,6 +176,7 @@ const MandatoryGrants = () => {
         with the correct Seta and to monitor the process and ensure the transfer
         is completed.
       </Typography>
+      <Divider />
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -186,10 +188,7 @@ const MandatoryGrants = () => {
       <Typography>
         Please contact the PQA Department (011) 476-8570 with any enquiries in
         this regard or consult the{" "}
-        <a
-          href="#123"
-          style={{ color: "primary.main", cursor: "pointer" }}
-        >
+        <a href="#123" style={{ color: "primary.main", cursor: "pointer" }}>
           download
         </a>{" "}
         page for additional information

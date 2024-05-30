@@ -21,31 +21,34 @@ const Slideshow = ({ banners }) => {
       cssClass="slideshow"
       arrows={false}
     >
-      {data?.banners.map((banner, index) => (
-        <div key={index} style={{ width: "100%", display: "block" }}>
-          <div
-            style={{
-              height: 350
-              // backgroundImage: `url(${slideImage.url})`,
-              // backgroundRepeat: "cover",
-              // backgroundSize: "100% 100%",
-              // backgroundPosition: "center",
-            }}
-          >
-            <img
-              src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
-              alt=""
+      {data?.banners.map((banner, index) => {
+        console.log(`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`)
+        return (
+          <div key={index} style={{ width: "100%", display: "block" }}>
+            <div
               style={{
-                objectFit: "fit",
-                height: 350,
-                objectPosition: "100% 100%"
+                height: 350
+                // backgroundImage: `url(${slideImage.url})`,
+                // backgroundRepeat: "cover",
+                // backgroundSize: "100% 100%",
+                // backgroundPosition: "center",
               }}
-              height="100%"
-              width="100%"
-            />
+            >
+              <img
+                src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
+                alt=""
+                style={{
+                  objectFit: "fit",
+                  height: 350,
+                  objectPosition: "100% 100%"
+                }}
+                height="100%"
+                width="100%"
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </Slide>
   );
 };

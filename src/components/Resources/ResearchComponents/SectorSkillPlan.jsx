@@ -1,6 +1,6 @@
 import {
+  Divider,
   IconButton,
-  ListItem,
   Paper,
   Stack,
   Table,
@@ -80,40 +80,45 @@ const SectorSkillPlan = () => {
         development deliverables, Fasset's vision and mission, the SSP provides
         information on:
       </Typography>
-      {[
-        "Sector profile",
-        "Factors influencing future change in the sector",
-        "Sector development strategy",
-        "Employment and skills needs",
-        "Implications for skills policy and skills provision",
-        "Vision, mission, objectives, priorities, outcomes and key performance indicators",
-        "Monitoring, evaluating and reporting",
-        "Economic performance of and the demand for labour in the sector",
-        "Skills and research needs of the sector",
-        "Skills development priorities",
-        "Sector strategies, goals and objectives"
-      ].map((option, i) => (
-        <ListItem key={i}>
-          <Typography>&#x2022; {option}</Typography>
-        </ListItem>
-      ))}
 
+      <ul>
+        {[
+          "Sector profile",
+          "Factors influencing future change in the sector",
+          "Sector development strategy",
+          "Employment and skills needs",
+          "Implications for skills policy and skills provision",
+          "Vision, mission, objectives, priorities, outcomes and key performance indicators",
+          "Monitoring, evaluating and reporting",
+          "Economic performance of and the demand for labour in the sector",
+          "Skills and research needs of the sector",
+          "Skills development priorities",
+          "Sector strategies, goals and objectives"
+        ].map((option, i) => (
+          <li key={i}>
+            <Typography>{option}</Typography>
+          </li>
+        ))}
+      </ul>
+      <Divider />
       <Typography fontWeight="bolder">
         The SSP should be based on the following:
       </Typography>
-      {[
-        "Sector-wide representation without exclusion (i.e. including all sub-sectors, sizes of enterprise within the sector and both public and private organisations, geographical distribution)",
-        "Comprehensive vision based on long, medium and short-term perspective for the optimum development of the sector",
-        "Sector analysis and prognosis focusing on occupations and skills levels",
-        "Full stakeholder participation and commitment",
-        "Alignment with national objectives and priorities, in particular the National Skills Development Strategy (NSDS)",
-        "Clear objectives, strategy and action plan for implementation"
-      ].map((option, i) => (
-        <ListItem key={i}>
-          <Typography>&#x2022; {option}</Typography>
-        </ListItem>
-      ))}
-
+      <ul>
+        {[
+          "Sector-wide representation without exclusion (i.e. including all sub-sectors, sizes of enterprise within the sector and both public and private organisations, geographical distribution)",
+          "Comprehensive vision based on long, medium and short-term perspective for the optimum development of the sector",
+          "Sector analysis and prognosis focusing on occupations and skills levels",
+          "Full stakeholder participation and commitment",
+          "Alignment with national objectives and priorities, in particular the National Skills Development Strategy (NSDS)",
+          "Clear objectives, strategy and action plan for implementation"
+        ].map((option, i) => (
+          <li key={i}>
+            <Typography>{option}</Typography>
+          </li>
+        ))}
+      </ul>
+      <Divider />
       <Typography fontWeight="bolder">
         Responsibility for producing the SSP rests with Fasset and therefore,
         the members of Fasset representing organised labour, organised

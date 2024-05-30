@@ -215,7 +215,7 @@ const TenderDetails = () => {
         <Typography>
           Bid documentation is available for downloading on this link&nbsp;
           <a
-            href={`${process.env.REACT_APP_API_URL}/scm/downloadTenderDocument?filename=${data?.tender?.tenderDocument}`}
+            href={`${process.env.REACT_APP_API_URL}/api/dev/scm/downloadTenderDocument?filename=${data?.tender?.tenderDocument}`}
             download
             target="_blank"
             rel="noreferrer"
@@ -407,7 +407,7 @@ const TenderDetails = () => {
 
         <Button variant="contained" fullWidth>
           <a
-            href={`${process.env.REACT_APP_API_URL}/scm/downloadTenderDocument?filename=${data?.tender?.tenderDocument}`}
+            href={`${process.env.REACT_APP_API_URL}/api/dev/scm/downloadTenderDocument?filename=${data?.tender?.tenderDocument}`}
             download
             target="_blank"
             rel="noreferrer"

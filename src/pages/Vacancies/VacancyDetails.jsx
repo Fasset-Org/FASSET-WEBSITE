@@ -257,7 +257,7 @@ const VacancyDetails = () => {
           >
             <Button variant="outlined">
               <a
-                href={`${process.env.REACT_APP_API_URL}/humanResource/downloadJobSpecDocument?filename=${data?.position?.jobSpecDocumentName}`}
+                href={`${process.env.REACT_APP_API_URL}/api/dev/humanResource/downloadJobSpecDocument?filename=${data?.position?.jobSpecDocumentName}`}
                 download
                 target="_blank"
                 rel="noreferrer"

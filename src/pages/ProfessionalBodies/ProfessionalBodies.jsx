@@ -114,7 +114,7 @@ const ProfessionalBodies = () => {
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
-          label="Skills Development Providers Accreditation"
+          label="SDP Accreditation"
           icon={<DesignServicesIcon />}
           iconPosition="start"
           {...a11yProps(2)}
@@ -135,14 +135,14 @@ const ProfessionalBodies = () => {
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
-          label="Subject Matter Experts Database Registration"
+          label="SME Registration"
           icon={<SubjectIcon />}
           iconPosition="start"
           {...a11yProps(4)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
-          label="External Integrated Summative Assessment (EISA)"
+          label="EISA"
           icon={<IntegrationInstructionsIcon />}
           iconPosition="start"
           {...a11yProps(4)}

@@ -165,7 +165,7 @@ const ResearchReports = () => {
                         >
                           <MenuItem>
                             <a
-                              href={`${process.env.REACT_APP_API_URL}/cse/downloadResearchReportDocument?fileName=${row.researchReportFileURL}`}
+                              href={`${process.env.REACT_APP_API_URL}/api/dev/cse/downloadResearchReportDocument?fileName=${row.researchReportFileURL}`}
                               target="_blank"
                               rel="noreferrer"
                               style={{ all: "unset" }}
@@ -175,7 +175,7 @@ const ResearchReports = () => {
                           </MenuItem>
                           <MenuItem>
                             <a
-                              href={`${process.env.REACT_APP_API_URL}/cse/downloadResearchReportDocument?fileName=${row.researchReportFileURL}`}
+                              href={`${process.env.REACT_APP_API_URL}/api/dev/cse/downloadResearchReportDocument?fileName=${row.researchReportFileURL}`}
                               target="_blank"
                               rel="noreferrer"
                               style={{ all: "unset" }}

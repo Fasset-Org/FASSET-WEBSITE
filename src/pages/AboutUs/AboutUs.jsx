@@ -61,7 +61,7 @@ const Learners = () => {
       sx={{
         flexGrow: 1,
         bgcolor: "background.paper",
-        display: "flex",
+        display: "flex"
       }}
       position="sticky"
     >
@@ -124,14 +124,14 @@ const Learners = () => {
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
-          label="Fasset Constitution"
+          label="Constitution"
           icon={<ConstructionIcon />}
           iconPosition="start"
           {...a11yProps(4)}
           sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
         />
         <Tab
-          label="Fasset Policies"
+          label="Policies"
           icon={<PolicyIcon />}
           iconPosition="start"
           {...a11yProps(5)}

@@ -4,14 +4,19 @@ import "react-slideshow-image/dist/styles.css";
 import "./Navigation/tab.css";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../stateQueries/User";
+import { Skeleton } from "@mui/material";
 
 const Slideshow = ({ banners }) => {
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["banners"],
     queryFn: async () => {
       return UserQuery.getAllBanners();
     }
   });
+
+  if (isLoading) {
+    return <Skeleton variant="rectangular" width='100%' height={350} />;
+  }
 
   return (
     <Slide
@@ -22,7 +27,9 @@ const Slideshow = ({ banners }) => {
       arrows={false}
     >
       {data?.banners.map((banner, index) => {
-        console.log(`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`)
+        console.log(
+          `${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`
+        );
         return (
           <div key={index} style={{ width: "100%", display: "block" }}>
             <div

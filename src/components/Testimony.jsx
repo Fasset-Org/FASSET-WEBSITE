@@ -36,7 +36,6 @@ const Testimony = () => {
         fontSize={40}
         fontWeight="bolder"
         textTransform="uppercase"
-        fontFamily="Helvetica Neue"
         textAlign="center"
       >
         <Divider>Testimonails</Divider>

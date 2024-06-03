@@ -1,5 +1,6 @@
 import {
   Alert,
+  Divider,
   Grid,
   IconButton,
   LinearProgress,
@@ -21,6 +22,7 @@ import UserQuery from "../../stateQueries/User";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import { useNavigate } from "react-router-dom";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import VacancyCard from "../VacancyCard";
 
 const PreviousVacancies = () => {
   const [page, setPage] = React.useState(0);
@@ -49,15 +51,16 @@ const PreviousVacancies = () => {
   }
 
   return (
-    <Stack spacing={2}>
+    <Stack>
       <Typography
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main", textTransform: "uppercase", }}
+        sx={{ color: "primary.main", textTransform: "uppercase", mb: 2 }}
       >
         Previous Vacancies
       </Typography>
-      <Grid container spacing={2}>
+      <Divider />
+      <Stack display={{ md: "block", xs: "none" }}>
         {data?.positions?.length > 0 ? (
           <TableContainer component={Paper}>
             <Table aria-label="simple table">
@@ -173,7 +176,19 @@ const PreviousVacancies = () => {
             <Alert severity="info">No Positions Available</Alert>
           </Stack>
         )}
-      </Grid>
+      </Stack>
+
+      {data?.positions?.length > 0 ? (
+        <Grid container display={{ md: "none", xs: "block" }} spacing={2} mt={2}>
+          {data?.positions?.map((vacancy, i) => {
+            return <VacancyCard vacancy={vacancy} />;
+          })}
+        </Grid>
+      ) : (
+        <Grid item xs={12} md={12}>
+          <Alert severity="info">No Positions Available</Alert>
+        </Grid>
+      )}
     </Stack>
   );
 };

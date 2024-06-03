@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const ExternalModerationProcess = () => {
@@ -11,7 +11,7 @@ const ExternalModerationProcess = () => {
       >
         External Moderation Process
       </Typography>
-
+      <Divider />
       <Typography textAlign="justify">
         FASSET has been delegated the responsibility to carry out the quality
         assurance functions including promoting quality learning by the QCTO in

@@ -13,7 +13,7 @@ const TenderCard = ({ tender, state }) => {
       spacing={2}
       justifyContent="center"
       alignItems="center"
-      height={300}
+      // height={300}
     >
       <Stack
         direction="row"
@@ -35,14 +35,14 @@ const TenderCard = ({ tender, state }) => {
           label={
             state === "active"
               ? "active"
-              : state === "past"
+              : state === "inactive"
               ? "previous"
               : "cancelled"
           }
           color={
             state === "active"
               ? "success"
-              : state === "past"
+              : state === "inactive"
               ? "warning"
               : "error"
           }
@@ -50,9 +50,10 @@ const TenderCard = ({ tender, state }) => {
         />
       </Stack>
       <Stack
-        direction={{md: 'row', xs: 'column'}}
+        direction={{ md: "row", xs: "column" }}
         justifyContent={{ md: "space-between", xs: "center", sm: "center" }}
         alignItems="center"
+        // p={2}
       >
         <Typography fontWeight="bolder">Tender Reference:</Typography>
         <Typography>{tender?.tenderReference}</Typography>

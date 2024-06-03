@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import {
+  Divider,
   IconButton,
   Stack,
   TableFooter,
@@ -312,6 +313,7 @@ const AboutFassetLearnerships = () => {
       >
         Learnerships
       </Typography>
+      <Divider />
       {/* <Typography fontWeight="bolder">
         Association of Accounting Technicians (AAT(SA)) 011 621 6888 –
         info@aatsa.org.za

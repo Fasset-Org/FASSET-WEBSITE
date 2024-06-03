@@ -12,7 +12,6 @@ import { useNavigate } from "react-router-dom";
 
 const NavLink = styled(Link)({
   textDecoration: "none",
-  fontFamily: 'Open Sans", Helvetica, Arial, Lucida, sans-serif',
   cursor: "pointer",
 
   ":hover": {

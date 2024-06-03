@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, Stack, Typography } from "@mui/material";
 
@@ -66,7 +66,6 @@ const FlipCard = ({ value, definition }) => {
               fontSize={20}
               fontWeight="bolder"
               textTransform="uppercase"
-              fontFamily="Helvetica Neue"
               textAlign="center"
               sx={{ color: "primary.main" }}
             >

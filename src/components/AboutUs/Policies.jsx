@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Divider, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import LaguagePolicy from "../../images/Language Policy .pdf";
 import EnglishManual from "../../images/policies_S14_Manual - English.pdf";
@@ -15,6 +15,7 @@ const Policies = () => {
       >
         Policies
       </Typography>
+      <Divider />
       <Typography textAlign="justify">
         Fasset’s Language Policy Fasset’s Language Policy adheres to the
         requirement of the Use of Official Languages Act, No. 12 of 2012 and is
@@ -29,8 +30,6 @@ const Policies = () => {
         >
           click here.
         </a>{" "}
-      </Typography>
-      <Typography textAlign="justify">
         Fasset has in place a Proatia Manual in terms of Section 14 of the
         Promotion of Access to Information Act, 2000 (Act No. 2 of 2000) ("the
         Act"). The Act gives effect to the provisions of Section 32 of the
@@ -96,6 +95,7 @@ const Policies = () => {
           <DownloadCard fileName="Xhosa Version" />
         </Grid>
       </Grid> */}
+      <Divider />
       <Typography fontWeight="bold">Fraud Policy Statement</Typography>
       <Typography textAlign="justify">
         Fasset’s Fraud Prevention Plan is implemented as a means of
@@ -131,6 +131,7 @@ const Policies = () => {
         to notify Fasset of any suspected fraudulent activities impacting on
         Fasset.
       </Typography>
+      <Divider />
       <Typography fontWeight="bold">Publication Distribution</Typography>
       <Typography textAlign="justify">
         Fasset would like to advise all publishers of publications which are not

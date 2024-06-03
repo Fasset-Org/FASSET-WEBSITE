@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const SubjectMatterExpertsDatabaseRegistration = () => {
@@ -11,7 +11,7 @@ const SubjectMatterExpertsDatabaseRegistration = () => {
       >
         Subject Matter Experts Database Registration
       </Typography>
-
+      <Divider />
       <Typography textAlign="justify">
         Implementation of occupational qualifications is supported by Subject
         Matter Experts (Facilitators, Assessors, Moderators, and workplace

@@ -1,5 +1,6 @@
 import {
   Alert,
+  Divider,
   Grid,
   IconButton,
   LinearProgress,
@@ -21,6 +22,7 @@ import UserQuery from "../../stateQueries/User";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useNavigate } from "react-router-dom";
+import VacancyCard from "../VacancyCard";
 
 const CurrentVacancies = () => {
   const [page, setPage] = React.useState(0);
@@ -48,15 +50,16 @@ const CurrentVacancies = () => {
   }
 
   return (
-    <Stack spacing={2}>
+    <Stack>
       <Typography
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main", textTransform: "uppercase" }}
+        sx={{ color: "primary.main", textTransform: "uppercase", mb: 2 }}
       >
         Available Vacancies
       </Typography>
-      <Typography>
+      <Divider />
+      <Typography mb={2}>
         Fasset’s human capital is the engine of its skills development
         activities and employees’ knowledge, experience, expertise and
         commitment enable us to meet our annual objectives Capacitation of staff
@@ -70,7 +73,8 @@ const CurrentVacancies = () => {
         citizenship, marital status and disability status. To explore available
         career opportunities with us, please visit our website often.
       </Typography>
-      <Grid container spacing={2}>
+      <Divider />
+      <Stack display={{ md: "block", xs: "none" }}>
         {data?.positions?.length > 0 ? (
           <TableContainer component={Paper}>
             <Table aria-label="simple table">
@@ -182,11 +186,28 @@ const CurrentVacancies = () => {
             </Table>
           </TableContainer>
         ) : (
-          <Stack width="100%" spacing={2} ml={2}>
+          <Stack width="100%" spacing={2} mt={2} mb={2}>
             <Alert severity="info">No Positions Available</Alert>
           </Stack>
         )}
-      </Grid>
+      </Stack>
+
+      {data?.positions?.length > 0 ? (
+        <Grid
+          container
+          display={{ md: "none", xs: "block" }}
+          spacing={2}
+          mt={2}
+        >
+          {data?.positions?.map((vacancy, i) => {
+            return <VacancyCard vacancy={vacancy} />;
+          })}
+        </Grid>
+      ) : (
+        <Grid item xs={12} md={12}>
+          <Alert severity="info">No Positions Available</Alert>
+        </Grid>
+      )}
     </Stack>
   );
 };

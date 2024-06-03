@@ -37,12 +37,12 @@ const VacancyCard = ({ vacancy }) => {
             textAlign="center"
             mt={2}
             sx={{
-              maxHeight: 100,
+              // maxHeight: 100,
               overflow: "hidden",
               textOverflow: "ellipsis"
             }}
           >
-            {/* {vacancy.purposeOfJob} */}
+            {vacancy.purposeOfJob}
           </Typography>
           <Box textAlign="center">
             <Button

@@ -1,4 +1,4 @@
-import { Stack, TableBody, Typography } from "@mui/material";
+import { Divider, Stack, TableBody, Typography } from "@mui/material";
 import React from "react";
 import Table from "@mui/material/Table";
 
@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 
 function LifeLongLearningEvents() {
   return (
-    <Stack>
+    <Stack spacing={2}>
       <Typography
         fontSize={20}
         fontWeight="bolder"
@@ -18,8 +18,8 @@ function LifeLongLearningEvents() {
       >
         LIFELONG LEARNING WORKSHOPS
       </Typography>
-      <Typography>Dear Stakeholders</Typography>
-      <br />
+      <Divider />
+      <Typography fontWeight='bolder'>Dear Stakeholders</Typography>
       <Typography>
         FASSET has once again commenced with the Lifelong Learning online
         training that is facilitated by partner skills Professional Body. The
@@ -29,7 +29,6 @@ function LifeLongLearningEvents() {
         convenient for you for any of the topics below. We look forward to
         hosting you.
       </Typography>
-      <br />
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>

@@ -5,7 +5,6 @@ const AnnualReports = () => {
   return (
     <Stack>
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main" }}

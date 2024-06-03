@@ -1,4 +1,4 @@
-import {  Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 import ValueCard from "../ValueCard";
 
@@ -10,12 +10,12 @@ const WhoWeAre = () => {
     "Enter signed agreements on targets for delivery with chambers or sub-sectors.",
     "Monitor and evaluate the implementation of strategies and the achievement of targets.",
     "Assume accountability in terms of the Skills Development Act, the Skills Development Levies Act, Public Finance Management Act and the SAQA Act.",
-    "Quality assure education and training providers via an Education and Training Quality Assurance body. Be responsible for Learnerships.",
+    "Quality assure education and training providers via an Education and Training Quality Assurance body. Be responsible for Learnerships."
   ];
 
   const legislation = [
     "Skills Development Act (Act 97 of 1998).",
-    "Skills Development Levies Act (Act no 9 of 1999).",
+    "Skills Development Levies Act (Act no 9 of 1999)."
   ];
 
   return (
@@ -27,21 +27,20 @@ const WhoWeAre = () => {
       >
         About
       </Typography>
+      <Divider />
       <Typography textAlign="justify">
         Fasset is the Finance and Accounting Services Sector Education and
         Training Authority. The finance and accounting services sector is
         particularly important because it is the largest employer of people with
         financial management, accounting, and auditing skills. In 2018 more than
-        168 000 people worked in the sector.
-        The demarcation and definition of
+        168 000 people worked in the sector. The demarcation and definition of
         this sector differs in the different data sources available, as well as
         in different environments. In the national accounts and in employment
         surveys conducted by Statistics South Africa (such as the Labour Force
         Survey (LFS)) the sector includes real estate activities and an array of
         other business services such as labour brokerages, information
         technology services, legal services, and engineering and architectural
-        services. 
-        The Financial and Accounting Services Sector refers to the
+        services. The Financial and Accounting Services Sector refers to the
         organisations served by Fasset. This sector includes: investment
         entities and trusts and company secretary services; stockbroking and
         financial markets; financial development organisations; accounting,
@@ -50,7 +49,7 @@ const WhoWeAre = () => {
         provincial treasuries; and other activities auxiliary to financial
         intermediation, such as debt collection.
       </Typography>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={20}
@@ -62,6 +61,7 @@ const WhoWeAre = () => {
         To facilitate the achievement of world-class finance and accounting
         services skills.
       </Typography>
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={20}
@@ -75,7 +75,7 @@ const WhoWeAre = () => {
         facilitate the transformation of the finance and accounting services
         sector.
       </Typography>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={20}
@@ -112,7 +112,7 @@ const WhoWeAre = () => {
           definition="We Continuously innovate and improve to add value to all our stakeholders. The Work of Setas"
         />
       </Stack>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={20}
@@ -130,7 +130,7 @@ const WhoWeAre = () => {
           );
         })}
       </ul>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={20}
@@ -148,7 +148,7 @@ const WhoWeAre = () => {
           );
         })}
       </ul>
-
+      <Divider />
       <Typography
         fontWeight="bolder"
         fontSize={20}

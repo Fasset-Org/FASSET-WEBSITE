@@ -11,6 +11,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Alert,
+  Divider,
   IconButton,
   Menu,
   MenuItem,
@@ -55,7 +56,7 @@ const Downloads = () => {
   };
 
   return (
-    <Stack spacing={1} justifyContent="center">
+    <Stack spacing={2} justifyContent="center">
       <Typography
         fontWeight="bolder"
         fontSize={20}
@@ -63,6 +64,7 @@ const Downloads = () => {
       >
         Downloads
       </Typography>
+      <Divider />
       {data?.titles?.length > 0 ? (
         data?.titles?.map((title) => {
           return (

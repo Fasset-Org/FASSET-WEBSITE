@@ -83,7 +83,7 @@ const SupplyChain = () => {
         }}
       >
         <Tab
-          label="Fasset Current Tenders"
+          label="Active Tenders"
           icon={<TaskIcon />}
           iconPosition="start"
           {...a11yProps(0)}
@@ -94,7 +94,7 @@ const SupplyChain = () => {
           }}
         />
         <Tab
-          label="Fasset Past Tenders"
+          label="Past Tenders"
           icon={<FileOpenIcon />}
           iconPosition="start"
           {...a11yProps(1)}
@@ -102,7 +102,7 @@ const SupplyChain = () => {
         />
 
         <Tab
-          label="Fasset Candelled Tenders"
+          label="Candelled Tenders"
           icon={<WebAssetOffIcon />}
           iconPosition="start"
           {...a11yProps(1)}

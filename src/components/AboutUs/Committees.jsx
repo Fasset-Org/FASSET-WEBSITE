@@ -2,6 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Divider,
   // Accordion,
   // AccordionDetails,
   // AccordionSummary,
@@ -72,7 +73,7 @@ const Committees = () => {
       >
         Committees
       </Typography>
-
+      <Divider />
       {data?.committees?.map((committee) => {
         return (
           <Accordion key={committee.id}>

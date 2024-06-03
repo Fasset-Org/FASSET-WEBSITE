@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const OurMandate = () => {
@@ -195,6 +195,7 @@ const OurMandate = () => {
       >
         Our Mandate
       </Typography>
+      <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
         The Objectives of Fasset are the following:
       </Typography>
@@ -222,7 +223,7 @@ const OurMandate = () => {
           </>
         );
       })}
-
+      <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>Functions of Fasset</Typography>
       <Typography>
         The Fasset Board may delegate any of the below mentioned functions to an
@@ -230,6 +231,7 @@ const OurMandate = () => {
         policy and to any other bodies, which may include ETQAs, professional
         bodies etc
       </Typography>
+      <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
         Fasset will serve to:
       </Typography>
@@ -257,6 +259,7 @@ const OurMandate = () => {
           </>
         );
       })}
+      <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
         Fasset will, specifically, in accordance with the Skills Development
         Act:

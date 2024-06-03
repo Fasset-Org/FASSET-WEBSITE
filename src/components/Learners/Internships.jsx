@@ -1,4 +1,5 @@
 import {
+  Divider,
   IconButton,
   Paper,
   Stack,
@@ -78,6 +79,7 @@ const Internships = () => {
       >
         Internships
       </Typography>
+      <Divider />
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>

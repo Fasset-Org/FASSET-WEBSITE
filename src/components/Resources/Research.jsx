@@ -2,6 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Divider,
   Stack,
   Typography
 } from "@mui/material";
@@ -14,7 +15,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Research = () => {
   return (
-    <Stack spacing={1}>
+    <Stack spacing={2}>
       <Typography
         fontWeight="bolder"
         fontSize={20}
@@ -22,6 +23,7 @@ const Research = () => {
       >
         Research
       </Typography>
+      <Divider />
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}

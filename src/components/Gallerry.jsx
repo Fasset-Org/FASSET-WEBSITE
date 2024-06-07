@@ -1,7 +1,7 @@
 import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import img1 from "../images/2023 AGM/ZooM-6849.jpg";
 import img2 from "../images/2023 AGM/ZooM-6852.jpg";
 import img3 from "../images/2023 AGM/ZooM-6926 (1).jpg";
@@ -17,28 +17,63 @@ import img12 from "../images/2023 AGM/ZooM-6849.jpg";
 
 export default function StandardImageList() {
   return (
-    <Stack paddingX={{ md: 10, xs: 2 }}>
+    <Stack paddingX={{ md: 10, xs: 2 }} spacing={2} paddingY={2}>
       <Typography
         fontSize={20}
         fontWeight="bolder"
         textTransform="uppercase"
         textAlign="center"
-        sx={{ color: "primary.main", mb: 1 }}
+        sx={{ color: "primary.main", }}
       >
         Gallery
       </Typography>
-      <ImageList sx={{ width: "100%" }} cols={3}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
+      <Stack display={{ md: "block", xs: "none" }}>
+        <ImageList sx={{ width: "100%" }} cols={4} gap={10}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                srcSet={`${item.img}`}
+                src={`${item.img}`}
+                alt={item.title}
+                loading="lazy"
+                style={{
+                  height: 350,
+                  objectFit: "cover",
+                  objectPosition: "center top"
+                }}
+                onClick={() => {
+                  window.open(item.img, "_blank", "noopener,noreferrer");
+                }}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Stack>
+
+      <Stack display={{ md: "none", xs: "block" }}>
+        <ImageList sx={{ width: "100%" }} cols={1} gap={10}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                srcSet={`${item.img}`}
+                src={`${item.img}`}
+                alt={item.title}
+                loading="lazy"
+                style={{
+                  height: 350,
+                  objectFit: "cover",
+                  objectPosition: "center top"
+                }}
+                onClick={() => {
+                  window.open(item.img, "_blank", "noopener,noreferrer");
+                }}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Stack>
+
+      <Button variant="contained">See More</Button>
     </Stack>
   );
 }

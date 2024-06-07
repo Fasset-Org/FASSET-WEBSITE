@@ -52,7 +52,7 @@ const Slideshow = ({ banners }) => {
 
   return (
     <Stack spacing={2}>
-      <div className="slideshow-container">
+      <Stack className="slideshow-container">
         {data?.banners?.length > 0 &&
           data?.banners.map((banner, index) => {
             return (
@@ -60,15 +60,30 @@ const Slideshow = ({ banners }) => {
                 <div className="numbertext">{`${index + 1} / ${
                   data.banners.length
                 }`}</div>
-                <img
-                  src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
-                  style={{
-                    height: 400,
-                    objectPosition: "100% 100%",
-                    width: "100%"
-                  }}
-                  alt=""
-                />
+                <Stack display={{ md: "block", xs: "none" }}>
+                  <img
+                    src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
+                    style={{
+                      height: 400,
+                      objectPosition: "100% 100%",
+                      width: "100%"
+                      // objectFit: xs ? 'scale-down' : "fill"
+                    }}
+                    alt=""
+                  />
+                </Stack>
+                <Stack display={{ md: "none", xs: "block" }}>
+                  <img
+                    src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
+                    style={{
+                      height: 250,
+                      objectPosition: "100% 100%",
+                      width: "100%",
+                      objectFit: 'fill'
+                    }}
+                    alt=""
+                  />
+                </Stack>
                 <div className="text">Caption Text</div>
               </div>
             );
@@ -93,7 +108,7 @@ const Slideshow = ({ banners }) => {
           />
           <div class="text">Caption Three</div>
         </div> */}
-      </div>
+      </Stack>
 
       <div style={{ textAlign: "center" }}>
         {data?.banners?.map((banner, i) => {

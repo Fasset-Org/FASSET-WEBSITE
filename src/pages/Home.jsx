@@ -108,9 +108,9 @@ const Home = ({ id }) => {
               definition="We Continuously innovate and improve to add value to all our stakeholders. The Work of Setas"
             />
           </Stack>
+          <StandardImageList />
         </>
       )}
-      <StandardImageList />
     </Stack>
   );
 };

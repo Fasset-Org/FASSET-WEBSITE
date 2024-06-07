@@ -1,4 +1,12 @@
-import { Divider, IconButton, Link, Stack, Typography } from "@mui/material";
+import {
+  Divider,
+  IconButton,
+  Link,
+  Stack,
+  Typography,
+  useMediaQuery,
+  useTheme
+} from "@mui/material";
 import React from "react";
 import logo from "../images/fasset_master_logo.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -6,8 +14,13 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { useNavigate } from "react-router-dom";
 
 const LinksFooter = () => {
+  const theme = useTheme();
+  const navigate = useNavigate();
+  const xs = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
     <Stack
       paddingTop={2}
@@ -66,22 +79,76 @@ const LinksFooter = () => {
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             About Us
           </Typography>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+          <Link
+            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            onClick={() => {
+              if (xs) {
+                navigate("/aboutus");
+              } else {
+                navigate("/whoweare");
+              }
+            }}
+          >
             Who we are
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+          <Link
+            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            onClick={() => {
+              if (xs) {
+                navigate("/aboutus");
+              } else {
+                navigate("/ourMandate");
+              }
+            }}
+          >
             Our Mandate
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
-            Board & Commitees
+          <Link
+            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            onClick={() => {
+              if (xs) {
+                navigate("/aboutus");
+              } else {
+                navigate("/board");
+              }
+            }}
+          >
+            Board
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
-            Our Team
+          <Link
+            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            onClick={() => {
+              if (xs) {
+                navigate("/aboutus");
+              } else {
+                navigate("/committees");
+              }
+            }}
+          >
+            Commitees
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+          <Link
+            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            onClick={() => {
+              if (xs) {
+                navigate("/aboutus");
+              } else {
+                navigate("/constitution");
+              }
+            }}
+          >
             Fasset Constitution
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+          <Link
+            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            onClick={() => {
+              if (xs) {
+                navigate("/aboutus");
+              } else {
+                navigate("/policies");
+              }
+            }}
+          >
             Policies
           </Link>
         </Stack>
@@ -97,14 +164,44 @@ const LinksFooter = () => {
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             Stakeholder
           </Typography>
-          <Link sx={{ color: "primary.main" }}>Stakeholder Login</Link>
-          <Link sx={{ color: "primary.main" }}>Latest News</Link>
-          <Link sx={{ color: "primary.main" }}>Annual Report</Link>
-          <Link sx={{ color: "primary.main" }}>eFacts Newsletter</Link>
+          <Link
+            sx={{ color: "primary.main" }}
+            href="https://portal.fasset.org.za/web/login"
+            target="_blank"
+          >
+            Stakeholder Login
+          </Link>
+          {/* <Link sx={{ color: "primary.main" }}>Latest News</Link> */}
+          <Link
+            sx={{ color: "primary.main" }}
+            onClick={() => {
+              if (xs) {
+                navigate("/resources");
+              } else {
+                navigate("/annualReports");
+              }
+            }}
+          >
+            Annual Report
+          </Link>
+          <Link
+            sx={{ color: "primary.main" }}
+            onClick={() => {
+              if (xs) {
+                navigate("/vacancies");
+              } else {
+                navigate("/availablePositions");
+              }
+            }}
+          >
+            Vacancies
+          </Link>
+          <Link sx={{ color: "primary.main" }}>Downloads</Link>
+          {/* <Link sx={{ color: "primary.main" }}>eFacts Newsletter</Link>
           <Link sx={{ color: "primary.main" }}>Facts Newsletter</Link>
-          <Link sx={{ color: "primary.main" }}>Press Articles</Link>
+          <Link sx={{ color: "primary.main" }}>Press Articles</Link> */}
         </Stack>
-        <Stack
+        {/* <Stack
           width={{ xs: "100%", md: "33.33%" }}
           height={{ xs: 200, md: "100%" }}
           direction="column"
@@ -121,7 +218,7 @@ const LinksFooter = () => {
           <Link sx={{ color: "primary.main" }}>Downloads</Link>
           <Link sx={{ color: "primary.main" }}>Events</Link>
           <Link sx={{ color: "primary.main" }}>Vacancies</Link>
-        </Stack>
+        </Stack> */}
       </Stack>
 
       <Stack

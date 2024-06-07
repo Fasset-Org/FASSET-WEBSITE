@@ -52,12 +52,12 @@ export default function StandardImageList() {
 
       <Stack display={{ md: "none", xs: "block" }}>
         <ImageList sx={{ width: "100%" }} cols={1} gap={10}>
-          {itemData.map((item) => (
+          {itemData.map((item, i) => (
             <ImageListItem key={item.img}>
               <img
                 srcSet={`${item.img}`}
                 src={`${item.img}`}
-                alt={item.title}
+                alt={`Shoot ${i}`}
                 loading="lazy"
                 style={{
                   height: 350,

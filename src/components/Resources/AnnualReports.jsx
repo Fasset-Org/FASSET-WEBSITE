@@ -51,7 +51,7 @@ const AnnualReports = () => {
     }
   });
 
-  console.log(data);
+  // console.log(data);
 
   if (isLoading) {
     return <LinearProgress />;

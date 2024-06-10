@@ -10,7 +10,7 @@ const MainNavigation = () => {
   const sm = useMediaQuery(theme.breakpoints.down('sm'));
   const md = useMediaQuery(theme.breakpoints.down('md'))
 
-  console.log(xs, sm)
+  // console.log(xs, sm)
 
   return (
     <Stack>

@@ -47,8 +47,16 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import PixIcon from "@mui/icons-material/Pix";
 import ModelTrainingIcon from "@mui/icons-material/ModelTraining";
 
-// Proffessional Bodies Icons
-import EventRepeatIcon from "@mui/icons-material/EventRepeat";
+// Quality Assurance Icons
+import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import CreditScoreIcon from "@mui/icons-material/CreditScore";
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import SubjectIcon from '@mui/icons-material/Subject';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
+import RunningWithErrorsIcon from '@mui/icons-material/RunningWithErrors';
+// import PolicyIcon from '@mui/icons-material/Policy';
 
 // Supply Chain Icons
 import TaskIcon from "@mui/icons-material/Task";
@@ -164,13 +172,52 @@ export default function MobileNavigation() {
       open: false
     },
     {
-      parent: "Proffessional Bodies",
+      parent: "Quality Assurance",
       children: [
-        { name: "Leanersships", icon: SchoolIcon, url: "/leanersships" },
         {
-          name: "Lifeling Learning Events",
-          icon: EventRepeatIcon,
-          url: "/learningEvents"
+          name: "Overview",
+          icon: ScreenSearchDesktopIcon,
+          url: "/overview"
+        },
+        {
+          name: "SDP Accreditation",
+          icon: DesignServicesIcon,
+          url: "/SDPAccreditation"
+        },
+        {
+          name: "Accreditation",
+          icon: CreditScoreIcon,
+          url: "/accreditation"
+        },
+        {
+          name: "Assessment Centres Accreditation",
+          icon: AssessmentIcon,
+          url: "/assessmentCentresAccreditation"
+        },
+        {
+          name: "SME Registration",
+          icon: SubjectIcon,
+          url: "/SMERegistration"
+        },
+        {
+          name: "EISA",
+          icon: IntegrationInstructionsIcon,
+          url: "/EISA"
+        },
+        {
+          name: "Workplace Approval",
+          icon: FactCheckIcon,
+          url: "/workplaceApproval"
+        },
+        {
+          name: "External Moderation Process",
+          icon: RunningWithErrorsIcon,
+          url: "/externalModerationProcess"
+        },
+        {
+          name: "QCTO Policies",
+          icon: PolicyIcon,
+          url: "/QCTOPolicies"
         }
       ],
       icon: PestControlIcon,

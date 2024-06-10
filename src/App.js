@@ -53,6 +53,15 @@ import ResearchMobile from "./pages/Mobile/Resources/ResearchMobile";
 import AvailableVacanciesMobile from "./pages/Mobile/Vacancies/AvailableVacanciesMobile";
 import PreviousVacanciesMobile from "./pages/Mobile/Vacancies/PreviousVacanciesMobile";
 import AnnualReportsMobile from "./pages/Mobile/Resources/AnnualReportsMobile";
+import OverviewMobile from "./pages/Mobile/QualityAssurance/OverviewMobile";
+import SDPAccreditationMobile from "./pages/Mobile/QualityAssurance/SDPAccreditationMobile";
+import AccreditationMobile from "./pages/Mobile/QualityAssurance/AccreditationMobile";
+import ACAMobile from "./pages/Mobile/QualityAssurance/ACAMobile";
+import SubjectMatterExpertsDatabaseRegistration from "./components/QualityAssurance/SubjectMatterExpertsDatabaseRegistration";
+import EISAMobile from "./pages/Mobile/QualityAssurance/EISAMobile";
+import EMPMobile from "./pages/Mobile/QualityAssurance/EMPMobile";
+import QTCOPoliciesMobile from "./pages/Mobile/QualityAssurance/QTCOPoliciesMobile";
+import WorkplaceApprovalMobile from "./pages/Mobile/QualityAssurance/WorkplaceApprovalMobile";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -128,6 +137,18 @@ function App() {
                 path="/leanersships"
                 element={<AboutFassetLearnershipsMobile />}
               />
+
+              {/* Quality Assurance Routes */}
+              <Route path="/overview" element={<OverviewMobile />} />
+              <Route path="/SDPAccreditation" element={<SDPAccreditationMobile />} />
+              <Route path="/accreditation" element={<AccreditationMobile />} />
+              <Route path="/assessmentCentresAccreditation" element={<ACAMobile />} />
+              <Route path="/SMERegistration" element={<SubjectMatterExpertsDatabaseRegistration />} />
+              <Route path="/EISA" element={<EISAMobile />} />
+              <Route path="/workplaceApproval" element={<WorkplaceApprovalMobile />} />
+              <Route path="/externalModerationProcess" element={<EMPMobile />} />
+              <Route path="/QCTOPolicies" element={<QTCOPoliciesMobile />} />
+         
 
               <Route
                 path="/currentTenders"

@@ -64,7 +64,7 @@ export default function NoticeBoardModal() {
     }
   });
 
-  console.log(noticesQuery);
+  // console.log(noticesQuery);
 
   const handleClose = () => {
     setOpen(false);

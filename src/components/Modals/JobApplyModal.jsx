@@ -46,7 +46,7 @@ const JobApplyModal = ({ position }) => {
       return await UserQuery.jobApplication(formData);
     },
     onSuccess: (data) => {
-      console.log(data);
+      // console.log(data);
     }
   });
 

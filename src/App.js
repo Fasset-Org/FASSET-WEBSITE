@@ -28,7 +28,6 @@ import ProfessionalBodies from "./pages/ProfessionalBodies/ProfessionalBodies";
 import TenderDetails from "./pages/SupplyChain/TenderDetails";
 import FallbackError from "./pages/FallbackError";
 import MainNavigation from "./components/Navigation/MainNavigation";
-import WorkbasedProgrammeMobile from "./pages/Mobile/Employers/WorkbasedProgrammeMobile";
 import WhoWeAreMobile from "./pages/Mobile/AboutUs/WhoWeAreMobile";
 import OurMandateMobile from "./pages/Mobile/AboutUs/OurMandateMobile";
 import BoardMobile from "./pages/Mobile/AboutUs/BoardMobile";
@@ -36,14 +35,10 @@ import CommitteesMobile from "./pages/Mobile/AboutUs/CommitteesMobile";
 import ConstitutionMobile from "./pages/Mobile/AboutUs/ConstitutionMobile";
 import PoliciesMobile from "./pages/Mobile/AboutUs/PoliciesMobile";
 import ChooseCareerMobile from "./pages/Mobile/Learners/ChooseCareerMobile";
-import ScarceSkilsMobile from "./pages/Mobile/Learners/ScarceSkilsMobile";
-import CareerGuideMobile from "./pages/Mobile/Learners/CareerGuideMobile";
 import BursaryMobile from "./pages/Mobile/Learners/BursaryMobile";
-import CareerPortalMobile from "./pages/Mobile/Learners/CareerPortalMobile";
 import SkillsProgrammeMobile from "./pages/Mobile/Employers/SkillsProgrammeMobile";
 import MandatoryGrantsMobile from "./pages/Mobile/Employers/MandatoryGrantsMobile";
 import DiscretionaryGrantsMobile from "./pages/Mobile/Employers/DiscretionaryGrantsMobile";
-import TrainingProvidersMobile from "./pages/Mobile/Employers/TrainingProvidersMobile";
 import AboutFassetLearnershipsMobile from "./pages/Mobile/ProfessionalBodies/AboutFassetLearnershipsMobile";
 import CurrentTendersMobile from "./pages/Mobile/SupplyChain/CurrentTendersMobile";
 import PastTendersMobile from "./pages/Mobile/SupplyChain/PastTendersMobile";
@@ -57,11 +52,13 @@ import OverviewMobile from "./pages/Mobile/QualityAssurance/OverviewMobile";
 import SDPAccreditationMobile from "./pages/Mobile/QualityAssurance/SDPAccreditationMobile";
 import AccreditationMobile from "./pages/Mobile/QualityAssurance/AccreditationMobile";
 import ACAMobile from "./pages/Mobile/QualityAssurance/ACAMobile";
-import SubjectMatterExpertsDatabaseRegistration from "./components/QualityAssurance/SubjectMatterExpertsDatabaseRegistration";
 import EISAMobile from "./pages/Mobile/QualityAssurance/EISAMobile";
 import EMPMobile from "./pages/Mobile/QualityAssurance/EMPMobile";
 import QTCOPoliciesMobile from "./pages/Mobile/QualityAssurance/QTCOPoliciesMobile";
 import WorkplaceApprovalMobile from "./pages/Mobile/QualityAssurance/WorkplaceApprovalMobile";
+import SMERegistration from "./pages/Mobile/QualityAssurance/SMERegistration";
+import InternshipsMobile from "./pages/Mobile/Learners/InternshipsMobile";
+import LearningEventsMobile from "./pages/Mobile/Employers/LearningEventsMobile";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -102,25 +99,29 @@ function App() {
               />
               <Route path="/resources" element={<Resources />} />
               {/* Mobile Routes */}
+
+              {/* About Us Routes */}
               <Route path="/whoweare" element={<WhoWeAreMobile />} />
               <Route path="/ourMandate" element={<OurMandateMobile />} />
               <Route path="/board" element={<BoardMobile />} />
               <Route path="/committees" element={<CommitteesMobile />} />
               <Route path="/constitution" element={<ConstitutionMobile />} />
               <Route path="/policies" element={<PoliciesMobile />} />
-              <Route path="/chooseCarrer" element={<ChooseCareerMobile />} />
-              <Route path="/scarceSkils" element={<ScarceSkilsMobile />} />
-              <Route path="/carrerGuide" element={<CareerGuideMobile />} />
-              <Route path="/bursary" element={<BursaryMobile />} />
-              <Route path="/careerPortal" element={<CareerPortalMobile />} />
+
+              {/* Learning Programme Routes */}
+              <Route path="/learnerOverview" element={<ChooseCareerMobile />} />
+              <Route path="/bursaries" element={<BursaryMobile />} />
               <Route
-                path="/skillsProgramme"
+                path="/leanerships"
+                element={<AboutFassetLearnershipsMobile />}
+              />
+              <Route path="/internships" element={<InternshipsMobile />} />
+              <Route
+                path="/skillsProgrammes"
                 element={<SkillsProgrammeMobile />}
               />
-              <Route
-                path="/workbasedProgramme"
-                element={<WorkbasedProgrammeMobile />}
-              />
+              {/* Employer Router */}
+             
               <Route
                 path="/mandateGrants"
                 element={<MandatoryGrantsMobile />}
@@ -130,25 +131,32 @@ function App() {
                 element={<DiscretionaryGrantsMobile />}
               />
               <Route
-                path="/trainingProviders"
-                element={<TrainingProvidersMobile />}
-              />
-              <Route
-                path="/leanersships"
-                element={<AboutFassetLearnershipsMobile />}
+                path="/learningEvents"
+                element={<LearningEventsMobile />}
               />
 
               {/* Quality Assurance Routes */}
               <Route path="/overview" element={<OverviewMobile />} />
-              <Route path="/SDPAccreditation" element={<SDPAccreditationMobile />} />
+              <Route
+                path="/SDPAccreditation"
+                element={<SDPAccreditationMobile />}
+              />
               <Route path="/accreditation" element={<AccreditationMobile />} />
-              <Route path="/assessmentCentresAccreditation" element={<ACAMobile />} />
-              <Route path="/SMERegistration" element={<SubjectMatterExpertsDatabaseRegistration />} />
+              <Route
+                path="/assessmentCentresAccreditation"
+                element={<ACAMobile />}
+              />
+              <Route path="/SMERegistration" element={<SMERegistration />} />
               <Route path="/EISA" element={<EISAMobile />} />
-              <Route path="/workplaceApproval" element={<WorkplaceApprovalMobile />} />
-              <Route path="/externalModerationProcess" element={<EMPMobile />} />
+              <Route
+                path="/workplaceApproval"
+                element={<WorkplaceApprovalMobile />}
+              />
+              <Route
+                path="/externalModerationProcess"
+                element={<EMPMobile />}
+              />
               <Route path="/QCTOPolicies" element={<QTCOPoliciesMobile />} />
-         
 
               <Route
                 path="/currentTenders"

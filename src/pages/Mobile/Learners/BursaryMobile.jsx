@@ -1,11 +1,11 @@
 import { Stack } from "@mui/material";
 import React from "react";
+import Bursary from "../../../components/Learners/Bursary";
 
 const BursaryMobile = () => {
   return (
     <Stack padding={2}>
-      About Fasset Bursary will be defined here and provide a link to the
-      bursary system
+      <Bursary />
     </Stack>
   );
 };

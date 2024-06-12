@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
@@ -10,6 +9,9 @@ import CancelledTenders from "../../components/SupplyChain/CancelledTenders";
 import TaskIcon from "@mui/icons-material/Task";
 import FileOpenIcon from "@mui/icons-material/FileOpen";
 import WebAssetOffIcon from "@mui/icons-material/WebAssetOff";
+import { useTheme } from "@mui/material/styles";
+import { Stack, useMediaQuery } from "@mui/material";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -32,12 +34,6 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired
-};
-
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
@@ -46,80 +42,118 @@ function a11yProps(index) {
 }
 
 const SupplyChain = () => {
-  const [value, setValue] = React.useState(0);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const navigate = useNavigate();
+
+  const { pathname } = useLocation();
+
+  const value = pathname.split("/")[1] || "currentTenders";
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    navigate(`/${newValue}`, { replace: true });
   };
 
-  return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        bgcolor: "background.paper",
-        display: "flex",
-        minHeight: 450
-      }}
-    >
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        textColor="secondary"
-        indicatorColor="secondary"
+  if (isDesktop) {
+    return (
+      <Box
         sx={{
-          borderRight: 1,
-          borderColor: "lightgray",
-          borderBottomRightRadius: 0,
-          backgroundColor: "primary.main",
-          m: 2
-        }}
-        TabIndicatorProps={{
-          sx: {
-            border: 3,
-            borderColor: "secondary.main"
-          }
+          flexGrow: 1,
+          bgcolor: "background.paper",
+          display: "flex",
+          minHeight: 450
         }}
       >
-        <Tab
-          label="Active Tenders"
-          icon={<TaskIcon />}
-          iconPosition="start"
-          {...a11yProps(0)}
+        <Tabs
+          orientation="vertical"
+          variant="scrollable"
+          value={value}
+          onChange={handleChange}
+          textColor="secondary"
+          indicatorColor="secondary"
           sx={{
-            borderBottom: 1,
+            borderRight: 1,
             borderColor: "lightgray",
-            color: "#FFFFFF"
+            borderBottomRightRadius: 0,
+            backgroundColor: "primary.main",
+            m: 2
           }}
-        />
-        <Tab
-          label="Past Tenders"
-          icon={<FileOpenIcon />}
-          iconPosition="start"
-          {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
+          TabIndicatorProps={{
+            sx: {
+              border: 3,
+              borderColor: "secondary.main"
+            }
+          }}
+        >
+          <Tab
+            label="Current Tenders"
+            icon={<TaskIcon />}
+            iconPosition="start"
+            {...a11yProps("currentTenders")}
+            sx={{
+              borderBottom: 1,
+              borderColor: "lightgray",
+              color: "#FFFFFF"
+            }}
+            value="currentTenders"
+          />
+          <Tab
+            label="Past Tenders"
+            icon={<FileOpenIcon />}
+            iconPosition="start"
+            {...a11yProps("previousTenders")}
+            sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+            value="previousTenders"
+          />
 
-        <Tab
-          label="Candelled Tenders"
-          icon={<WebAssetOffIcon />}
-          iconPosition="start"
-          {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        <ActiveTenders />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <PastTenders />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <CancelledTenders />
-      </TabPanel>
-    </Box>
-  );
+          <Tab
+            label="Candelled Tenders"
+            icon={<WebAssetOffIcon />}
+            iconPosition="start"
+            {...a11yProps("cancelledTenders")}
+            sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+            value="cancelledTenders"
+          />
+        </Tabs>
+        <TabPanel value={value} index={"currentTenders"}>
+          <ActiveTenders />
+        </TabPanel>
+        <TabPanel value={value} index={"previousTenders"}>
+          <PastTenders />
+        </TabPanel>
+        <TabPanel value={value} index={"cancelledTenders"}>
+          <CancelledTenders />
+        </TabPanel>
+      </Box>
+    );
+  } else {
+    switch (value) {
+      case "currentTenders":
+        return (
+          <Stack padding={2}>
+            <ActiveTenders />
+          </Stack>
+        );
+      case "previousTenders":
+        return (
+          <Stack padding={2}>
+            <PastTenders />
+          </Stack>
+        );
+      case "cancelledTenders":
+        return (
+          <Stack padding={2}>
+            <CancelledTenders />
+          </Stack>
+        );
+      default:
+        return (
+          <Stack padding={2}>
+            <ActiveTenders />
+          </Stack>
+        );
+    }
+  }
 };
 
 export default SupplyChain;

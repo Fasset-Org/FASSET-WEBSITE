@@ -60,15 +60,15 @@ const DesktopNavigation = () => {
             <Link to="/home">Home</Link>
             <Link to="/aboutus">About Us</Link>
             <Link to="/learners">Learning Programmes</Link>
-            <Link to="/employers">Employer</Link>
-            <Link to="/qualityAssurance">Quality Assurance</Link>
+            <Link to="/mandateGrants">Employer</Link>
+            <Link to="/overview">Quality Assurance</Link>
             {/* <Link to="/trainingProviders">Quality Assurance</Link> */}
             {/* <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Institutions
             </Link> */}
-            <Link to="/tenders">Supply Chain</Link>
-            <Link to="/resources">Resources</Link>
-            <Link to="/vacancies">Vacancies</Link>
+            <Link to="/currentTenders">Supply Chain</Link>
+            <Link to="/downloads">Resources</Link>
+            <Link to="/openPositions">Vacancies</Link>
             {/* <Button
               variant="contained"
               sx={{ backgroundColor: "primary.dark" }}

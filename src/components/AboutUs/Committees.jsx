@@ -3,9 +3,6 @@ import {
   AccordionDetails,
   AccordionSummary,
   Divider,
-  // Accordion,
-  // AccordionDetails,
-  // AccordionSummary,
   Grid,
   Paper,
   Skeleton,
@@ -26,7 +23,6 @@ import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../../stateQueries/User";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
-// import SectorSkillPlan from "../Resources/ResearchComponents/SectorSkillPlan";
 
 const Committees = () => {
   const [page, setPage] = React.useState(0);
@@ -52,9 +48,9 @@ const Committees = () => {
     return (
       <div>
         <Grid container spacing={2}>
-          {[...Array(5)].map((skeleton) => {
+          {[...Array(5)].map((skeleton, i) => {
             return (
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={4} key={i}>
                 <Skeleton variant="rectangular" width={"100%"} height={300} />;
               </Grid>
             );

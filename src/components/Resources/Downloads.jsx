@@ -68,7 +68,7 @@ const Downloads = () => {
       {data?.titles?.length > 0 ? (
         data?.titles?.map((title) => {
           return (
-            <Accordion>
+            <Accordion key={title.id}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
                 aria-controls="panel1a-content"

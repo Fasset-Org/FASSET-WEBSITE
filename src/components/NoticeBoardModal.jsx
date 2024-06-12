@@ -17,7 +17,16 @@ function BootstrapDialogTitle(props) {
   const { children, onClose, ...other } = props;
 
   return (
-    <DialogTitle sx={{ m: 0, p: 2, fontWeight: "bolder", backgroundColor: 'primary.main', color: '#FFFFFF' }} {...other}>
+    <DialogTitle
+      sx={{
+        m: 0,
+        p: 2,
+        fontWeight: "bolder",
+        backgroundColor: "primary.main",
+        color: "#FFFFFF"
+      }}
+      {...other}
+    >
       {children}
       {onClose ? (
         <IconButton
@@ -47,7 +56,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 export default function NoticeBoardModal() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -64,7 +73,14 @@ export default function NoticeBoardModal() {
     }
   });
 
-  // console.log(noticesQuery);
+  React.useEffect(() => {
+    if (
+      noticesQuery.data?.notices?.length > 0 ||
+      noticesQuery?.data?.grants?.length > 0
+    ) {
+      setOpen(true);
+    }
+  }, [noticesQuery.data?.grants?.length, noticesQuery.data?.notices?.length]);
 
   const handleClose = () => {
     setOpen(false);
@@ -80,22 +96,22 @@ export default function NoticeBoardModal() {
       fullWidth
     >
       <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-        Notice Board
+        Latest News
       </BootstrapDialogTitle>
       <DialogContent dividers>
         <Stack spacing={2}>
           {grantsWindowQuery?.data?.grants?.length > 0 &&
             grantsWindowQuery?.data?.grants?.map((grant) => {
-              return <WindowCountDown grant={grant} />;
+              return <WindowCountDown grant={grant} key={grant.id} />;
             })}
 
-          <Typography fontSize={20} fontWeight="bolder">
+          {/* <Typography fontSize={20} fontWeight="bolder">
             Latest News
-          </Typography>
+          </Typography> */}
           {noticesQuery.data?.notices?.length > 0 &&
             noticesQuery.data?.notices?.map((notice) => {
               return (
-                <Stack width="100%" spacing={1} component={Paper} padding={2}>
+                <Stack width="100%" spacing={1} component={Paper} padding={2} key={notice.id}>
                   <Typography
                     sx={
                       {
@@ -103,6 +119,7 @@ export default function NoticeBoardModal() {
                         // whiteSpace: "nowrap",
                         // textOverflow: "ellipsis",
                         // width: 500
+                        // textAlign: 'justify's
                       }
                     }
                     dangerouslySetInnerHTML={{ __html: notice.content }}

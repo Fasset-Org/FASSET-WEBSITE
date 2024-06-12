@@ -1,11 +1,4 @@
-import {
-  Divider,
-  IconButton,
-  Link,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Divider, IconButton, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import logo from "../images/fasset_master_logo.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -14,11 +7,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
-import { useTheme } from '@mui/material/styles';
 
 const LinksFooter = () => {
-  const theme = useTheme();
-  const xs = useMediaQuery(theme.breakpoints.down("xs"));
   const navigate = useNavigate();
 
   return (
@@ -106,11 +96,7 @@ const LinksFooter = () => {
               cursor: "pointer"
             }}
             onClick={() => {
-              if (xs) {
-                navigate("/aboutus");
-              } else {
-                navigate("/whoweare");
-              }
+              navigate("/whoweare");
             }}
           >
             Who we are
@@ -123,11 +109,7 @@ const LinksFooter = () => {
               cursor: "pointer"
             }}
             onClick={() => {
-              if (xs) {
-                navigate("/aboutus");
-              } else {
-                navigate("/ourMandate");
-              }
+              navigate("/ourMandate");
             }}
           >
             Our Mandate
@@ -140,14 +122,10 @@ const LinksFooter = () => {
               cursor: "pointer"
             }}
             onClick={() => {
-              if (xs) {
-                navigate("/aboutus");
-              } else {
-                navigate("/board");
-              }
+              navigate("/accountingAuthority");
             }}
           >
-            Board
+            Accounting Authority
           </Link>
           <Link
             sx={{
@@ -157,14 +135,10 @@ const LinksFooter = () => {
               cursor: "pointer"
             }}
             onClick={() => {
-              if (xs) {
-                navigate("/aboutus");
-              } else {
-                navigate("/committees");
-              }
+              navigate("/management");
             }}
           >
-            Commitees
+            Management
           </Link>
           <Link
             sx={{
@@ -174,11 +148,7 @@ const LinksFooter = () => {
               cursor: "pointer"
             }}
             onClick={() => {
-              if (xs) {
-                navigate("/aboutus");
-              } else {
-                navigate("/constitution");
-              }
+              navigate("/constitution");
             }}
           >
             Constitution
@@ -191,11 +161,7 @@ const LinksFooter = () => {
               cursor: "pointer"
             }}
             onClick={() => {
-              if (xs) {
-                navigate("/aboutus");
-              } else {
-                navigate("/policies");
-              }
+              navigate("/policies");
             }}
           >
             Policies
@@ -234,11 +200,7 @@ const LinksFooter = () => {
               cursor: "pointer"
             }}
             onClick={() => {
-              if (xs) {
-                navigate("/resources");
-              } else {
-                navigate("/annualReports");
-              }
+              navigate("/annualReports");
             }}
           >
             Annual Report
@@ -251,11 +213,7 @@ const LinksFooter = () => {
               cursor: "pointer"
             }}
             onClick={() => {
-              if (xs) {
-                navigate("/vacancies");
-              } else {
-                navigate("/availablePositions");
-              }
+              navigate("/openPositions");
             }}
           >
             Vacancies
@@ -267,31 +225,13 @@ const LinksFooter = () => {
               textDecoration: "none",
               cursor: "pointer"
             }}
+            onClick={() => {
+              navigate("/downloads");
+            }}
           >
             Downloads
           </Link>
-          {/* <Link sx={{ color: "primary.main" }}>eFacts Newsletter</Link>
-          <Link sx={{ color: "primary.main" }}>Facts Newsletter</Link>
-          <Link sx={{ color: "primary.main" }}>Press Articles</Link> */}
         </Stack>
-        {/* <Stack
-          width={{ xs: "100%", md: "33.33%" }}
-          height={{ xs: 200, md: "100%" }}
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          // border={1}
-          // borderColor={"red"}
-        >
-          <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
-            Other
-          </Typography>
-          <Link sx={{ color: "primary.main" }}>Mandatory Grants</Link>
-          <Link sx={{ color: "primary.main" }}>Discretionary Grants</Link>
-          <Link sx={{ color: "primary.main" }}>Downloads</Link>
-          <Link sx={{ color: "primary.main" }}>Events</Link>
-          <Link sx={{ color: "primary.main" }}>Vacancies</Link>
-        </Stack> */}
       </Stack>
 
       <Stack
@@ -331,13 +271,16 @@ const LinksFooter = () => {
           }}
         />
 
-        <Link
-          href="https://www.google.com/maps/place/296+Kent+Ave,+Ferndale,+Randburg,+2194,+South+Africa/@-26.094773,27.999893,14z/data=!4m6!3m5!1s0x1e95749412095119:0xa215fac024675b4!8m2!3d-26.0947729!4d27.9998927!16s%2Fg%2F11mtfgpqkh?hl=en"
-          component={Stack}
+        <Stack
           direction="row"
           justifyContent="center"
           sx={{ cursor: "pointer" }}
-          target="_blank"
+          onClick={() => {
+            window.open(
+              "https://www.google.com/maps/place/Fasset+Financial+%26+Accounting+Sector+Education+And/@-26.0948292,27.9973029,17z/data=!3m1!4b1!4m6!3m5!1s0x1e950ad4f694dd9d:0xfdcbc0464976f09e!8m2!3d-26.0948292!4d27.9998778!16s%2Fg%2F11b6d7d4fn?entry=ttu",
+              "_blank"
+            );
+          }}
         >
           <LocationOnIcon sx={{ color: "#FFFFFF" }} />
           <Typography
@@ -345,9 +288,9 @@ const LinksFooter = () => {
             fontWeight="bolder"
             sx={{ color: "#FFFFFF" }}
           >
-            296 Kent Avenue Randburg 2194
+            1st floor, 296 Kent Ave, Ferndale, Randburg, 2194
           </Typography>
-        </Link>
+        </Stack>
       </Stack>
     </Stack>
   );

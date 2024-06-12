@@ -116,8 +116,8 @@ export default function MobileNavigation() {
       children: [
         { name: "About", icon: AssignmentIndIcon, url: "/whoweare" },
         { name: "Our Mandate", icon: RoomPreferencesIcon, url: "/ourMandate" },
-        { name: "Board", icon: Diversity3Icon, url: "/accountingAuthority" },
-        { name: "Committees", icon: Diversity3Icon, url: "/management" },
+        { name: "Accounting Authority", icon: Diversity3Icon, url: "/accountingAuthority" },
+        { name: "Management", icon: Diversity3Icon, url: "/management" },
         { name: "Constitution", icon: PolicyIcon, url: "/constitution" },
         { name: "Policies", icon: ConstructionIcon, url: "/policies" }
       ],
@@ -250,14 +250,14 @@ export default function MobileNavigation() {
       parent: "Vacancies",
       children: [
         {
-          name: "Available Vacancies",
+          name: "Open Positions",
           icon: ArrowCircleDownIcon,
-          url: "/availablePositions"
+          url: "/openPositions"
         },
         {
-          name: "Previous Vacancies",
+          name: "Past Positions",
           icon: ArrowCircleUpIcon,
-          url: "/previousPositions"
+          url: "/pastPositions"
         }
       ],
       icon: WorkHistoryIcon,

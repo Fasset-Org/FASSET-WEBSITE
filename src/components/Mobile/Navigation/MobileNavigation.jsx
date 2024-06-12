@@ -116,8 +116,8 @@ export default function MobileNavigation() {
       children: [
         { name: "About", icon: AssignmentIndIcon, url: "/whoweare" },
         { name: "Our Mandate", icon: RoomPreferencesIcon, url: "/ourMandate" },
-        { name: "Board", icon: Diversity3Icon, url: "/board" },
-        { name: "Committees", icon: Diversity3Icon, url: "/committees" },
+        { name: "Board", icon: Diversity3Icon, url: "/accountingAuthority" },
+        { name: "Committees", icon: Diversity3Icon, url: "/management" },
         { name: "Constitution", icon: PolicyIcon, url: "/constitution" },
         { name: "Policies", icon: ConstructionIcon, url: "/policies" }
       ],
@@ -226,7 +226,7 @@ export default function MobileNavigation() {
       parent: "Supply Chain",
       children: [
         { name: "Current Tenders", icon: TaskIcon, url: "/currentTenders" },
-        { name: "Past Tenders", icon: FileOpenIcon, url: "/pastTenders" },
+        { name: "Past Tenders", icon: FileOpenIcon, url: "/previousTenders" },
         {
           name: "Cancelled Tenders",
           icon: WebAssetOffIcon,

@@ -76,11 +76,14 @@ export default function NoticeBoardModal() {
   React.useEffect(() => {
     if (
       noticesQuery.data?.notices?.length > 0 ||
-      noticesQuery?.data?.grants?.length > 0
+      grantsWindowQuery?.data?.grants?.length > 0
     ) {
       setOpen(true);
     }
-  }, [noticesQuery.data?.grants?.length, noticesQuery.data?.notices?.length]);
+  }, [
+    grantsWindowQuery?.data?.grants?.length,
+    noticesQuery.data?.notices?.length
+  ]);
 
   const handleClose = () => {
     setOpen(false);
@@ -111,7 +114,13 @@ export default function NoticeBoardModal() {
           {noticesQuery.data?.notices?.length > 0 &&
             noticesQuery.data?.notices?.map((notice) => {
               return (
-                <Stack width="100%" spacing={1} component={Paper} padding={2} key={notice.id}>
+                <Stack
+                  width="100%"
+                  spacing={1}
+                  component={Paper}
+                  padding={2}
+                  key={notice.id}
+                >
                   <Typography
                     sx={
                       {

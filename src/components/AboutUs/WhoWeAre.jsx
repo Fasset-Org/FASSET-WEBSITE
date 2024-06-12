@@ -124,7 +124,7 @@ const WhoWeAre = () => {
       <ul>
         {determine.map((item, i) => {
           return (
-            <li>
+            <li key={i}>
               <Typography>{item}</Typography>
             </li>
           );
@@ -142,7 +142,7 @@ const WhoWeAre = () => {
       <ul>
         {legislation.map((item, i) => {
           return (
-            <li>
+            <li key={i}>
               <Typography>{item}</Typography>
             </li>
           );

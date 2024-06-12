@@ -1,21 +1,20 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import WorkIcon from "@mui/icons-material/Work";
 import CastForEducationIcon from "@mui/icons-material/CastForEducation";
-import CareerPortal from "../../components/Learners/CareerPortal";
-// import DownloadCard from "../../components/DownloadCard";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import SchoolIcon from "@mui/icons-material/School";
 import Bursary from "../../components/Learners/Bursary";
-// import CareerGuide from "../../images/Leaners/Fasset Career Guide 2020 - Cropped.pdf";
 import SkillsProgramme from "../../components/Learners/SkillsProgramme";
 import AboutFassetLearnerships from "../../components/ProfessionalBodies/AboutFassetLearnerships";
 import CareerGuide from "../../components/Learners/CareerGuide";
 import Internships from "../../components/Learners/Internships";
+import { useTheme } from "@mui/material/styles";
+import { Stack, useMediaQuery } from "@mui/material";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -38,12 +37,6 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired
-};
-
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
@@ -52,166 +45,162 @@ function a11yProps(index) {
 }
 
 const Learners = () => {
-  const [value, setValue] = React.useState(0);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const navigate = useNavigate();
+
+  const { pathname } = useLocation();
+
+  const value = pathname.split("/")[1] || "downloads";
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    navigate(`/${newValue}`);
   };
 
-  return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        bgcolor: "background.paper",
-        display: "flex",
-        minHeight: 450,
-        backgroundColor: '#FFFFFF'
-      }}
-      position="sticky"
-    >
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        textColor="secondary"
+  if (isDesktop) {
+    return (
+      <Box
         sx={{
-          borderRight: 1,
-          borderColor: "lightgray",
-          borderBottomRightRadius: 0,
-          backgroundColor: "primary.main",
-          m: 2
+          flexGrow: 1,
+          bgcolor: "background.paper",
+          display: "flex",
+          minHeight: 450,
+          backgroundColor: "#FFFFFF"
         }}
-        TabIndicatorProps={{
-          sx: {
-            border: 3,
-            borderColor: "secondary.main"
-          }
-        }}
+        position="sticky"
       >
-        <Tab
-          label="Overview"
-          icon={<WorkIcon />}
-          iconPosition="start"
-          {...a11yProps(0)}
+        <Tabs
+          orientation="vertical"
+          variant="scrollable"
+          value={value}
+          onChange={handleChange}
+          textColor="secondary"
           sx={{
-            borderBottom: 1,
+            borderRight: 1,
             borderColor: "lightgray",
-            color: "#FFFFFF"
+            borderBottomRightRadius: 0,
+            backgroundColor: "primary.main",
+            m: 2
           }}
-        />
-
-        <Tab
-          label="Bursaries"
-          icon={<CastForEducationIcon />}
-          iconPosition="start"
-          {...a11yProps(1)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
-
-        <Tab
-          label="Learnerships"
-          icon={<SchoolIcon />}
-          iconPosition="start"
-          {...a11yProps(2)}
-          sx={{
-            borderBottom: 1,
-            borderColor: "lightgray",
-            color: "#FFFFFF"
+          TabIndicatorProps={{
+            sx: {
+              border: 3,
+              borderColor: "secondary.main"
+            }
           }}
-        />
+        >
+          <Tab
+            label="Overview"
+            icon={<WorkIcon />}
+            iconPosition="start"
+            {...a11yProps(0)}
+            sx={{
+              borderBottom: 1,
+              borderColor: "lightgray",
+              color: "#FFFFFF"
+            }}
+            value="learnerOverview"
+          />
 
-        <Tab
-          label="Internships"
-          icon={<SchoolIcon />}
-          iconPosition="start"
-          {...a11yProps(3)}
-          sx={{
-            borderBottom: 1,
-            borderColor: "lightgray",
-            color: "#FFFFFF"
-          }}
-        />
+          <Tab
+            label="Bursaries"
+            icon={<CastForEducationIcon />}
+            iconPosition="start"
+            {...a11yProps(1)}
+            sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+            value="bursaries"
+          />
 
-        <Tab
-          label="Skills Programmes"
-          icon={<AdjustIcon />}
-          iconPosition="start"
-          {...a11yProps(4)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
+          <Tab
+            label="Learnerships"
+            icon={<SchoolIcon />}
+            iconPosition="start"
+            {...a11yProps(2)}
+            sx={{
+              borderBottom: 1,
+              borderColor: "lightgray",
+              color: "#FFFFFF"
+            }}
+            value="leanerships"
+          />
 
-        {/* <Tab
-          label="Scarce Skills"
-          icon={<AcUnitIcon />}
-          iconPosition="start"
-          {...a11yProps(3)}
-          sx={{
-            borderBottom: 1,
-            borderColor: "lightgray",
-            color: "#FFFFFF",
-            textAlign: "start"
-          }}
-        />
-        <Tab
-          label="Career Guide Booklet"
-          icon={<EditRoadIcon />}
-          iconPosition="start"
-          {...a11yProps(4)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
+          <Tab
+            label="Internships"
+            icon={<SchoolIcon />}
+            iconPosition="start"
+            {...a11yProps(3)}
+            sx={{
+              borderBottom: 1,
+              borderColor: "lightgray",
+              color: "#FFFFFF"
+            }}
+            value="internships"
+          />
 
-        <Tab
-          label="Career Portal"
-          icon={<AutoAwesomeIcon />}
-          iconPosition="start"
-          {...a11yProps(6)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        /> */}
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        <CareerGuide />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Bursary />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <AboutFassetLearnerships />
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <Internships />
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <SkillsProgramme />
-        {/* <Stack spacing={1}>
-          <Typography>
-            &nbsp;
-            <a
-              href={CareerGuide}
-              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Click here.
-            </a>{" "}
-            to view Fasset's Career Guide.
-          </Typography>
-
-          <Grid container>
-            <Grid xs={12} md={4}>
-              <DownloadCard fileName="Career Guide" />
-            </Grid>
-          </Grid>
-        </Stack> */}
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        <Bursary />
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        <CareerPortal />
-      </TabPanel>
-    </Box>
-  );
+          <Tab
+            label="Skills Programmes"
+            icon={<AdjustIcon />}
+            iconPosition="start"
+            {...a11yProps(4)}
+            sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+            value="skillsProgrammes"
+          />
+        </Tabs>
+        <TabPanel value={value} index="learnerOverview">
+          <CareerGuide />
+        </TabPanel>
+        <TabPanel value={value} index="bursaries">
+          <Bursary />
+        </TabPanel>
+        <TabPanel value={value} index="leanerships">
+          <AboutFassetLearnerships />
+        </TabPanel>
+        <TabPanel value={value} index="internships">
+          <Internships />
+        </TabPanel>
+        <TabPanel value={value} index="skillsProgrammes">
+          <SkillsProgramme />
+        </TabPanel>
+      </Box>
+    );
+  } else {
+    switch (value) {
+      case "learnerOverview":
+        return (
+          <Stack padding={2}>
+            <CareerGuide />
+          </Stack>
+        );
+      case "bursaries":
+        return (
+          <Stack padding={2}>
+            <Bursary />
+          </Stack>
+        );
+      case "leanerships":
+        return (
+          <Stack padding={2}>
+            <AboutFassetLearnerships />
+          </Stack>
+        );
+      case "internships":
+        return (
+          <Stack padding={2}>
+            <AboutFassetLearnerships />
+          </Stack>
+        );
+      case "skillsProgrammes":
+        return (
+          <Stack padding={2}>
+            <AboutFassetLearnerships />
+          </Stack>
+        );
+      default:
+        <Stack padding={2}>
+          <CareerGuide />
+        </Stack>;
+    }
+  }
 };
 
 export default Learners;

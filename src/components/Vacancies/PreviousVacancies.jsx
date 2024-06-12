@@ -57,7 +57,7 @@ const PreviousVacancies = () => {
         fontSize={20}
         sx={{ color: "primary.main", textTransform: "uppercase", mb: 2 }}
       >
-        Previous Vacancies
+        Past Positions
       </Typography>
       <Divider />
       <Stack display={{ md: "block", xs: "none" }}>

@@ -1,5 +1,5 @@
 import { Box, Divider, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { Fragment } from "react";
 
 const OurMandate = () => {
   const objectives = [
@@ -201,7 +201,7 @@ const OurMandate = () => {
       </Typography>
       {objectives.map((option, idx) => {
         return (
-          <>
+          <Fragment key={idx}>
             <ul>
               <li>
                 <Typography>{option.parent}</Typography>
@@ -212,7 +212,7 @@ const OurMandate = () => {
                 <ul style={{ listStyleType: "circle" }}>
                   {option.children.map((child) => {
                     return (
-                      <li>
+                      <li key={child}>
                         <Typography>{child}</Typography>
                       </li>
                     );
@@ -220,7 +220,7 @@ const OurMandate = () => {
                 </ul>
               </Box>
             )}
-          </>
+          </Fragment>
         );
       })}
       <Divider />
@@ -237,7 +237,7 @@ const OurMandate = () => {
       </Typography>
       {services.map((option, idx) => {
         return (
-          <>
+          <Fragment key={idx}>
             <ul>
               <li>
                 <Typography>{option.parent}</Typography>
@@ -246,9 +246,9 @@ const OurMandate = () => {
             {option.children.length > 0 && (
               <Box pl={3}>
                 <ul style={{ listStyle: "circle" }}>
-                  {option.children.map((child) => {
+                  {option.children.map((child, i) => {
                     return (
-                      <li>
+                      <li key={i}>
                         <Typography>{child}</Typography>
                       </li>
                     );
@@ -256,7 +256,7 @@ const OurMandate = () => {
                 </ul>
               </Box>
             )}
-          </>
+          </Fragment>
         );
       })}
       <Divider />
@@ -266,7 +266,7 @@ const OurMandate = () => {
       </Typography>
       {skills.map((option, idx) => {
         return (
-          <>
+          <Fragment key={idx}>
             <ul>
               <li>
                 <Typography>{option.parent}</Typography>
@@ -277,7 +277,7 @@ const OurMandate = () => {
                 <ul style={{ listStyle: "circle" }}>
                   {option.children.map((child) => {
                     return (
-                      <li>
+                      <li key={child}>
                         <Typography>{child}</Typography>
                       </li>
                     );
@@ -285,7 +285,7 @@ const OurMandate = () => {
                 </ul>
               </Box>
             )}
-          </>
+          </Fragment>
         );
       })}
     </Stack>

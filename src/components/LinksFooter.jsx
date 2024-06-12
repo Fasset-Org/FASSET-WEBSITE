@@ -5,7 +5,6 @@ import {
   Stack,
   Typography,
   useMediaQuery,
-  useTheme
 } from "@mui/material";
 import React from "react";
 import logo from "../images/fasset_master_logo.png";
@@ -15,11 +14,12 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from '@mui/material/styles';
 
 const LinksFooter = () => {
   const theme = useTheme();
-  const navigate = useNavigate();
   const xs = useMediaQuery(theme.breakpoints.down("xs"));
+  const navigate = useNavigate();
 
   return (
     <Stack
@@ -53,16 +53,35 @@ const LinksFooter = () => {
         >
           <img src={logo} alt="" />
           <Stack direction="row" spacing={2} zIndex={1}>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open("https://www.facebook.com/fasset.org", "_blank");
+              }}
+            >
               <FacebookIcon sx={{ color: "#1877f2" }} />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open("https://www.instagram.com/fasset_sa", "_blank");
+              }}
+            >
               <InstagramIcon sx={{ color: "#c83e83" }} />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open("https://x.com/fasset_sa", "_blank");
+              }}
+            >
               <TwitterIcon sx={{ color: "#1d9bf0" }} />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/company/financial-and-accounting-services-seta-fasset-/mycompany/",
+                  "_blank"
+                );
+              }}
+            >
               <LinkedInIcon sx={{ color: "#0178b5" }} />
             </IconButton>
           </Stack>
@@ -80,7 +99,12 @@ const LinksFooter = () => {
             About Us
           </Typography>
           <Link
-            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             onClick={() => {
               if (xs) {
                 navigate("/aboutus");
@@ -92,7 +116,12 @@ const LinksFooter = () => {
             Who we are
           </Link>
           <Link
-            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             onClick={() => {
               if (xs) {
                 navigate("/aboutus");
@@ -104,7 +133,12 @@ const LinksFooter = () => {
             Our Mandate
           </Link>
           <Link
-            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             onClick={() => {
               if (xs) {
                 navigate("/aboutus");
@@ -116,7 +150,12 @@ const LinksFooter = () => {
             Board
           </Link>
           <Link
-            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             onClick={() => {
               if (xs) {
                 navigate("/aboutus");
@@ -128,7 +167,12 @@ const LinksFooter = () => {
             Commitees
           </Link>
           <Link
-            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             onClick={() => {
               if (xs) {
                 navigate("/aboutus");
@@ -137,10 +181,15 @@ const LinksFooter = () => {
               }
             }}
           >
-            Fasset Constitution
+            Constitution
           </Link>
           <Link
-            sx={{ color: "primary.main", fontWeight: "lighter" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             onClick={() => {
               if (xs) {
                 navigate("/aboutus");
@@ -165,7 +214,12 @@ const LinksFooter = () => {
             Stakeholder
           </Typography>
           <Link
-            sx={{ color: "primary.main" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             href="https://portal.fasset.org.za/web/login"
             target="_blank"
           >
@@ -173,7 +227,12 @@ const LinksFooter = () => {
           </Link>
           {/* <Link sx={{ color: "primary.main" }}>Latest News</Link> */}
           <Link
-            sx={{ color: "primary.main" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             onClick={() => {
               if (xs) {
                 navigate("/resources");
@@ -185,7 +244,12 @@ const LinksFooter = () => {
             Annual Report
           </Link>
           <Link
-            sx={{ color: "primary.main" }}
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
             onClick={() => {
               if (xs) {
                 navigate("/vacancies");
@@ -196,7 +260,16 @@ const LinksFooter = () => {
           >
             Vacancies
           </Link>
-          <Link sx={{ color: "primary.main" }}>Downloads</Link>
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+          >
+            Downloads
+          </Link>
           {/* <Link sx={{ color: "primary.main" }}>eFacts Newsletter</Link>
           <Link sx={{ color: "primary.main" }}>Facts Newsletter</Link>
           <Link sx={{ color: "primary.main" }}>Press Articles</Link> */}

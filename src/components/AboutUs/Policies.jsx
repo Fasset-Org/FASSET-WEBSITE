@@ -1,4 +1,4 @@
-import { Divider, Link, Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 import LaguagePolicy from "../../images/Language Policy .pdf";
 import EnglishManual from "../../images/policies_S14_Manual - English.pdf";
@@ -43,58 +43,43 @@ const Policies = () => {
       </Typography>
 
       <ul>
-        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>
-            {" "}
-            <a
-              href={EnglishManual}
-              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              English Version
-            </a>
-          </li>
-        </Link>
-        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>
-            {" "}
-            <a
-              href={AfrikaansManual}
-              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Afrikaans Version
-            </a>
-          </li>
-        </Link>
-        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>
-            {" "}
-            <a
-              href={XhosaManual}
-              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Xhosa Version
-            </a>
-          </li>
-        </Link>
+        <li style={{ textDecoration: "none", cursor: "pointer" }}>
+          {" "}
+          <a
+            href={EnglishManual}
+            style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            English Version
+          </a>
+        </li>
+
+        <li style={{ textDecoration: "none", cursor: "pointer" }}>
+          {" "}
+          <a
+            href={AfrikaansManual}
+            style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Afrikaans Version
+          </a>
+        </li>
+
+        <li style={{ textDecoration: "none", cursor: "pointer" }}>
+          {" "}
+          <a
+            href={XhosaManual}
+            style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Xhosa Version
+          </a>
+        </li>
       </ul>
 
-      {/* <Grid container spacing={{md: 2}} rowGap={{xs: 2}}>
-        <Grid item xs={12} md={4}>
-          <DownloadCard fileName="English Version" />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <DownloadCard fileName="Afrikaans Version" />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <DownloadCard fileName="Xhosa Version" />
-        </Grid>
-      </Grid> */}
       <Divider />
       <Typography fontWeight="bold">Fraud Policy Statement</Typography>
       <Typography textAlign="justify">

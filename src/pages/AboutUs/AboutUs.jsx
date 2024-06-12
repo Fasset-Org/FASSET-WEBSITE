@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
@@ -15,6 +14,9 @@ import BoardMembers from "../../components/AboutUs/BoardMembers";
 import Committees from "../../components/AboutUs/Committees";
 import Constitution from "../../components/AboutUs/Constitution";
 import Policies from "../../components/AboutUs/Policies";
+import { useTheme } from "@mui/material/styles";
+import { Stack, useMediaQuery } from "@mui/material";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -36,12 +38,6 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired
-};
-
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
@@ -50,114 +46,173 @@ function a11yProps(index) {
 }
 
 const Learners = () => {
-  const [value, setValue] = React.useState(0);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const navigate = useNavigate();
+
+  const { pathname } = useLocation();
+
+  const value = pathname.split("/")[1] || "downloads";
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    navigate(`/${newValue}`);
   };
 
-  return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        bgcolor: "background.paper",
-        display: "flex"
-      }}
-      position="sticky"
-    >
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        textColor="secondary"
+  if (isDesktop) {
+    return (
+      <Box
         sx={{
-          borderRight: 1,
-          borderColor: "lightgray",
-          borderBottomRightRadius: 0,
-          backgroundColor: "primary.main",
-          m: 2
-          // height: 450
+          flexGrow: 1,
+          bgcolor: "background.paper",
+          display: "flex"
         }}
-        TabIndicatorProps={{
-          sx: {
-            border: 3,
-            borderColor: "secondary.main"
-          }
-        }}
+        position="sticky"
       >
-        <Tab
-          label="About"
-          icon={<AssignmentIndIcon />}
-          iconPosition="start"
-          {...a11yProps(0)}
+        <Tabs
+          orientation="vertical"
+          variant="scrollable"
+          value={value}
+          onChange={handleChange}
+          textColor="secondary"
           sx={{
-            borderBottom: 1,
+            borderRight: 1,
             borderColor: "lightgray",
-            color: "#FFFFFF"
+            borderBottomRightRadius: 0,
+            backgroundColor: "primary.main",
+            m: 2
+            // height: 450
           }}
-        />
-        <Tab
-          label="Our Mandate"
-          icon={<RoomPreferencesIcon />}
-          iconPosition="start"
-          {...a11yProps(1)}
-          sx={{
-            borderBottom: 1,
-            borderColor: "lightgray",
-            color: "#FFFFFF",
-            textAlign: "start"
+          TabIndicatorProps={{
+            sx: {
+              border: 3,
+              borderColor: "secondary.main"
+            }
           }}
-        />
-        <Tab
-          label="Accounting Authority"
-          icon={<Diversity3Icon />}
-          iconPosition="start"
-          {...a11yProps(2)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
-        <Tab
-          label="Management"
-          icon={<Diversity3Icon />}
-          iconPosition="start"
-          {...a11yProps(3)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
-        <Tab
-          label="Constitution"
-          icon={<ConstructionIcon />}
-          iconPosition="start"
-          {...a11yProps(4)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
-        <Tab
-          label="Policies"
-          icon={<PolicyIcon />}
-          iconPosition="start"
-          {...a11yProps(5)}
-          sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
-        />
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        <WhoWeAre />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <OurMandate />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <BoardMembers />
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <Committees />
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <Constitution />
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        <Policies />
-      </TabPanel>
-    </Box>
-  );
+        >
+          <Tab
+            label="About"
+            icon={<AssignmentIndIcon />}
+            iconPosition="start"
+            {...a11yProps(0)}
+            sx={{
+              borderBottom: 1,
+              borderColor: "lightgray",
+              color: "#FFFFFF"
+            }}
+            value="whoweare"
+          />
+          <Tab
+            label="Our Mandate"
+            icon={<RoomPreferencesIcon />}
+            iconPosition="start"
+            {...a11yProps(1)}
+            sx={{
+              borderBottom: 1,
+              borderColor: "lightgray",
+              color: "#FFFFFF",
+              textAlign: "start"
+            }}
+            value="ourMandate"
+          />
+          <Tab
+            label="Accounting Authority"
+            icon={<Diversity3Icon />}
+            iconPosition="start"
+            {...a11yProps(2)}
+            sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+            value="accountingAuthority"
+          />
+          <Tab
+            label="Management"
+            icon={<Diversity3Icon />}
+            iconPosition="start"
+            {...a11yProps(3)}
+            sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+            value="management"
+          />
+          <Tab
+            label="Constitution"
+            icon={<ConstructionIcon />}
+            iconPosition="start"
+            {...a11yProps(4)}
+            sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+            value="constitution"
+          />
+          <Tab
+            label="Policies"
+            icon={<PolicyIcon />}
+            iconPosition="start"
+            {...a11yProps(5)}
+            sx={{ borderBottom: 1, borderColor: "lightgray", color: "#FFFFFF" }}
+            value="policies"
+          />
+        </Tabs>
+        <TabPanel value={value} index="whoweare">
+          <WhoWeAre />
+        </TabPanel>
+        <TabPanel value={value} index="ourMandate">
+          <OurMandate />
+        </TabPanel>
+        <TabPanel value={value} index="accountingAuthority">
+          <BoardMembers />
+        </TabPanel>
+        <TabPanel value={value} index="management">
+          <Committees />
+        </TabPanel>
+        <TabPanel value={value} index="constitution">
+          <Constitution />
+        </TabPanel>
+        <TabPanel value={value} index="policies">
+          <Policies />
+        </TabPanel>
+      </Box>
+    );
+  } else {
+    switch (value) {
+      case "whoweare":
+        return (
+          <Stack padding={2}>
+            <WhoWeAre />
+          </Stack>
+        );
+      case "ourMandate":
+        return (
+          <Stack padding={2}>
+            <OurMandate />
+          </Stack>
+        );
+      case "accountingAuthority":
+        return (
+          <Stack padding={2}>
+            <BoardMembers />
+          </Stack>
+        );
+      case "management":
+        return (
+          <Stack padding={2}>
+            <Committees />
+          </Stack>
+        );
+      case "constitution":
+        return (
+          <Stack padding={2}>
+            <Constitution />
+          </Stack>
+        );
+      case "policies":
+        return (
+          <Stack padding={2}>
+            <Policies />
+          </Stack>
+        );
+      default:
+        return (
+          <Stack padding={2}>
+            <WhoWeAre />
+          </Stack>
+        );
+    }
+  }
 };
 
 export default Learners;

@@ -164,7 +164,7 @@ const SectorSkillPlan = () => {
               : rows
             ).map((row, i) => (
               <TableRow
-                key={row.name}
+                key={i}
                 sx={{ backgroundColor: i % 2 === 0 ? "action.hover" : "" }}
               >
                 <TableCell align="center" component="th" scope="row">

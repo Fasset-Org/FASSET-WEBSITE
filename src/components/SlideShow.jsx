@@ -80,13 +80,13 @@ const Slideshow = ({ banners }) => {
                       height: 250,
                       objectPosition: "100% 100%",
                       width: "100%",
-                      objectFit: 'fill'
+                      objectFit: "fill"
                     }}
                     loading="lazy"
                     alt=""
                   />
                 </Stack>
-                <div className="text">Caption Text</div>
+                {/* <div className="text">Caption Text</div> */}
               </div>
             );
           })}
@@ -114,7 +114,7 @@ const Slideshow = ({ banners }) => {
 
       <div style={{ textAlign: "center" }}>
         {data?.banners?.map((banner, i) => {
-          return <span class="dot" key={i}></span>;
+          return <span className="dot" key={i}></span>;
         })}
       </div>
     </Stack>

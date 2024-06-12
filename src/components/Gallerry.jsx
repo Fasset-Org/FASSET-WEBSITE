@@ -2,7 +2,6 @@ import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { Button, Stack, Typography } from "@mui/material";
-import img1 from "../images/2023 AGM/ZooM-6849.jpg";
 import img2 from "../images/2023 AGM/ZooM-6852.jpg";
 import img3 from "../images/2023 AGM/ZooM-6926 (1).jpg";
 import img4 from "../images/2023 AGM/ZooM-6978.jpg";
@@ -32,7 +31,7 @@ export default function StandardImageList() {
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
               <img
-                srcSet={`${item.img}`}
+                // srcSet={`${item.img}`}
                 src={`${item.img}`}
                 alt={item.title}
                 loading="lazy"
@@ -55,7 +54,7 @@ export default function StandardImageList() {
           {itemData.map((item, i) => (
             <ImageListItem key={item.img}>
               <img
-                srcSet={`${item.img}`}
+                // srcSet={`${item.img}`}
                 src={`${item.img}`}
                 alt={`Shoot ${i}`}
                 loading="lazy"
@@ -79,10 +78,10 @@ export default function StandardImageList() {
 }
 
 const itemData = [
-  {
-    img: img1,
-    title: "Breakfast"
-  },
+  // {
+  //   img: img1,
+  //   title: "Breakfast"
+  // },
   {
     img: img2,
     title: "Burger"

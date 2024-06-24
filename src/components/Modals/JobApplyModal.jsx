@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  CircularProgress,
   Dialog,
   DialogContent,
   DialogTitle,
@@ -41,7 +42,7 @@ const JobApplyModal = ({ position }) => {
     setOpen(false);
   };
 
-  const { mutate, isError, isSuccess, data, error } = useMutation({
+  const { mutate, isError, isSuccess, data, error, isLoading } = useMutation({
     mutationFn: async (formData) => {
       return await UserQuery.jobApplication(formData);
     },
@@ -553,7 +554,11 @@ const JobApplyModal = ({ position }) => {
                           Cancel
                         </Button>
                         <Button type="submit" variant="contained">
-                          Submit Application
+                          {isLoading ? (
+                            <CircularProgress color="secondary" />
+                          ) : (
+                            "Submit Application"
+                          )}
                         </Button>
                       </Stack>
                     </Grid>

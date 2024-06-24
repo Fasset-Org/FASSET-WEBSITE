@@ -132,7 +132,9 @@ const PreviousVacancies = () => {
                       <TableCell>
                         <IconButton
                           onClick={() => {
-                            navigate(`/vacancies/${position.id}`);
+                            navigate(`/vacancies/${position.id}`, {
+                              state: { open: false }
+                            });
                           }}
                         >
                           <VisibilityIcon />
@@ -179,13 +181,18 @@ const PreviousVacancies = () => {
       </Stack>
 
       {data?.positions?.length > 0 ? (
-        <Grid container display={{ md: "none", xs: "block" }} spacing={2} mt={2}>
+        <Grid
+          container
+          display={{ md: "none", xs: "block" }}
+          spacing={2}
+          mt={2}
+        >
           {data?.positions?.map((vacancy, i) => {
-            return <VacancyCard vacancy={vacancy} />;
+            return <VacancyCard vacancy={vacancy} open={false} key={i} />;
           })}
         </Grid>
       ) : (
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={12} display={{ md: "none", xs: "block" }}>
           <Alert severity="info">No Positions Available</Alert>
         </Grid>
       )}

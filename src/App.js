@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import {
@@ -28,6 +28,7 @@ import ProfessionalBodies from "./pages/ProfessionalBodies/ProfessionalBodies";
 import TenderDetails from "./pages/SupplyChain/TenderDetails";
 import FallbackError from "./pages/FallbackError";
 import MainNavigation from "./components/Navigation/MainNavigation";
+import CookieConsent from "react-cookie-consent";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -47,6 +48,24 @@ function App() {
     <ThemeProvider theme={theme === "light" ? themeLight : themeDark}>
       <CssBaseline />
       <QueryClientProvider client={queryClient}>
+        <CookieConsent
+          location="bottom"
+          buttonText="Accept Cookies"
+          cookieName="FassetCookie"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{
+            color: "#4e503b",
+            fontSize: "15px",
+            padding: 10,
+            borderRadius: 5,
+            fontWeight: "bolder"
+          }}
+          expires={150}
+        >
+          <Typography fontSize={15}>
+            This website uses cookies to enhance the user experience.{" "}
+          </Typography>
+        </CookieConsent>
         <Router>
           <Routes>
             {/* Website Routes */}

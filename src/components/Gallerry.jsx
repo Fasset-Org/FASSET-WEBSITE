@@ -1,7 +1,7 @@
 import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { Button, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import img2 from "../images/2023 AGM/ZooM-6852.jpg";
 import img3 from "../images/2023 AGM/ZooM-6926 (1).jpg";
 import img4 from "../images/2023 AGM/ZooM-6978.jpg";
@@ -72,7 +72,7 @@ export default function StandardImageList() {
         </ImageList>
       </Stack>
 
-      <Button variant="contained">See More</Button>
+      {/* <Button variant="contained">See More</Button> */}
     </Stack>
   );
 }

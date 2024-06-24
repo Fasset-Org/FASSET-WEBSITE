@@ -56,7 +56,7 @@ const CurrentVacancies = () => {
         fontSize={20}
         sx={{ color: "primary.main", textTransform: "uppercase", mb: 2 }}
       >
-        Open Positions
+        Positions
       </Typography>
       <Divider />
       <Typography mb={2}>

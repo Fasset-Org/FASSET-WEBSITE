@@ -146,7 +146,9 @@ const CurrentVacancies = () => {
                       <TableCell>
                         <IconButton
                           onClick={() => {
-                            navigate(`/vacancies/${position.id}`);
+                            navigate(`/vacancies/${position.id}`, {
+                              state: { open: true }
+                            });
                           }}
                         >
                           <VisibilityIcon />
@@ -200,11 +202,11 @@ const CurrentVacancies = () => {
           mt={2}
         >
           {data?.positions?.map((vacancy, i) => {
-            return <VacancyCard vacancy={vacancy} />;
+            return <VacancyCard vacancy={vacancy} open={true} key={i} />;
           })}
         </Grid>
       ) : (
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={12} display={{ md: "none", xs: "block" }}>
           <Alert severity="info">No Positions Available</Alert>
         </Grid>
       )}

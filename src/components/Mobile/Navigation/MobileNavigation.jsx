@@ -125,7 +125,7 @@ export default function MobileNavigation() {
       open: false
     },
     {
-      parent: "Leaners",
+      parent: "Learning Programmes",
       children: [
         {
           name: "Overview",

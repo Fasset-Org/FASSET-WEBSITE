@@ -1,5 +1,6 @@
 {
   "routes": [
+    { "route": "/logo-sm.png", "serve": "/logo-sm.png" },
     {
       "route": "/static/*",
       "headers": {
@@ -9,7 +10,6 @@
     {
       "route": "/*",
       "rewrite": "/index.html"
-    },
-    { "route": "/logo-sm.png", "serve": "/logo-sm.png" }
+    }
   ]
 }

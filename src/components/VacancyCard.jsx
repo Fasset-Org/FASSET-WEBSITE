@@ -9,7 +9,7 @@ import {
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const VacancyCard = ({ vacancy }) => {
+const VacancyCard = ({ vacancy, open }) => {
   const navigate = useNavigate();
   return (
     <Grid
@@ -51,7 +51,7 @@ const VacancyCard = ({ vacancy }) => {
               color="primary"
               // fullWidth
               onClick={() => {
-                navigate(`/vacancies/${vacancy.id}`);
+                navigate(`/vacancies/${vacancy.id}`, { state: { open: open } });
               }}
             >
               Read More

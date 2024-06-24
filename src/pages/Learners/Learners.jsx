@@ -186,13 +186,13 @@ const Learners = () => {
       case "internships":
         return (
           <Stack padding={2}>
-            <AboutFassetLearnerships />
+            <Internships />
           </Stack>
         );
       case "skillsProgrammes":
         return (
           <Stack padding={2}>
-            <AboutFassetLearnerships />
+            <SkillsProgramme />
           </Stack>
         );
       default:

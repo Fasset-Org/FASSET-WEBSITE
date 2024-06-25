@@ -21,7 +21,6 @@ const AboutBanner = () => {
         <Typography
           width="100%"
           textAlign="center"
-          fontFamily="Helvetica Neue"
           fontWeight="bolder"
           fontSize={40}
           textTransform="uppercase"

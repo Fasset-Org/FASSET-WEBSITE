@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const WorkplaceApproval = () => {
@@ -11,7 +11,7 @@ const WorkplaceApproval = () => {
       >
         Workplace Approval
       </Typography>
-
+      <Divider />
       <Typography textAlign="justify">
         One of the most important aspects of occupational qualifications is
         access to a relevant and approved workplace. For this reason, all SDPs

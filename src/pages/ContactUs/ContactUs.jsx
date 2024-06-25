@@ -22,7 +22,6 @@ const ContactUs = () => {
                 fontSize={40}
                 fontWeight="bolder"
                 textTransform="uppercase"
-                fontFamily="Helvetica Neue"
               >
                 Contact Us
               </Typography>

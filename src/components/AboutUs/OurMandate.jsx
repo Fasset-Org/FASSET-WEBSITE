@@ -1,5 +1,5 @@
-import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
+import { Box, Divider, Stack, Typography } from "@mui/material";
+import React, { Fragment } from "react";
 
 const OurMandate = () => {
   const objectives = [
@@ -195,12 +195,13 @@ const OurMandate = () => {
       >
         Our Mandate
       </Typography>
+      <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
         The Objectives of Fasset are the following:
       </Typography>
       {objectives.map((option, idx) => {
         return (
-          <>
+          <Fragment key={idx}>
             <ul>
               <li>
                 <Typography>{option.parent}</Typography>
@@ -211,7 +212,7 @@ const OurMandate = () => {
                 <ul style={{ listStyleType: "circle" }}>
                   {option.children.map((child) => {
                     return (
-                      <li>
+                      <li key={child}>
                         <Typography>{child}</Typography>
                       </li>
                     );
@@ -219,10 +220,10 @@ const OurMandate = () => {
                 </ul>
               </Box>
             )}
-          </>
+          </Fragment>
         );
       })}
-
+      <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>Functions of Fasset</Typography>
       <Typography>
         The Fasset Board may delegate any of the below mentioned functions to an
@@ -230,12 +231,13 @@ const OurMandate = () => {
         policy and to any other bodies, which may include ETQAs, professional
         bodies etc
       </Typography>
+      <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
         Fasset will serve to:
       </Typography>
       {services.map((option, idx) => {
         return (
-          <>
+          <Fragment key={idx}>
             <ul>
               <li>
                 <Typography>{option.parent}</Typography>
@@ -244,9 +246,9 @@ const OurMandate = () => {
             {option.children.length > 0 && (
               <Box pl={3}>
                 <ul style={{ listStyle: "circle" }}>
-                  {option.children.map((child) => {
+                  {option.children.map((child, i) => {
                     return (
-                      <li>
+                      <li key={i}>
                         <Typography>{child}</Typography>
                       </li>
                     );
@@ -254,16 +256,17 @@ const OurMandate = () => {
                 </ul>
               </Box>
             )}
-          </>
+          </Fragment>
         );
       })}
+      <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
         Fasset will, specifically, in accordance with the Skills Development
         Act:
       </Typography>
       {skills.map((option, idx) => {
         return (
-          <>
+          <Fragment key={idx}>
             <ul>
               <li>
                 <Typography>{option.parent}</Typography>
@@ -274,7 +277,7 @@ const OurMandate = () => {
                 <ul style={{ listStyle: "circle" }}>
                   {option.children.map((child) => {
                     return (
-                      <li>
+                      <li key={child}>
                         <Typography>{child}</Typography>
                       </li>
                     );
@@ -282,7 +285,7 @@ const OurMandate = () => {
                 </ul>
               </Box>
             )}
-          </>
+          </Fragment>
         );
       })}
     </Stack>

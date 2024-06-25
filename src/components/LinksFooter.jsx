@@ -6,8 +6,11 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { useNavigate } from "react-router-dom";
 
 const LinksFooter = () => {
+  const navigate = useNavigate();
+
   return (
     <Stack
       paddingTop={2}
@@ -40,16 +43,35 @@ const LinksFooter = () => {
         >
           <img src={logo} alt="" />
           <Stack direction="row" spacing={2} zIndex={1}>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open("https://www.facebook.com/fasset.org", "_blank");
+              }}
+            >
               <FacebookIcon sx={{ color: "#1877f2" }} />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open("https://www.instagram.com/fasset_sa", "_blank");
+              }}
+            >
               <InstagramIcon sx={{ color: "#c83e83" }} />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open("https://x.com/fasset_sa", "_blank");
+              }}
+            >
               <TwitterIcon sx={{ color: "#1d9bf0" }} />
             </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/company/financial-and-accounting-services-seta-fasset-/mycompany/",
+                  "_blank"
+                );
+              }}
+            >
               <LinkedInIcon sx={{ color: "#0178b5" }} />
             </IconButton>
           </Stack>
@@ -66,22 +88,82 @@ const LinksFooter = () => {
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             About Us
           </Typography>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/whoweare");
+            }}
+          >
             Who we are
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/ourMandate");
+            }}
+          >
             Our Mandate
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
-            Board & Commitees
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/accountingAuthority");
+            }}
+          >
+            Accounting Authority
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
-            Our Team
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/management");
+            }}
+          >
+            Management
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
-            Fasset Constitution
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/constitution");
+            }}
+          >
+            Constitution
           </Link>
-          <Link sx={{ color: "primary.main", fontWeight: "lighter" }}>
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/policies");
+            }}
+          >
             Policies
           </Link>
         </Stack>
@@ -97,30 +179,58 @@ const LinksFooter = () => {
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             Stakeholder
           </Typography>
-          <Link sx={{ color: "primary.main" }}>Stakeholder Login</Link>
-          <Link sx={{ color: "primary.main" }}>Latest News</Link>
-          <Link sx={{ color: "primary.main" }}>Annual Report</Link>
-          <Link sx={{ color: "primary.main" }}>eFacts Newsletter</Link>
-          <Link sx={{ color: "primary.main" }}>Facts Newsletter</Link>
-          <Link sx={{ color: "primary.main" }}>Press Articles</Link>
-        </Stack>
-        <Stack
-          width={{ xs: "100%", md: "33.33%" }}
-          height={{ xs: 200, md: "100%" }}
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          // border={1}
-          // borderColor={"red"}
-        >
-          <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
-            Other
-          </Typography>
-          <Link sx={{ color: "primary.main" }}>Mandatory Grants</Link>
-          <Link sx={{ color: "primary.main" }}>Discretionary Grants</Link>
-          <Link sx={{ color: "primary.main" }}>Downloads</Link>
-          <Link sx={{ color: "primary.main" }}>Events</Link>
-          <Link sx={{ color: "primary.main" }}>Vacancies</Link>
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            href="https://portal.fasset.org.za/web/login"
+            target="_blank"
+          >
+            Stakeholder Login
+          </Link>
+          {/* <Link sx={{ color: "primary.main" }}>Latest News</Link> */}
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/annualReports");
+            }}
+          >
+            Annual Report
+          </Link>
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/openPositions");
+            }}
+          >
+            Vacancies
+          </Link>
+          <Link
+            sx={{
+              color: "primary.main",
+              fontWeight: "lighter",
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+            onClick={() => {
+              navigate("/downloads");
+            }}
+          >
+            Downloads
+          </Link>
         </Stack>
       </Stack>
 
@@ -161,13 +271,16 @@ const LinksFooter = () => {
           }}
         />
 
-        <Link
-          href="https://www.google.com/maps/place/296+Kent+Ave,+Ferndale,+Randburg,+2194,+South+Africa/@-26.094773,27.999893,14z/data=!4m6!3m5!1s0x1e95749412095119:0xa215fac024675b4!8m2!3d-26.0947729!4d27.9998927!16s%2Fg%2F11mtfgpqkh?hl=en"
-          component={Stack}
+        <Stack
           direction="row"
           justifyContent="center"
           sx={{ cursor: "pointer" }}
-          target="_blank"
+          onClick={() => {
+            window.open(
+              "https://www.google.com/maps/place/Fasset+Financial+%26+Accounting+Sector+Education+And/@-26.0948292,27.9973029,17z/data=!3m1!4b1!4m6!3m5!1s0x1e950ad4f694dd9d:0xfdcbc0464976f09e!8m2!3d-26.0948292!4d27.9998778!16s%2Fg%2F11b6d7d4fn?entry=ttu",
+              "_blank"
+            );
+          }}
         >
           <LocationOnIcon sx={{ color: "#FFFFFF" }} />
           <Typography
@@ -175,9 +288,9 @@ const LinksFooter = () => {
             fontWeight="bolder"
             sx={{ color: "#FFFFFF" }}
           >
-            296 Kent Avenue Randburg 2194
+            1st floor, 296 Kent Ave, Ferndale, Randburg, 2194
           </Typography>
-        </Link>
+        </Stack>
       </Stack>
     </Stack>
   );

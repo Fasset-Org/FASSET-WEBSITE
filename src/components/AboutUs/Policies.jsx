@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 import LaguagePolicy from "../../images/Language Policy .pdf";
 import EnglishManual from "../../images/policies_S14_Manual - English.pdf";
@@ -15,6 +15,7 @@ const Policies = () => {
       >
         Policies
       </Typography>
+      <Divider />
       <Typography textAlign="justify">
         Fasset’s Language Policy Fasset’s Language Policy adheres to the
         requirement of the Use of Official Languages Act, No. 12 of 2012 and is
@@ -29,8 +30,6 @@ const Policies = () => {
         >
           click here.
         </a>{" "}
-      </Typography>
-      <Typography textAlign="justify">
         Fasset has in place a Proatia Manual in terms of Section 14 of the
         Promotion of Access to Information Act, 2000 (Act No. 2 of 2000) ("the
         Act"). The Act gives effect to the provisions of Section 32 of the
@@ -44,58 +43,44 @@ const Policies = () => {
       </Typography>
 
       <ul>
-        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>
-            {" "}
-            <a
-              href={EnglishManual}
-              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              English Version
-            </a>
-          </li>
-        </Link>
-        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>
-            {" "}
-            <a
-              href={AfrikaansManual}
-              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Afrikaans Version
-            </a>
-          </li>
-        </Link>
-        <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
-          <li>
-            {" "}
-            <a
-              href={XhosaManual}
-              style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Xhosa Version
-            </a>
-          </li>
-        </Link>
+        <li style={{ textDecoration: "none", cursor: "pointer" }}>
+          {" "}
+          <a
+            href={EnglishManual}
+            style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            English Version
+          </a>
+        </li>
+
+        <li style={{ textDecoration: "none", cursor: "pointer" }}>
+          {" "}
+          <a
+            href={AfrikaansManual}
+            style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Afrikaans Version
+          </a>
+        </li>
+
+        <li style={{ textDecoration: "none", cursor: "pointer" }}>
+          {" "}
+          <a
+            href={XhosaManual}
+            style={{ color: "#163683", cursor: "pointer", fontWeight: 600 }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Xhosa Version
+          </a>
+        </li>
       </ul>
 
-      {/* <Grid container spacing={{md: 2}} rowGap={{xs: 2}}>
-        <Grid item xs={12} md={4}>
-          <DownloadCard fileName="English Version" />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <DownloadCard fileName="Afrikaans Version" />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <DownloadCard fileName="Xhosa Version" />
-        </Grid>
-      </Grid> */}
+      <Divider />
       <Typography fontWeight="bold">Fraud Policy Statement</Typography>
       <Typography textAlign="justify">
         Fasset’s Fraud Prevention Plan is implemented as a means of
@@ -131,6 +116,7 @@ const Policies = () => {
         to notify Fasset of any suspected fraudulent activities impacting on
         Fasset.
       </Typography>
+      <Divider />
       <Typography fontWeight="bold">Publication Distribution</Typography>
       <Typography textAlign="justify">
         Fasset would like to advise all publishers of publications which are not

@@ -266,7 +266,6 @@ const TenderDetails = () => {
             <AccordionDetails>
               <Typography
                 textAlign="center"
-                fontFamily="Helvetica Neue"
                 fontWeight="bolder"
                 fontSize={20}
               >
@@ -361,7 +360,6 @@ const TenderDetails = () => {
             <AccordionDetails>
               <Typography
                 textAlign="center"
-                fontFamily="Helvetica Neue"
                 fontWeight="bolder"
                 fontSize={20}
               >

@@ -1,5 +1,6 @@
 import {
-  IconButton,
+  Box,
+  Divider,
   Paper,
   Stack,
   Table,
@@ -10,15 +11,19 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Typography
+  Typography,
+  useMediaQuery
 } from "@mui/material";
 import React from "react";
-import VisibilityIcon from "@mui/icons-material/Visibility";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
+import { useTheme } from "@mui/material/styles";
+import InternshiCardMobile from "../Mobile/InternshiCardMobile";
 
 const Internships = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -78,113 +83,157 @@ const Internships = () => {
       >
         Internships
       </Typography>
-      <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
-        <Table aria-label="simple table">
-          <TableHead sx={{ backgroundColor: "primary.main" }}>
-            <TableRow>
-              <TableCell
-                align="center"
-                sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-              >
-                No#
-              </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-              >
-                Intervention Type
-              </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-              >
-                Purpose
-              </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-              >
-                Service Provider Expectations
-              </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-              >
-                Learner Exptections
-              </TableCell>
+      <Divider />
+      {isDesktop ? (
+        <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+          <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
+            <Table aria-label="simple table">
+              <TableHead sx={{ backgroundColor: "primary.main" }}>
+                <TableRow>
+                  <TableCell
+                    align="justify"
+                    sx={{
+                      fontWeight: "bolder",
+                      color: "#FFFFFF",
+                      fontSize: { md: 10 }
+                    }}
+                  >
+                    No#
+                  </TableCell>
+                  <TableCell
+                    align="justify"
+                    sx={{
+                      fontWeight: "bolder",
+                      color: "#FFFFFF",
+                      fontSize: { md: 10 }
+                    }}
+                  >
+                    Intervention Type
+                  </TableCell>
+                  <TableCell
+                    align="justify"
+                    sx={{
+                      fontWeight: "bolder",
+                      color: "#FFFFFF",
+                      fontSize: { md: 10 }
+                    }}
+                  >
+                    Purpose
+                  </TableCell>
+                  <TableCell
+                    align="justify"
+                    sx={{
+                      fontWeight: "bolder",
+                      color: "#FFFFFF",
+                      fontSize: { md: 10 }
+                    }}
+                  >
+                    Service Provider Expectations
+                  </TableCell>
+                  <TableCell
+                    align="justify"
+                    sx={{
+                      fontWeight: "bolder",
+                      color: "#FFFFFF",
+                      fontSize: { md: 10 }
+                    }}
+                  >
+                    Learner Exptections
+                  </TableCell>
 
-              <TableCell
-                align="center"
-                sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
-              >
-                Action
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {(rowsPerPage > 0
-              ? internships.slice(
-                  page * rowsPerPage,
-                  page * rowsPerPage + rowsPerPage
-                )
-              : internships
-            ).map((row, i) => (
-              <TableRow
-                key={row?.title}
-                sx={{ backgroundColor: i % 2 === 0 ? "action.hover" : "" }}
-              >
-                <TableCell align="center" component="th" scope="row">
-                  {i + 1}
-                </TableCell>
-                <TableCell align="center" component="th" scope="row">
-                  {row?.interventionType}
-                </TableCell>
-                <TableCell align="center" component="th" scope="row">
-                  {row?.purpose}
-                </TableCell>
-                <TableCell align="center" scope="row">
-                  {row?.providerExpectations}
-                </TableCell>
-                <TableCell align="center" scope="row">
-                  {row.learnerExpectations}
-                </TableCell>
-                <TableCell align="center" scope="row">
-                  <IconButton>
-                    <a
-                      href={"#/"}
-                      style={{ all: "unset" }}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <VisibilityIcon />
-                    </a>
-                  </IconButton>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableFooter>
-            <TableRow>
-              <TablePagination
-                rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
-                // colSpan={3}
-                count={internships?.length || 0}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                SelectProps={{
-                  inputProps: {
-                    "aria-label": "rows per page"
-                  },
-                  native: true
-                }}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-                ActionsComponent={TablePaginationActions}
+                  {/* <TableCell
+                  align="center"
+                  sx={{ fontWeight: "bolder", color: "#FFFFFF" }}
+                >
+                  Action
+                </TableCell> */}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {(rowsPerPage > 0
+                  ? internships.slice(
+                      page * rowsPerPage,
+                      page * rowsPerPage + rowsPerPage
+                    )
+                  : internships
+                ).map((row, i) => (
+                  <TableRow
+                    key={row?.title}
+                    sx={{ backgroundColor: i % 2 === 0 ? "action.hover" : "" }}
+                  >
+                    <TableCell align="justify" sx={{ fontSize: { md: 10 } }}>
+                      {i + 1}
+                    </TableCell>
+                    <TableCell align="justify" sx={{ fontSize: { md: 10 } }}>
+                      {row?.interventionType}
+                    </TableCell>
+                    <TableCell align="justify" sx={{ fontSize: { md: 10 } }}>
+                      {row?.purpose}
+                    </TableCell>
+                    <TableCell align="justify" sx={{ fontSize: { md: 10 } }}>
+                      {row?.providerExpectations}
+                    </TableCell>
+                    <TableCell align="justify" sx={{ fontSize: { md: 10 } }}>
+                      {row.learnerExpectations}
+                    </TableCell>
+                    {/* <TableCell align="center" scope="row">
+                    <IconButton>
+                      <a
+                        href={"#/"}
+                        style={{ all: "unset" }}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <VisibilityIcon />
+                      </a>
+                    </IconButton>
+                  </TableCell> */}
+                  </TableRow>
+                ))}
+              </TableBody>
+              <TableFooter>
+                <TableRow>
+                  <TablePagination
+                    rowsPerPageOptions={[
+                      5,
+                      10,
+                      25,
+                      { label: "All", value: -1 }
+                    ]}
+                    // colSpan={3}
+                    count={internships?.length || 0}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
+                    SelectProps={{
+                      inputProps: {
+                        "aria-label": "rows per page"
+                      },
+                      native: true
+                    }}
+                    onPageChange={handleChangePage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                    ActionsComponent={TablePaginationActions}
+                  />
+                </TableRow>
+              </TableFooter>
+            </Table>
+          </TableContainer>
+        </Box>
+      ) : (
+        <>
+          {internships?.map((internship, i) => {
+            return (
+              <InternshiCardMobile
+                interventionType={internship.interventionType}
+                purpose={internship.purpose}
+                providerExpectation={internship.providerExpectations}
+                learnerExpectation={internship.learnerExpectations}
+                key={i}
               />
-            </TableRow>
-          </TableFooter>
-        </Table>
-      </TableContainer>
+            );
+          })}
+        </>
+      )}
     </Stack>
   );
 };

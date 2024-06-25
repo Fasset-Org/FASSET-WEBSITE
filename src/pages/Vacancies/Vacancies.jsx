@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
@@ -8,6 +7,9 @@ import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import CurrentVacancies from "../../components/Vacancies/CurrentVacancies";
 import PreviousVacancies from "../../components/Vacancies/PreviousVacancies";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useTheme } from "@mui/material/styles";
+import { Stack, useMediaQuery } from "@mui/material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -30,12 +32,6 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired
-};
-
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
@@ -44,73 +40,104 @@ function a11yProps(index) {
 }
 
 const Vacancies = () => {
-  const [value, setValue] = React.useState(0);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const { pathname } = useLocation();
+
+  const value = pathname.split("/")[1] || "openPositions";
+
+  const navigate = useNavigate();
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    navigate(`/${newValue}`, { replace: true });
   };
 
-  return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        bgcolor: "background.paper",
-        display: "flex"
-      }}
-    >
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        textColor="secondary"
+  if (isDesktop) {
+    return (
+      <Box
         sx={{
-          borderRight: 1,
-          borderColor: "lightgray",
-          backgroundColor: "primary.main",
-          borderRadius: 0,
-          m: 2,
-          minHeight: 450
-        }}
-        TabIndicatorProps={{
-          sx: {
-            border: 3,
-            borderColor: "secondary.main"
-          }
+          flexGrow: 1,
+          bgcolor: "background.paper",
+          display: "flex"
         }}
       >
-        <Tab
-          label="Available Vacancies"
-          icon={<ArrowCircleDownIcon />}
-          iconPosition="start"
-          {...a11yProps(0)}
+        <Tabs
+          orientation="vertical"
+          variant="scrollable"
+          value={value}
+          onChange={handleChange}
+          textColor="secondary"
           sx={{
-            borderBottom: 1,
+            borderRight: 1,
             borderColor: "lightgray",
-            color: "#FFFFFF"
+            backgroundColor: "primary.main",
+            borderRadius: 0,
+            m: 2,
+            minHeight: 450
           }}
-        />
-        <Tab
-          label="Previous Vacancies"
-          icon={<ArrowCircleUpIcon />}
-          iconPosition="start"
-          {...a11yProps(1)}
-          sx={{
-            borderBottom: 1,
-            borderColor: "lightgray",
-            color: "#FFFFFF",
-            textAlign: "start"
+          TabIndicatorProps={{
+            sx: {
+              border: 3,
+              borderColor: "secondary.main"
+            }
           }}
-        />
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        <CurrentVacancies />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <PreviousVacancies />
-      </TabPanel>
-    </Box>
-  );
+        >
+          <Tab
+            label="Open Positions"
+            icon={<ArrowCircleDownIcon />}
+            iconPosition="start"
+            {...a11yProps("openPositions")}
+            sx={{
+              borderBottom: 1,
+              borderColor: "lightgray",
+              color: "#FFFFFF"
+            }}
+            value="openPositions"
+          />
+          <Tab
+            label="Past Positions"
+            icon={<ArrowCircleUpIcon />}
+            iconPosition="start"
+            {...a11yProps("pastPositions")}
+            sx={{
+              borderBottom: 1,
+              borderColor: "lightgray",
+              color: "#FFFFFF",
+              textAlign: "start"
+            }}
+            value="pastPositions"
+          />
+        </Tabs>
+        <TabPanel value={value} index="openPositions">
+          <CurrentVacancies />
+        </TabPanel>
+        <TabPanel value={value} index="pastPositions">
+          <PreviousVacancies />
+        </TabPanel>
+      </Box>
+    );
+  } else {
+    switch (value) {
+      case "openPositions":
+        return (
+          <Stack padding={2}>
+            <CurrentVacancies />
+          </Stack>
+        );
+      case "pastPositions":
+        return (
+          <Stack padding={2}>
+            <PreviousVacancies />
+          </Stack>
+        );
+      default:
+        return (
+          <Stack padding={2}>
+            <CurrentVacancies />
+          </Stack>
+        );
+    }
+  }
 };
 
 export default Vacancies;

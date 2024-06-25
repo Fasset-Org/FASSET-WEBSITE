@@ -15,7 +15,7 @@ import {
   TableRow,
   Typography
 } from "@mui/material";
-import React from "react";
+import React, { Fragment } from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import { useQuery } from "@tanstack/react-query";
@@ -50,12 +50,11 @@ const ResearchReports = () => {
     setAnchorEl(null);
   };
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <Stack spacing={1}>
       <Typography
-        fontFamily="Helvetica Neue"
         fontWeight="bolder"
         fontSize={20}
         sx={{ color: "primary.main" }}
@@ -71,7 +70,7 @@ const ResearchReports = () => {
       {isLoading ? (
         <LinearProgress />
       ) : (
-        <>
+        <Fragment>
           {data?.researchReports && (
             <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -216,7 +215,7 @@ const ResearchReports = () => {
               </Table>
             </TableContainer>
           )}
-        </>
+        </Fragment>
       )}
     </Stack>
   );

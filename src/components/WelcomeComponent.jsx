@@ -44,7 +44,6 @@ const WelcomeComponent = () => {
         >
           <Typography
             textAlign="center"
-            fontFamily="Helvetica Neue"
             fontWeight="bolder"
             fontSize={20}
             textTransform="uppercase"
@@ -53,11 +52,7 @@ const WelcomeComponent = () => {
             About Fasset
           </Typography>
 
-          <Typography
-            fontFamily="Helvetica Neue"
-            fontSize={14}
-            textAlign="justify"
-          >
+          <Typography fontSize={14} textAlign="justify">
             Fasset is the Finance and Accounting Services Sector Education and
             Training Authority. The finance and accounting services sector is
             particularly important because it is the largest employer of people

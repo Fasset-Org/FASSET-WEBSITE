@@ -1,4 +1,4 @@
-import { Grid, Skeleton, Stack, Typography } from "@mui/material";
+import { Divider, Grid, Skeleton, Stack, Typography } from "@mui/material";
 import React from "react";
 import ProfileCard from "./ProfileCard";
 import { useQuery } from "@tanstack/react-query";
@@ -16,9 +16,9 @@ const BoardMembers = () => {
     return (
       <div>
         <Grid container spacing={2}>
-          {[...Array(5)].map((skeleton) => {
+          {[...Array(5)].map((skeleton, i) => {
             return (
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={4} key={i}>
                 <Skeleton variant="rectangular" width={"100%"} height={300} />;
               </Grid>
             );
@@ -37,6 +37,7 @@ const BoardMembers = () => {
       >
         Board Members
       </Typography>
+      <Divider />
       <Typography>
         The Board is Fasset’s Accounting Authority. As the highest governing
         structure, the Board provides strategic leadership for Fasset; it

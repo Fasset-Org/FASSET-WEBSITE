@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import {
@@ -28,35 +28,16 @@ import ProfessionalBodies from "./pages/ProfessionalBodies/ProfessionalBodies";
 import TenderDetails from "./pages/SupplyChain/TenderDetails";
 import FallbackError from "./pages/FallbackError";
 import MainNavigation from "./components/Navigation/MainNavigation";
-import WorkbasedProgrammeMobile from "./pages/Mobile/Employers/WorkbasedProgrammeMobile";
-import WhoWeAreMobile from "./pages/Mobile/AboutUs/WhoWeAreMobile";
-import OurMandateMobile from "./pages/Mobile/AboutUs/OurMandateMobile";
-import BoardMobile from "./pages/Mobile/AboutUs/BoardMobile";
-import CommitteesMobile from "./pages/Mobile/AboutUs/CommitteesMobile";
-import ConstitutionMobile from "./pages/Mobile/AboutUs/ConstitutionMobile";
-import PoliciesMobile from "./pages/Mobile/AboutUs/PoliciesMobile";
-import ChooseCareerMobile from "./pages/Mobile/Learners/ChooseCareerMobile";
-import ScarceSkilsMobile from "./pages/Mobile/Learners/ScarceSkilsMobile";
-import CareerGuideMobile from "./pages/Mobile/Learners/CareerGuideMobile";
-import BursaryMobile from "./pages/Mobile/Learners/BursaryMobile";
-import CareerPortalMobile from "./pages/Mobile/Learners/CareerPortalMobile";
-import SkillsProgrammeMobile from "./pages/Mobile/Employers/SkillsProgrammeMobile";
-import MandatoryGrantsMobile from "./pages/Mobile/Employers/MandatoryGrantsMobile";
-import DiscretionaryGrantsMobile from "./pages/Mobile/Employers/DiscretionaryGrantsMobile";
-import TrainingProvidersMobile from "./pages/Mobile/Employers/TrainingProvidersMobile";
-import AboutFassetLearnershipsMobile from "./pages/Mobile/ProfessionalBodies/AboutFassetLearnershipsMobile";
-import CurrentTendersMobile from "./pages/Mobile/SupplyChain/CurrentTendersMobile";
-import PastTendersMobile from "./pages/Mobile/SupplyChain/PastTendersMobile";
-import CancelledTendersMobile from "./pages/Mobile/SupplyChain/CancelledTendersMobile";
-import DownloadsMobile from "./pages/Mobile/Resources/DownloadsMobile";
-import ResearchMobile from "./pages/Mobile/Resources/ResearchMobile";
-import AvailableVacanciesMobile from "./pages/Mobile/Vacancies/AvailableVacanciesMobile";
-import PreviousVacanciesMobile from "./pages/Mobile/Vacancies/PreviousVacanciesMobile";
-import AnnualReportsMobile from "./pages/Mobile/Resources/AnnualReportsMobile";
+import CookieConsent from "react-cookie-consent";
 
 function App() {
   const [theme, setTheme] = useState("light");
   const queryClient = new QueryClient();
+
+  console.log(
+    "%cAhh my guy just stop, it's pointless",
+    "color: red; font-weight: bold; font-size: 20px;"
+  );
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
@@ -67,6 +48,24 @@ function App() {
     <ThemeProvider theme={theme === "light" ? themeLight : themeDark}>
       <CssBaseline />
       <QueryClientProvider client={queryClient}>
+        <CookieConsent
+          location="bottom"
+          buttonText="Accept Cookies"
+          cookieName="FassetCookie"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{
+            color: "#4e503b",
+            fontSize: "15px",
+            padding: 10,
+            borderRadius: 5,
+            fontWeight: "bolder"
+          }}
+          expires={150}
+        >
+          <Typography fontSize={15}>
+            This website uses cookies to enhance the user experience.{" "}
+          </Typography>
+        </CookieConsent>
         <Router>
           <Routes>
             {/* Website Routes */}
@@ -79,89 +78,66 @@ function App() {
                 }}
               />
               <Route path="/home" element={<Home />} index />
-              <Route path="/vacancies" element={<Vacancies />} />
-              <Route path="/vacancies/:id" element={<VacancyDetails />} />
-              <Route path="/aboutus" element={<AboutUs />} />
-              <Route path="/learners" element={<Learners />} />
-              <Route path="/contactus" element={<Home id="contact-us" />} />
-              <Route path="/employers" element={<Employers />} />
-              <Route path="/tenders" element={<SupplyChain />} />
-              <Route path="/tenders/:id" element={<TenderDetails />} />
+
+              {/* About Us Routes */}
+              <Route path="/whoweare" element={<AboutUs />} />
+              <Route path="/ourMandate" element={<AboutUs />} />
+              <Route path="/accountingAuthority" element={<AboutUs />} />
+              <Route path="/management" element={<AboutUs />} />
+              <Route path="/constitution" element={<AboutUs />} />
+              <Route path="/policies" element={<AboutUs />} />
+
+              {/* Learning Programme Routes */}
+              <Route path="/learnerOverview" element={<Learners />} />
+              <Route path="/bursaries" element={<Learners />} />
+              <Route path="/leanerships" element={<Learners />} />
+              <Route path="/internships" element={<Learners />} />
+              <Route path="/skillsProgrammes" element={<Learners />} />
+
+              {/* Employer Routes */}
+              <Route path="/mandateGrants" element={<Employers />} />
+              <Route path="/discreteGrants" element={<Employers />} />
+              <Route path="/learningEvents" element={<Employers />} />
+
+              {/* Quality Assurance Routes */}
+              <Route path="/overview" element={<ProfessionalBodies />} />
               <Route
-                path="/qualityAssurance"
+                path="/SDPAccreditation"
                 element={<ProfessionalBodies />}
               />
-              <Route path="/resources" element={<Resources />} />
-              {/* Mobile Routes */}
-              <Route path="/whoweare" element={<WhoWeAreMobile />} />
-              <Route path="/ourMandate" element={<OurMandateMobile />} />
-              <Route path="/board" element={<BoardMobile />} />
-              <Route path="/committees" element={<CommitteesMobile />} />
-              <Route path="/constitution" element={<ConstitutionMobile />} />
-              <Route path="/policies" element={<PoliciesMobile />} />
-              <Route path="/chooseCarrer" element={<ChooseCareerMobile />} />
-              <Route path="/scarceSkils" element={<ScarceSkilsMobile />} />
-              <Route path="/carrerGuide" element={<CareerGuideMobile />} />
-              <Route path="/bursary" element={<BursaryMobile />} />
-              <Route path="/careerPortal" element={<CareerPortalMobile />} />
+              <Route path="/accreditation" element={<ProfessionalBodies />} />
               <Route
-                path="/skillsProgramme"
-                element={<SkillsProgrammeMobile />}
+                path="/assessmentCentresAccreditation"
+                element={<ProfessionalBodies />}
+              />
+              <Route path="/SMERegistration" element={<ProfessionalBodies />} />
+              <Route path="/EISA" element={<ProfessionalBodies />} />
+              <Route
+                path="/workplaceApproval"
+                element={<ProfessionalBodies />}
               />
               <Route
-                path="/workbasedProgramme"
-                element={<WorkbasedProgrammeMobile />}
+                path="/externalModerationProcess"
+                element={<ProfessionalBodies />}
               />
-              <Route
-                path="/mandateGrants"
-                element={<MandatoryGrantsMobile />}
-              />
-              <Route
-                path="/discreteGrants"
-                element={<DiscretionaryGrantsMobile />}
-              />
-              <Route
-                path="/trainingProviders"
-                element={<TrainingProvidersMobile />}
-              />
-              <Route
-                path="/leanersships"
-                element={<AboutFassetLearnershipsMobile />}
-              />
+              <Route path="/QCTOPolicies" element={<ProfessionalBodies />} />
 
-              <Route
-                path="/currentTenders"
-                element={<CurrentTendersMobile />}
-              />
-              <Route path="/pastTenders" element={<PastTendersMobile />} />
-              <Route
-                path="/cancelledTenders"
-                element={<CancelledTendersMobile />}
-              />
+              {/* Tenders Routes */}
+              <Route path="/currentTenders" element={<SupplyChain />} />
+              <Route path="/previousTenders" element={<SupplyChain />} />
+              <Route path="/cancelledTenders" element={<SupplyChain />} />
+              <Route path="/tenders/:id" element={<TenderDetails />} />
 
-              <Route path="/downloads" element={<DownloadsMobile />} />
-              <Route path="/research" element={<ResearchMobile />} />
-              <Route path="/annualReports" element={<AnnualReportsMobile />} />
-              <Route
-                path="/availablePositions"
-                element={<AvailableVacanciesMobile />}
-              />
-              <Route
-                path="/previousPositions"
-                element={<PreviousVacanciesMobile />}
-              />
+              {/* Resoruces Routes */}
+              <Route path="/downloads" element={<Resources />} />
+              <Route path="/research" element={<Resources />} />
+              <Route path="/annualReports" element={<Resources />} />
+
+              {/* Vacancies Routes */}
+              <Route path="/openPositions" element={<Vacancies />} />
+              <Route path="/pastPositions" element={<Vacancies />} />
+              <Route path="/vacancies/:id" element={<VacancyDetails />} />
             </Route>
-
-            {/* Auth Routes */}
-            {/* <Route path="/login" element={<LoginUser />} /> */}
-
-            {/* Content Management Routes */}
-
-            {/* <Route path="/fms" element={<Navigation />}>
-              <Route path="dashboard" element={<Dashboard />} />
-              <Route path="users" element={<UsersList />} />
-              <Route path="assets" element={<AssetsAllocated />} />
-            </Route> */}
           </Routes>
         </Router>
         <ReactQueryDevtools initialIsOpen={false} />

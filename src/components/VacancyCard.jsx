@@ -9,7 +9,7 @@ import {
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const VacancyCard = ({ vacancy }) => {
+const VacancyCard = ({ vacancy, open }) => {
   const navigate = useNavigate();
   return (
     <Grid
@@ -37,12 +37,12 @@ const VacancyCard = ({ vacancy }) => {
             textAlign="center"
             mt={2}
             sx={{
-              maxHeight: 100,
+              // maxHeight: 100,
               overflow: "hidden",
               textOverflow: "ellipsis"
             }}
           >
-            {/* {vacancy.purposeOfJob} */}
+            {vacancy.purposeOfJob}
           </Typography>
           <Box textAlign="center">
             <Button
@@ -51,7 +51,7 @@ const VacancyCard = ({ vacancy }) => {
               color="primary"
               // fullWidth
               onClick={() => {
-                navigate(`/vacancies/${vacancy.id}`);
+                navigate(`/vacancies/${vacancy.id}`, { state: { open: open } });
               }}
             >
               Read More

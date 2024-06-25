@@ -1,6 +1,8 @@
 import {
+  Backdrop,
   Box,
   Button,
+  CircularProgress,
   Dialog,
   DialogContent,
   DialogTitle,
@@ -18,7 +20,7 @@ import {
   useTheme
 } from "@mui/material";
 import { Field, Form, Formik } from "formik";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import TextFieldWrapper from "../FormComponents/TextFieldWrapper";
 import SelectFieldWrapper from "../FormComponents/SelectFieldWrapper";
 import * as Yup from "yup";
@@ -29,6 +31,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const JobApplyModal = ({ position }) => {
   const [open, setOpen] = React.useState(false);
+  const [openBackDrop, setOpenBackDrop] = useState(false);
 
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -41,12 +44,16 @@ const JobApplyModal = ({ position }) => {
     setOpen(false);
   };
 
-  const { mutate, isError, isSuccess, data, error } = useMutation({
+  const { mutate, isError, isSuccess, data, error, isLoading } = useMutation({
     mutationFn: async (formData) => {
       return await UserQuery.jobApplication(formData);
     },
     onSuccess: (data) => {
-      console.log(data);
+      // console.log(data);
+      setOpenBackDrop(false);
+    },
+    onError: (err) => {
+      setOpenBackDrop(false);
     }
   });
 
@@ -103,6 +110,14 @@ const JobApplyModal = ({ position }) => {
     }
   }
 
+  useEffect(() => {
+    if (isLoading) {
+      setOpenBackDrop(true);
+    } else {
+      setOpenBackDrop(false);
+    }
+  }, [isLoading]);
+
   function BootstrapDialogTitle(props) {
     const { children, onClose, ...other } = props;
 
@@ -151,7 +166,7 @@ const JobApplyModal = ({ position }) => {
       {isSuccess && <AlertPopup open={true} message={data?.message} />}
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={null}
         fullScreen={fullScreen}
         fullWidth
         sx={{ width: "100%" }}
@@ -277,6 +292,7 @@ const JobApplyModal = ({ position }) => {
               );
 
               mutate(formData);
+              console.log(isLoading);
             }}
           >
             {({ values, setFieldValue, getFieldMeta }) => {
@@ -555,6 +571,17 @@ const JobApplyModal = ({ position }) => {
                         <Button type="submit" variant="contained">
                           Submit Application
                         </Button>
+                        <Backdrop
+                          sx={{
+                            color: "#fff",
+                            pointerEvents: "none",
+                            zIndex: (theme) => theme.zIndex.drawer + 1
+                          }}
+                          open={openBackDrop}
+                          onClick={handleClose}
+                        >
+                          <CircularProgress color="inherit" />
+                        </Backdrop>
                       </Stack>
                     </Grid>
                   </Grid>

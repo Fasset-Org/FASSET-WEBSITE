@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 import ConstitutionFile from "../../images/SETA_Standard_Constitution_Fasset_Final_Amended_Nov_2017.pdf";
 
@@ -12,8 +12,8 @@ const Constitution = () => {
       >
         Constitution
       </Typography>
-
-      <Typography>
+      <Divider />
+      <Typography mt={1}>
         &nbsp;
         <a
           href={ConstitutionFile}

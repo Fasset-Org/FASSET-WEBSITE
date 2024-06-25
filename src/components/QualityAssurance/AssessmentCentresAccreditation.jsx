@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Divider, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const AssessmentCentresAccreditation = () => {
@@ -11,7 +11,7 @@ const AssessmentCentresAccreditation = () => {
       >
         Assessment Centres Accreditation
       </Typography>
-
+      <Divider />
       <Typography textAlign="justify">
         Assessment and certification of learners enrolled in occupational
         qualifications occurs through a new process known as External Integrated

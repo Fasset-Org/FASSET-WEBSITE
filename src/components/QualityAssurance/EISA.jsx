@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const EISA = () => {
@@ -11,7 +11,7 @@ const EISA = () => {
       >
         External Integrated Summative Assessment (EISA)
       </Typography>
-
+      <Divider />
       <Typography textAlign="justify">
         Assessment for leaners enrolled in occupational qualifications is
         facilitated through an External Integrated Summative Assessment (EISA).

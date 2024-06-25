@@ -6,7 +6,7 @@ const WindowCountDown = ({ grant }) => {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a complete state
-      return <Typography>Expired</Typography>;
+      return;
     } else {
       // Render a countdown
       return (

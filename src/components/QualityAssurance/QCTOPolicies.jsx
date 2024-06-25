@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Divider, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import Policy1 from "../../files/Quality Assurance/QCTO-Policy-on-Accreditation-of-Skills-Development-Providers (2).pdf";
 import Policy2 from "../../files/Quality Assurance/QCTO-Policy-on-Accreditation-of-Assessment-Centres (1).pdf";
@@ -21,7 +21,7 @@ const QCTOPolicies = () => {
       >
         QCTO Policies
       </Typography>
-
+      <Divider />
       <div>
         <ul>
           <li>

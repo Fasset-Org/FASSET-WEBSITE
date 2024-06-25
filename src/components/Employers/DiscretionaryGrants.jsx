@@ -1,4 +1,5 @@
 import {
+  Divider,
   Paper,
   Stack,
   Table,
@@ -28,6 +29,7 @@ const DiscretionaryGrants = () => {
       >
         Discretionary Grants
       </Typography>
+      <Divider />
       <Typography>
         The Fasset Board determines the areas of strategic importance for the
         sector by assessing the information from Mandatory Grant applications,
@@ -36,8 +38,9 @@ const DiscretionaryGrants = () => {
         National Skills Development Strategy (NSDS), coordinated by DHET, guides
         the development of strategic areas within Fasset’s sector.
       </Typography>
+      <Divider />
       <Typography
-        textAlign="center"
+        // textAlign="center"
         sx={{ fontWeight: "bolder", color: "primary.main" }}
       >
         Benefits available to Fasset levy-paying and non- levy paying employers

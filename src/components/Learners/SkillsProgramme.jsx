@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import { Stack, useMediaQuery, useTheme } from "@mui/material";
+import { Divider, Stack, useMediaQuery, useTheme } from "@mui/material";
 import img from "../../images/SkillProgramme.png";
 import FundedCourse from "../../files/Employers/Projects_that_are_funded_Fasset_2019.docx";
 
@@ -17,7 +17,7 @@ const SkillsProgramme = () => {
       >
         Skills Programme
       </Typography>
-
+      <Divider />
       <Typography textAlign="justify">
         Fasset has adopted a pipeline approach to funding. The pipeline approach
         seeks to identify the education and training value chain of people who
@@ -32,7 +32,7 @@ const SkillsProgramme = () => {
         height={xs || sm ? "auto%" : 300}
         style={{ objectFit: "contain" }}
       />
-
+      <Divider />
       <Typography>
         To facilitate skills development, transformation and social upliftment
         in the sector in pursuance of NSDS Targets Fasset funds programmes that

@@ -12,12 +12,11 @@ import { useNavigate } from "react-router-dom";
 
 const NavLink = styled(Link)({
   textDecoration: "none",
-  fontFamily: 'Open Sans", Helvetica, Arial, Lucida, sans-serif',
   cursor: "pointer",
 
   ":hover": {
     transform: "none",
-    backgroundColor: "#14a37f",
+    // backgroundColor: "#14a37f",
     borderRadius: 8,
     fontWeight: 500
   },
@@ -55,14 +54,17 @@ const TopLinksNavigation = () => {
             sx={{ backgroundColor: "#FFFFFF", borderRadius: 5 }}
           />
         </IconButton>
-        <Stack width="100%">
+        <Stack
+          width="100%"
+          onClick={() => navigate("/home")}
+          sx={{ cursor: "pointer" }}
+        >
           <Typography
             variant="h6"
             noWrap
             component="div"
             // textTransform="uppercase"
             fontSize={15}
-            onClick={() => navigate("/home")}
             textTransform="uppercase"
             fontWeight="bolder"
             sx={{ color: "primary.main" }}

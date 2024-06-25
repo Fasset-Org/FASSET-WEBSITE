@@ -46,7 +46,6 @@ const AboutInfo = () => {
           </IconButton>
           <Typography
             textAlign="center"
-            fontFamily="Helvetica Neue"
             fontWeight="bolder"
             fontSize={20}
             textTransform="uppercase"
@@ -69,7 +68,6 @@ const AboutInfo = () => {
           </IconButton>
           <Typography
             textAlign="center"
-            fontFamily="Helvetica Neue"
             fontWeight="bolder"
             fontSize={20}
             textTransform="uppercase"
@@ -94,7 +92,6 @@ const AboutInfo = () => {
           </IconButton>
           <Typography
             textAlign="center"
-            fontFamily="Helvetica Neue"
             fontWeight="bolder"
             fontSize={30}
             textTransform="uppercase"
@@ -123,7 +120,6 @@ const AboutInfo = () => {
             >
               <Typography
                 textAlign="center"
-                fontFamily="Helvetica Neue"
                 fontWeight="bolder"
                 fontSize={15}
                 textTransform="uppercase"
@@ -156,7 +152,6 @@ const AboutInfo = () => {
             >
               <Typography
                 textAlign="center"
-                fontFamily="Helvetica Neue"
                 fontWeight="bolder"
                 fontSize={15}
                 textTransform="uppercase"
@@ -189,7 +184,6 @@ const AboutInfo = () => {
             >
               <Typography
                 textAlign="center"
-                fontFamily="Helvetica Neue"
                 fontWeight="bolder"
                 fontSize={15}
                 textTransform="uppercase"
@@ -221,7 +215,6 @@ const AboutInfo = () => {
             >
               <Typography
                 textAlign="center"
-                fontFamily="Helvetica Neue"
                 fontWeight="bolder"
                 fontSize={15}
                 textTransform="uppercase"
@@ -252,7 +245,6 @@ const AboutInfo = () => {
             >
               <Typography
                 textAlign="center"
-                fontFamily="Helvetica Neue"
                 fontWeight="bolder"
                 fontSize={15}
                 textTransform="uppercase"

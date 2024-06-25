@@ -1,4 +1,5 @@
 import {
+  Divider,
   IconButton,
   LinearProgress,
   Menu,
@@ -50,14 +51,14 @@ const AnnualReports = () => {
     }
   });
 
-  console.log(data);
+  // console.log(data);
 
   if (isLoading) {
     return <LinearProgress />;
   }
 
   return (
-    <Stack spacing={1}>
+    <Stack spacing={2}>
       <Typography
         fontWeight="bolder"
         fontSize={20}
@@ -65,7 +66,7 @@ const AnnualReports = () => {
       >
         Annual Reports
       </Typography>
-
+      <Divider />
       <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>

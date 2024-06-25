@@ -35,20 +35,25 @@ import ConstructionIcon from "@mui/icons-material/Construction";
 
 // Leaners Icons
 import WorkIcon from "@mui/icons-material/Work";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import EditRoadIcon from "@mui/icons-material/EditRoad";
+// import AdjustIcon from "@mui/icons-material/Adjust";
+// import SchoolIcon from "@mui/icons-material/School";
 import CastForEducationIcon from "@mui/icons-material/CastForEducation";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
-
 // Employers Icons
 import AdjustIcon from "@mui/icons-material/Adjust";
-import EditNoteIcon from "@mui/icons-material/EditNote";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import PixIcon from "@mui/icons-material/Pix";
 import ModelTrainingIcon from "@mui/icons-material/ModelTraining";
 
-// Proffessional Bodies Icons
-import EventRepeatIcon from "@mui/icons-material/EventRepeat";
+// Quality Assurance Icons
+import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import CreditScoreIcon from "@mui/icons-material/CreditScore";
+import AssessmentIcon from "@mui/icons-material/Assessment";
+import SubjectIcon from "@mui/icons-material/Subject";
+import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
+import FactCheckIcon from "@mui/icons-material/FactCheck";
+import RunningWithErrorsIcon from "@mui/icons-material/RunningWithErrors";
+// import PolicyIcon from '@mui/icons-material/Policy';
 
 // Supply Chain Icons
 import TaskIcon from "@mui/icons-material/Task";
@@ -111,8 +116,8 @@ export default function MobileNavigation() {
       children: [
         { name: "About", icon: AssignmentIndIcon, url: "/whoweare" },
         { name: "Our Mandate", icon: RoomPreferencesIcon, url: "/ourMandate" },
-        { name: "Board", icon: Diversity3Icon, url: "/board" },
-        { name: "Committees", icon: Diversity3Icon, url: "/committees" },
+        { name: "Accounting Authority", icon: Diversity3Icon, url: "/accountingAuthority" },
+        { name: "Management", icon: Diversity3Icon, url: "/management" },
         { name: "Constitution", icon: PolicyIcon, url: "/constitution" },
         { name: "Policies", icon: ConstructionIcon, url: "/policies" }
       ],
@@ -120,21 +125,29 @@ export default function MobileNavigation() {
       open: false
     },
     {
-      parent: "Leaners",
+      parent: "Learning Programmes",
       children: [
         {
-          name: "Choose career in our sector",
+          name: "Overview",
           icon: WorkIcon,
-          url: "/chooseCarrer"
+          url: "/learnerOverview"
         },
-        { name: "Scarce Skills", icon: AcUnitIcon, url: "/scarceSkils" },
+        { name: "Bursaries", icon: CastForEducationIcon, url: "/bursaries" },
         {
-          name: "Career Guide Booklet",
-          icon: EditRoadIcon,
-          url: "/carrerGuide"
+          name: "Learnerships",
+          icon: SchoolIcon,
+          url: "/leanerships"
         },
-        { name: "Bursary", icon: CastForEducationIcon, url: "/bursary" },
-        { name: "Career Portal", icon: AutoAwesomeIcon, url: "/careerPortal" }
+        {
+          name: "Internships",
+          icon: SchoolIcon,
+          url: "/internships"
+        },
+        {
+          name: "Skills Programmes",
+          icon: AdjustIcon,
+          url: "/skillsProgrammes"
+        }
       ],
       icon: SchoolIcon,
       open: false
@@ -142,12 +155,6 @@ export default function MobileNavigation() {
     {
       parent: "Employers",
       children: [
-        { name: "Skills Programme", icon: AdjustIcon, url: "/skillsProgramme" },
-        {
-          name: "TVET Workbased Programme",
-          icon: EditNoteIcon,
-          url: "/workbasedProgramme"
-        },
         {
           name: "Mandatory Grants",
           icon: AccountBalanceIcon,
@@ -155,22 +162,61 @@ export default function MobileNavigation() {
         },
         { name: "Discretionary Grants", icon: PixIcon, url: "/discreteGrants" },
         {
-          name: "Training Providers",
+          name: "Lifelong Learning Events",
           icon: ModelTrainingIcon,
-          url: "/trainingProviders"
+          url: "/learningEvents"
         }
       ],
       icon: AssuredWorkloadIcon,
       open: false
     },
     {
-      parent: "Proffessional Bodies",
+      parent: "Quality Assurance",
       children: [
-        { name: "Leanersships", icon: SchoolIcon, url: "/leanersships" },
         {
-          name: "Lifeling Learning Events",
-          icon: EventRepeatIcon,
-          url: "/learningEvents"
+          name: "Overview",
+          icon: ScreenSearchDesktopIcon,
+          url: "/overview"
+        },
+        {
+          name: "SDP Accreditation",
+          icon: DesignServicesIcon,
+          url: "/SDPAccreditation"
+        },
+        {
+          name: "Accreditation",
+          icon: CreditScoreIcon,
+          url: "/accreditation"
+        },
+        {
+          name: "Assessment Centres Accreditation",
+          icon: AssessmentIcon,
+          url: "/assessmentCentresAccreditation"
+        },
+        {
+          name: "SME Registration",
+          icon: SubjectIcon,
+          url: "/SMERegistration"
+        },
+        {
+          name: "EISA",
+          icon: IntegrationInstructionsIcon,
+          url: "/EISA"
+        },
+        {
+          name: "Workplace Approval",
+          icon: FactCheckIcon,
+          url: "/workplaceApproval"
+        },
+        {
+          name: "External Moderation Process",
+          icon: RunningWithErrorsIcon,
+          url: "/externalModerationProcess"
+        },
+        {
+          name: "QCTO Policies",
+          icon: PolicyIcon,
+          url: "/QCTOPolicies"
         }
       ],
       icon: PestControlIcon,
@@ -180,7 +226,7 @@ export default function MobileNavigation() {
       parent: "Supply Chain",
       children: [
         { name: "Current Tenders", icon: TaskIcon, url: "/currentTenders" },
-        { name: "Past Tenders", icon: FileOpenIcon, url: "/pastTenders" },
+        { name: "Past Tenders", icon: FileOpenIcon, url: "/previousTenders" },
         {
           name: "Cancelled Tenders",
           icon: WebAssetOffIcon,
@@ -204,14 +250,14 @@ export default function MobileNavigation() {
       parent: "Vacancies",
       children: [
         {
-          name: "Available Vacancies",
+          name: "Open Positions",
           icon: ArrowCircleDownIcon,
-          url: "/availablePositions"
+          url: "/openPositions"
         },
         {
-          name: "Previous Vacancies",
+          name: "Past Positions",
           icon: ArrowCircleUpIcon,
-          url: "/previousPositions"
+          url: "/pastPositions"
         }
       ],
       icon: WorkHistoryIcon,

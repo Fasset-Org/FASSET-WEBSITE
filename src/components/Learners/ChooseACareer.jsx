@@ -65,7 +65,13 @@ const ChooseACareer = () => {
         </li>
       </ul>
 
-      <img src={StepGuideImage} alt="" width="70%" height={500} />
+      <img
+        src={StepGuideImage}
+        alt=""
+        width="100%"
+        height={500}
+        style={{ objectFit: "contain" }}
+      />
     </Stack>
   );
 };

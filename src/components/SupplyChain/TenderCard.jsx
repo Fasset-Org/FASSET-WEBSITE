@@ -1,4 +1,4 @@
-import { Button, Chip, Paper, Stack, Typography } from "@mui/material";
+import { Button, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -26,12 +26,15 @@ const TenderCard = ({ tender, state }) => {
             fontWeight: "bolder",
             color: "primary.main",
             fontSize: 15,
-            textAlign: "center"
+            textAlign: "center",
+            width: '100%'
           }}
+          
+          
         >
           {tender?.tenderName}
         </Typography>
-        <Chip
+        {/* <Chip
           label={
             state === "active"
               ? "active"
@@ -46,8 +49,8 @@ const TenderCard = ({ tender, state }) => {
               ? "warning"
               : "error"
           }
-          sx={{ height: 30, fontWeight: "bolder" }}
-        />
+          sx={{ height: 30, fontWeight: "bolder", width: '20%' }}
+        /> */}
       </Stack>
       <Stack
         direction={{ md: "row", xs: "column" }}

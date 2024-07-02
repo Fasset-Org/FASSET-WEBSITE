@@ -32,7 +32,7 @@ const ProfileCard = ({ title, fullName, position, imageFileURL }) => {
             color: "primary.main"
           }}
         >
-          {position.toUpperCase()}
+          {position}
         </Typography>
         <Typography sx={{ fontWeight: "bolder", fontSize: 15 }}>
           {title} {fullName}

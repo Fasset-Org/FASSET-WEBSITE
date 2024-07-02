@@ -3,7 +3,7 @@ import React from "react";
 
 const ProfileCard = ({ title, fullName, position, imageFileURL }) => {
   return (
-    <Stack component={Paper} height={300} boxShadow={5} borderRadius={3}>
+    <Stack component={Paper} height={270} boxShadow={5} borderRadius={3}>
       <img
         src={`${process.env.REACT_APP_API_URL}/uploads/board-members/${imageFileURL}`}
         alt=""
@@ -21,7 +21,7 @@ const ProfileCard = ({ title, fullName, position, imageFileURL }) => {
         component={Paper}
         width="80%"
         m="auto"
-        sx={{ position: "relative", bottom: 30, borderRadius: 0 }}
+        sx={{ position: "relative", bottom: 20, borderRadius: 0 }}
         elevation={5}
       >
         <Typography

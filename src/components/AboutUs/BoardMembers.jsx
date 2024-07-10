@@ -33,21 +33,21 @@ const BoardMembers = () => {
       <Typography
         fontWeight="bolder"
         fontSize={20}
-        sx={{ color: "primary.main", textTransform: "uppercase", mb: 1 }}
+        sx={{ color: "primary.main", textTransform: "uppercase", mb: 2 }}
       >
-        Board Members
+        Accounting Authority
       </Typography>
       <Divider />
-      <Typography>
+      {/* <Typography>
         The Board is Fasset’s Accounting Authority. As the highest governing
         structure, the Board provides strategic leadership for Fasset; it
         provide assurance to all stakeholders that Fasset is fulfilling its
         obligations in terms of the Fasset constitution and the Skills
         Development Act, and reports to the Minister of Higher Education and
         Training as the Executive Authority of the Seta.
-      </Typography>
+      </Typography> */}
 
-      <Grid container spacing={2} mt={1}>
+      <Grid container spacing={2} mt={2}>
         {data?.boardMembers.map((member) => {
           return (
             <Grid item xs={12} md={4} xl={3} key={member.id}>

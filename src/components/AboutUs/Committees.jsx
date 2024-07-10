@@ -67,7 +67,7 @@ const Committees = () => {
         fontSize={20}
         sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
-        Committees
+        Management
       </Typography>
       <Divider />
       {data?.committees?.map((committee) => {

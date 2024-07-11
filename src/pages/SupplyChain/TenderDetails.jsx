@@ -3,7 +3,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Button,
-  Chip,
+  // Chip,
   LinearProgress,
   Paper,
   Stack,
@@ -111,7 +111,7 @@ const TenderDetails = () => {
           >
             {data?.tender?.tenderName}
           </Typography>
-          <Chip label="active" color="success" sx={{ height: 20 }} />
+          {/* <Chip label="active" color="success" sx={{ height: 20 }} /> */}
         </Stack>
         <Stack
           justifyContent="space-between"

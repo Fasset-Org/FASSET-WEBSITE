@@ -107,7 +107,7 @@ const SupplyChain = () => {
           />
 
           <Tab
-            label="Candelled Tenders"
+            label="Cancelled Tenders"
             icon={<WebAssetOffIcon />}
             iconPosition="start"
             {...a11yProps("cancelledTenders")}

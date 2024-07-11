@@ -100,7 +100,7 @@ const OurMandate = () => {
       ]
     },
     {
-      parent: "Manage and administer all learnerships within Fasset",
+      parent: "Manage and administer all learnerships within FASSET",
       children: []
     },
     {
@@ -109,7 +109,7 @@ const OurMandate = () => {
     },
     {
       parent:
-        "Promote a culture of learning within this sector and encourage active employer and employee organisation participation in the strategies and activities of Fasset",
+        "Promote a culture of learning within this sector and encourage active employer and employee organisation participation in the strategies and activities of FASSET",
       children: []
     },
     {
@@ -119,12 +119,12 @@ const OurMandate = () => {
     },
     {
       parent:
-        "Perform any other function required by SAQA in terms of Fasset's registration",
+        "Perform any other function required by SAQA in terms of FASSET's registration",
       children: []
     },
     {
       parent:
-        "Perform any other function that must be performed by Fasset in terms of the Skills Development Act or any other applicable law.",
+        "Perform any other function that must be performed by FASSET in terms of the Skills Development Act or any other applicable law.",
       children: []
     }
   ];
@@ -132,7 +132,7 @@ const OurMandate = () => {
   const skills = [
     {
       parent:
-        "Develop a sector skills plan within the framework of the national skills development strategy for Fasset",
+        "Develop a sector skills plan within the framework of the national skills development strategy for FASSET",
       children: []
     },
     {
@@ -176,12 +176,12 @@ const OurMandate = () => {
     },
     {
       parent:
-        "Facilitate the involvement of the relevant government departments in the activities of Fasset in order to:",
+        "Facilitate the involvement of the relevant government departments in the activities of FASSET in order to:",
       children: [
         "Address the competency requirements for social delivery",
         "Address the learning needs of the most vulnerable segments of the sector",
         "Promote training in SMME's to enable them to qualify for public contracts",
-        "Perform any other duties imposed by the Act or any other function not specifically mentioned, in order to fulfill the objectives of Fasset."
+        "Perform any other duties imposed by the Act or any other function not specifically mentioned, in order to fulfill the objectives of FASSET."
       ]
     }
   ];
@@ -197,7 +197,7 @@ const OurMandate = () => {
       </Typography>
       <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
-        The Objectives of Fasset are the following:
+        The Objectives of FASSET are the following:
       </Typography>
       {objectives.map((option, idx) => {
         return (
@@ -224,16 +224,16 @@ const OurMandate = () => {
         );
       })}
       <Divider />
-      <Typography sx={{ fontWeight: "bolder" }}>Functions of Fasset</Typography>
+      <Typography sx={{ fontWeight: "bolder" }}>Functions of FASSET</Typography>
       <Typography>
-        The Fasset Board may delegate any of the below mentioned functions to an
-        appropriate service provider, in accordance with the Fasset procurement
+        The FASSET Board may delegate any of the below mentioned functions to an
+        appropriate service provider, in accordance with the FASSET procurement
         policy and to any other bodies, which may include ETQAs, professional
         bodies etc
       </Typography>
       <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
-        Fasset will serve to:
+        FASSET will serve to:
       </Typography>
       {services.map((option, idx) => {
         return (
@@ -261,7 +261,7 @@ const OurMandate = () => {
       })}
       <Divider />
       <Typography sx={{ fontWeight: "bolder" }}>
-        Fasset will, specifically, in accordance with the Skills Development
+        FASSET will, specifically, in accordance with the Skills Development
         Act:
       </Typography>
       {skills.map((option, idx) => {

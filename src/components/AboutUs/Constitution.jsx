@@ -23,7 +23,7 @@ const Constitution = () => {
         >
           Click here.
         </a>{" "}
-        to view Fasset's Constitution.
+        to view FASSET's Constitution.
       </Typography>
       {/* <Grid container spacing={2}>
         <Grid item xs={12} md={4}>

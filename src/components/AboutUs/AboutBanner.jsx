@@ -26,7 +26,7 @@ const AboutBanner = () => {
           textTransform="uppercase"
           sx={{ color: "primary.main", textShadow: "2px 2px #f5df43" }}
         >
-          About Fasset
+          About FASSET
         </Typography>
       </Stack>
     </Box>

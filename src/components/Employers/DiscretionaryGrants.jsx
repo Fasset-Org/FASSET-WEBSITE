@@ -31,19 +31,19 @@ const DiscretionaryGrants = () => {
       </Typography>
       <Divider />
       <Typography>
-        The Fasset Board determines the areas of strategic importance for the
+        The FASSET Board determines the areas of strategic importance for the
         sector by assessing the information from Mandatory Grant applications,
         the Sector Skills Plan (SSP) and other research conducted from time to
         time. In addition to this background research and information, the
         National Skills Development Strategy (NSDS), coordinated by DHET, guides
-        the development of strategic areas within Fasset’s sector.
+        the development of strategic areas within FASSET’s sector.
       </Typography>
       <Divider />
       <Typography
         // textAlign="center"
         sx={{ fontWeight: "bolder", color: "primary.main" }}
       >
-        Benefits available to Fasset levy-paying and non- levy paying employers
+        Benefits available to FASSET levy-paying and non- levy paying employers
       </Typography>
       <TableContainer component={Paper}>
         <Table aria-label="simple table">

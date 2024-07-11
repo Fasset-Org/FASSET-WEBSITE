@@ -34,7 +34,7 @@ const TopLinksNavigation = () => {
       spacing={2}
     >
       <NavLink
-        href="http://102.37.217.58:8000/fasset-ims/login"
+        href="https://invoices.fasset.org.za/"
         target="_blank"
         rel="noreferrer"
       >

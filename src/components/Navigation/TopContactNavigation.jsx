@@ -68,7 +68,7 @@ const TopContactNavigation = () => {
 
           <Typography>Email :</Typography>
           <Typography>
-            &nbsp;fassetcallcentre(@)fasset.org.za
+            &nbsp;fassetcallcentre@fasset.org.za
           </Typography>
         </Typography>
       </Stack>

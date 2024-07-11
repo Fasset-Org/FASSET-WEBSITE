@@ -74,13 +74,13 @@ const MandatoryGrants = () => {
       <Typography>
         Employers can claim 20% of total levy contributions annually through the
         submission of an approved Skills Development Plan (SDP). The SDP is
-        submitted online and is due by latest 30 April of each year. Fasset uses
+        submitted online and is due by latest 30 April of each year. FASSET uses
         SDP information to determine sector skills needs and revises its skills
         development strategy accordingly. Accuracy of data is therefore of the
         utmost importance. Since no extensions can be granted for submission,
         employers are urged to collect and collate the required data as soon as
         possible. It should be noted that an approved SDP is a requirement for
-        participation in any Fasset discretionary grants
+        participation in any FASSET discretionary grants
       </Typography>
       <Divider />
       <Typography
@@ -96,10 +96,10 @@ const MandatoryGrants = () => {
 
       <Typography>
         The criteria for the acceptance and payment of the Mandatory Grant by
-        Fasset are as follows: Employer registered with Fasset. SDL payments to
+        FASSET are as follows: Employer registered with FASSET. SDL payments to
         SARS up to date. SDP (based on regulated format as published in the
         Government Gazette) correctly completed and submitted in the format
-        required by Fasset. Deadline for submission is 30 April, or within 6
+        required by FASSET. Deadline for submission is 30 April, or within 6
         months of new employers registering for the SDL. Authorized signatories
         have signed where required Proof of the company’s banking details
         submitted (i.e. a cancelled cheque, bank statement or letter from the
@@ -120,7 +120,7 @@ const MandatoryGrants = () => {
       <Typography>
         Grant payments are made via a direct EFT into the organisation’s bank
         account. The reference on the bank statement is the Skills Development
-        Levy number of the company. Fasset receives levies 3 to 4 months in
+        Levy number of the company. FASSET receives levies 3 to 4 months in
         arrears and is only able to pay grants if accurate levy information has
         been received. Mandatory Grant payments are scheduled as follows:
         February May August November
@@ -135,7 +135,7 @@ const MandatoryGrants = () => {
       </Typography>
 
       <Typography>
-        For Fasset to pay grants, current banking details are required. An
+        For FASSET to pay grants, current banking details are required. An
         original stamped letter issued by the bank, or an original cancelled
         cheque, is required to process any changes in banking details.
       </Typography>
@@ -159,10 +159,10 @@ const MandatoryGrants = () => {
         motivated by: the composition of the workforce, the amount of
         remuneration paid or payable to the different categories of employees;
         and the training needs of the different categories of employees Should
-        an organisation wish to move from another Seta to Fasset, an IST 01 form
+        an organisation wish to move from another Seta to FASSET, an IST 01 form
         must be submitted to the Seta with which the organisation is currently
-        registered. Should a company wish to move out of Fasset to another Seta
-        the IST 01 form must be submitted to Fasset. The Seta must in turn
+        registered. Should a company wish to move out of FASSET to another Seta
+        the IST 01 form must be submitted to FASSET. The Seta must in turn
         approve the application and forward the signed application to the
         Department of Higher Education and Training (DHET). DHET then verifies
         the request and submits the form to the South African Revenue Services

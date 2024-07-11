@@ -30,7 +30,7 @@ const WorkbasedProgramme = () => {
       </Typography>
 
       <Typography>
-        In this context, Fasset is implementing a project aimed at facilitating
+        In this context, FASSET is implementing a project aimed at facilitating
         and funding workplace-based experience for graduates. This project is
         aimed at learners who have successfully completed the National N6
         certificate in business studies and who are eligible to the National N
@@ -39,7 +39,7 @@ const WorkbasedProgramme = () => {
       </Typography>
 
       <Typography fontWeight="bold">
-        Fasset will be recruiting learners who have specialised in one of the
+        FASSET will be recruiting learners who have specialised in one of the
         following areas:
       </Typography>
       <ul>

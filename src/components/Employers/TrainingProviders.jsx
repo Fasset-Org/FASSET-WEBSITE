@@ -19,16 +19,16 @@ const TrainingProviders = () => {
         Provider Accreditation
       </Typography>
       <Typography textAlign="justify">
-        Kindly be informed that as from 1 July 2022, Fasset will no longer
+        Kindly be informed that as from 1 July 2022, FASSET will no longer
         accredit or re-accredit skills development providers on historical
-        qualification expiring in June 2023. All Fasset qualifications are in
+        qualification expiring in June 2023. All FASSET qualifications are in
         the process of realignment with occupational qualifications. We
         apologise for thge inconvenience this may have caused to our current and
         new skilld development providers. Please be on the lookout for further
         announcement relating to this.
       </Typography>
       <Typography>Yours in Skills Development</Typography>
-      <Typography>Fasset PQA Team</Typography>
+      <Typography>FASSET PQA Team</Typography>
 
       <Typography
         fontSize={20}

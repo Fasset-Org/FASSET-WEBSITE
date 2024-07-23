@@ -74,9 +74,9 @@ const SectorSkillPlan = () => {
       </Typography>
       <Typography fontWeight="bolder">
         The Sector Skills Plan (SSP) represents the 'roadmap' for the work of
-        Fasset and organisations in the Fasset sector in terms of skills
+        FASSET and organisations in the FASSET sector in terms of skills
         development. In addition, to outlining long-term and short-term skills
-        development deliverables, Fasset's vision and mission, the SSP provides
+        development deliverables, FASSET's vision and mission, the SSP provides
         information on:
       </Typography>
 
@@ -119,11 +119,11 @@ const SectorSkillPlan = () => {
       </ul>
       <Divider />
       <Typography fontWeight="bolder">
-        Responsibility for producing the SSP rests with Fasset and therefore,
-        the members of Fasset representing organised labour, organised
+        Responsibility for producing the SSP rests with FASSET and therefore,
+        the members of FASSET representing organised labour, organised
         employers, relevant government departments and other members appointed
-        to the Fasset Board. As a strategic Seta document, the main stakeholders
-        via the Fasset Board, of the sector must endorse the SSP
+        to the FASSET Board. As a strategic Seta document, the main stakeholders
+        via the FASSET Board, of the sector must endorse the SSP
       </Typography>
       <Typography sx={{ fontWeight: "bolder", color: "primary.main" }}>
         Download the Sector Skills Plan

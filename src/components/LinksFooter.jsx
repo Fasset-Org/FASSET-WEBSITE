@@ -262,7 +262,7 @@ const LinksFooter = () => {
           fontWeight="bolder"
           sx={{ color: "#FFFFFF" }}
         >
-          Fasset Policy
+          FASSET Policy
         </Typography>
         <Divider
           orientation="vertical"

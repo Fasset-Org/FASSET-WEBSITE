@@ -62,10 +62,10 @@ const ResearchReports = () => {
         Research Reports
       </Typography>
       <Typography fontWeight="bolder">
-        In addition the regular research programmes supported by Fasset, from
+        In addition the regular research programmes supported by FASSET, from
         time-to-time ad hoc research is conducted. Click on the links below to
         view the various research reports and articles commissioned or conducted
-        by Fasset.
+        by FASSET.
       </Typography>
       {isLoading ? (
         <LinearProgress />

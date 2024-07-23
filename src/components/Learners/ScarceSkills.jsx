@@ -27,7 +27,7 @@ const ScarceSkills = () => {
         skills sought by employers. The lack of qualified black people,
         especially in the higher level occupations and professional
         designations, is considered a serious problem. The Sector Skills Plan of
-        Fasset, 2016 - 2021 indicated that shortages of finance and accounting
+        FASSET, 2016 - 2021 indicated that shortages of finance and accounting
         services skills exist at all levels – from clerical to technician, and
         administrative to professional, and managerial.
       </Typography>

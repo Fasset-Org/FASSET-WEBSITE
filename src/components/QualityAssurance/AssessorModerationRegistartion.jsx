@@ -52,7 +52,7 @@ const AssessorModerationRegistartion = () => {
         fontWeight="bolder"
         sx={{ color: "primary.main" }}
       >
-        Criteria for Registration as an Assessor with Fasset
+        Criteria for Registration as an Assessor with FASSET
       </Typography>
       <Typography fontWeight="bolder">
         The assessor should meet the following criteria:
@@ -101,7 +101,7 @@ const AssessorModerationRegistartion = () => {
         <li>
           <Typography>
             {" "}
-            Complete the Fasset Online Registration application form (Click here
+            Complete the FASSET Online Registration application form (Click here
             to access the platform)
           </Typography>
         </li>
@@ -112,7 +112,7 @@ const AssessorModerationRegistartion = () => {
         </li>
         <li>
           <Typography>
-            Submit the application and supporting documentation to the Fasset
+            Submit the application and supporting documentation to the FASSET
             Processing and Quality Assurance department
           </Typography>
         </li>
@@ -174,7 +174,7 @@ const AssessorModerationRegistartion = () => {
         De-Registration Process
       </Typography>
       <Typography fontWeight="bolder">
-        Fasset will de-register assessors for the following reasons:
+        FASSET will de-register assessors for the following reasons:
       </Typography>
 
       <ul>
@@ -201,7 +201,7 @@ const AssessorModerationRegistartion = () => {
         </li>
         <ul style={{}}>
           <li>
-            <Typography>Fasset’s Chief Executive Officer</Typography>
+            <Typography>FASSET’s Chief Executive Officer</Typography>
           </li>
           <li>
             <Typography>Quality Council for Trades and Occupations</Typography>
@@ -223,7 +223,7 @@ const AssessorModerationRegistartion = () => {
         fontWeight="bolder"
         sx={{ color: "primary.main" }}
       >
-        Fasset Appeals Process
+        FASSET Appeals Process
       </Typography>
       <Typography fontWeight="bolder">
         Assessors who have been de-registered or have not been granted
@@ -246,7 +246,7 @@ const AssessorModerationRegistartion = () => {
         </li>
         <li>
           <Typography>
-            The appeal will be forwarded to Fasset’s Appeals Committee who will
+            The appeal will be forwarded to FASSET’s Appeals Committee who will
             consider the evidence and make decisions to either accept or reject
             the appellant’s claim
           </Typography>

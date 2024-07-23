@@ -3,7 +3,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Button,
-  Chip,
+  // Chip,
   LinearProgress,
   Paper,
   Stack,
@@ -111,7 +111,7 @@ const TenderDetails = () => {
           >
             {data?.tender?.tenderName}
           </Typography>
-          <Chip label="active" color="success" sx={{ height: 20 }} />
+          {/* <Chip label="active" color="success" sx={{ height: 20 }} /> */}
         </Stack>
         <Stack
           justifyContent="space-between"
@@ -245,12 +245,12 @@ const TenderDetails = () => {
 
         <Typography>
           No late submissions will be considered. Submissions should be
-          delivered to: Supply Chain Management, Fasset Offices, First Floor,
+          delivered to: Supply Chain Management, FASSET Offices, First Floor,
           296 Kent Avenue, Randburg, Johannesburg.
         </Typography>
 
         <Typography>
-          The procurement process is administered by Fasset.
+          The procurement process is administered by FASSET.
         </Typography>
 
         {data?.tender?.bidders?.length > 0 && (

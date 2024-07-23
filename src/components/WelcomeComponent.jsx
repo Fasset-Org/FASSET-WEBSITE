@@ -28,7 +28,7 @@ const WelcomeComponent = () => {
             textTransform="uppercase"
             sx={{ color: "primary.main" }}
           >
-            Welcome to fasset
+            Welcome to FASSET
           </Typography>
         </Divider>
       </Stack>
@@ -49,11 +49,11 @@ const WelcomeComponent = () => {
             textTransform="uppercase"
             sx={{ color: "primary.main" }}
           >
-            About Fasset
+            About FASSET
           </Typography>
 
           <Typography fontSize={14} textAlign="justify">
-            Fasset is the Finance and Accounting Services Sector Education and
+            FASSET is the Finance and Accounting Services Sector Education and
             Training Authority. The finance and accounting services sector is
             particularly important because it is the largest employer of people
             with financial management, accounting, and auditing skills. In 2018
@@ -66,7 +66,7 @@ const WelcomeComponent = () => {
             as labour brokerages, information technology services, legal
             services, and engineering and architectural services. The Financial
             and Accounting Services Sector refers to the organisations served by
-            Fasset. This sector includes: investment entities and trusts and
+            FASSET. This sector includes: investment entities and trusts and
             company secretary services; stockbroking and financial markets;
             financial development organisations; accounting, bookkeeping,
             auditing and tax services; business and management consulting

@@ -23,7 +23,9 @@ const WorkplaceApproval = () => {
         provide a win-win situation, as SDPs in our sector are more experienced
         in and understand the FASSET process. Entities wishing to be included in
         the database of approved workplaces should send an e-mail to:
-        Esther.morake@fasset.org.za.
+        <a href={`mailto:Esther.morake@fasset.org.za.`}>
+          Esther.morake@fasset.org.za
+        </a>{" "}
       </Typography>
     </Stack>
   );

@@ -1,13 +1,6 @@
-import {
-  Avatar,
-  IconButton,
-  Link,
-  Stack,
-  Typography,
-  styled
-} from "@mui/material";
+import { Link, Stack, styled } from "@mui/material";
 import React from "react";
-import logo from "../../images/homoLogo 2.png";
+import logo from "../../images/horizontail-white-logo.jpg";
 import { useNavigate } from "react-router-dom";
 
 const NavLink = styled(Link)({
@@ -27,11 +20,12 @@ const TopLinksNavigation = () => {
   const navigate = useNavigate();
   return (
     <Stack
-      height={50}
+      height={65}
       direction="row"
       justifyContent="center"
       alignItems="center"
       spacing={2}
+      sx={{ backgroundColor: "#FFFFFF" }}
     >
       <NavLink
         href="https://invoices.fasset.org.za/"
@@ -47,7 +41,16 @@ const TopLinksNavigation = () => {
       >
         ODOO LMIS
       </NavLink>
-      <Stack direction="row" alignItems="center">
+
+      <img
+        src={logo}
+        width={160}
+        height={65}
+        alt=""
+        onClick={() => navigate("/home")}
+      />
+
+      {/* <Stack direction="row" alignItems="center">
         <IconButton onClick={() => navigate("/home")}>
           <Avatar
             src={logo}
@@ -85,7 +88,7 @@ const TopLinksNavigation = () => {
             <i>Make the future count</i>
           </Typography>
         </Stack>
-      </Stack>
+      </Stack> */}
       {/* <NavLink
         href="https://fassetapps.co.za/#/"
         target="_blank"
@@ -98,7 +101,7 @@ const TopLinksNavigation = () => {
         target="_blank"
         rel="noreferrer"
       >
-        CAREER PORTAL
+        LEARNER PORTAL
       </NavLink>
     </Stack>
   );

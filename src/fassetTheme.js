@@ -122,7 +122,7 @@ export const themeLight = createTheme({
     },
     background: {
       paper: "#fbfbfbff",
-      default: "#f3f3f3ff"
+      default: "#FFFFFF"
     }
   },
   typography: {

@@ -1,14 +1,14 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
-import { useTheme } from "@mui/material/styles";
+// import { useTheme } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import { Paper, Slide, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Paper, Slide, Stack, Typography } from "@mui/material";
 import WindowCountDown from "./WindowCountDown";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../stateQueries/User";
@@ -57,8 +57,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function NoticeBoardModal() {
   const [open, setOpen] = React.useState(false);
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+  // const theme = useTheme();
+  // const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const noticesQuery = useQuery({
     queryKey: ["notices"],
@@ -94,7 +94,7 @@ export default function NoticeBoardModal() {
       onClose={handleClose}
       aria-labelledby="customized-dialog-title"
       open={open}
-      fullScreen={fullScreen}
+      fullScreen={true}
       TransitionComponent={Transition}
       fullWidth
     >

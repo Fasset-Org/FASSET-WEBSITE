@@ -19,7 +19,7 @@ function LifeLongLearningEvents() {
         LIFELONG LEARNING WORKSHOPS
       </Typography>
       <Divider />
-      <Typography fontWeight='bolder'>Dear Stakeholders</Typography>
+      <Typography fontWeight="bolder">Dear Stakeholders</Typography>
       <Typography>
         FASSET has once again commenced with the Lifelong Learning online
         training that is facilitated by partner skills Professional Body. The
@@ -295,7 +295,10 @@ function LifeLongLearningEvents() {
       </TableContainer>
       <br />
       <Typography>
-        For any further enquiries please contact lifelonglearning@fasset.org.za
+        For any further enquiries please contact{" "}
+        <a href={`mailto:lifelonglearning@fasset.org.za`}>
+          lifelonglearning@fasset.org.za
+        </a>{" "}
         | +27 011 476 8570
       </Typography>
     </Stack>

@@ -243,12 +243,13 @@ const VacancyDetails = () => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  For any inquiries regarding the position please contact: Mr
-                  Karabo Dikgore, Human Resources Department at
-                  Karabo.Dikgore@fasset.org.za. Should you not hear from FASSET
-                  within 6 weeks of the closing date, please consider your
-                  application unsuccessful. Communication is limited to
-                  shortlisted candidates only.
+                  For any inquiries regarding the position please email:{" "}
+                  <a href={`mailto:${data?.position?.emailForQueries}`}>
+                    {data?.position?.emailForQueries}
+                  </a>{" "}
+                  Should you not hear from FASSET within 6 weeks of the closing
+                  date, please consider your application unsuccessful.
+                  Communication is limited to shortlisted candidates only.
                 </Typography>
               </AccordionDetails>
             </Accordion>

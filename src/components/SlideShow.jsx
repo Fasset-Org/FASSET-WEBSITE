@@ -64,10 +64,10 @@ const Slideshow = ({ banners }) => {
                   <img
                     src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
                     style={{
-                      height: 430,
-                      objectPosition: "100% 100%",
+                      height: 500,
+                      // objectPosition: "100% 100%",
                       width: "100%",
-                      objectFit: 'fill'
+                      objectFit: 'contain'
                       // objectFit: xs ? 'scale-down' : "fill"
                     }}
                     alt=""

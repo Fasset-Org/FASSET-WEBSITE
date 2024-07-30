@@ -66,11 +66,12 @@ const Slideshow = ({ banners }) => {
                     style={{
                       height: 430,
                       objectPosition: "100% 100%",
-                      width: "100%"
+                      width: "100%",
+                      objectFit: 'fill'
                       // objectFit: xs ? 'scale-down' : "fill"
                     }}
                     alt=""
-                    loading="lazy"
+                    // loading="lazy"
                   />
                 </Stack>
                 <Stack display={{ md: "none", xs: "block" }}>

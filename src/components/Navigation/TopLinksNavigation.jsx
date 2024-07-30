@@ -97,7 +97,7 @@ const TopLinksNavigation = () => {
         BURSARY MANGEMENT SYSTEM
       </NavLink> */}
       <NavLink
-        href="https://www.fasset.org.za/learner_portal/index.php"
+        href="https://www.learner-portal.fasset.org.za"
         target="_blank"
         rel="noreferrer"
       >

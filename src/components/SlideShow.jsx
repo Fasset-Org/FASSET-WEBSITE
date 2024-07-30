@@ -3,7 +3,7 @@ import "react-slideshow-image/dist/styles.css";
 import "./Navigation/tab.css";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../stateQueries/User";
-import { Skeleton, Stack } from "@mui/material";
+import { Skeleton } from "@mui/material";
 import "./SlideShow.css";
 import { Slide } from "react-slideshow-image";
 

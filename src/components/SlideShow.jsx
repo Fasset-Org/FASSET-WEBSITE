@@ -63,16 +63,29 @@ const Slideshow = ({ banners }) => {
                 <Stack display={{ md: "block", xs: "none" }}>
                   <img
                     src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
+                    srcSet={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL} 1x, ${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}@2x 2x`}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      objectPosition: "center",
+                      objectFit: "cover", // Use 'cover' to maintain aspect ratio and avoid distortion
+                      imageRendering: "auto" // You can try 'crisp-edges' or 'pixelated' if needed // Try 'crisp-edges' or 'pixelated' if needed,
+                    }}
+                    alt={banner.altText || "Banner image"} // Providing an alt text for accessibility
+                    loading="lazy" // Uncomment to lazy load images
+                  />
+                  {/* <img
+                    src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
                     style={{
                       height: "auto",
-                      // objectPosition: "100% 100%",
+                      objectPosition: "100% 100%",
                       width: "100%",
-                      objectFit: 'contain'
+                      objectFit: 'fill'
                       // objectFit: xs ? 'scale-down' : "fill"
                     }}
                     alt=""
                     // loading="lazy"
-                  />
+                  /> */}
                 </Stack>
                 <Stack display={{ md: "none", xs: "block" }}>
                   <img

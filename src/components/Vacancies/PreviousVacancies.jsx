@@ -174,7 +174,7 @@ const PreviousVacancies = () => {
             </Table>
           </TableContainer>
         ) : (
-          <Stack width="100%" spacing={2} ml={2}>
+          <Stack width="100%" spacing={2} ml={2} mt={2}>
             <Alert severity="info">No Positions Available</Alert>
           </Stack>
         )}

@@ -5,14 +5,19 @@ import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../stateQueries/User";
 import { Skeleton, Stack } from "@mui/material";
 import "./SlideShow.css";
+import banner1 from "../images/website-banners/Web Banner 1.jpg";
+import banner2 from "../images/website-banners/web banner 2.jpg";
+import banner3 from "../images/website-banners/web banner 3.jpg";
 
-const Slideshow = ({ banners }) => {
+const Slideshow = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["banners"],
     queryFn: async () => {
       return UserQuery.getAllBanners();
     }
   });
+
+  const banners = [banner1, banner2, banner3];
 
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -52,7 +57,7 @@ const Slideshow = ({ banners }) => {
 
   return (
     <Stack spacing={2}>
-      <Stack className="slideshow-container">
+      {/* <Stack className="slideshow-container">
         {data?.banners?.length > 0 &&
           data?.banners.map((banner, index) => {
             return (
@@ -63,29 +68,16 @@ const Slideshow = ({ banners }) => {
                 <Stack display={{ md: "block", xs: "none" }}>
                   <img
                     src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
-                    srcSet={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL} 1x, ${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}@2x 2x`}
                     style={{
                       width: "100%",
-                      height: "auto",
+                      height: 400,
                       objectPosition: "center",
-                      objectFit: "cover", // Use 'cover' to maintain aspect ratio and avoid distortion
-                      imageRendering: "auto" // You can try 'crisp-edges' or 'pixelated' if needed // Try 'crisp-edges' or 'pixelated' if needed,
+                      objectFit: "fill",
+                      imageRendering: "auto"
                     }}
-                    alt={banner.altText || "Banner image"} // Providing an alt text for accessibility
-                    loading="lazy" // Uncomment to lazy load images
+                    alt={banner.altText || "Banner image"}
+                    loading="lazy"
                   />
-                  {/* <img
-                    src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
-                    style={{
-                      height: "auto",
-                      objectPosition: "100% 100%",
-                      width: "100%",
-                      objectFit: 'fill'
-                      // objectFit: xs ? 'scale-down' : "fill"
-                    }}
-                    alt=""
-                    // loading="lazy"
-                  /> */}
                 </Stack>
                 <Stack display={{ md: "none", xs: "block" }}>
                   <img
@@ -100,34 +92,62 @@ const Slideshow = ({ banners }) => {
                     alt=""
                   />
                 </Stack>
-                {/* <div className="text">Caption Text</div> */}
+          
               </div>
             );
           })}
 
-        {/* <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img
-            src={`${process.env.REACT_APP_API_URL}/uploads/banners/${data?.banners[0].bannerImageURL}`}
-            style={{ width: "100%" }}
-            alt=""
-          />
-          <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img
-            src={`${process.env.REACT_APP_API_URL}/uploads/banners/${data?.banners[1].bannerImageURL}`}
-            style={{ width: "100%" }}
-            alt=""
-          />
-          <div class="text">Caption Three</div>
-        </div> */}
+       
       </Stack>
 
       <div style={{ textAlign: "center" }}>
         {data?.banners?.map((banner, i) => {
+          return <span className="dot" key={i}></span>;
+        })}
+      </div> */}
+
+      <Stack className="slideshow-container">
+        {banners?.length > 0 &&
+          banners.map((banner, index) => {
+            return (
+              <div className="mySlides fade" key={index}>
+                <div className="numbertext">{`${index + 1} / ${
+                  banners.length
+                }`}</div>
+                <Stack display={{ md: "block", xs: "none" }}>
+                  <img
+                    src={banner}
+                    style={{
+                      width: "100%",
+                      height: 400,
+                      objectPosition: "center",
+                      objectFit: "fill",
+                      imageRendering: "auto"
+                    }}
+                    alt={"Banner" + index}
+                    loading="lazy"
+                  />
+                </Stack>
+                <Stack display={{ md: "none", xs: "block" }}>
+                  <img
+                    src={banner}
+                    style={{
+                      height: 180,
+                      objectPosition: "100% 100%",
+                      width: "100%",
+                      objectFit: "fill"
+                    }}
+                    // loading="lazy"
+                    alt=""
+                  />
+                </Stack>
+              </div>
+            );
+          })}
+      </Stack>
+
+      <div style={{ textAlign: "center" }}>
+        {banners?.map((banner, i) => {
           return <span className="dot" key={i}></span>;
         })}
       </div>

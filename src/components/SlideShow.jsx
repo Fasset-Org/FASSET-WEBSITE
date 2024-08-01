@@ -119,10 +119,7 @@ const Slideshow = () => {
                     src={banner}
                     style={{
                       width: "100%",
-                      height: 400,
-                      objectPosition: "center",
-                      objectFit: "fill",
-                      imageRendering: "auto"
+                      height: "auto"
                     }}
                     alt={"Banner" + index}
                     loading="lazy"
@@ -132,10 +129,8 @@ const Slideshow = () => {
                   <img
                     src={banner}
                     style={{
-                      height: 180,
-                      objectPosition: "100% 100%",
-                      width: "100%",
-                      objectFit: "fill"
+                      height: "auto",
+                      width: "100%"
                     }}
                     // loading="lazy"
                     alt=""

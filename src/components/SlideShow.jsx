@@ -130,7 +130,7 @@ const Slideshow = () => {
                   <img
                     src={banner}
                     style={{
-                      height: 150,
+                      height: 170,
                       width: "100%"
                     }}
                     // loading="lazy"

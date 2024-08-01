@@ -5,9 +5,9 @@ import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../stateQueries/User";
 import { Skeleton, Stack } from "@mui/material";
 import "./SlideShow.css";
-import banner1 from "../images/website-banners/Web Banner 1.jpg";
-import banner2 from "../images/website-banners/web banner 2.jpg";
-import banner3 from "../images/website-banners/web banner 3.jpg";
+import banner1 from "../images/website-banner-new/Web Banner 1.jpg";
+import banner2 from "../images/website-banner-new/web banner 2.jpg";
+import banner3 from "../images/website-banner-new/web banner 3.jpg";
 
 const Slideshow = () => {
   const { data, isLoading } = useQuery({
@@ -119,7 +119,7 @@ const Slideshow = () => {
                     src={banner}
                     style={{
                       width: "100%",
-                      height: "auto",
+                      height: "auto"
                       // objectFit: 'scale-down'
                     }}
                     alt={"Banner" + index}

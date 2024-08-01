@@ -45,7 +45,7 @@ const Slideshow = () => {
         setSlideIndex(nextSlideIndex);
       };
 
-      const interval = setInterval(showSlides, 3000); // Change image every 3 seconds
+      const interval = setInterval(showSlides, 6000); // Change image every 3 seconds
 
       return () => clearInterval(interval); // Cleanup interval on unmount
     }
@@ -119,7 +119,8 @@ const Slideshow = () => {
                     src={banner}
                     style={{
                       width: "100%",
-                      height: "auto"
+                      height: "auto",
+                      // objectFit: 'scale-down'
                     }}
                     alt={"Banner" + index}
                     loading="lazy"
@@ -129,7 +130,7 @@ const Slideshow = () => {
                   <img
                     src={banner}
                     style={{
-                      height: "auto",
+                      height: 150,
                       width: "100%"
                     }}
                     // loading="lazy"

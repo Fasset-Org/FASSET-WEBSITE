@@ -148,7 +148,17 @@ const Downloads = () => {
                                 component="th"
                                 scope="row"
                               >
-                                {doc.originalFileName}
+                                <a
+                                  href={`${
+                                    process.env.REACT_APP_API_URL
+                                  }/api/dev/cse/downloadDocument?fileName=${
+                                    doc.fileName
+                                  }.${doc.originalFileName.split(".")[1]}`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  {doc.originalFileName}
+                                </a>
                               </TableCell>
                               <TableCell align="center" scope="row">
                                 <Tooltip title="Download">

@@ -2,8 +2,8 @@ import {
   Divider,
   IconButton,
   LinearProgress,
-  Menu,
-  MenuItem,
+  // Menu,
+  // MenuItem,
   Paper,
   Stack,
   Table,
@@ -14,19 +14,21 @@ import {
   TableHead,
   TablePagination,
   TableRow,
+  Tooltip,
   Typography
 } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import UserQuery from "../../stateQueries/User";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Download } from "@mui/icons-material";
 
 const AnnualReports = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  // const [anchorEl, setAnchorEl] = React.useState(null);
+  // const open = Boolean(anchorEl);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -37,12 +39,12 @@ const AnnualReports = () => {
     setPage(0);
   };
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
 
   const { data, isLoading } = useQuery({
     queryKey: ["annualReports"],
@@ -141,7 +143,28 @@ const AnnualReports = () => {
                 </TableCell>
 
                 <TableCell align="center" scope="row">
-                  <IconButton
+                  <Tooltip title="Download">
+                    <IconButton
+                      sx={{
+                        backgroundColor: "primary.main",
+                        color: "#FFFFFF",
+                        "&:hover": {
+                          backgroundColor: "primary.light",
+                          color: "#FFFFFF",
+                          fontWeight: "bolder"
+                        }
+                      }}
+                      onClick={() => {
+                        window.open(
+                          `${process.env.REACT_APP_API_URL}/api/dev/cse/downloadAnnualReportDocument?fileName=${annualReport.annualReportFileURL}`,
+                          "_blank"
+                        );
+                      }}
+                    >
+                      <Download />
+                    </IconButton>
+                  </Tooltip>
+                  {/* <IconButton
                     id="demo-positioned-button"
                     aria-controls={open ? "demo-positioned-menu" : undefined}
                     aria-haspopup="true"
@@ -185,7 +208,7 @@ const AnnualReports = () => {
                         Download
                       </a>
                     </MenuItem>
-                  </Menu>
+                  </Menu> */}
                 </TableCell>
               </TableRow>
             ))}

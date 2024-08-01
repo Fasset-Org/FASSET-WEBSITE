@@ -1,8 +1,8 @@
 import {
   Divider,
   IconButton,
-  Menu,
-  MenuItem,
+  // Menu,
+  // MenuItem,
   Paper,
   Stack,
   Table,
@@ -13,13 +13,15 @@ import {
   TableHead,
   TablePagination,
   TableRow,
+  Tooltip,
   Typography
 } from "@mui/material";
 import React from "react";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import Trend2021 from "../../../files/Reseources/Sector-Trends/Fasset Sector Trends 2021 - Final.pdf";
 import Trend2020 from "../../../files/Reseources/Sector-Trends/Fasset_Sector_Trends_2020_30_March_2020EB.pdf";
+import { Download } from "@mui/icons-material";
 
 const rows = [
   {
@@ -39,8 +41,8 @@ const rows = [
 const SectorTrends = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  // const [anchorEl, setAnchorEl] = React.useState(null);
+  // const open = Boolean(anchorEl);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -51,12 +53,12 @@ const SectorTrends = () => {
     setPage(0);
   };
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
 
   return (
     <Stack spacing={1}>
@@ -151,7 +153,25 @@ const SectorTrends = () => {
                 </TableCell>
 
                 <TableCell align="center" scope="row">
-                  <IconButton
+                  <Tooltip title="Download">
+                    <IconButton
+                      sx={{
+                        backgroundColor: "primary.main",
+                        color: "#FFFFFF",
+                        "&:hover": {
+                          backgroundColor: "primary.light",
+                          color: "#FFFFFF",
+                          fontWeight: "bolder"
+                        }
+                      }}
+                      onClick={() => {
+                        window.open(row.fileUrl, "_blank");
+                      }}
+                    >
+                      <Download />
+                    </IconButton>
+                  </Tooltip>
+                  {/* <IconButton
                     id="demo-positioned-button"
                     aria-controls={open ? "demo-positioned-menu" : undefined}
                     aria-haspopup="true"
@@ -195,7 +215,7 @@ const SectorTrends = () => {
                         Download
                       </a>
                     </MenuItem>
-                  </Menu>
+                  </Menu> */}
                 </TableCell>
               </TableRow>
             ))}

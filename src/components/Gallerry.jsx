@@ -36,7 +36,7 @@ export default function StandardImageList() {
                 alt={item.title}
                 loading="lazy"
                 style={{
-                  height: 350,
+                  height: 400,
                   objectFit: "cover",
                   objectPosition: "center top"
                 }}

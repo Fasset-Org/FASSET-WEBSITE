@@ -132,6 +132,15 @@ const PastTenders = () => {
                           onClick={() => {
                             navigate(`/tenders/${tender.id}`);
                           }}
+                          sx={{
+                            backgroundColor: "primary.main",
+                            color: "#FFFFFF",
+                            "&:hover": {
+                              backgroundColor: "primary.light",
+                              color: "#FFFFFF",
+                              fontWeight: "bolder"
+                            }
+                          }}
                         >
                           <VisibilityIcon />
                         </IconButton>

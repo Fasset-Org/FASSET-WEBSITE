@@ -1,8 +1,8 @@
 import {
   IconButton,
   LinearProgress,
-  Menu,
-  MenuItem,
+  // Menu,
+  // MenuItem,
   Paper,
   Stack,
   Table,
@@ -13,19 +13,21 @@ import {
   TableHead,
   TablePagination,
   TableRow,
+  Tooltip,
   Typography
 } from "@mui/material";
 import React, { Fragment } from "react";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../../../stateQueries/User";
+import { Download } from "@mui/icons-material";
 
 const ResearchReports = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  // const [anchorEl, setAnchorEl] = React.useState(null);
+  // const open = Boolean(anchorEl);
 
   const { data, isLoading } = useQuery({
     queryKey: ["researchReports"],
@@ -43,12 +45,12 @@ const ResearchReports = () => {
     setPage(0);
   };
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
 
   // console.log(data);
 
@@ -136,6 +138,28 @@ const ResearchReports = () => {
                       </TableCell>
 
                       <TableCell align="center" scope="row">
+                        <Tooltip title="Download">
+                          <IconButton
+                            sx={{
+                              backgroundColor: "primary.main",
+                              color: "#FFFFFF",
+                              "&:hover": {
+                                backgroundColor: "primary.light",
+                                color: "#FFFFFF",
+                                fontWeight: "bolder"
+                              }
+                            }}
+                            onClick={() => {
+                              window.open(
+                                `${process.env.REACT_APP_API_URL}/api/dev/cse/downloadResearchReportDocument?fileName=${row.researchReportFileURL}`,
+                                "_blank"
+                              );
+                            }}
+                          >
+                            <Download />
+                          </IconButton>
+                        </Tooltip>
+                        {/* 
                         <IconButton
                           id="demo-positioned-button"
                           aria-controls={
@@ -182,7 +206,7 @@ const ResearchReports = () => {
                               Download
                             </a>
                           </MenuItem>
-                        </Menu>
+                        </Menu> */}
                       </TableCell>
                     </TableRow>
                   ))}

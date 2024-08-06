@@ -20,6 +20,22 @@ const ScarceSkills = () => {
         fontWeight="bolder"
         sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
+        Volunteer
+      </Typography>
+      <Typography textAlign="justify">
+        Pay it forward and volunteer your time! We are looking for passionate
+        individuals who want to make a real difference to young people. We are
+        looking for volunteers to help us with disseminating career awareness
+        information. We are calling upon our Alumni to volunteer their time and
+        give career awareness talks at schools, youth centres, churches and
+        communities around you. If you wish to pledge your support and
+        volunteer, please send an email to unathi.nkosiyane@fasset.org.za
+      </Typography>
+      <Typography
+        fontSize={20}
+        fontWeight="bolder"
+        sx={{ color: "primary.main", textTransform: "uppercase" }}
+      >
         Scarce Skills
       </Typography>
 

@@ -187,8 +187,7 @@ const VacancyDetails = () => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  FASSET requires applications for a permanent Grants
-                  Administrator to join existing team as soon as possible.
+                  As soon as possible
                 </Typography>
               </AccordionDetails>
             </Accordion>

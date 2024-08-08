@@ -97,12 +97,12 @@ const VacancyDetails = () => {
                 new Date(data?.positon?.closingDate).getHours() > 11
                   ? new Date(data?.position?.closingDate).getHours() +
                     ":" +
-                    new Date(data?.position?.closingDate).getMinutes() +
-                    "PM"
+                    new Date(data?.position?.closingDate).getMinutes() 
+                    // "AM"
                   : new Date(data?.position?.closingDate).getHours() +
                     ":" +
-                    new Date(data?.position?.closingDate).getMinutes() +
-                    "AM"
+                    new Date(data?.position?.closingDate).getMinutes() 
+                    // "PM"
               }`}
             </Typography>
           </Stack>

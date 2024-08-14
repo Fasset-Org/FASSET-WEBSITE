@@ -1,12 +1,12 @@
-import { Divider, Stack, TableBody, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
-import Table from "@mui/material/Table";
+// import Table from "@mui/material/Table";
 
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+// import TableCell from "@mui/material/TableCell";
+// import TableContainer from "@mui/material/TableContainer";
+// import TableHead from "@mui/material/TableHead";
+// import TableRow from "@mui/material/TableRow";
+// import Paper from "@mui/material/Paper";
 
 function LifeLongLearningEvents() {
   return (
@@ -29,7 +29,8 @@ function LifeLongLearningEvents() {
         convenient for you for any of the topics below. We look forward to
         hosting you.
       </Typography>
-      <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
+      <Typography>Events will be added here</Typography>
+      {/* <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>
             <TableRow>
@@ -292,7 +293,7 @@ function LifeLongLearningEvents() {
             </TableRow>
           </TableBody>
         </Table>
-      </TableContainer>
+      </TableContainer> */}
       <br />
       <Typography>
         For any further enquiries please contact{" "}

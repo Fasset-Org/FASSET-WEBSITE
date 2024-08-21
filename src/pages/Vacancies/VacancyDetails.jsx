@@ -242,7 +242,7 @@ const VacancyDetails = () => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  For any inquiries regarding the position please email:{" "}
+                  For any inquiries regarding the position please contact:{" "}
                   <a href={`mailto:${data?.position?.emailForQueries}`}>
                     {data?.position?.emailForQueries}
                   </a>{" "}

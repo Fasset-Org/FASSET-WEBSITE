@@ -28,14 +28,14 @@ import { Download } from "@mui/icons-material";
 const rows = [
   {
     period: "2023",
-    documentName: "Fasset Trends Study",
+    documentName: "",
     desc: "A trend analysis of the Finance and Accounting Services sector in the 2020/21 to 2023/24 period.",
     fileUrl: Trend2023
   },
   {
     period: "2022",
-    documentName:
-      "Analysis of the FASSET grant applications between 2000/01 and 2021/22 period.",
+    documentName: "Fasset Trends Study",
+    desc: "Analysis of the FASSET grant applications between 2000/01 and 2021/22 period.",
     fileUrl: Trend2022
   },
   {

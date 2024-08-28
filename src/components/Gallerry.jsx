@@ -10,9 +10,9 @@ import img6 from "../images/2023 AGM/ZooM-7229.jpg";
 import img7 from "../images/2023 AGM/ZooM-7233.jpg";
 import img8 from "../images/2023 AGM/ZooM-7268.jpg";
 import img9 from "../images/2023 AGM/ZooM-7285.jpg";
-import img10 from "../images/2023 AGM/ZooM-7294.jpg";
-import img11 from "../images/2023 AGM/ZooM-7310.jpg";
-import img12 from "../images/2023 AGM/ZooM-6849.jpg";
+// import img10 from "../images/2023 AGM/ZooM-7294.jpg";
+// import img11 from "../images/2023 AGM/ZooM-7310.jpg";
+// import img12 from "../images/2023 AGM/ZooM-6849.jpg";
 
 export default function StandardImageList() {
   return (
@@ -114,16 +114,16 @@ const itemData = [
     img: img9,
     title: "Mushrooms"
   },
-  {
-    img: img10,
-    title: "Tomato basil"
-  },
-  {
-    img: img11,
-    title: "Sea star"
-  },
-  {
-    img: img12,
-    title: "Bike"
-  }
+  // {
+  //   img: img10,
+  //   title: "Tomato basil"
+  // },
+  // {
+  //   img: img11,
+  //   title: "Sea star"
+  // },
+  // {
+  //   img: img12,
+  //   title: "Bike"
+  // }
 ];

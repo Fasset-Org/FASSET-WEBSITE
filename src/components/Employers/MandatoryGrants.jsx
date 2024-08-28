@@ -187,11 +187,7 @@ const MandatoryGrants = () => {
 
       <Typography>
         Please contact the PQA Department (011) 476-8570 with any enquiries in
-        this regard or consult the{" "}
-        <a href="#123" style={{ color: "primary.main", cursor: "pointer" }}>
-          download
-        </a>{" "}
-        page for additional information
+        this regard.
       </Typography>
     </Stack>
   );

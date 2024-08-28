@@ -120,6 +120,7 @@ export default function NoticeBoardModal() {
                   component={Paper}
                   padding={2}
                   key={notice.id}
+                  sx={{backgroundColor: '#FFFFFF'}}
                 >
                   <Typography
                     sx={

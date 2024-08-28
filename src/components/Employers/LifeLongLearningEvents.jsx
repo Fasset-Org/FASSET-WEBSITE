@@ -1,12 +1,12 @@
-import { Divider, Stack, TableBody, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
-import Table from "@mui/material/Table";
+// import Table from "@mui/material/Table";
 
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+// import TableCell from "@mui/material/TableCell";
+// import TableContainer from "@mui/material/TableContainer";
+// import TableHead from "@mui/material/TableHead";
+// import TableRow from "@mui/material/TableRow";
+// import Paper from "@mui/material/Paper";
 
 function LifeLongLearningEvents() {
   return (
@@ -19,7 +19,7 @@ function LifeLongLearningEvents() {
         LIFELONG LEARNING WORKSHOPS
       </Typography>
       <Divider />
-      <Typography fontWeight='bolder'>Dear Stakeholders</Typography>
+      <Typography fontWeight="bolder">Dear Stakeholders</Typography>
       <Typography>
         FASSET has once again commenced with the Lifelong Learning online
         training that is facilitated by partner skills Professional Body. The
@@ -29,7 +29,8 @@ function LifeLongLearningEvents() {
         convenient for you for any of the topics below. We look forward to
         hosting you.
       </Typography>
-      <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
+      <Typography>Events will be added here</Typography>
+      {/* <TableContainer component={Paper} sx={{ borderRadius: 0 }}>
         <Table aria-label="simple table">
           <TableHead sx={{ backgroundColor: "primary.main" }}>
             <TableRow>
@@ -292,10 +293,13 @@ function LifeLongLearningEvents() {
             </TableRow>
           </TableBody>
         </Table>
-      </TableContainer>
+      </TableContainer> */}
       <br />
       <Typography>
-        For any further enquiries please contact lifelonglearning@fasset.org.za
+        For any further enquiries please contact{" "}
+        <a href={`mailto:lifelonglearning@fasset.org.za`}>
+          lifelonglearning@fasset.org.za
+        </a>{" "}
         | +27 011 476 8570
       </Typography>
     </Stack>

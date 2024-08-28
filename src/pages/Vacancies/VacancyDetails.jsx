@@ -11,9 +11,9 @@ import {
 import React from "react";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import JobApplyModal from "../../components/Modals/JobApplyModal";
+// import JobApplyModal from "../../components/Modals/JobApplyModal";
 import { ArrowBack } from "@mui/icons-material";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../../stateQueries/User";
 
@@ -22,9 +22,9 @@ const VacancyDetails = () => {
 
   const { id } = useParams();
 
-  const location = useLocation();
+  // const location = useLocation();
 
-  const { open } = location.state;
+  // const { open } = location.state;
 
   const { data, isLoading } = useQuery({
     queryKey: ["position"],
@@ -97,12 +97,12 @@ const VacancyDetails = () => {
                 new Date(data?.positon?.closingDate).getHours() > 11
                   ? new Date(data?.position?.closingDate).getHours() +
                     ":" +
-                    new Date(data?.position?.closingDate).getMinutes() +
-                    "PM"
+                    new Date(data?.position?.closingDate).getMinutes() 
+                    // "AM"
                   : new Date(data?.position?.closingDate).getHours() +
                     ":" +
-                    new Date(data?.position?.closingDate).getMinutes() +
-                    "AM"
+                    new Date(data?.position?.closingDate).getMinutes() 
+                    // "PM"
               }`}
             </Typography>
           </Stack>
@@ -187,8 +187,7 @@ const VacancyDetails = () => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  FASSET requires applications for a permanent Grants
-                  Administrator to join existing team as soon as possible.
+                  As soon as possible
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -243,12 +242,13 @@ const VacancyDetails = () => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  For any inquiries regarding the position please contact: Mr
-                  Karabo Dikgore, Human Resources Department at
-                  Karabo.Dikgore@fasset.org.za. Should you not hear from FASSET
-                  within 6 weeks of the closing date, please consider your
-                  application unsuccessful. Communication is limited to
-                  shortlisted candidates only.
+                  For any inquiries regarding the position please contact:{" "}
+                  <a href={`mailto:${data?.position?.emailForQueries}`}>
+                    {data?.position?.emailForQueries}
+                  </a>{" "}
+                  Should you not hear from FASSET within 6 weeks of the closing
+                  date, please consider your application unsuccessful.
+                  Communication is limited to shortlisted candidates only.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -270,7 +270,7 @@ const VacancyDetails = () => {
                 Download Job Description
               </a>
             </Button>
-            {open === true && <JobApplyModal position={data?.position} />}
+            {/* {open === true && <JobApplyModal position={data?.position} />} */}
           </Stack>
         </Stack>
       </Stack>

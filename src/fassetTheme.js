@@ -35,7 +35,7 @@ export const themeDark = createTheme({
       contrastText: "#333"
     },
     secondary: {
-      main: "#0FFFB3"
+      main: "#bc9337"
     },
     error: {
       light: "#e57373",
@@ -117,12 +117,11 @@ export const themeLight = createTheme({
       contrastText: "#ffffff"
     },
     secondary: {
-      main: "#a6aa15",
-      contrastText: "#ffffff"
+      main: "#bc9337",
     },
     background: {
       paper: "#fbfbfbff",
-      default: "#f3f3f3ff"
+      default: "#FFFFFF"
     }
   },
   typography: {

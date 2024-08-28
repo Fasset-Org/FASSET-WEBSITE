@@ -15,13 +15,13 @@ const DesktopNavigation = () => {
     textTransform: "uppercase",
     "&:hover": {
       transform: "none",
-      backgroundColor: "#a6aa15",
+      backgroundColor: "#bc9337",
       borderRadius: 8,
       fontWeight: "bolder"
     },
     "&.active": {
       transform: "none",
-      backgroundColor: "#a6aa15",
+      backgroundColor: "#bc9337",
       borderRadius: 8,
       fontWeight: "bolder"
     }

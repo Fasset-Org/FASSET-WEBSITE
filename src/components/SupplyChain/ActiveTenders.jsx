@@ -132,6 +132,15 @@ const ActiveTenders = () => {
                           onClick={() => {
                             navigate(`/tenders/${tender.id}`);
                           }}
+                          sx={{
+                            backgroundColor: "primary.main",
+                            color: "#FFFFFF",
+                            "&:hover": {
+                              backgroundColor: "primary.light",
+                              color: "#FFFFFF",
+                              fontWeight: "bolder"
+                            }
+                          }}
                         >
                           <VisibilityIcon />
                         </IconButton>
@@ -176,9 +185,6 @@ const ActiveTenders = () => {
         )}
       </Stack>
 
-     
-
-      
       <Grid container display={{ md: "none", xs: "block" }} spacing={2} mt={2}>
         {data?.currentTenders?.length > 0 ? (
           data?.currentTenders?.map((tender, i) => {

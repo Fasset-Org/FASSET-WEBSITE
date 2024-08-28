@@ -20,7 +20,7 @@ import UpdateFile2023 from "../../../files/Reseources/Skills-Plan/FASSET 2023-24
 import UpdateFile2022 from "../../../files/Reseources/Skills-Plan/FASSET 2022-23 SSP Final Annual Update.pdf";
 import UpdateFile2021 from "../../../files/Reseources/Skills-Plan/Fasset Sector Skills Plan 2021-22 Update - Final.pdf";
 import UpdateFile2019 from "../../../files/Reseources/Skills-Plan/Fasset SSP 2019 - 2020.pdf";
-import { Visibility } from "@mui/icons-material";
+import { Download } from "@mui/icons-material";
 
 const rows = [
   {
@@ -176,16 +176,23 @@ const SectorSkillPlan = () => {
                 <TableCell align="center" component="th" scope="row">
                   {row.documentName}
                 </TableCell>
+
                 <TableCell align="center" scope="row">
-                  <IconButton>
-                    <a
-                      href={row.fileUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      style={{ all: "unset" }}
-                    >
-                      <Visibility />
-                    </a>
+                  <IconButton
+                    sx={{
+                      backgroundColor: "primary.main",
+                      color: "#FFFFFF",
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        color: "#FFFFFF",
+                        fontWeight: "bolder"
+                      }
+                    }}
+                    onClick={() => {
+                      window.open(row.fileUrl, "_blank");
+                    }}
+                  >
+                    <Download />
                   </IconButton>
                 </TableCell>
               </TableRow>

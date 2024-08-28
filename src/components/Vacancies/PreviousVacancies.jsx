@@ -136,6 +136,15 @@ const PreviousVacancies = () => {
                               state: { open: false }
                             });
                           }}
+                          sx={{
+                            backgroundColor: "primary.main",
+                            color: "#FFFFFF",
+                            "&:hover": {
+                              backgroundColor: "primary.light",
+                              color: "#FFFFFF",
+                              fontWeight: "bolder"
+                            }
+                          }}
                         >
                           <VisibilityIcon />
                         </IconButton>
@@ -174,7 +183,7 @@ const PreviousVacancies = () => {
             </Table>
           </TableContainer>
         ) : (
-          <Stack width="100%" spacing={2} ml={2}>
+          <Stack width="100%" spacing={2} ml={2} mt={2}>
             <Alert severity="info">No Positions Available</Alert>
           </Stack>
         )}

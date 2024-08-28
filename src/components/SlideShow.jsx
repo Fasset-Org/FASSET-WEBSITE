@@ -5,14 +5,19 @@ import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../stateQueries/User";
 import { Skeleton, Stack } from "@mui/material";
 import "./SlideShow.css";
+import banner1 from "../images/website-banner-new/Web Banner 1.jpg";
+import banner2 from "../images/website-banner-new/web banner 2.jpg";
+import banner3 from "../images/website-banner-new/web banner 3.jpg";
 
-const Slideshow = ({ banners }) => {
+const Slideshow = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["banners"],
     queryFn: async () => {
       return UserQuery.getAllBanners();
     }
   });
+
+  const banners = [banner1, banner2, banner3];
 
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -40,7 +45,7 @@ const Slideshow = ({ banners }) => {
         setSlideIndex(nextSlideIndex);
       };
 
-      const interval = setInterval(showSlides, 3000); // Change image every 3 seconds
+      const interval = setInterval(showSlides, 6000); // Change image every 3 seconds
 
       return () => clearInterval(interval); // Cleanup interval on unmount
     }
@@ -52,7 +57,7 @@ const Slideshow = ({ banners }) => {
 
   return (
     <Stack spacing={2}>
-      <Stack className="slideshow-container">
+      {/* <Stack className="slideshow-container">
         {data?.banners?.length > 0 &&
           data?.banners.map((banner, index) => {
             return (
@@ -64,12 +69,13 @@ const Slideshow = ({ banners }) => {
                   <img
                     src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
                     style={{
+                      width: "100%",
                       height: 400,
-                      objectPosition: "100% 100%",
-                      width: "100%"
-                      // objectFit: xs ? 'scale-down' : "fill"
+                      objectPosition: "center",
+                      objectFit: "fill",
+                      imageRendering: "auto"
                     }}
-                    alt=""
+                    alt={banner.altText || "Banner image"}
                     loading="lazy"
                   />
                 </Stack>
@@ -77,43 +83,67 @@ const Slideshow = ({ banners }) => {
                   <img
                     src={`${process.env.REACT_APP_API_URL}/uploads/banners/${banner.bannerImageURL}`}
                     style={{
-                      height: 250,
+                      height: 180,
                       objectPosition: "100% 100%",
                       width: "100%",
                       objectFit: "fill"
                     }}
-                    loading="lazy"
+                    // loading="lazy"
                     alt=""
                   />
                 </Stack>
-                {/* <div className="text">Caption Text</div> */}
+          
               </div>
             );
           })}
 
-        {/* <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img
-            src={`${process.env.REACT_APP_API_URL}/uploads/banners/${data?.banners[0].bannerImageURL}`}
-            style={{ width: "100%" }}
-            alt=""
-          />
-          <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img
-            src={`${process.env.REACT_APP_API_URL}/uploads/banners/${data?.banners[1].bannerImageURL}`}
-            style={{ width: "100%" }}
-            alt=""
-          />
-          <div class="text">Caption Three</div>
-        </div> */}
+       
       </Stack>
 
       <div style={{ textAlign: "center" }}>
         {data?.banners?.map((banner, i) => {
+          return <span className="dot" key={i}></span>;
+        })}
+      </div> */}
+
+      <Stack className="slideshow-container">
+        {banners?.length > 0 &&
+          banners.map((banner, index) => {
+            return (
+              <div className="mySlides fade" key={index}>
+                <div className="numbertext">{`${index + 1} / ${
+                  banners.length
+                }`}</div>
+                <Stack display={{ md: "block", xs: "none" }}>
+                  <img
+                    src={banner}
+                    style={{
+                      width: "100%",
+                      height: "auto"
+                      // objectFit: 'scale-down'
+                    }}
+                    alt={"Banner" + index}
+                    loading="lazy"
+                  />
+                </Stack>
+                <Stack display={{ md: "none", xs: "block" }}>
+                  <img
+                    src={banner}
+                    style={{
+                      height: 170,
+                      width: "100%"
+                    }}
+                    // loading="lazy"
+                    alt=""
+                  />
+                </Stack>
+              </div>
+            );
+          })}
+      </Stack>
+
+      <div style={{ textAlign: "center" }}>
+        {banners?.map((banner, i) => {
           return <span className="dot" key={i}></span>;
         })}
       </div>

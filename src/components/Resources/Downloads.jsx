@@ -13,24 +13,26 @@ import {
   Alert,
   Divider,
   IconButton,
-  Menu,
-  MenuItem,
+  // Menu,
+  // MenuItem,
   Stack,
   TableFooter,
   TablePagination,
+  Tooltip,
   Typography
 } from "@mui/material";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../../stateQueries/User";
+import { Download } from "@mui/icons-material";
 
 const Downloads = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  // const [anchorEl, setAnchorEl] = React.useState(null);
+  // const open = Boolean(anchorEl);
 
   const { data } = useQuery({
     queryKey: ["downloads"],
@@ -48,12 +50,14 @@ const Downloads = () => {
     setPage(0);
   };
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
+
+  console.log(data);
 
   return (
     <Stack spacing={2} justifyContent="center">
@@ -144,10 +148,48 @@ const Downloads = () => {
                                 component="th"
                                 scope="row"
                               >
-                                {doc.originalFileName}
+                                <a
+                                  href={`${
+                                    process.env.REACT_APP_API_URL
+                                  }/api/dev/cse/downloadDocument?fileName=${
+                                    doc.fileName
+                                  }.${doc.originalFileName.split(".")[1]}`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  {doc.originalFileName}
+                                </a>
                               </TableCell>
                               <TableCell align="center" scope="row">
-                                <IconButton
+                                <Tooltip title="Download">
+                                  <IconButton
+                                    sx={{
+                                      backgroundColor: "primary.main",
+                                      color: "#FFFFFF",
+                                      "&:hover": {
+                                        backgroundColor: "primary.light",
+                                        color: "#FFFFFF",
+                                        fontWeight: "bolder"
+                                      }
+                                    }}
+                                    onClick={() => {
+                                      window.open(
+                                        `${
+                                          process.env.REACT_APP_API_URL
+                                        }/api/dev/cse/downloadDocument?fileName=${
+                                          doc.fileName
+                                        }.${
+                                          doc.originalFileName.split(".")[1]
+                                        }`,
+                                        "_blank"
+                                      );
+                                    }}
+                                  >
+                                    <Download />
+                                  </IconButton>
+                                </Tooltip>
+
+                                {/* <IconButton
                                   id="demo-positioned-button"
                                   aria-controls={
                                     open ? "demo-positioned-menu" : undefined
@@ -201,7 +243,7 @@ const Downloads = () => {
                                       Download
                                     </a>
                                   </MenuItem>
-                                </Menu>
+                                </Menu> */}
                               </TableCell>
                             </TableRow>
                           ))}

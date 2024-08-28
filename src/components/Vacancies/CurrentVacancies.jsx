@@ -150,6 +150,15 @@ const CurrentVacancies = () => {
                               state: { open: true }
                             });
                           }}
+                          sx={{
+                            backgroundColor: "primary.main",
+                            color: "#FFFFFF",
+                            "&:hover": {
+                              backgroundColor: "primary.light",
+                              color: "#FFFFFF",
+                              fontWeight: "bolder"
+                            }
+                          }}
                         >
                           <VisibilityIcon />
                         </IconButton>

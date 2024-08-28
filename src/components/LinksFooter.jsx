@@ -247,7 +247,7 @@ const LinksFooter = () => {
         <Typography
           textAlign="center"
           fontWeight="bolder"
-          sx={{ color: "#FFFFFF" }}
+          sx={{ color: "#FFFFFF", fontSize: { xs: 10 } }}
         >
           {`Copyright © ${new Date().getFullYear()} - Fasset Rights Reserved`}
         </Typography>
@@ -260,7 +260,7 @@ const LinksFooter = () => {
         <Typography
           textAlign="center"
           fontWeight="bolder"
-          sx={{ color: "#FFFFFF" }}
+          sx={{ color: "#FFFFFF", fontSize: { xs: 10 } }}
         >
           FASSET Policy
         </Typography>
@@ -274,7 +274,7 @@ const LinksFooter = () => {
         <Stack
           direction="row"
           justifyContent="center"
-          sx={{ cursor: "pointer" }}
+          sx={{ cursor: "pointer", fontSize: { xs: 10 } }}
           onClick={() => {
             window.open(
               "https://www.google.com/maps/place/Fasset+Financial+%26+Accounting+Sector+Education+And/@-26.0948292,27.9973029,17z/data=!3m1!4b1!4m6!3m5!1s0x1e950ad4f694dd9d:0xfdcbc0464976f09e!8m2!3d-26.0948292!4d27.9998778!16s%2Fg%2F11b6d7d4fn?entry=ttu",
@@ -286,7 +286,7 @@ const LinksFooter = () => {
           <Typography
             textAlign="center"
             fontWeight="bolder"
-            sx={{ color: "#FFFFFF" }}
+            sx={{ color: "#FFFFFF", fontSize: { xs: 10 } }}
           >
             1st floor, 296 Kent Ave, Ferndale, Randburg, 2194
           </Typography>

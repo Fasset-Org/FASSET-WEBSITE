@@ -26,7 +26,9 @@ const SubjectMatterExpertsDatabaseRegistration = () => {
         occupational qualification they wish to be involved with before applying
         for the registration on the database. Subject Matter Experts are
         encouraged to apply for registration by sending an e-mail to:
-        Esther.morake@fasset.org.za.
+        <a href={`mailto:Esther.morake@fasset.org.za`}>
+          Esther.morake@fasset.org.za
+        </a>{" "}
       </Typography>
     </Stack>
   );

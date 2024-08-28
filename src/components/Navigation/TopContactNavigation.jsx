@@ -6,7 +6,13 @@ import MailIcon from "@mui/icons-material/Mail";
 
 const TopContactNavigation = () => {
   return (
-    <Stack height={40} direction="row" justifyContent="center" width='100%' display='block'>
+    <Stack
+      height={40}
+      direction="row"
+      justifyContent="center"
+      width="100%"
+      display="block"
+    >
       <Stack
         height="100%"
         width="100%"
@@ -68,7 +74,13 @@ const TopContactNavigation = () => {
 
           <Typography>Email :</Typography>
           <Typography>
-            &nbsp;fassetcallcentre@fasset.org.za
+            &nbsp;
+            <a
+              href={`mailto:fassetcallcentre@fasset.org.za`}
+              style={{ color: "#FFFFFF" }}
+            >
+              fassetcallcentre@fasset.org.za
+            </a>{" "}
           </Typography>
         </Typography>
       </Stack>

@@ -21,9 +21,23 @@ import React from "react";
 import TablePaginationActions from "@mui/material/TablePagination/TablePaginationActions";
 import Trend2021 from "../../../files/Reseources/Sector-Trends/Fasset Sector Trends 2021 - Final.pdf";
 import Trend2020 from "../../../files/Reseources/Sector-Trends/Fasset_Sector_Trends_2020_30_March_2020EB.pdf";
+import Trend2022 from "../../../files/Reseources/Sector-Trends/FASSET Sector Trends 2021_22 Final Report.pdf";
+import Trend2023 from "../../../files/Reseources/Sector-Trends/FINAL REPORT_FASSET Sector Trends 2023.pdf";
 import { Download } from "@mui/icons-material";
 
 const rows = [
+  {
+    period: "2023",
+    documentName: "Fasset Trends Study",
+    desc: "A trend analysis of the Finance and Accounting Services sector in the 2020/21 to 2023/24 period.",
+    fileUrl: Trend2023
+  },
+  {
+    period: "2022",
+    documentName:
+      "Analysis of the FASSET grant applications between 2000/01 and 2021/22 period.",
+    fileUrl: Trend2022
+  },
   {
     period: "2021",
     documentName: "Sector Trends Study",

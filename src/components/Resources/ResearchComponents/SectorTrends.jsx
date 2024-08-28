@@ -28,7 +28,7 @@ import { Download } from "@mui/icons-material";
 const rows = [
   {
     period: "2023",
-    documentName: "",
+    documentName: "Fasset Trends Study",
     desc: "A trend analysis of the Finance and Accounting Services sector in the 2020/21 to 2023/24 period.",
     fileUrl: Trend2023
   },

@@ -131,7 +131,7 @@ function LifeLongLearningEvents() {
               <TableCell align="center" component="th" scope="row"></TableCell>
               <TableCell align="center" component="th" scope="row"></TableCell>
               <TableCell align="center" component="th" scope="row">
-                <Typography>Cyber Security</Typography>
+                <Typography>Cyber Security in Financial Markets</Typography>
               </TableCell>
 
               <TableCell align="center" scope="row">

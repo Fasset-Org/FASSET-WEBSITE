@@ -95,7 +95,7 @@ function LifeLongLearningEvents() {
                 <span>20 September 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                <span>
+                {/* <span>
                   <a
                     href="https://app.glueup.com/event/fasset-blockchain-and-cyber-security-in-financial-markets-webinar-2-5hr-116812/"
                     style={{
@@ -109,7 +109,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br />
+                <br /> */}
                 <span>
                   <a
                     href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-118080/"
@@ -140,7 +140,7 @@ function LifeLongLearningEvents() {
                 <span>27 September 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                <span>
+                {/* <span>
                   <a
                     href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-118076/"
                     style={{
@@ -154,7 +154,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br />
+                <br /> */}
                 <span>
                   <a
                     href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-118079/"

@@ -108,7 +108,7 @@ const AnnualReports = () => {
                 Annual Report 2023/2024
               </TableCell>
               <TableCell align="center" component="th" scope="row">
-                Apr 01 2023 - May 31 2024
+                Apr 01 2023 - Mar 31 2024
               </TableCell>
 
               <TableCell align="center" scope="row">

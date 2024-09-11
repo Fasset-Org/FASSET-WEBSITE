@@ -90,8 +90,8 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>03 September 2024 (10h00 – 12h30)</span>
-                <br />
+                {/* <span>03 September 2024 (10h00 – 12h30)</span> */}
+                {/* <br /> */}
                 <span>20 September 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
@@ -135,8 +135,8 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>11 September 2024 (10h00 – 12h30)</span>
-                <br />
+                {/* <span>11 September 2024 (10h00 – 12h30)</span>
+                <br /> */}
                 <span>27 September 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
@@ -171,6 +171,53 @@ function LifeLongLearningEvents() {
                 </span>
               </TableCell>
             </TableRow>
+
+
+            <TableRow>
+              <TableCell align="center" component="th" scope="row">2</TableCell>
+              <TableCell align="center" component="th" scope="row">The Institute of Risk Management South Africa (IRMS)</TableCell>
+              <TableCell align="center" component="th" scope="row">
+                <Typography>Risk Management</Typography>
+              </TableCell>
+
+              <TableCell align="center" scope="row">
+                {/* <span>11 September 2024 (10h00 – 12h30)</span>
+                <br /> */}
+                <span>26 September 2024 (09h00 – 12h00)</span>
+              </TableCell>
+              <TableCell align="center" scope="row">
+                <span>
+                  <a
+                    href="https://www.irmsa.org.za/events/EventDetails.aspx?id=1883899&group="
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                {/* <br />
+                <span>
+                  <a
+                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-118079/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span> */}
+              </TableCell>
+            </TableRow>
+            
           </TableBody>
         </Table>
       </TableContainer>

@@ -12,7 +12,7 @@ const WindowCountDown = ({ grant }) => {
       return (
         <Stack component={Paper} width="100%">
           <Stack direction="row" justifyContent="space-between">
-            <Typography fontSize={20} fontWeight={"bolder"} padding={2}>
+            <Typography fontSize={15} fontWeight={"bolder"} padding={2}>
               {grant.title}
             </Typography>
             <Typography
@@ -21,7 +21,7 @@ const WindowCountDown = ({ grant }) => {
                 color: "#FFFFFF",
                 fontWeight: "bolder",
                 padding: { md: 2, xs: 0.5, sm: 0.5 },
-                fontSize: 20,
+                fontSize: 15,
                 textAlign: "center"
               }}
               component={Stack}

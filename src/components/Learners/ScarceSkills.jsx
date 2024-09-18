@@ -31,7 +31,7 @@ const ScarceSkills = () => {
         communities around you. If you wish to pledge your support and
         volunteer, please send an email to{" "}
         <a href={`mailto:Unathi.Nkosiyane@fasset.org.za`}>
-          Esther.morake@fasset.org.za
+          Unathi.Nkosiyane@fasset.org.za
         </a>{" "}
       </Typography>
       <Typography

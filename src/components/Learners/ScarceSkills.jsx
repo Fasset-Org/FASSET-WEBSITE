@@ -29,7 +29,10 @@ const ScarceSkills = () => {
         information. We are calling upon our Alumni to volunteer their time and
         give career awareness talks at schools, youth centres, churches and
         communities around you. If you wish to pledge your support and
-        volunteer, please send an email to unathi.nkosiyane@fasset.org.za
+        volunteer, please send an email to{" "}
+        <a href={`mailto:Unathi.Nkosiyane@fasset.org.za`}>
+          Esther.morake@fasset.org.za
+        </a>{" "}
       </Typography>
       <Typography
         fontSize={20}

@@ -137,7 +137,9 @@ function LifeLongLearningEvents() {
               <TableCell align="center" scope="row">
                 {/* <span>11 September 2024 (10h00 – 12h30)</span>
                 <br /> */}
-                <span>27 September 2024 (10h00 – 12h30)</span>
+                <span>26 September 2024 (10h00 – 12h30)</span>
+                <br />
+                <span>09 October 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 {/* <span>
@@ -169,13 +171,31 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
+                <br />
+                <span>
+                  <a
+                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-120000/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
               </TableCell>
             </TableRow>
 
-
             <TableRow>
-              <TableCell align="center" component="th" scope="row">2</TableCell>
-              <TableCell align="center" component="th" scope="row">The Institute of Risk Management South Africa (IRMS)</TableCell>
+              <TableCell align="center" component="th" scope="row">
+                2
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                The Institute of Risk Management South Africa (IRMS)
+              </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>Risk Management</Typography>
               </TableCell>
@@ -217,7 +237,55 @@ function LifeLongLearningEvents() {
                 </span> */}
               </TableCell>
             </TableRow>
-            
+
+            <TableRow>
+              <TableCell align="center" component="th" scope="row">
+                3
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                The Institute of Internal Audit South Africa (IIASA)
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                <Typography>The Global Internal Audit Standards</Typography>
+              </TableCell>
+
+              <TableCell align="center" scope="row">
+                <span>12 November 2024 (17h00 – 19h30)</span>
+                <br />
+                <span>03 December 2024 (17h00 – 19h30)</span>
+              </TableCell>
+              <TableCell align="center" scope="row">
+                <span>
+                  <a
+                    href="https://iiasa.site-ym.com/events/register.aspx?id=1888605"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="https://iiasa.site-ym.com/events/register.aspx?id=1888606"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </TableContainer>

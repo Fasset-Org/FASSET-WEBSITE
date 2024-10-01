@@ -286,6 +286,56 @@ function LifeLongLearningEvents() {
                 </span>
               </TableCell>
             </TableRow>
+
+            <TableRow>
+              <TableCell align="center" component="th" scope="row">
+                4
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                The Association of Certified Fraud Examiners South Africa (ACFE
+                SA)
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                <Typography>
+                  Detecting Fraud with Data Analytics & Criminal Investigation
+                </Typography>
+              </TableCell>
+
+              <TableCell align="center" scope="row">
+                22 October 2024 (09h00 – 11h30)
+              </TableCell>
+              <TableCell align="center" scope="row">
+                <span>
+                  <a
+                    href="https://acfesa.glueup.com/event/acfe-sa-fasset-lifelong-learning-event-2024-116943/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                {/* <br />
+                <span>
+                  <a
+                    href="https://iiasa.site-ym.com/events/register.aspx?id=1888606"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span> */}
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </TableContainer>

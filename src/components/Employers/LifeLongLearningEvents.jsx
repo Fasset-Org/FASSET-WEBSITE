@@ -78,7 +78,7 @@ function LifeLongLearningEvents() {
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow>
+            {/* <TableRow>
               <TableCell align="center" component="th" scope="row">
                 1
               </TableCell>
@@ -90,12 +90,12 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                {/* <span>03 September 2024 (10h00 – 12h30)</span> */}
-                {/* <br /> */}
+                <span>03 September 2024 (10h00 – 12h30)</span>
+                <br />
                 <span>20 September 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                {/* <span>
+                <span>
                   <a
                     href="https://app.glueup.com/event/fasset-blockchain-and-cyber-security-in-financial-markets-webinar-2-5hr-116812/"
                     style={{
@@ -109,7 +109,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br /> */}
+                <br />
                 <span>
                   <a
                     href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-118080/"
@@ -125,7 +125,7 @@ function LifeLongLearningEvents() {
                   </a>
                 </span>
               </TableCell>
-            </TableRow>
+            </TableRow> */}
 
             <TableRow>
               <TableCell align="center" component="th" scope="row"></TableCell>
@@ -211,7 +211,7 @@ function LifeLongLearningEvents() {
                 2
               </TableCell>
               <TableCell align="center" component="th" scope="row">
-                The Institute of Risk Management South Africa (IRMS)
+                The Institute of Risk Management South Africa (IRMSA)
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>Risk Management</Typography>

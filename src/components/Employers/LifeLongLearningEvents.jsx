@@ -135,46 +135,63 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                {/* <span>11 September 2024 (10h00 – 12h30)</span>
-                <br /> */}
-                <span>26 September 2024 (10h00 – 12h30)</span>
-                <br />
                 <span>09 October 2024 (10h00 – 12h30)</span>
+                <br />
+                <span>23 October 2024 (10h00 – 12h30)</span>
+                <br />
+                <span>28 October 2024 (10h00 – 12h30)</span>
+                <br />
+                <span>30 October 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                {/* <span>
-                  <a
-                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-118076/"
-                    style={{
-                      color: "#163683",
-                      cursor: "pointer",
-                      fontWeight: 600
-                    }}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Link
-                  </a>
-                </span>
-                <br /> */}
-                <span>
-                  <a
-                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-118079/"
-                    style={{
-                      color: "#163683",
-                      cursor: "pointer",
-                      fontWeight: 600
-                    }}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Link
-                  </a>
-                </span>
-                <br />
                 <span>
                   <a
                     href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-120000/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-120722/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-120723/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-120108/"
                     style={{
                       color: "#163683",
                       cursor: "pointer",
@@ -203,7 +220,7 @@ function LifeLongLearningEvents() {
               <TableCell align="center" scope="row">
                 {/* <span>11 September 2024 (10h00 – 12h30)</span>
                 <br /> */}
-                <span>26 September 2024 (09h00 – 12h00)</span>
+                <span>17 October 2024 (09h00 – 12h00)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 <span>

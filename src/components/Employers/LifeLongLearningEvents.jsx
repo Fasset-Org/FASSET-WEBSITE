@@ -128,8 +128,13 @@ function LifeLongLearningEvents() {
             </TableRow> */}
 
             <TableRow>
-              <TableCell align="center" component="th" scope="row"></TableCell>
-              <TableCell align="center" component="th" scope="row"></TableCell>
+              <TableCell align="center" component="th" scope="row">
+                1
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                {" "}
+                South African Institute of Financial Markets (SAIFM)
+              </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <span>Cyber Security in Financial Markets</span>
                 <br />

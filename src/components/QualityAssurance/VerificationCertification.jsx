@@ -13,7 +13,7 @@ const VerificationCertification = () => {
       </Typography>
       <Typography fontWeight="bolder">
         The purpose of verification is to confirm assessment decisions made by
-        Fasset accredited providers. The process includes verification of:
+        FASSET accredited providers. The process includes verification of:
       </Typography>
 
       <ul>
@@ -46,7 +46,7 @@ const VerificationCertification = () => {
         </li>
       </ul>
       <Typography>
-        The majority of qualifications within Fasset’s scope of quality
+        The majority of qualifications within FASSET's scope of quality
         assurance responsibility are subject to summative assessment performed
         by the relevant professional body. Verification of assessment for other
         qualifications, skills programmes and unit standards is conducted on
@@ -55,15 +55,15 @@ const VerificationCertification = () => {
       </Typography>
 
       <Typography>
-        Fasset issues certificates for the achievement of qualifications and
+        FASSET issues certificates for the achievement of qualifications and
         learnerships, and a statement of results for skills programmes and unit
         standards. Certificates and statements of results can only be issued if
         verification was successful and learner data has been reported in the
-        format prescribed by Fasset.
+        format prescribed by FASSET.
       </Typography>
 
       <Typography>
-        Please contact the Fasset PQA Department of further information
+        Please contact the FASSET PQA Department of further information
         regarding verification and certification.
       </Typography>
     </Stack>

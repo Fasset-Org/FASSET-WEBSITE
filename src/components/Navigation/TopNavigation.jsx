@@ -87,13 +87,13 @@ const TopNavigation = () => {
             <li>Our Mandate</li>
             <li>Board & Committes</li>
             <li>Our Teams</li>
-            <li>Fasset Constitution</li>
+            <li>FASSET Constitution</li>
             <li>Policies</li>
           </ul>
         </li>
         <li>
           <Link to="/fassetprogrammes" style={{ color: "inherit" }}>
-            Fasset Programmes
+            FASSET Programmes
           </Link>
         </li>
         <li>

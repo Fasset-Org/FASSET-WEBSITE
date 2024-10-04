@@ -28,13 +28,13 @@ import { Download } from "@mui/icons-material";
 const rows = [
   {
     period: "2023",
-    documentName: "Fasset Trends Study",
+    documentName: "FASSET Trends Study",
     desc: "A trend analysis of the Finance and Accounting Services sector in the 2020/21 to 2023/24 period.",
     fileUrl: Trend2023
   },
   {
     period: "2022",
-    documentName: "Fasset Trends Study",
+    documentName: "FASSET Trends Study",
     desc: "Analysis of the FASSET grant applications between 2000/01 and 2021/22 period.",
     fileUrl: Trend2022
   },
@@ -46,8 +46,8 @@ const rows = [
   },
   {
     period: "2020",
-    documentName: "Fasset Trends Study",
-    desc: "Fasset commissioned a survey of the sector (employers, professional institutes, education and training institutions and learners) and concluded with a labour market demand and supply analysis, and a skills needs analysis. This document is intended to provide strategic direction for the sector and highlight skills deficits and skills priorities. This is the third sector survey",
+    documentName: "FASSET Trends Study",
+    desc: "FASSET commissioned a survey of the sector (employers, professional institutes, education and training institutions and learners) and concluded with a labour market demand and supply analysis, and a skills needs analysis. This document is intended to provide strategic direction for the sector and highlight skills deficits and skills priorities. This is the third sector survey",
     fileUrl: Trend2020
   }
 ];
@@ -104,7 +104,7 @@ const SectorTrends = () => {
         Download the Sector Trend
       </Typography>
       <Typography>
-        To download Fasset’s Sector Trend Reports, click on your choice in the
+        To download FASSET's Sector Trend Reports, click on your choice in the
         table below.
       </Typography>
 

@@ -21,9 +21,10 @@ const LinksFooter = () => {
     >
       <Stack
         direction={{ xs: "column-reverse", md: "row" }}
-        height={{ md: 300 }}
+        height={{ md: "auto" }}
         justifyContent="center"
         alignItems="center"
+        padding={2}
         // sx={{
         //   "& :nth-child(1)": {
         //     order: { xs: 4 }
@@ -78,10 +79,7 @@ const LinksFooter = () => {
 
             <IconButton
               onClick={() => {
-                window.open(
-                  "https://www.linkedin.com/company/financial-and-accounting-services-seta-fasset-/mycompany/",
-                  "_blank"
-                );
+                window.open("https://www.tiktok.com/@fasset_sa", "_blank");
               }}
             >
               <TikTokIcon sx={{ color: "#0178b5" }} />
@@ -92,8 +90,8 @@ const LinksFooter = () => {
           width={{ xs: "100%", md: "33.33%" }}
           height={{ xs: 200, md: "100%" }}
           direction="column"
-          justifyContent="center"
-          alignItems="center"
+          // justifyContent="center"
+          alignItems={{ xs: "center" }}
           // border={1}
           // borderColor={"red"}
         >
@@ -185,8 +183,8 @@ const LinksFooter = () => {
           // border={1}
           // borderColor={"red"}
           direction="column"
-          justifyContent="center"
-          alignItems="center"
+          // justifyContent="center"
+          alignItems={{ xs: "center" }}
         >
           <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
             Stakeholder
@@ -243,6 +241,61 @@ const LinksFooter = () => {
           >
             Downloads
           </Link>
+        </Stack>
+
+        <Stack
+          width={{ xs: "100%", md: "33.33%" }}
+          height={{ xs: 200, md: "100%" }}
+          // border={1}
+          // borderColor={"red"}
+          direction="column"
+          // justifyContent="center"
+          alignItems={{ xs: "center" }}
+        >
+          <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
+            Whistle Blowers
+          </Typography>
+          <Stack direction="row">
+            <Typography fontWeight="bolder">Toll Free Number:</Typography>
+            <Typography>&nbsp;&nbsp;&nbsp;0800 472 637</Typography>
+          </Stack>
+
+          <Stack direction="row">
+            <Typography fontWeight="bolder">Email:</Typography>
+            <Typography>
+              &nbsp;&nbsp;&nbsp;fasset@whistleblowing.co.za
+            </Typography>
+          </Stack>
+
+          <Stack direction="row">
+            <Typography fontWeight="bolder">WhatsApp ChatBot:</Typography>
+            <Typography>&nbsp;&nbsp;&nbsp;031 308 4664</Typography>
+          </Stack>
+
+          <Stack direction="row">
+            <Typography fontWeight="bolder">Postal:</Typography>
+            <Typography>
+              &nbsp;&nbsp;&nbsp;FREEPOST KZN665, MUSGRAVE, 4062
+            </Typography>
+          </Stack>
+
+          <Stack direction="row">
+            <Typography fontWeight="bolder">SMS:</Typography>
+            <Typography>&nbsp;&nbsp;&nbsp;33490</Typography>
+          </Stack>
+
+          <Stack direction="row">
+            <Typography fontWeight="bolder">Online:</Typography>
+            <Typography>&nbsp;&nbsp;&nbsp;www.whistleblowing.co.za</Typography>
+          </Stack>
+
+          <Stack direction="row">
+            <Typography fontWeight="bolder">Mobile App:</Typography>
+            <Typography sx={{ overflow: "auto"}}>
+              &nbsp;&nbsp;&nbsp;Google Play and Apple App
+              stores{" "}
+            </Typography>
+          </Stack>
         </Stack>
       </Stack>
 

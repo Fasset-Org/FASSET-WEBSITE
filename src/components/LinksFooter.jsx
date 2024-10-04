@@ -7,6 +7,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
+import TikTokIcon from "./TikTokIcon";
 
 const LinksFooter = () => {
   const navigate = useNavigate();
@@ -73,6 +74,17 @@ const LinksFooter = () => {
               }}
             >
               <LinkedInIcon sx={{ color: "#0178b5" }} />
+            </IconButton>
+
+            <IconButton
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/company/financial-and-accounting-services-seta-fasset-/mycompany/",
+                  "_blank"
+                );
+              }}
+            >
+              <TikTokIcon sx={{ color: "#0178b5" }} />
             </IconButton>
           </Stack>
         </Stack>

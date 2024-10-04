@@ -40,12 +40,12 @@ const rows = [
   },
   {
     period: "2021/2022",
-    documentName: "Fasset Sector Skills Plan 2021-22 Update",
+    documentName: "FASSET Sector Skills Plan 2021-22 Update",
     fileUrl: UpdateFile2021
   },
   {
     period: "2019/2020",
-    documentName: "Fasset SSP 2019 - 2020",
+    documentName: "FASSET SSP 2019 - 2020",
     fileUrl: UpdateFile2019
   }
 ];

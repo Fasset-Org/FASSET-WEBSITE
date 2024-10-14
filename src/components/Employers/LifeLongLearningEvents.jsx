@@ -155,21 +155,6 @@ function LifeLongLearningEvents() {
                 <span>30 October 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                {/* <span>
-                  <a
-                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-120000/"
-                    style={{
-                      color: "#163683",
-                      cursor: "pointer",
-                      fontWeight: 600
-                    }}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Link
-                  </a>
-                </span>
-                <br /> */}
                 <span>
                   <a
                     href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-120722/"
@@ -248,21 +233,6 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                {/* <br />
-                <span>
-                  <a
-                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-118079/"
-                    style={{
-                      color: "#163683",
-                      cursor: "pointer",
-                      fontWeight: 600
-                    }}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Link
-                  </a>
-                </span> */}
               </TableCell>
             </TableRow>
 
@@ -362,6 +332,94 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span> */}
+              </TableCell>
+            </TableRow>
+
+            {/* New Record */}
+
+            <TableRow>
+              <TableCell align="center" component="th" scope="row">
+                5
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                South African Institute of Taxation (SAIT)
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                <Typography>
+                  Budget & Tax Updates (2024 SARS operations and legislative
+                  updates)
+                </Typography>
+              </TableCell>
+
+              <TableCell align="center" scope="row">
+                <span>29 October 2024 (10h00 - 12h30)</span>
+                <br />
+                <span>12 November 2024 (10h00 - 12h30)</span>
+                <br />
+                <span>26 November 2024 (10h00 - 12h30)</span>
+                <br />
+                <span>03 December 2024 (10h00 - 12h30)</span>
+              </TableCell>
+              <TableCell align="center" scope="row">
+                <span>
+                  <a
+                    href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897629&group="
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897956&group="
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+
+                <br />
+                <span>
+                  <a
+                    href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897957&group="
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <span>
+                  <a
+                    href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897958&group="
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
               </TableCell>
             </TableRow>
           </TableBody>

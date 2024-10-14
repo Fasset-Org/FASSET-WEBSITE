@@ -146,8 +146,8 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>09 October 2024 (10h00 – 12h30)</span>
-                <br />
+                {/* <span>09 October 2024 (10h00 – 12h30)</span>
+                <br /> */}
                 <span>23 October 2024 (10h00 – 12h30)</span>
                 <br />
                 <span>28 October 2024 (10h00 – 12h30)</span>
@@ -155,7 +155,7 @@ function LifeLongLearningEvents() {
                 <span>30 October 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                <span>
+                {/* <span>
                   <a
                     href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-120000/"
                     style={{
@@ -169,7 +169,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br />
+                <br /> */}
                 <span>
                   <a
                     href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-120722/"

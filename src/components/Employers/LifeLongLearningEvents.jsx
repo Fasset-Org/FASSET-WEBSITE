@@ -406,6 +406,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
+                <br />
                 <span>
                   <a
                     href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897958&group="

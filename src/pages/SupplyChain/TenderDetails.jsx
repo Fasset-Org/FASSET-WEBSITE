@@ -140,7 +140,7 @@ const TenderDetails = () => {
                 : new Date(data?.tender?.closingDate).getHours() +
                   ":" +
                   new Date(data?.tender?.closingDate).getMinutes() +
-                  "AM"
+                  "0 AM"
             }`}
           </Typography>
         </Stack>
@@ -205,10 +205,11 @@ const TenderDetails = () => {
                 >
                   Click here to join the meeting
                 </a>
-                <br />
-                &nbsp; Meeting ID: {data?.tender?.meetinngId} <br />Passcode:
-                {data?.tender?.meetingPasscode}
               </Typography>
+              <Typography>
+                Meeting ID: {data?.tender?.meetinngId} <br />
+              </Typography>
+              <Typography>Passcode: {data?.tender?.meetingPasscode}</Typography>
             </>
           )}
         </Stack>
@@ -265,11 +266,7 @@ const TenderDetails = () => {
               <Typography>Bids Received</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography
-                textAlign="center"
-                fontWeight="bolder"
-                fontSize={20}
-              >
+              <Typography textAlign="center" fontWeight="bolder" fontSize={20}>
                 Date Posted:
                 <span style={{ color: "#1f2f79", fontWeight: "lighter" }}>
                   {new Date(data?.tender.bidders[0].datePosted).toDateString()}
@@ -359,11 +356,7 @@ const TenderDetails = () => {
               <Typography>Awarded Bidder</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography
-                textAlign="center"
-                fontWeight="bolder"
-                fontSize={20}
-              >
+              <Typography textAlign="center" fontWeight="bolder" fontSize={20}>
                 Date Posted:
                 <span style={{ color: "#1f2f79", fontWeight: "lighter" }}>
                   {new Date(winner.datePosted).toDateString()}

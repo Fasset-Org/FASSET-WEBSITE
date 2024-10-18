@@ -189,7 +189,7 @@ const TenderDetails = () => {
                     : new Date(data?.tender?.meetingDate).getHours() +
                       ":" +
                       new Date(data?.tender?.meetingDate).getMinutes() +
-                      "AM"
+                      "0 AM"
                 }`}{" "}
                 &nbsp; AM virtually.
               </Typography>
@@ -205,7 +205,8 @@ const TenderDetails = () => {
                 >
                   Click here to join the meeting
                 </a>
-                &nbsp; Meeting ID: {data?.tender?.meetinngId} Passcode:
+                <br />
+                &nbsp; Meeting ID: {data?.tender?.meetinngId} <br />Passcode:
                 {data?.tender?.meetingPasscode}
               </Typography>
             </>
@@ -239,7 +240,7 @@ const TenderDetails = () => {
               : new Date(data?.tender?.closingDate).getHours() +
                 ":" +
                 new Date(data?.tender?.closingDate).getMinutes() +
-                "AM"
+                "0 AM"
           }`}
         </Typography>
 

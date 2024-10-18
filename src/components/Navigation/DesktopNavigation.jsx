@@ -73,7 +73,7 @@ const DesktopNavigation = () => {
               variant="contained"
               sx={{ backgroundColor: "primary.dark" }}
             >
-              Fasset Assistant
+              FASSET Assistant
             </Button> */}
           </Stack>
         </Stack>

@@ -9,7 +9,7 @@ import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { Paper, Slide, Stack, Typography, useMediaQuery } from "@mui/material";
-import WindowCountDown from "./WindowCountDown";
+// import WindowCountDown from "./WindowCountDown";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../stateQueries/User";
 
@@ -103,10 +103,10 @@ export default function NoticeBoardModal() {
       </BootstrapDialogTitle>
       <DialogContent dividers>
         <Stack spacing={2}>
-          {grantsWindowQuery?.data?.grants?.length > 0 &&
+          {/* {grantsWindowQuery?.data?.grants?.length > 0 &&
             grantsWindowQuery?.data?.grants?.map((grant) => {
               return <WindowCountDown grant={grant} key={grant.id} />;
-            })}
+            })} */}
 
           {/* <Typography fontSize={20} fontWeight="bolder">
             Latest News
@@ -120,7 +120,7 @@ export default function NoticeBoardModal() {
                   component={Paper}
                   padding={2}
                   key={notice.id}
-                  sx={{backgroundColor: '#FFFFFF'}}
+                  sx={{ backgroundColor: "#FFFFFF" }}
                 >
                   <Typography
                     sx={

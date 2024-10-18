@@ -89,7 +89,7 @@ const TenderDetails = () => {
         spacing={2}
         border={1}
         borderColor="lightgray"
-        width={{ xs: "100%", sm: "100%", md: "70%" }}
+        width={{ xs: "100%", sm: "100%", md: "50%" }}
         padding={2}
         justifyContent="center"
         component={Paper}

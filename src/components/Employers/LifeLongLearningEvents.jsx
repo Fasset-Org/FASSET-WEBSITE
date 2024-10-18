@@ -390,7 +390,6 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-
                 <br />
                 <span>
                   <a

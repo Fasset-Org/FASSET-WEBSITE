@@ -47,6 +47,36 @@ const TenderDetails = () => {
     }
   });
 
+  const questionsAndAnswers = [
+    {
+      question: "How will FASSET assess the company’s experience?",
+      answer:
+        "The company profile and reference letters should indicate how long the company has been in operation. Reference letters should also provide FASSET with details of previous projects completed by the company."
+    },
+    {
+      question: "How will FASSET assess the experience of the employees?",
+      answer:
+        "Employee CVs should provide employment history, including the number of years they have worked as property agents."
+    },
+    {
+      question: "Should transfer costs be included in the pricing?",
+      answer:
+        "Yes, the tender document specifies that providers should include transfer costs in their pricing."
+    },
+    {
+      question:
+        "iven the absence of mandates, how will FASSET select the provider? Will it be based on the entity's qualifications, the merits of the property asset, or a combination of both?",
+      answer:
+        "We understand that providers may not have mandates at this stage. However, bidders must ensure properties are available for viewing when FASSET requests it. At this stage, we are not evaluating the building itself; rather, we are assessing the bidder's capability to meet our requirements."
+    },
+    {
+      question:
+        " If a bidder has five buildings, should they present a separate pricing sheet for each building?",
+      answer:
+        "No, we provided an estimated value of R50 million for bidders to use as a basis. FASSET’s objective is to confirm that you have five buildings in place."
+    }
+  ];
+
   const winner =
     (data &&
       data?.tender?.bidders.find(
@@ -254,6 +284,47 @@ const TenderDetails = () => {
         <Typography>
           The procurement process is administered by FASSET.
         </Typography>
+
+        {data?.tender?.tenderReference === "FAS/BM/OPS/OFFICESPACE/CON3445" && (
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ color: "#FFFFFF" }} />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              sx={{ backgroundColor: "primary.main" }}
+            >
+              <Typography fontSize={15}>
+                {" "}
+                Questions and answers for the compulsory tender briefing session
+                - 25 October 2024 at 10:00
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ul>
+                {questionsAndAnswers.map((qa, i) => {
+                  return (
+                    <li key={1}>
+                      <Stack>
+                        <Stack>
+                          <Typography sx={{ fontWeight: "bold" }}>
+                            {`Question ${i + 1}`}:
+                          </Typography>
+                          <Typography>{qa.question}</Typography>
+                        </Stack>
+                        <Stack>
+                          <Typography sx={{ fontWeight: "bold" }}>
+                            Answer:
+                          </Typography>
+                          <Typography>{qa.answer}</Typography>
+                        </Stack>
+                      </Stack>
+                    </li>
+                  );
+                })}
+              </ul>
+            </AccordionDetails>
+          </Accordion>
+        )}
 
         {data?.tender?.bidders?.length > 0 && (
           <Accordion sx={{ width: "100%" }}>

@@ -247,7 +247,7 @@ const VacancyDetails = () => {
                   </a>{" "}
                   Should you not hear from FASSET within 6 weeks of the closing
                   date, please consider your application unsuccessful.
-                  Communication is limited to shortlisted candidates only.
+                  Communication is limited to shortlisted candidates only
                 </Typography>
               </AccordionDetails>
             </Accordion>

@@ -11,9 +11,9 @@ import {
 import React from "react";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// import JobApplyModal from "../../components/Modals/JobApplyModal";
+import JobApplyModal from "../../components/Modals/JobApplyModal";
 import { ArrowBack } from "@mui/icons-material";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../../stateQueries/User";
 
@@ -22,9 +22,9 @@ const VacancyDetails = () => {
 
   const { id } = useParams();
 
-  // const location = useLocation();
+  const location = useLocation();
 
-  // const { open } = location.state;
+  const { open } = location.state;
 
   const { data, isLoading } = useQuery({
     queryKey: ["position"],
@@ -97,12 +97,12 @@ const VacancyDetails = () => {
                 new Date(data?.positon?.closingDate).getHours() > 11
                   ? new Date(data?.position?.closingDate).getHours() +
                     ":" +
-                    new Date(data?.position?.closingDate).getMinutes() 
-                    // "AM"
-                  : new Date(data?.position?.closingDate).getHours() +
+                    new Date(data?.position?.closingDate).getMinutes()
+                  : // "AM"
+                    new Date(data?.position?.closingDate).getHours() +
                     ":" +
-                    new Date(data?.position?.closingDate).getMinutes() 
-                    // "PM"
+                    new Date(data?.position?.closingDate).getMinutes()
+                // "PM"
               }`}
             </Typography>
           </Stack>
@@ -163,7 +163,8 @@ const VacancyDetails = () => {
                     (qualification, i) => {
                       return (
                         <span key={i}>
-                          {`${qualification.Qualification.qualificationLevel} in ${qualification.Qualification.qualificationName}/`}
+                          {/* {`${qualification.Qualification.qualificationLevel} in  */}
+                          {`${qualification.Qualification.qualificationName}/`}
                         </span>
                       );
                     }
@@ -186,9 +187,7 @@ const VacancyDetails = () => {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  As soon as possible
-                </Typography>
+                <Typography>As soon as possible</Typography>
               </AccordionDetails>
             </Accordion>
           </Stack>
@@ -270,7 +269,10 @@ const VacancyDetails = () => {
                 Download Job Description
               </a>
             </Button>
-            {/* {open === true && <JobApplyModal position={data?.position} />} */}
+            {open === true &&
+              data?.position?.jobTitle === "Legal Services Manager" && (
+                <JobApplyModal position={data?.position} />
+              )}
           </Stack>
         </Stack>
       </Stack>

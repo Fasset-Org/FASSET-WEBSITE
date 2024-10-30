@@ -127,7 +127,7 @@ function LifeLongLearningEvents() {
               </TableCell>
             </TableRow> */}
 
-            <TableRow>
+            {/* <TableRow>
               <TableCell align="center" component="th" scope="row">
                 1
               </TableCell>
@@ -146,8 +146,7 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                {/* <span>09 October 2024 (10h00 – 12h30)</span>
-                <br /> */}
+               
                 <span>23 October 2024 (10h00 – 12h30)</span>
                 <br />
                 <span>28 October 2024 (10h00 – 12h30)</span>
@@ -200,11 +199,11 @@ function LifeLongLearningEvents() {
                   </a>
                 </span>
               </TableCell>
-            </TableRow>
+            </TableRow> */}
 
             <TableRow>
               <TableCell align="center" component="th" scope="row">
-                2
+                1
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 The Institute of Risk Management South Africa (IRMSA)
@@ -214,14 +213,12 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                {/* <span>11 September 2024 (10h00 – 12h30)</span>
-                <br /> */}
-                <span>17 October 2024 (09h00 – 12h00)</span>
+                <span>03 December 2024 (09h00 – 12h00)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 <span>
                   <a
-                    href="https://www.irmsa.org.za/events/EventDetails.aspx?id=1883899&group="
+                    href="https://www.irmsa.org.za/events/register.aspx?id=1900522"
                     style={{
                       color: "#163683",
                       cursor: "pointer",
@@ -238,7 +235,7 @@ function LifeLongLearningEvents() {
 
             <TableRow>
               <TableCell align="center" component="th" scope="row">
-                3
+                2
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 The Institute of Internal Audit South Africa (IIASA)
@@ -285,61 +282,11 @@ function LifeLongLearningEvents() {
               </TableCell>
             </TableRow>
 
-            <TableRow>
-              <TableCell align="center" component="th" scope="row">
-                4
-              </TableCell>
-              <TableCell align="center" component="th" scope="row">
-                The Association of Certified Fraud Examiners South Africa (ACFE
-                SA)
-              </TableCell>
-              <TableCell align="center" component="th" scope="row">
-                <Typography>
-                  Detecting Fraud with Data Analytics & Criminal Investigation
-                </Typography>
-              </TableCell>
-
-              <TableCell align="center" scope="row">
-                22 October 2024 (09h00 – 11h30)
-              </TableCell>
-              <TableCell align="center" scope="row">
-                <span>
-                  <a
-                    href="https://acfesa.glueup.com/event/acfe-sa-fasset-lifelong-learning-event-2024-116943/"
-                    style={{
-                      color: "#163683",
-                      cursor: "pointer",
-                      fontWeight: 600
-                    }}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Link
-                  </a>
-                </span>
-                {/* <br />
-                <span>
-                  <a
-                    href="https://iiasa.site-ym.com/events/register.aspx?id=1888606"
-                    style={{
-                      color: "#163683",
-                      cursor: "pointer",
-                      fontWeight: 600
-                    }}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Link
-                  </a>
-                </span> */}
-              </TableCell>
-            </TableRow>
-
             {/* New Record */}
 
             <TableRow>
               <TableCell align="center" component="th" scope="row">
-                5
+                3
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 South African Institute of Taxation (SAIT)
@@ -352,8 +299,6 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>29 October 2024 (10h00 - 12h30)</span>
-                <br />
                 <span>12 November 2024 (10h00 - 12h30)</span>
                 <br />
                 <span>26 November 2024 (10h00 - 12h30)</span>
@@ -361,21 +306,6 @@ function LifeLongLearningEvents() {
                 <span>03 December 2024 (10h00 - 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                <span>
-                  <a
-                    href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897629&group="
-                    style={{
-                      color: "#163683",
-                      cursor: "pointer",
-                      fontWeight: 600
-                    }}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Link
-                  </a>
-                </span>
-                <br />
                 <span>
                   <a
                     href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897956&group="

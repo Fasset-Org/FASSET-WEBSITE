@@ -65,7 +65,7 @@ const TenderDetails = () => {
     },
     {
       question:
-        "iven the absence of mandates, how will FASSET select the provider? Will it be based on the entity's qualifications, the merits of the property asset, or a combination of both?",
+        "Given the absence of mandates, how will FASSET select the provider? Will it be based on the entity's qualifications, the merits of the property asset, or a combination of both?",
       answer:
         "We understand that providers may not have mandates at this stage. However, bidders must ensure properties are available for viewing when FASSET requests it. At this stage, we are not evaluating the building itself; rather, we are assessing the bidder's capability to meet our requirements."
     },

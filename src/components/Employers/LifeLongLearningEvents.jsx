@@ -245,12 +245,12 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>12 November 2024 (17h00 – 19h30)</span>
+                {/* <span>12 November 2024 (17h00 – 19h30)</span> */}
                 <br />
                 <span>03 December 2024 (17h00 – 19h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                <span>
+                {/* <span>
                   <a
                     href="https://iiasa.site-ym.com/events/register.aspx?id=1888605"
                     style={{
@@ -264,7 +264,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br />
+                <br /> */}
                 <span>
                   <a
                     href="https://iiasa.site-ym.com/events/register.aspx?id=1888606"
@@ -299,14 +299,14 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>12 November 2024 (10h00 - 12h30)</span>
+                {/* <span>12 November 2024 (10h00 - 12h30)</span> */}
                 <br />
                 <span>26 November 2024 (10h00 - 12h30)</span>
                 <br />
                 <span>03 December 2024 (10h00 - 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                <span>
+                {/* <span>
                   <a
                     href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897956&group="
                     style={{
@@ -320,7 +320,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br />
+                <br /> */}
                 <span>
                   <a
                     href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897957&group="
@@ -364,21 +364,21 @@ function LifeLongLearningEvents() {
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>
-                  <span>Blockchain Technology</span>
-                  <br />
                   <span>Cybersecurity in Financial Markets</span>
+                  <br />
+                  <span>Blockchain Technology</span>
                 </Typography>
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>11 November 2024 (10h00 – 12h30)</span>
-                <br />
                 <span>22 November 2024 (10h00 – 12h30)</span>
+                <br />
+                <span>03 November 2024 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 <span>
                   <a
-                    href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-124248/"
+                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-124249/"
                     style={{
                       color: "#163683",
                       cursor: "pointer",
@@ -393,7 +393,7 @@ function LifeLongLearningEvents() {
                 <br />
                 <span>
                   <a
-                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-124249/"
+                    href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-125775/"
                     style={{
                       color: "#163683",
                       cursor: "pointer",

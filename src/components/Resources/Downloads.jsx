@@ -148,8 +148,8 @@ const Downloads = () => {
                                 component="th"
                                 scope="row"
                               >
-                                {doc.originalFileName ===
-                                "Annual Report.html" ? (
+                                {doc.fileName ===
+                                "https://fasset.org.za/flipbook/mobile/index.html" ? (
                                   <a
                                     href={`https://fasset.org.za/flipbook/mobile/index.html`}
                                     target="_blank"

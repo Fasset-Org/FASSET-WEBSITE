@@ -148,17 +148,28 @@ const Downloads = () => {
                                 component="th"
                                 scope="row"
                               >
-                                <a
-                                  href={`${
-                                    process.env.REACT_APP_API_URL
-                                  }/api/dev/cse/downloadDocument?fileName=${
-                                    doc.fileName
-                                  }.${doc.originalFileName.split(".")[1]}`}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  {doc.originalFileName}
-                                </a>
+                                {doc.originalFileName ===
+                                "Annual Report.html" ? (
+                                  <a
+                                    href={`https://fasset.org.za/flipbook/mobile/index.html`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    {doc.originalFileName}
+                                  </a>
+                                ) : (
+                                  <a
+                                    href={`${
+                                      process.env.REACT_APP_API_URL
+                                    }/api/dev/cse/downloadDocument?fileName=${
+                                      doc.fileName
+                                    }.${doc.originalFileName.split(".")[1]}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    {doc.originalFileName}
+                                  </a>
+                                )}
                               </TableCell>
                               <TableCell align="center" scope="row">
                                 <Tooltip title="Download">

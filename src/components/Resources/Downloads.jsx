@@ -148,8 +148,8 @@ const Downloads = () => {
                                 component="th"
                                 scope="row"
                               >
-                                {doc.fileName ===
-                                "https://fasset.org.za/flipbook/mobile/index.html" ? (
+                                {doc.originalFileName ===
+                                "Annual Report.html" ? (
                                   <a
                                     href={`https://fasset.org.za/flipbook/mobile/index.html`}
                                     target="_blank"
@@ -184,16 +184,26 @@ const Downloads = () => {
                                       }
                                     }}
                                     onClick={() => {
-                                      window.open(
-                                        `${
-                                          process.env.REACT_APP_API_URL
-                                        }/api/dev/cse/downloadDocument?fileName=${
-                                          doc.fileName
-                                        }.${
-                                          doc.originalFileName.split(".")[1]
-                                        }`,
-                                        "_blank"
-                                      );
+                                      if (
+                                        doc.originalFileName ===
+                                        "Annual Report.html"
+                                      ) {
+                                        window.open(
+                                          "https://fasset.org.za/flipbook/mobile/index.html",
+                                          "_blank"
+                                        );
+                                      } else {
+                                        window.open(
+                                          `${
+                                            process.env.REACT_APP_API_URL
+                                          }/api/dev/cse/downloadDocument?fileName=${
+                                            doc.fileName
+                                          }.${
+                                            doc.originalFileName.split(".")[1]
+                                          }`,
+                                          "_blank"
+                                        );
+                                      }
                                     }}
                                   >
                                     <Download />

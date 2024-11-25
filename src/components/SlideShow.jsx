@@ -7,7 +7,7 @@ import { Skeleton, Stack } from "@mui/material";
 import "./SlideShow.css";
 import banner1 from "../images/website-banner-new/Web Banner 1.jpg";
 import banner2 from "../images/website-banner-new/web banner 2.jpg";
-import banner3 from "../images/website-banner-new/web banner 3.jpg";
+// import banner3 from "../images/website-banner-new/web banner 3.jpg";
 
 const Slideshow = () => {
   const { data, isLoading } = useQuery({

@@ -17,7 +17,7 @@ const Slideshow = () => {
     }
   });
 
-  const banners = [banner1, banner2, banner3];
+  const banners = [banner1, banner2];
 
   const [slideIndex, setSlideIndex] = useState(0);
 

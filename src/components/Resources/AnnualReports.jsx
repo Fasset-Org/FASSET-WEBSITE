@@ -102,7 +102,7 @@ const AnnualReports = () => {
           <TableBody>
             <TableRow>
               <TableCell align="center" component="th" scope="row">
-                {0}
+                {1}
               </TableCell>
               <TableCell align="center" component="th" scope="row">
               FASSET ANNUAL REPORT 2022 2023
@@ -135,6 +135,43 @@ const AnnualReports = () => {
                 </Tooltip>
               </TableCell>
             </TableRow>
+
+
+            <TableRow>
+              <TableCell align="center" component="th" scope="row">
+                {2}
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+              FASSET ANNUAL REPORT 2022 2023
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                Apr 01 2022 - Mar 31 2023
+              </TableCell>
+
+              <TableCell align="center" scope="row">
+                <Tooltip title="Download">
+                  <IconButton
+                    sx={{
+                      backgroundColor: "primary.main",
+                      color: "#FFFFFF",
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        color: "#FFFFFF",
+                        fontWeight: "bolder"
+                      }
+                    }}
+                    onClick={() => {
+                      window.open(
+                        `https://fasset.org.za/flipbook/mobile/index.html`,
+                        "_blank"
+                      );
+                    }}
+                  >
+                    <Download />
+                  </IconButton>
+                </Tooltip>
+              </TableCell>
+            </TableRow>
             {(rowsPerPage > 0
               ? data?.annualReports?.slice(
                   page * rowsPerPage,
@@ -147,7 +184,7 @@ const AnnualReports = () => {
                 sx={{ backgroundColor: i % 2 === 0 ? "action.hover" : "" }}
               >
                 <TableCell align="center" component="th" scope="row">
-                  {i + 1}
+                  {i + 3}
                 </TableCell>
                 <TableCell align="center" component="th" scope="row">
                   {annualReport?.annualReportFileURL}

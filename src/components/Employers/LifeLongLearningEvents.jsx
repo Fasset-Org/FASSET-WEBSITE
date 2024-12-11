@@ -206,19 +206,21 @@ function LifeLongLearningEvents() {
                 1
               </TableCell>
               <TableCell align="center" component="th" scope="row">
-                The Institute of Risk Management South Africa (IRMSA)
+                The Chartered Institute of Management Accounting NPC (CIMA NPC)
               </TableCell>
               <TableCell align="center" component="th" scope="row">
-                <Typography>Risk Management</Typography>
+                <Typography>
+                  The Ethical Compass: Guiding South Africa’s Financial Future
+                </Typography>
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>03 December 2024 (09h00 – 12h00)</span>
+                <span>15 January 2025 (14h00 – 16h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 <span>
                   <a
-                    href="https://www.irmsa.org.za/events/register.aspx?id=1900522"
+                    href="https://cvent.me/Bqag3b"
                     style={{
                       color: "#163683",
                       cursor: "pointer",
@@ -233,7 +235,7 @@ function LifeLongLearningEvents() {
               </TableCell>
             </TableRow>
 
-            <TableRow>
+            {/* <TableRow>
               <TableCell align="center" component="th" scope="row">
                 2
               </TableCell>
@@ -245,12 +247,12 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                {/* <span>12 November 2024 (17h00 – 19h30)</span> */}
+                <span>12 November 2024 (17h00 – 19h30)</span>
                 <br />
                 <span>03 December 2024 (17h00 – 19h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                {/* <span>
+                <span>
                   <a
                     href="https://iiasa.site-ym.com/events/register.aspx?id=1888605"
                     style={{
@@ -264,7 +266,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br /> */}
+                <br />
                 <span>
                   <a
                     href="https://iiasa.site-ym.com/events/register.aspx?id=1888606"
@@ -282,7 +284,7 @@ function LifeLongLearningEvents() {
               </TableCell>
             </TableRow>
 
-            {/* New Record */}
+            New Record
 
             <TableRow>
               <TableCell align="center" component="th" scope="row">
@@ -299,14 +301,14 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                {/* <span>12 November 2024 (10h00 - 12h30)</span> */}
+                <span>12 November 2024 (10h00 - 12h30)</span>
                 <br />
                 <span>26 November 2024 (10h00 - 12h30)</span>
                 <br />
                 <span>03 December 2024 (10h00 - 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                {/* <span>
+                <span>
                   <a
                     href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897956&group="
                     style={{
@@ -320,7 +322,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br /> */}
+                <br />
                 <span>
                   <a
                     href="https://www.thesait.org.za/events/EventDetails.aspx?id=1897957&group="
@@ -351,34 +353,34 @@ function LifeLongLearningEvents() {
                   </a>
                 </span>
               </TableCell>
-            </TableRow>
+            </TableRow> */}
 
             {/* Another New Record */}
 
             <TableRow>
               <TableCell align="center" component="th" scope="row">
-                4
+                2
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 The South African Institute of Financial Markets (SAIFM)
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>
-                  <span>Cybersecurity in Financial Markets</span>
-                  <br />
                   <span>Blockchain Technology</span>
+                  <br />
+                  <span>Cybersecurity in Financial Markets</span>
                 </Typography>
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>22 November 2024 (10h00 – 12h30)</span>
+                <span>14 February 2025 (10h00 – 12h30)</span>
                 <br />
-                <span>03 November 2024 (10h00 – 12h30)</span>
+                <span>19 February 2025 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 <span>
                   <a
-                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-124249/"
+                    href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-125775/"
                     style={{
                       color: "#163683",
                       cursor: "pointer",
@@ -393,7 +395,7 @@ function LifeLongLearningEvents() {
                 <br />
                 <span>
                   <a
-                    href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-125775/"
+                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-127329/"
                     style={{
                       color: "#163683",
                       cursor: "pointer",

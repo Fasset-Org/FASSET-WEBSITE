@@ -201,7 +201,7 @@ function LifeLongLearningEvents() {
               </TableCell>
             </TableRow> */}
 
-            <TableRow>
+            {/* <TableRow>
               <TableCell align="center" component="th" scope="row">
                 1
               </TableCell>
@@ -233,7 +233,7 @@ function LifeLongLearningEvents() {
                   </a>
                 </span>
               </TableCell>
-            </TableRow>
+            </TableRow> */}
 
             {/* <TableRow>
               <TableCell align="center" component="th" scope="row">
@@ -359,7 +359,7 @@ function LifeLongLearningEvents() {
 
             <TableRow>
               <TableCell align="center" component="th" scope="row">
-                2
+                1
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 The South African Institute of Financial Markets (SAIFM)

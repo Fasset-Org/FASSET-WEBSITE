@@ -11,9 +11,9 @@ import {
 import React from "react";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import JobApplyModal from "../../components/Modals/JobApplyModal";
+// import JobApplyModal from "../../components/Modals/JobApplyModal";
 import { ArrowBack } from "@mui/icons-material";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../../stateQueries/User";
 
@@ -22,9 +22,9 @@ const VacancyDetails = () => {
 
   const { id } = useParams();
 
-  const location = useLocation();
+  // const location = useLocation();
 
-  const { open } = location.state;
+  // const { open } = location.state;
 
   const { data, isLoading } = useQuery({
     queryKey: ["position"],
@@ -269,10 +269,10 @@ const VacancyDetails = () => {
                 Download Job Description
               </a>
             </Button>
-            {open === true &&
+            {/* {open === true &&
               data?.position?.jobTitle === "Legal Services Manager" && (
                 <JobApplyModal position={data?.position} />
-              )}
+              )} */}
           </Stack>
         </Stack>
       </Stack>

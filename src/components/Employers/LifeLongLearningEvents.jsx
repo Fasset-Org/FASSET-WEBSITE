@@ -201,26 +201,26 @@ function LifeLongLearningEvents() {
               </TableCell>
             </TableRow> */}
 
-            {/* <TableRow>
+            <TableRow>
               <TableCell align="center" component="th" scope="row">
                 1
               </TableCell>
               <TableCell align="center" component="th" scope="row">
-                The Chartered Institute of Management Accounting NPC (CIMA NPC)
+              The Institute of Risk Management South Africa (IRMSA)
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>
-                  The Ethical Compass: Guiding South Africa’s Financial Future
+                Risk Management
                 </Typography>
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>15 January 2025 (14h00 – 16h30)</span>
+                <span>30 January 2025 (09h00 – 11h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 <span>
                   <a
-                    href="https://cvent.me/Bqag3b"
+                    href="https://www.irmsa.org.za/events/register.aspx?id=1915490"
                     style={{
                       color: "#163683",
                       cursor: "pointer",
@@ -233,7 +233,7 @@ function LifeLongLearningEvents() {
                   </a>
                 </span>
               </TableCell>
-            </TableRow> */}
+            </TableRow>
 
             {/* <TableRow>
               <TableCell align="center" component="th" scope="row">
@@ -359,7 +359,7 @@ function LifeLongLearningEvents() {
 
             <TableRow>
               <TableCell align="center" component="th" scope="row">
-                1
+                2
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 The South African Institute of Financial Markets (SAIFM)

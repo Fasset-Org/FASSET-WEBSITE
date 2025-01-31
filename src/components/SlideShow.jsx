@@ -8,6 +8,7 @@ import "./SlideShow.css";
 // import banner1 from "../images/Office Closure Message.jpg";
 import banner2 from "../images/Website Banner 1.jpg";
 import banner3 from "../images/Website Banner 2.jpg";
+import banner4 from "../images/WSP ATR 25.26 WEB BANNER.jpg";
 
 const Slideshow = () => {
   const { data, isLoading } = useQuery({
@@ -17,7 +18,7 @@ const Slideshow = () => {
     }
   });
 
-  const banners = [banner2, banner3];
+  const banners = [banner2, banner3, banner4];
 
   const [slideIndex, setSlideIndex] = useState(0);
 

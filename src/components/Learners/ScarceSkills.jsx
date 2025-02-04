@@ -20,7 +20,7 @@ const ScarceSkills = () => {
         fontWeight="bolder"
         sx={{ color: "primary.main", textTransform: "uppercase" }}
       >
-        Volunteer
+        CAREER AWARNESS VOLUNTEER
       </Typography>
       <Typography textAlign="justify">
         Pay it forward and volunteer your time! We are looking for passionate

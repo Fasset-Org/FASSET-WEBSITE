@@ -206,21 +206,21 @@ function LifeLongLearningEvents() {
                 1
               </TableCell>
               <TableCell align="center" component="th" scope="row">
-              The Institute of Risk Management South Africa (IRMSA)
+              The Chartered Institute of Management Accounting NPC (CIMA NPC)
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>
-                Risk Management
+                The Ethical Compass: Guiding South Africa’s Financial Future
                 </Typography>
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>30 January 2025 (09h00 – 11h30)</span>
+                <span>12 February 2025 (14h00 – 16h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 <span>
                   <a
-                    href="https://www.irmsa.org.za/events/register.aspx?id=1915490"
+                    href="https://cvent.me/Q0qnbv"
                     style={{
                       color: "#163683",
                       cursor: "pointer",

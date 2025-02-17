@@ -206,11 +206,11 @@ function LifeLongLearningEvents() {
                 1
               </TableCell>
               <TableCell align="center" component="th" scope="row">
-              The Chartered Institute of Management Accounting NPC (CIMA NPC)
+                The Chartered Institute of Management Accounting NPC (CIMA NPC)
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>
-                The Ethical Compass: Guiding South Africa’s Financial Future
+                  The Ethical Compass: Guiding South Africa’s Financial Future
                 </Typography>
               </TableCell>
 
@@ -366,21 +366,48 @@ function LifeLongLearningEvents() {
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>
-                  <span>Blockchain Technology</span>
+                  <span>Cybersecurity in Financial Markets</span>
+                  <br />
+                  <span>Blockchain Technology in Financial Markets</span>
                   <br />
                   <span>Cybersecurity in Financial Markets</span>
+                  <br />
+                  <span>Blockchain Technology in Financial Markets</span>
+                  <br />
+                  <span>Blockchain Technology in Financial Markets</span>
                 </Typography>
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>14 February 2025 (10h00 – 12h30)</span>
-                <br />
                 <span>19 February 2025 (10h00 – 12h30)</span>
+                <br />
+                <span>09 April 2025 (10h00 – 12h30)</span>
+                <br />
+                <span>30 April 2025 (10h00 – 12h30)</span>
+                <br />
+                <span>7 May 2025 (10h00 – 12h30)</span>
+                <br />
+                <span>30 May 2025 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 <span>
                   <a
-                    href="https://app.glueup.com/event/fasset-blockchain-in-financial-markets-webinar-2-5hr-125775/"
+                    href="https://saifm.co.za/webinar/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Registration Closed
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="hhttps://saifm.co.za/webinar/"
                     style={{
                       color: "#163683",
                       cursor: "pointer",
@@ -395,7 +422,37 @@ function LifeLongLearningEvents() {
                 <br />
                 <span>
                   <a
-                    href="https://app.glueup.com/event/fasset-cyber-security-in-financial-markets-webinar-2-5hr-127329/"
+                    href="https://saifm.co.za/webinar/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="https://saifm.co.za/webinar/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="https://saifm.co.za/webinar/"
                     style={{
                       color: "#163683",
                       cursor: "pointer",

@@ -66,7 +66,7 @@ const DesktopNavigation = () => {
             {/* <Link to="/home" className="nav-link" style={{ cursor: "pointer" }}>
               Institutions
             </Link> */}
-            <Link to="/currentTenders">Supply Chain</Link>
+            <Link to="/currentTenders">SCM</Link>
             <Link to="/downloads">Resources</Link>
             <Link to="/openPositions">Vacancies</Link>
             {/* <Button

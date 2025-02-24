@@ -20,9 +20,15 @@ import UpdateFile2023 from "../../../files/Reseources/Skills-Plan/FASSET 2023-24
 import UpdateFile2022 from "../../../files/Reseources/Skills-Plan/FASSET 2022-23 SSP Final Annual Update.pdf";
 import UpdateFile2021 from "../../../files/Reseources/Skills-Plan/Fasset Sector Skills Plan 2021-22 Update - Final.pdf";
 import UpdateFile2019 from "../../../files/Reseources/Skills-Plan/Fasset SSP 2019 - 2020.pdf";
+import UpdateFile2025 from "../../../files/Reseources/Skills-Plan/FASSET Final SSP 2025-2030.pdf";
 import { Download } from "@mui/icons-material";
 
 const rows = [
+  {
+    period: "2025-2030",
+    documentName: "FASSET Final SSP 2025-2030",
+    fileUrl: UpdateFile2025
+  },
   {
     period: "2024/2025",
     documentName: "FASSET Sector Skills Plan Update 2024-25",

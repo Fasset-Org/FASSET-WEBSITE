@@ -201,7 +201,7 @@ function LifeLongLearningEvents() {
               </TableCell>
             </TableRow> */}
 
-            <TableRow>
+            {/* <TableRow>
               <TableCell align="center" component="th" scope="row">
                 1
               </TableCell>
@@ -233,7 +233,7 @@ function LifeLongLearningEvents() {
                   </a>
                 </span>
               </TableCell>
-            </TableRow>
+            </TableRow> */}
 
             {/* <TableRow>
               <TableCell align="center" component="th" scope="row">
@@ -366,8 +366,8 @@ function LifeLongLearningEvents() {
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 <Typography>
-                  <span>Cybersecurity in Financial Markets</span>
-                  <br />
+                  {/* <span>Cybersecurity in Financial Markets</span>
+                  <br /> */}
                   <span>Blockchain Technology in Financial Markets</span>
                   <br />
                   <span>Cybersecurity in Financial Markets</span>
@@ -379,8 +379,8 @@ function LifeLongLearningEvents() {
               </TableCell>
 
               <TableCell align="center" scope="row">
-                <span>19 February 2025 (10h00 – 12h30)</span>
-                <br />
+                {/* <span>19 February 2025 (10h00 – 12h30)</span>
+                <br /> */}
                 <span>09 April 2025 (10h00 – 12h30)</span>
                 <br />
                 <span>30 April 2025 (10h00 – 12h30)</span>
@@ -390,7 +390,7 @@ function LifeLongLearningEvents() {
                 <span>30 May 2025 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
-                <span>
+                {/* <span>
                   <a
                     href="https://saifm.co.za/webinar/"
                     style={{
@@ -404,7 +404,7 @@ function LifeLongLearningEvents() {
                     Registration Closed
                   </a>
                 </span>
-                <br />
+                <br /> */}
                 <span>
                   <a
                     href="hhttps://saifm.co.za/webinar/"

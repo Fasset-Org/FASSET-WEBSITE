@@ -5,10 +5,10 @@ import { useQuery } from "@tanstack/react-query";
 import UserQuery from "../stateQueries/User";
 import { Skeleton, Stack } from "@mui/material";
 import "./SlideShow.css";
-// import banner1 from "../images/Office Closure Message.jpg";
-import banner2 from "../images/Website Banner 1.jpg";
-import banner3 from "../images/Website Banner 2.jpg";
-import banner4 from "../images/WSP ATR 25.26 WEB BANNER.jpg";
+import banner1 from "../images/Website Banner 1.jpg";
+import banner2 from "../images/Website Banner 2.jpg";
+import banner3 from "../images/WSP ATR 25.26 WEB BANNER.jpg";
+import banner4 from "../images/Web Banner Atang Artwork.jpg";
 
 const Slideshow = () => {
   const { data, isLoading } = useQuery({
@@ -18,7 +18,7 @@ const Slideshow = () => {
     }
   });
 
-  const banners = [banner2, banner3, banner4];
+  const banners = [banner1,banner2, banner3, banner4];
 
   const [slideIndex, setSlideIndex] = useState(0);
 

@@ -81,8 +81,8 @@ function App() {
           </Typography>
         </CookieConsent>
         <Router>
+          <Analytics />
           <Routes>
-            <Analytics />
             {/* Website Routes */}
             <Route path="*" element={<FallbackError />} />
             <Route path="/" element={<MainNavigation />}>

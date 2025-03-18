@@ -36,7 +36,7 @@ function App() {
   const [theme, setTheme] = useState("light");
   const queryClient = new QueryClient();
 
-  ReactGA.initialize("GTM-WRH9G6SZ");
+  ReactGA.initialize("G-WPXLYPD9RP");
 
   const Analytics = () => {
     const location = useLocation();

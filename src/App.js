@@ -6,7 +6,8 @@ import {
   Navigate,
   Route,
   BrowserRouter as Router,
-  Routes
+  Routes,
+  useLocation
 } from "react-router-dom";
 import Vacancies from "./pages/Vacancies/Vacancies";
 import AboutUs from "./pages/AboutUs/AboutUs";
@@ -29,10 +30,23 @@ import TenderDetails from "./pages/SupplyChain/TenderDetails";
 import FallbackError from "./pages/FallbackError";
 import MainNavigation from "./components/Navigation/MainNavigation";
 import CookieConsent from "react-cookie-consent";
+import ReactGA from "react-ga4";
 
 function App() {
   const [theme, setTheme] = useState("light");
   const queryClient = new QueryClient();
+
+  ReactGA.initialize("GTM-WRH9G6SZ");
+
+  const Analytics = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+      ReactGA.send({ hitType: "pageview", page: location.pathname });
+    }, [location]);
+
+    return null;
+  };
 
   console.log(
     "%cAhh my guy just stop, it's pointless",
@@ -68,6 +82,7 @@ function App() {
         </CookieConsent>
         <Router>
           <Routes>
+            <Analytics />
             {/* Website Routes */}
             <Route path="*" element={<FallbackError />} />
             <Route path="/" element={<MainNavigation />}>

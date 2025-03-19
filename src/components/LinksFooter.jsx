@@ -8,6 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
 import TikTokIcon from "./TikTokIcon";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const LinksFooter = () => {
   const navigate = useNavigate();
@@ -75,6 +76,14 @@ const LinksFooter = () => {
               }}
             >
               <LinkedInIcon sx={{ color: "#0178b5" }} />
+            </IconButton>
+
+            <IconButton
+              onClick={() => {
+                window.open("https://www.youtube.com/@fasset_sa", "_blank");
+              }}
+            >
+              <YouTubeIcon sx={{ color: "#ff0033" }} />
             </IconButton>
 
             <IconButton
@@ -291,9 +300,8 @@ const LinksFooter = () => {
 
           <Stack direction="row">
             <Typography fontWeight="bolder">Mobile App:</Typography>
-            <Typography sx={{ overflow: "auto"}}>
-              &nbsp;&nbsp;&nbsp;Google Play and Apple App
-              stores{" "}
+            <Typography sx={{ overflow: "auto" }}>
+              &nbsp;&nbsp;&nbsp;Google Play and Apple App stores{" "}
             </Typography>
           </Stack>
         </Stack>

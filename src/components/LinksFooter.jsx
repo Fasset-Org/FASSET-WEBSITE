@@ -1,4 +1,12 @@
-import { Divider, IconButton, Link, Stack, Typography } from "@mui/material";
+import {
+  Divider,
+  Grid,
+  IconButton,
+  InputAdornment,
+  Link,
+  Stack,
+  Typography
+} from "@mui/material";
 import React from "react";
 import logo from "../images/fasset_master_logo.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -7,6 +15,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
+import { Form, Formik } from "formik";
+import SendIcon from "@mui/icons-material/Send";
+import TextFieldWrapper from "./FormComponents/TextFieldWrapper";
 
 const LinksFooter = () => {
   const navigate = useNavigate();
@@ -75,6 +86,47 @@ const LinksFooter = () => {
               <LinkedInIcon sx={{ color: "#0178b5" }} />
             </IconButton>
           </Stack>
+        </Stack>
+        <Stack
+          width={{ xs: "100%", md: "33.33%" }}
+          height={{ xs: 200, md: "100%" }}
+          justifyContent="center"
+          alignItems="center"
+          // border={1}
+          // borderColor={"red"}
+        >
+          <Typography sx={{ color: "primary.main", fontWeight: "bolder" }}>
+            Newsletter
+          </Typography>
+          <Typography>
+            Don't miss to subscribe to our new feeds, kindly fill the form
+            below.
+          </Typography>
+          <Formik>
+            {() => {
+              return (
+                <Form style={{ width: "100%" }}>
+                  <Grid container mt={1} width="100%">
+                    <Grid item xs={12} md={12}>
+                      <TextFieldWrapper
+                        name="email"
+                        placeholder="Email Address"
+                        label="Email Address"
+                        autoComplete="off"
+                        InputProps={{
+                          endAdornment: (
+                            <InputAdornment position="start">
+                              <SendIcon />
+                            </InputAdornment>
+                          )
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Form>
+              );
+            }}
+          </Formik>
         </Stack>
         <Stack
           width={{ xs: "100%", md: "33.33%" }}

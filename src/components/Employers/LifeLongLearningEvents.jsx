@@ -405,8 +405,8 @@ function LifeLongLearningEvents() {
                   </a>
                 </span>
                 <br /> */}
-                <span>
-                  {/* <a
+                {/* <span>
+                  <a
                     href="hhttps://saifm.co.za/webinar/"
                     style={{
                       color: "#163683",

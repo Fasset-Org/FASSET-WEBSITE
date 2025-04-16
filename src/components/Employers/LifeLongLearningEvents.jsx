@@ -368,8 +368,8 @@ function LifeLongLearningEvents() {
                 <Typography>
                   {/* <span>Cybersecurity in Financial Markets</span>
                   <br /> */}
-                  <span>Blockchain Technology in Financial Markets</span>
-                  <br />
+                  {/* <span>Blockchain Technology in Financial Markets</span>
+                  <br /> */}
                   <span>Cybersecurity in Financial Markets</span>
                   <br />
                   <span>Blockchain Technology in Financial Markets</span>
@@ -381,8 +381,8 @@ function LifeLongLearningEvents() {
               <TableCell align="center" scope="row">
                 {/* <span>19 February 2025 (10h00 – 12h30)</span>
                 <br /> */}
-                <span>09 April 2025 (10h00 – 12h30)</span>
-                <br />
+                {/* <span>09 April 2025 (10h00 – 12h30)</span>
+                <br /> */}
                 <span>30 April 2025 (10h00 – 12h30)</span>
                 <br />
                 <span>7 May 2025 (10h00 – 12h30)</span>
@@ -406,7 +406,7 @@ function LifeLongLearningEvents() {
                 </span>
                 <br /> */}
                 <span>
-                  <a
+                  {/* <a
                     href="hhttps://saifm.co.za/webinar/"
                     style={{
                       color: "#163683",
@@ -419,7 +419,7 @@ function LifeLongLearningEvents() {
                     Link
                   </a>
                 </span>
-                <br />
+                <br /> */}
                 <span>
                   <a
                     href="https://saifm.co.za/webinar/"

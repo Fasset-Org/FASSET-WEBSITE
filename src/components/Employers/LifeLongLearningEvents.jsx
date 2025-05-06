@@ -359,7 +359,7 @@ function LifeLongLearningEvents() {
 
             <TableRow>
               <TableCell align="center" component="th" scope="row">
-                2
+                1
               </TableCell>
               <TableCell align="center" component="th" scope="row">
                 The South African Institute of Financial Markets (SAIFM)
@@ -370,11 +370,14 @@ function LifeLongLearningEvents() {
                   <br /> */}
                   {/* <span>Blockchain Technology in Financial Markets</span>
                   <br /> */}
+
+                  <span>Blockchain Technology in Financial Markets</span>
+                  <br />
                   <span>Cybersecurity in Financial Markets</span>
                   <br />
                   <span>Blockchain Technology in Financial Markets</span>
                   <br />
-                  <span>Blockchain Technology in Financial Markets</span>
+                  <span>Cybersecurity in Financial Markets</span>
                 </Typography>
               </TableCell>
 
@@ -383,11 +386,13 @@ function LifeLongLearningEvents() {
                 <br /> */}
                 {/* <span>09 April 2025 (10h00 – 12h30)</span>
                 <br /> */}
-                <span>30 April 2025 (10h00 – 12h30)</span>
-                <br />
-                <span>7 May 2025 (10h00 – 12h30)</span>
+                <span>07 May 2025 (10h00 – 12h30)</span>
                 <br />
                 <span>30 May 2025 (10h00 – 12h30)</span>
+                <br />
+                <span>10 May 2025 (10h00 – 12h30)</span>
+                <br />
+                <span>27 June 2025 (10h00 – 12h30)</span>
               </TableCell>
               <TableCell align="center" scope="row">
                 {/* <span>
@@ -453,6 +458,134 @@ function LifeLongLearningEvents() {
                 <span>
                   <a
                     href="https://saifm.co.za/webinar/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+                <br />
+                <span>
+                  <a
+                    href="https://saifm.co.za/webinar/"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+              </TableCell>
+            </TableRow>
+
+            <TableRow>
+              <TableCell align="center" component="th" scope="row">
+                2
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                Institute of Risk Management South Africa (IRMSA)
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                <Typography>
+                  {/* <span>Cybersecurity in Financial Markets</span>
+                  <br /> */}
+                  {/* <span>Blockchain Technology in Financial Markets</span>
+                  <br /> */}
+
+                  <span>
+                    Driving Digital Transformation: Navigating Financial & Risk
+                    Management
+                  </span>
+                </Typography>
+              </TableCell>
+
+              <TableCell align="center" scope="row">
+                <span>20 May 2025 (14h00 – 16h30)</span>
+              </TableCell>
+              <TableCell align="center" scope="row">
+                <span>
+                  <a
+                    href="https://www.irmsa.org.za/events/register.aspx?id=1945252"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+              </TableCell>
+            </TableRow>
+
+            <TableRow>
+              <TableCell align="center" component="th" scope="row">
+                3
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                Institute of Internal Auditors South Auditors (IIASA)
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                <Typography>
+                  <span>Global Internal Audit Standards Update</span>
+                </Typography>
+              </TableCell>
+
+              <TableCell align="center" scope="row">
+                <span>12 May 2025 (17h00 – 19h30)</span>
+              </TableCell>
+              <TableCell align="center" scope="row">
+                <span>
+                  <a
+                    href="https://www.iiasa.org.za/event/Global_Standards_Update_12May2025"
+                    style={{
+                      color: "#163683",
+                      cursor: "pointer",
+                      fontWeight: 600
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Link
+                  </a>
+                </span>
+              </TableCell>
+            </TableRow>
+
+            <TableRow>
+              <TableCell align="center" component="th" scope="row">
+                3
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                Association of Certified Fraud Examiners (ACFE SA)
+              </TableCell>
+              <TableCell align="center" component="th" scope="row">
+                <Typography>
+                  <span>
+                    Detecting Fraud with Data Analytics & Criminal
+                    Investigations
+                  </span>
+                </Typography>
+              </TableCell>
+
+              <TableCell align="center" scope="row">
+                <span>10 July 2025 (09h10 - 11:30)</span>
+              </TableCell>
+              <TableCell align="center" scope="row">
+                <span>
+                  <a
+                    href="hhttps://acfesa.glueup.com/event/acfe-sa-fasset-lifelong-learning-event-10-july-2025-139424/"
                     style={{
                       color: "#163683",
                       cursor: "pointer",

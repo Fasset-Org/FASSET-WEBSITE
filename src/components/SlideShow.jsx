@@ -9,6 +9,7 @@ import banner1 from "../images/Website Banner 1.jpg";
 import banner2 from "../images/Website Banner 2.jpg";
 import banner3 from "../images/WSP ATR 25.26 WEB BANNER.jpg";
 import banner4 from "../images/Web Banner Atang Artwork.jpg";
+import banner5 from "../images/NationalCareerAwarenessWeek-WebsiteBanner.jpg";
 
 const Slideshow = () => {
   const { data, isLoading } = useQuery({
@@ -18,7 +19,7 @@ const Slideshow = () => {
     }
   });
 
-  const banners = [banner1,banner2, banner3, banner4];
+  const banners = [banner5, banner1, banner2, banner3, banner4];
 
   const [slideIndex, setSlideIndex] = useState(0);
 
